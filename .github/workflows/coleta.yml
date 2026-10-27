@@ -23,6 +23,8 @@ jobs:
   coletar:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    outputs:
+      mudou: ${{ steps.gravar.outputs.mudou }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -40,14 +42,17 @@ jobs:
           TELEGRAM_CHAT: ${{ secrets.TELEGRAM_CHAT }}
         run: python scripts/telegram.py
       - name: Gravar no repositório
+        id: gravar
         run: |
           git config user.name "radar-cafe-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
           if git diff --cached --quiet; then
             echo "Nada mudou."
+            echo "mudou=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          echo "mudou=true" >> "$GITHUB_OUTPUT"
           git commit -m "Coleta automática $(date -u +'%Y-%m-%d %H:%M') UTC"
           for i in 1 2 3; do
             git pull --rebase origin main && git push origin main && exit 0
@@ -57,7 +62,8 @@ jobs:
 
   publicar:
     needs: coletar
-    if: always() && (needs.coletar.result == 'success' || needs.coletar.result == 'skipped')
+    # só republica quando algo mudou (ou quando o código foi alterado)
+    if: always() && needs.coletar.result == 'success' && (needs.coletar.outputs.mudou == 'true' || github.event_name != 'schedule')
     runs-on: ubuntu-latest
     environment:
       name: github-pages

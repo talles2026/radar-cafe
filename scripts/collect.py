@@ -514,7 +514,8 @@ def main():
     status("Emenda de contratos", True, f"NY: {vk} virada(s); Londres: {vr} virada(s)")
     status("Conferência de valores", not rejeitados, ("rejeitados por salto impossível: " + ", ".join(rejeitados[:6])) if rejeitados else "nenhum valor estranho")
     rows = sorted(quotes.values(), key=lambda q: q["date"])
-    QUOTES.write_text(json.dumps(rows, ensure_ascii=False, indent=1), "utf-8")
+    # uma linha por dia: arquivo menor para o celular baixar e ainda legível no histórico do GitHub
+    QUOTES.write_text("[\n" + ",\n".join(json.dumps(r, ensure_ascii=False, separators=(",", ":")) for r in rows) + "\n]\n", "utf-8")
     log(f"quotes.json: {len(rows)} dias, {changed} campos alterados")
 
     w = fetch_weather()
