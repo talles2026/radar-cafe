@@ -27,11 +27,33 @@ async function json(path: string) {
   return r.json();
 }
 
-Deno.serve(async () => {
+const CORS = {
+  "Access-Control-Allow-Origin": "https://talles2026.github.io",
+  "Access-Control-Allow-Headers": "authorization, apikey, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Content-Type": "application/json",
+};
+
+Deno.serve(async (req: Request) => {
+  if (req.method === "OPTIONS") return new Response("ok", { headers: CORS });
   const db = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
   const { data: est } = await db.from("radar_estado").select("chave,valor");
   const E = Object.fromEntries((est ?? []).map((x: any) => [x.chave, x.valor]));
   webpush.setVapidDetails("mailto:talleseugenio@gmail.com", E.vapid_public, E.vapid_private);
+
+  // ---- aviso de teste pedido pelo próprio celular (só para inscrição já cadastrada) ----
+  const corpo = await req.json().catch(() => ({}));
+  if (corpo?.teste) {
+    const { data: s } = await db.from("radar_inscricoes").select("endpoint,p256dh,auth").eq("endpoint", String(corpo.teste)).maybeSingle();
+    if (!s) return new Response(JSON.stringify({ ok: false, erro: "inscrição não encontrada" }), { status: 404, headers: CORS });
+    try {
+      await webpush.sendNotification({ endpoint: s.endpoint, keys: { p256dh: s.p256dh, auth: s.auth } },
+        JSON.stringify({ title: "Radar do Café", body: "Teste: as notificações estão funcionando neste celular. ☕", url: SITE, tag: "teste-" + Date.now() }), { TTL: 600, urgency: "high" });
+      return new Response(JSON.stringify({ ok: true }), { headers: CORS });
+    } catch (err: any) {
+      return new Response(JSON.stringify({ ok: false, erro: String(err?.statusCode ?? err) }), { status: 500, headers: CORS });
+    }
+  }
 
   const quotes: Q[] = (await json("data/quotes.json")).sort((a: Q, b: Q) => (a.date < b.date ? -1 : 1));
   const recs = await json("data/recomendacoes.json").catch(() => ({ itens: [] }));
@@ -118,7 +140,7 @@ Deno.serve(async () => {
     for (const m of novos.slice(0, 4)) {
       try {
         await webpush.sendNotification({ endpoint: s.endpoint, keys: { p256dh: s.p256dh, auth: s.auth } },
-          JSON.stringify({ title: m.titulo, body: m.texto, url: SITE, tag: m.chave.split(":")[0] }), { TTL: 6 * 3600 });
+          JSON.stringify({ title: m.titulo, body: m.texto, url: SITE, tag: m.chave.split(":")[0] }), { TTL: 6 * 3600, urgency: "high" });
         enviados++;
       } catch (err: any) {
         if (err?.statusCode === 404 || err?.statusCode === 410) { // celular cancelou

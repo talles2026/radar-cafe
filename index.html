@@ -296,6 +296,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
       <div class="panel" id="notif" style="margin-top:12px">
         <div class="kv" style="border:0;padding:0"><span><b style="font-family:var(--body);color:var(--ink)">Notificações no celular</b><br><span id="nStatus">Desligadas</span></span>
           <button class="btn primary" type="button" id="nBtn">Ativar</button></div>
+        <button class="btn" type="button" id="nTeste" hidden>Enviar notificação de teste</button>
         <fieldset class="nopts" id="nOpts">
           <legend class="eyebrow">Avisar sobre</legend>
           <label><input type="checkbox" id="nArabica" checked> Arábica</label>
@@ -338,7 +339,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   <footer class="assinatura">
     <span class="marca">Radar do Café</span>
     <span>desenvolvido por <b>Talles Eugenio</b></span>
-    <span class="versao">versão 27/10 · 16h35</span>
+    <span class="versao">versão 27/10 · 16h45</span>
   </footer>
 </div>
 
@@ -809,6 +810,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     $("nBtn").textContent = on ? "Desativar" : "Ativar";
     $("nBtn").className = on ? "btn" : "btn primary";
     $("nStatus").textContent = on ? "Ligadas neste celular" : "Desligadas";
+    $("nTeste").hidden = !on;
     if (!("PushManager" in window) || typeof Notification === "undefined"){
       $("nBtn").disabled = true;
       $("nHint").textContent = isIOS && !standalone ? "No iPhone, primeiro adicione o app à Tela de Início (Safari → Compartilhar → Adicionar à Tela de Início) e abra por lá. Precisa do iOS 16.4 ou mais novo." : "Este navegador não aceita notificações. No Android, use o Chrome.";
@@ -823,6 +825,17 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     try { await rpc("radar_salvar_inscricao", { p_endpoint:j.endpoint, p_p256dh:j.keys.p256dh, p_auth:j.keys.auth, p_prefs:nPrefs() }); $("nHint").textContent = "Preferências salvas. Os avisos chegam mesmo com o app fechado."; }
     catch(e){ $("nHint").textContent = "Não consegui salvar agora (" + e.message + "). Tente de novo com internet."; }
   }
+  $("nTeste").addEventListener("click", async ()=>{
+    const sub = await nSub().catch(()=>null); if (!sub || !nOk()) return;
+    $("nTeste").disabled = true; $("nTeste").textContent = "Enviando…";
+    try {
+      await nSync();
+      const r = await fetch(config.supabaseUrl.replace(/\/$/,"") + "/functions/v1/radar-push", { method:"POST",
+        headers:{ Authorization:"Bearer "+config.supabaseAnon, "Content-Type":"application/json" }, body: JSON.stringify({ teste: sub.endpoint }) });
+      $("nHint").textContent = r.ok ? "Teste enviado. Bloqueie a tela ou saia do app: o aviso deve aparecer em alguns segundos." : "O teste não saiu (" + r.status + "). Desative e ative de novo.";
+    } catch(e){ $("nHint").textContent = "Não consegui enviar o teste agora: " + e.message; }
+    $("nTeste").disabled = false; $("nTeste").textContent = "Enviar notificação de teste";
+  });
   N_IDS.forEach(id=>$(id).addEventListener("change", ()=>{ nSaveLocal(); clearTimeout(nTimer); nTimer = setTimeout(nSync, 600); }));
   $("nBtn").addEventListener("click", async ()=>{
     if (!nOk()){ $("nHint").textContent = "As notificações ainda estão sendo configuradas. Volte daqui a pouco."; return; }
