@@ -133,6 +133,20 @@ def fetch_usd():
         status("Dólar agora (AwesomeAPI)", True, f"{js['bid']} em {live['hora']}")
     except Exception as e:
         status("Dólar agora (AwesomeAPI)", False, e)
+    if live is None:
+        try:
+            js = json.loads(get("https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol"
+                                "?symbols=BRL%3D&requestMethod=itv&noform=1&partnerId=2&fund=1&exthrs=1&output=json"))
+            q = js["FormattedQuoteResult"]["FormattedQuote"][0]
+            hora = q.get("last_time") or ""
+            try:
+                d = datetime.fromisoformat(hora[:19]).date().isoformat()
+            except ValueError:
+                d = datetime.now(timezone(timedelta(hours=-3))).date().isoformat()
+            live = {"date": d, "valor": round(cnbc_num(q["last"]), 4), "hora": hora}
+            status("Dólar agora (CNBC)", True, f"{q['last']} em {hora}")
+        except Exception as e:
+            status("Dólar agora (CNBC)", False, e)
     return out, live
 
 
