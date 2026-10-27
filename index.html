@@ -466,7 +466,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     // estimativa de hoje no topo (só quando o CEPEA é de dia anterior)
     { const Fa = forecastFor("arabica", 7);
       if (Fa && Fa.cL && Fa.ajuste){ $("estHoje").hidden = false;
-        $("estHoje").innerHTML = `Estimado para hoje: <b>${esc(fmtR0(Fa.base))}</b> <span class="${cls(Fa.ajuste)}">(${esc(pct(Fa.ajuste))})</span>, pelo movimento de NY e do dólar. O CEPEA sai no fim da tarde.`; }
+        $("estHoje").innerHTML = `Estimado hoje: <b>${esc(fmtR0(Fa.base))}</b> <span class="${cls(Fa.ajuste)}">${esc(pct(Fa.ajuste))}</span> · pela bolsa e dólar até agora`; }
       else $("estHoje").hidden = true; }
 
     // previsão
@@ -609,7 +609,8 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   // ---------- físico x NY ----------
   function renderBasis(){
     if (!CTX) return;
-    const pts = CTX.S.filter(x=>x.cepea && x.usdReal).map(x=>({date:x.date, r:x.cepea/x.parity-1}));
+    // compara com os últimos 60 pregões: o diferencial muda com a safra, então janelas longas distorcem
+    const pts = CTX.S.filter(x=>x.cepea && x.usdReal).map(x=>({date:x.date, r:x.cepea/x.parity-1})).slice(-60);
     if (!pts.length){ $("bNow").textContent = "–"; $("bNote").textContent = "Aguardando dias com CEPEA e dólar."; return; }
     const now = pts[pts.length-1], rs = pts.map(x=>x.r), avg = rs.reduce((a,b)=>a+b,0)/rs.length;
     const sd = Math.sqrt(rs.reduce((a,b)=>a+(b-avg)**2,0)/Math.max(1,rs.length-1)) || 0.02;
