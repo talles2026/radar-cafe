@@ -157,6 +157,11 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
 .fase b{font-weight:600}
 .hist-sig{display:grid;gap:6px;margin-top:4px}
 .hist-sig div{display:grid;grid-template-columns:auto auto 1fr auto;gap:8px;align-items:center;font-size:.8rem}
+.nopts{border:0;margin:0;padding:0;display:grid;gap:8px}
+.nopts legend{margin-bottom:6px;padding:0}
+.nopts label{display:flex;gap:10px;align-items:center;font-size:.9rem;min-height:32px}
+.nopts input{width:20px;height:20px;accent-color:var(--accent)}
+#notif.off .nopts, #notif.off .fields{opacity:.55}
 .btn.wa{background:#1F8A4C;border-color:#1F8A4C;color:#fff}
 .preview{font:400 .82rem var(--mono);white-space:pre-wrap;background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:10px;margin:0;overflow-wrap:anywhere}
 </style>
@@ -287,6 +292,25 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
       <div class="actions">
         <button class="btn primary" type="button" id="btnInstall" hidden>Instalar app</button>
         <button class="btn" type="button" id="btnShare">Compartilhar link</button>
+      </div>
+      <div class="panel" id="notif" style="margin-top:12px">
+        <div class="kv" style="border:0;padding:0"><span><b style="font-family:var(--body);color:var(--ink)">Notificações no celular</b><br><span id="nStatus">Desligadas</span></span>
+          <button class="btn primary" type="button" id="nBtn">Ativar</button></div>
+        <fieldset class="nopts" id="nOpts">
+          <legend class="eyebrow">Avisar sobre</legend>
+          <label><input type="checkbox" id="nArabica" checked> Arábica</label>
+          <label><input type="checkbox" id="nConilon" checked> Conilon</label>
+          <label><input type="checkbox" id="nCepea" checked> CEPEA do dia (1 aviso à tarde)</label>
+          <label><input type="checkbox" id="nForte" checked> Movimento forte na bolsa (2% ou mais)</label>
+          <label><input type="checkbox" id="nSinal" checked> Mudança no Sinal do Radar</label>
+        </fieldset>
+        <div class="fields">
+          <div class="field"><label for="nAA">Arábica acima de (R$)</label><input id="nAA" type="number" inputmode="numeric" placeholder="ex.: 1700"></div>
+          <div class="field"><label for="nAB">Arábica abaixo de (R$)</label><input id="nAB" type="number" inputmode="numeric" placeholder="ex.: 1500"></div>
+          <div class="field"><label for="nCA">Conilon acima de (R$)</label><input id="nCA" type="number" inputmode="numeric" placeholder="ex.: 1000"></div>
+          <div class="field"><label for="nCB">Conilon abaixo de (R$)</label><input id="nCB" type="number" inputmode="numeric" placeholder="ex.: 900"></div>
+        </div>
+        <p class="caption" id="nHint">Os avisos chegam mesmo com o app fechado. As escolhas valem só para este celular.</p>
       </div>
       <p class="hint" id="installHint" style="margin-top:8px">No iPhone: toque em Compartilhar no Safari e depois em "Adicionar à Tela de Início". No Android: menu do Chrome, "Instalar app" ou "Adicionar à tela inicial".</p>
     </section>
@@ -754,11 +778,72 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     if (w.status === "fulfilled") weather = w.value;
     $("nodb").hidden = navigator.onLine;
     if (q.status === "rejected" && !quotes.length) $("fresh").textContent = "não foi possível carregar";
-    render(); renderSinal(); renderPlacar(); renderFontes(); renderCalc(); renderBasis(); renderHist(); renderResumo();
+    nRender(); render(); renderSinal(); renderPlacar(); renderFontes(); renderCalc(); renderBasis(); renderHist(); renderResumo();
   }
   load();
   setInterval(load, 10 * 60 * 1000);
   document.addEventListener("visibilitychange", () => { if (!document.hidden) load(); });
+
+  // ---------- notificações ----------
+  const N_IDS = ["nArabica","nConilon","nCepea","nForte","nSinal","nAA","nAB","nCA","nCB"];
+  try { const v = JSON.parse(localStorage.getItem("radar-notif-prefs")||"null"); if (v) N_IDS.forEach(id=>{ if (id in v){ const el=$(id); if (el.type==="checkbox") el.checked=!!v[id]; else el.value=v[id]; } }); } catch(e){}
+  const num = id => { const v = +$(id).value; return v>0 ? v : null; };
+  function nPrefs(){
+    return { arabica:$("nArabica").checked, conilon:$("nConilon").checked, cepea:$("nCepea").checked, forte:$("nForte").checked, sinal:$("nSinal").checked,
+      alvos:{ arabica:{acima:num("nAA"), abaixo:num("nAB")}, conilon:{acima:num("nCA"), abaixo:num("nCB")} } };
+  }
+  function nSaveLocal(){ try{ const o={}; N_IDS.forEach(id=>{ const el=$(id); o[id]= el.type==="checkbox" ? el.checked : el.value; }); localStorage.setItem("radar-notif-prefs", JSON.stringify(o)); }catch(e){} }
+  const b64 = s => { const p = "=".repeat((4 - s.length % 4) % 4), r = atob((s + p).replace(/-/g,"+").replace(/_/g,"/")); return Uint8Array.from(r, c=>c.charCodeAt(0)); };
+  async function rpc(fn, body){
+    const r = await fetch(config.supabaseUrl.replace(/\/$/,"") + "/rest/v1/rpc/" + fn, { method:"POST",
+      headers:{ apikey:config.supabaseAnon, Authorization:"Bearer "+config.supabaseAnon, "Content-Type":"application/json" }, body: JSON.stringify(body) });
+    if (!r.ok) throw new Error("servidor respondeu " + r.status);
+  }
+  const nOk = () => config && config.supabaseUrl && config.supabaseAnon && config.vapidPublic;
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent), standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+  async function nSub(){ if (!("serviceWorker" in navigator) || !("PushManager" in window)) return null; const reg = await navigator.serviceWorker.ready; return reg.pushManager.getSubscription(); }
+  async function nRender(){
+    const sub = await nSub().catch(()=>null), on = !!sub && typeof Notification!=="undefined" && Notification.permission === "granted";
+    $("notif").classList.toggle("off", !on);
+    $("nBtn").textContent = on ? "Desativar" : "Ativar";
+    $("nBtn").className = on ? "btn" : "btn primary";
+    $("nStatus").textContent = on ? "Ligadas neste celular" : "Desligadas";
+    if (!("PushManager" in window) || typeof Notification === "undefined"){
+      $("nBtn").disabled = true;
+      $("nHint").textContent = isIOS && !standalone ? "No iPhone, primeiro adicione o app à Tela de Início (Safari → Compartilhar → Adicionar à Tela de Início) e abra por lá. Precisa do iOS 16.4 ou mais novo." : "Este navegador não aceita notificações. No Android, use o Chrome.";
+    } else if (typeof Notification!=="undefined" && Notification.permission === "denied"){
+      $("nHint").textContent = "As notificações foram bloqueadas para este site. Libere nas configurações do navegador (cadeado ao lado do endereço) e toque em Ativar.";
+    }
+  }
+  let nTimer = null;
+  async function nSync(){
+    const sub = await nSub().catch(()=>null); if (!sub || !nOk()) return;
+    const j = sub.toJSON();
+    try { await rpc("radar_salvar_inscricao", { p_endpoint:j.endpoint, p_p256dh:j.keys.p256dh, p_auth:j.keys.auth, p_prefs:nPrefs() }); $("nHint").textContent = "Preferências salvas. Os avisos chegam mesmo com o app fechado."; }
+    catch(e){ $("nHint").textContent = "Não consegui salvar agora (" + e.message + "). Tente de novo com internet."; }
+  }
+  N_IDS.forEach(id=>$(id).addEventListener("change", ()=>{ nSaveLocal(); clearTimeout(nTimer); nTimer = setTimeout(nSync, 600); }));
+  $("nBtn").addEventListener("click", async ()=>{
+    if (!nOk()){ $("nHint").textContent = "As notificações ainda estão sendo configuradas. Volte daqui a pouco."; return; }
+    const sub = await nSub().catch(()=>null);
+    $("nBtn").disabled = true;
+    try {
+      if (sub && Notification.permission === "granted"){
+        const ep = sub.endpoint; await sub.unsubscribe().catch(()=>{});
+        await rpc("radar_remover_inscricao", { p_endpoint: ep }).catch(()=>{});
+        $("nHint").textContent = "Notificações desligadas neste celular.";
+      } else {
+        const perm = await Notification.requestPermission();
+        if (perm !== "granted"){ $("nHint").textContent = "Sem permissão, o celular não deixa o app avisar. Toque em Ativar e escolha Permitir."; }
+        else {
+          const reg = await navigator.serviceWorker.ready;
+          await reg.pushManager.subscribe({ userVisibleOnly:true, applicationServerKey:b64(config.vapidPublic) });
+          await nSync();
+        }
+      }
+    } catch(e){ $("nHint").textContent = "Não foi possível ativar: " + e.message; }
+    $("nBtn").disabled = false; nRender();
+  });
 
   // ---------- app ----------
   if ("serviceWorker" in navigator){

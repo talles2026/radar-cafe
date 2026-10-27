@@ -29,7 +29,7 @@ jobs:
           python-version: "3.12"
       - name: Buscar dados de mercado
         run: |
-          pip install --quiet xlrd openpyxl
+          pip install --quiet xlrd openpyxl pywebpush
           python scripts/collect.py
       - name: Calcular indicadores do dia
         run: python scripts/indicadores.py
@@ -38,6 +38,12 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT: ${{ secrets.TELEGRAM_CHAT }}
         run: python scripts/telegram.py
+      - name: Enviar notificações no celular
+        env:
+          VAPID_PRIVATE: ${{ secrets.VAPID_PRIVATE }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python scripts/push.py
       - name: Gravar no repositório
         run: |
           git config user.name "radar-cafe-bot"

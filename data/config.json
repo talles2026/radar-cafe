@@ -1,1 +1,6 @@
-{"telegram": null}
+{
+ "telegram": null,
+ "vapidPublic": "BHor8Fa27BtK97A6O-F6rtbHgVVVcJ6MUKuXmuQBfN8xkVDJsLz7wgSzWB4ETzD_rgn6ZD44b6sjsSdVVBemNZk",
+ "supabaseUrl": null,
+ "supabaseAnon": null
+}
