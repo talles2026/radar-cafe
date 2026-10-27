@@ -303,6 +303,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
           <label><input type="checkbox" id="nCepea" checked> CEPEA do dia (1 aviso à tarde)</label>
           <label><input type="checkbox" id="nForte" checked> Movimento forte na bolsa (2% ou mais)</label>
           <label><input type="checkbox" id="nSinal" checked> Mudança no Sinal do Radar</label>
+          <label><input type="checkbox" id="nAbertura"> Abertura do mercado (por volta das 6h30)</label>
         </fieldset>
         <div class="fields">
           <div class="field"><label for="nAA">Arábica acima de (R$)</label><input id="nAA" type="number" inputmode="numeric" placeholder="ex.: 1700"></div>
@@ -337,7 +338,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   <footer class="assinatura">
     <span class="marca">Radar do Café</span>
     <span>desenvolvido por <b>Talles Eugenio</b></span>
-    <span class="versao">versão 27/10 · 15h35</span>
+    <span class="versao">versão 27/10 · 16h15</span>
   </footer>
 </div>
 
@@ -785,11 +786,11 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   document.addEventListener("visibilitychange", () => { if (!document.hidden) load(); });
 
   // ---------- notificações ----------
-  const N_IDS = ["nArabica","nConilon","nCepea","nForte","nSinal","nAA","nAB","nCA","nCB"];
+  const N_IDS = ["nArabica","nConilon","nCepea","nForte","nSinal","nAbertura","nAA","nAB","nCA","nCB"];
   try { const v = JSON.parse(localStorage.getItem("radar-notif-prefs")||"null"); if (v) N_IDS.forEach(id=>{ if (id in v){ const el=$(id); if (el.type==="checkbox") el.checked=!!v[id]; else el.value=v[id]; } }); } catch(e){}
   const num = id => { const v = +$(id).value; return v>0 ? v : null; };
   function nPrefs(){
-    return { arabica:$("nArabica").checked, conilon:$("nConilon").checked, cepea:$("nCepea").checked, forte:$("nForte").checked, sinal:$("nSinal").checked,
+    return { arabica:$("nArabica").checked, conilon:$("nConilon").checked, cepea:$("nCepea").checked, forte:$("nForte").checked, sinal:$("nSinal").checked, abertura:$("nAbertura").checked,
       alvos:{ arabica:{acima:num("nAA"), abaixo:num("nAB")}, conilon:{acima:num("nCA"), abaixo:num("nCB")} } };
   }
   function nSaveLocal(){ try{ const o={}; N_IDS.forEach(id=>{ const el=$(id); o[id]= el.type==="checkbox" ? el.checked : el.value; }); localStorage.setItem("radar-notif-prefs", JSON.stringify(o)); }catch(e){} }

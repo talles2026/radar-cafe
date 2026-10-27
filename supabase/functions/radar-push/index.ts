@@ -76,6 +76,17 @@ Deno.serve(async () => {
     await db.from("radar_estado").upsert({ chave: "sinal_" + prod, valor: r.sinal, atualizado: new Date().toISOString() });
   }
 
+  // ---- abertura do mercado (uma vez por dia, entre 6h e 11h de Brasília, quando NY já negociou hoje) ----
+  const horaBR = new Date(Date.now() - 3 * 3600e3).getUTCHours();
+  const ind = await json("data/indicadores.json").catch(() => null);
+  const A = ind?.arabica;
+  if (A && A.bolsaData === hoje && horaBR >= 6 && horaBR < 11) {
+    const partes = [`NY ${br(A.bolsaUltimo)} ¢/lb (${pct(A.bolsaVar1d ?? 0)})`];
+    if (ind.dolar?.ultimo) partes.push(`dólar R$ ${br(ind.dolar.ultimo, 3)}`);
+    if (A.fisicoEstimadoHoje) partes.push(`arábica físico estimado R$ ${br(A.fisicoEstimadoHoje, 0)}`);
+    ev.push({ chave: `abertura-${hoje}`, prod: "*", tipo: "abertura", titulo: `Abertura do café · ${dbr(hoje)}`, texto: partes.join(" · ") });
+  }
+
   // ---- envio por celular ----
   const { data: subs } = await db.from("radar_inscricoes").select("id,endpoint,p256dh,auth,prefs,visto");
   let enviados = 0, removidos = 0;
@@ -83,7 +94,7 @@ Deno.serve(async () => {
     const p = s.prefs ?? {};
     const sid = s.id.slice(0, 8);
     const msgs: { chave: string; titulo: string; texto: string }[] = [];
-    for (const e of ev) if (p[e.prod] && p[e.tipo]) msgs.push({ chave: `${e.chave}:${sid}`, titulo: e.titulo, texto: e.texto });
+    for (const e of ev) if ((e.prod === "*" || p[e.prod]) && p[e.tipo]) msgs.push({ chave: `${e.chave}:${sid}`, titulo: e.titulo, texto: e.texto });
     for (const prod of ["arabica", "conilon"]) {
       const c = ultimoCep[prod], alvo = p.alvos?.[prod] ?? {};
       if (!p[prod] || !c) continue;
