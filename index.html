@@ -432,7 +432,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     if (cL){ $("cepea").innerHTML = esc(fmtN(cL.cepeaArabica)) + '<span class="unit">R$/saca</span>';
       const ch = cP ? cL.cepeaArabica/cP.cepeaArabica-1 : (cL.cepeaVar!=null? cL.cepeaVar/100 : null);
       $("cepeaChg").className = "chg " + (ch==null?"flat":cls(ch));
-      $("cepeaChg").textContent = (ch==null?"":pct(ch)+" no dia · ") + "em " + dBR(cL.date); }
+      $("cepeaChg").textContent = (ch==null?"":pct(ch)+" no dia · ") + "em " + dBR(cL.date) + (cL.date < todayISO() ? " · o de hoje sai no fim da tarde" : ""); }
     if (L){ $("kc").textContent = fmtN(L.kc);
       const today = new Date().toLocaleDateString("sv-SE",{timeZone:"America/Sao_Paulo"});
       const lq = lastQ.find(x=>x.date===L.date) || {};
