@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-27T18:48:23Z",
+ "geradoEm": "2026-10-27T19:12:13Z",
  "arabica": {
   "cepea": 1627.46,
   "cepeaData": "2026-10-26",
@@ -67,17 +67,17 @@
   }
  },
  "dolar": {
-  "ultimo": 5.3446,
+  "ultimo": 5.3445,
   "data": "2026-10-27",
-  "var1d": -0.012982695894661167,
-  "var5d": 0.06300966625561877
+  "var1d": -0.013001163456388909,
+  "var5d": 0.06298977684076523
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 57.4,
-   "tmin": 15.3,
-   "tmax": 28.8,
+   "chuva7d": 45.6,
+   "tmin": 15.5,
+   "tmax": 28.5,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
@@ -96,9 +96,9 @@
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 59.2,
+   "chuva7d": 54.1,
    "tmin": 19.9,
-   "tmax": 31.7,
+   "tmax": 31.3,
    "nota": "Chuva boa para a florada e o pegamento"
   }
  ]
