@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-27T17:05:24Z",
+ "updatedAt": "2026-10-27T17:46:15Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -11,23 +11,23 @@
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "294.45 (KCZ6) em 2026-10-27T12:55:22.000-0400"
+   "detalhe": "294.25 (KCZ6) em 2026-10-27T13:34:41.000-0400"
   },
   "Londres (Notícias Agrícolas)": {
    "ok": true,
    "detalhe": "10 pregões até 2026-10-26"
   },
   "Dólar PTAX (Banco Central)": {
-   "ok": false,
-   "detalhe": "The read operation timed out"
+   "ok": true,
+   "detalhe": "276 dias"
   },
   "Dólar comercial histórico (CNBC)": {
    "ok": true,
-   "detalhe": "553 dias"
+   "detalhe": "544 dias"
   },
   "Dólar agora (CNBC)": {
    "ok": true,
-   "detalhe": "5.3435 em 2026-10-27T13:05:00.000-0400"
+   "detalhe": "5.3305 em 2026-10-27T13:46:00.000-0400"
   },
   "CEPEA arábica (Notícias Agrícolas)": {
    "ok": true,
