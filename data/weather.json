@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-27T18:33:39Z",
+ "updatedAt": "2026-10-27T18:48:19Z",
  "regioes": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
@@ -28,9 +28,9 @@
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 86.7,
+   "chuva7d": 78.7,
    "tmin": 13.1,
-   "tmax": 27.3,
+   "tmax": 27.6,
    "dias": [
     "2026-10-27",
     "2026-10-28",
@@ -41,20 +41,20 @@
     "2026-11-02"
    ],
    "chuvaDia": [
+    0.0,
     0.1,
-    0.5,
-    23.0,
-    44.9,
-    9.5,
-    6.2,
+    30.8,
+    39.9,
+    3.0,
+    2.4,
     2.5
    ],
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 65.5,
-   "tmin": 17.6,
+   "chuva7d": 67.6,
+   "tmin": 18.0,
    "tmax": 28.3,
    "dias": [
     "2026-10-27",
@@ -66,12 +66,12 @@
     "2026-11-02"
    ],
    "chuvaDia": [
-    7.2,
-    1.7,
-    13.6,
-    21.6,
-    11.6,
-    8.4,
+    11.3,
+    10.7,
+    11.2,
+    15.6,
+    8.9,
+    8.5,
     1.4
    ],
    "nota": "Chuva boa para a florada e o pegamento"
