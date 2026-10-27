@@ -1,0 +1,105 @@
+{
+ "geradoEm": "2026-10-27T16:28:37Z",
+ "arabica": {
+  "cepea": 1627.46,
+  "cepeaData": "2026-10-26",
+  "fisicoEstimadoHoje": 1566,
+  "bolsaUltimo": 293.8,
+  "bolsaData": "2026-10-27",
+  "bolsaVar1d": -0.023758099352051754,
+  "bolsaVar5d": -0.05621586893671704,
+  "bolsaVar20d": 0.015028502332009142,
+  "previsao": {
+   "7d": {
+    "centro": 1579,
+    "faixa70": [
+     1465,
+     1703
+    ],
+    "chanceAlta": 0.55
+   },
+   "15d": {
+    "centro": 1595,
+    "faixa70": [
+     1427,
+     1784
+    ],
+    "chanceAlta": 0.57
+   }
+  },
+  "fisicoVsBolsa": {
+   "hoje": -0.2568,
+   "media": -0.2217,
+   "dias": 10
+  }
+ },
+ "conilon": {
+  "cepea": 954.64,
+  "cepeaData": "2026-10-26",
+  "fisicoEstimadoHoje": 955,
+  "bolsaUltimo": 3194.0,
+  "bolsaData": "2026-10-26",
+  "bolsaVar1d": -0.010532837670384154,
+  "bolsaVar5d": -0.08323765786452353,
+  "bolsaVar20d": -0.06389214536928489,
+  "previsao": {
+   "7d": {
+    "centro": 956,
+    "faixa70": [
+     895,
+     1022
+    ],
+    "chanceAlta": 0.51
+   },
+   "15d": {
+    "centro": 958,
+    "faixa70": [
+     868,
+     1057
+    ],
+    "chanceAlta": 0.51
+   }
+  },
+  "fisicoVsBolsa": {
+   "hoje": -0.0944,
+   "media": -0.0636,
+   "dias": 10
+  }
+ },
+ "dolar": {
+  "ultimo": 5.3346,
+  "data": "2026-10-27",
+  "var1d": -0.030196156852764222,
+  "var5d": 0.06394096529716786
+ },
+ "clima": [
+  {
+   "regiao": "Chapada de Minas (Angelândia)",
+   "chuva7d": 57.4,
+   "tmin": 15.3,
+   "tmax": 28.8,
+   "nota": "Chuva boa para a florada e o pegamento"
+  },
+  {
+   "regiao": "Sul de Minas (Varginha)",
+   "chuva7d": 86.7,
+   "tmin": 13.1,
+   "tmax": 27.3,
+   "nota": "Chuva boa para a florada e o pegamento"
+  },
+  {
+   "regiao": "Cerrado Mineiro (Patrocínio)",
+   "chuva7d": 65.5,
+   "tmin": 17.6,
+   "tmax": 28.3,
+   "nota": "Chuva boa para a florada e o pegamento"
+  },
+  {
+   "regiao": "Conilon ES (Linhares)",
+   "chuva7d": 59.2,
+   "tmin": 19.9,
+   "tmax": 31.7,
+   "nota": "Chuva boa para a florada e o pegamento"
+  }
+ ]
+}

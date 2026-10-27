@@ -130,6 +130,27 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
 .clima-row{padding:11px 0;border-bottom:1px solid var(--line)}
 .clima-row:last-child{border-bottom:0}
 .clima-row .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.sinal{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px 14px}
+.sinal details{border-bottom:1px solid var(--line);padding:8px 0}
+.sinal details:last-child{border-bottom:0}
+.sinal summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center}
+.sinal summary::-webkit-details-marker{display:none}
+.sinal summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.sig{font:700 .72rem var(--body);text-transform:uppercase;letter-spacing:.06em;padding:5px 9px;border-radius:6px;white-space:nowrap}
+.sig.vender{background:color-mix(in srgb,var(--down) 15%,transparent);color:var(--down)}
+.sig.segurar{background:color-mix(in srgb,var(--up) 15%,transparent);color:var(--up)}
+.sig.aguardar{background:var(--accent-soft);color:var(--accent)}
+.sinal .txt{min-width:0;font-size:.86rem;line-height:1.35}
+.sinal .txt b{font-weight:600}
+.sinal .conf{font-size:.7rem;color:var(--muted);text-align:right;white-space:nowrap}
+.sinal .chev{transition:transform .15s}
+.sinal details[open] .chev{transform:rotate(90deg)}
+.sinal ul{margin:8px 0 0;padding-left:18px;font-size:.84rem;color:var(--ink);display:grid;gap:4px}
+.sinal .meta{font-size:.72rem;color:var(--muted);margin-top:6px}
+.fase{font-size:.75rem;margin-top:3px}
+.fase b{font-weight:600}
+.hist-sig{display:grid;gap:6px;margin-top:4px}
+.hist-sig div{display:grid;grid-template-columns:auto auto 1fr auto;gap:8px;align-items:center;font-size:.8rem}
 .btn.wa{background:#1F8A4C;border-color:#1F8A4C;color:#fff}
 .preview{font:400 .82rem var(--mono);white-space:pre-wrap;background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:10px;margin:0;overflow-wrap:anywhere}
 </style>
@@ -157,6 +178,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
         <div class="mini"><div class="s" id="rcLbl">Londres · US$/t</div><div class="v" id="rc">–</div><div class="s" id="rcChg">&nbsp;</div></div>
         <div class="mini"><div class="s">Conilon CEPEA</div><div class="v" id="con">–</div><div class="s" id="conChg">&nbsp;</div></div>
       </div>
+      <div class="sinal" id="sinal" hidden aria-label="Sinal do Radar"></div>
     </section>
 
     <section aria-labelledby="h-prev">
@@ -247,7 +269,9 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     </section>
 
     <section aria-labelledby="h-acc">
-      <h2 id="h-acc">Quanto o modelo tem acertado</h2>
+      <h2 id="h-acc">Placar</h2>
+      <div class="card" style="padding-block:12px" id="placar"><div class="empty" style="border:0;padding:0">Os sinais do Radar são conferidos 7 e 15 dias depois.</div></div>
+      <div class="eyebrow" style="margin:14px 0 6px">Faixas da previsão</div>
       <div class="card" style="padding-block:12px" id="acc"><div class="empty" style="border:0;padding:0">Calculando…</div></div>
     </section>
 
@@ -273,6 +297,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     </section>
 
     <section class="span foot">
+      <div><b>Sobre os sinais.</b> O sinal do Radar é escrito pelo Claude duas vezes por dia, cruzando previsão, físico × bolsa, dólar, clima e notícias. É uma ajuda para pensar a venda, não uma ordem nem recomendação de investimento; a decisão é sua. O placar mostra quantas vezes ele teria ajudado.</div>
       <div><b>Como a previsão é feita.</b> O modelo mede a tendência recente e a volatilidade do café em NY convertido em reais, dá mais peso aos últimos pregões e devolve uma faixa de preço. Ele não sabe de geada, greve ou relatório que ainda vão sair. Use como referência para negociar, junto com o que você vê no mercado.</div>
       <div id="srcs"></div>
       <div id="fontes"></div>
@@ -292,7 +317,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   const esc = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const dBR = iso => { if(!iso) return ""; const [y,m,d]=iso.slice(0,10).split("-"); return d+"/"+m; };
 
-  let quotes = [], meta = null, weather = null, fontes = null, config = null, H = 7, PER = 66, CTX = null;
+  let quotes = [], meta = null, weather = null, fontes = null, config = null, recs = null, H = 7, PER = 66, CTX = null;
   try { const v = localStorage.getItem("radar-per"); if (v && [22,66,130,260].includes(+v)) PER = +v; } catch(e){}
   try { const s = localStorage.getItem("radar-h"); if (s && [3,7,15].includes(+s)) H = +s; } catch(e){}
 
@@ -480,13 +505,71 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     if (weather && weather.regioes && weather.regioes.length){
       const maxR = Math.max(10, ...weather.regioes.flatMap(w=>(w.chuvaDia||[]).map(x=>x||0)));
       const wd = ["dom","seg","ter","qua","qui","sex","sáb"];
-      $("clima").innerHTML = `<div class="card">${weather.regioes.map(w=>`<div class="clima-row"><div class="top"><div class="l" style="min-width:0"><b>${esc(w.regiao)}</b><div style="font-size:.75rem;color:var(--muted)">${esc(w.nota||"")}</div></div><div class="r num" style="text-align:right;white-space:nowrap">${w.chuva7d!=null?esc(fmtN(w.chuva7d,0))+" mm":"–"}<div style="font-size:.72rem;color:var(--muted)">${w.tmin!=null?"mín. "+esc(fmtN(w.tmin,0))+" °C":""}</div></div></div>${(w.chuvaDia&&w.dias)?`<div class="rain" aria-hidden="true">${w.chuvaDia.map(x=>`<i style="height:${Math.max(2,Math.round((x||0)/maxR*34))}px" title="${esc(fmtN(x||0,0))} mm"></i>`).join("")}</div><div class="rain-l">${w.dias.map(d=>`<span>${wd[new Date(d+"T12:00:00").getDay()]}</span>`).join("")}</div>`:""}</div>`).join("")}</div><p class="caption" style="margin-top:8px">Barras: chuva prevista por dia. Total da semana e menor temperatura à direita. Fonte: Open-Meteo.</p>`;
+      $("clima").innerHTML = `<div class="card">${weather.regioes.map(w=>`<div class="clima-row"><div class="top"><div class="l" style="min-width:0"><b>${esc(w.regiao)}</b>${faseSafra(w.regiao, w)}</div><div class="r num" style="text-align:right;white-space:nowrap">${w.chuva7d!=null?esc(fmtN(w.chuva7d,0))+" mm":"–"}<div style="font-size:.72rem;color:var(--muted)">${w.tmin!=null?"mín. "+esc(fmtN(w.tmin,0))+" °C":""}</div></div></div>${(w.chuvaDia&&w.dias)?`<div class="rain" aria-hidden="true">${w.chuvaDia.map(x=>`<i style="height:${Math.max(2,Math.round((x||0)/maxR*34))}px" title="${esc(fmtN(x||0,0))} mm"></i>`).join("")}</div><div class="rain-l">${w.dias.map(d=>`<span>${wd[new Date(d+"T12:00:00").getDay()]}</span>`).join("")}</div>`:""}</div>`).join("")}</div><p class="caption" style="margin-top:8px">Barras: chuva prevista por dia. Total da semana e menor temperatura à direita. Fonte: Open-Meteo.</p>`;
     }
     if (meta){
       if (meta.sources && meta.sources.length){
         $("srcs").innerHTML = "<b>Fontes da última coleta:</b> " + meta.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.nome)}</a>`).join(" · ");
       }
     }
+  }
+
+  // ---------- calendário da safra ----------
+  function faseSafra(regiao, w){
+    const mes = new Date().getMonth()+1, conilon = /Conilon/i.test(regiao);
+    const chuva = w.chuva7d ?? 0, tmin = w.tmin ?? 99, tmax = w.tmax ?? 0;
+    let fase, efeito, tom = "flat";
+    const F = conilon
+      ? (mes<=3 ? "granação" : mes<=7 ? "colheita" : mes<=10 ? "florada" : "chumbinho e expansão")
+      : (mes<=3 ? "granação" : mes===4 ? "maturação" : mes<=8 ? "colheita" : mes<=10 ? "florada" : mes===11 ? "pegamento e chumbinho" : "chumbinho e expansão");
+    fase = F;
+    if (tmin <= 3){ efeito = "risco de geada"; tom = "down"; }
+    else if (/florada|pegamento/.test(F)){
+      if (chuva >= 30){ efeito = "chuva favorece o pegamento"; tom = "up"; }
+      else if (chuva < 10 && tmax >= 32){ efeito = "calor e seca podem derrubar flores"; tom = "down"; }
+      else { efeito = conilon ? "irrigação ajuda nesta fase" : "chuva fraca, atenção"; }
+    } else if (/chumbinho|granação|expansão/.test(F)){
+      if (chuva >= 30){ efeito = "boa umidade para encher os grãos"; tom = "up"; }
+      else if (chuva < 10){ efeito = "veranico prejudica o enchimento"; tom = "down"; }
+      else { efeito = "umidade razoável"; }
+    } else if (F === "colheita"){
+      if (chuva >= 20){ efeito = "chuva atrapalha colheita e secagem"; tom = "down"; }
+      else { efeito = "tempo firme ajuda a colheita"; tom = "up"; }
+    } else { efeito = "fase de maturação"; }
+    return `<div class="fase"><b>${esc(fase.charAt(0).toUpperCase()+fase.slice(1))}</b> · <span class="${tom}">${esc(efeito)}</span></div>`;
+  }
+
+  // ---------- sinal do Radar ----------
+  const SIG = { vender:"Vender parte", segurar:"Segurar", aguardar:"Aguardar" };
+  function renderSinal(){
+    const itens = (recs && recs.itens) || []; if (!itens.length){ $("sinal").hidden = true; return; }
+    const ult = {}; itens.forEach(r=>{ const k=r.produto; if (!ult[k] || (r.data+r.hora) > (ult[k].data+ult[k].hora)) ult[k]=r; });
+    const ordem = ["arabica","conilon"].filter(k=>ult[k]);
+    $("sinal").innerHTML = ordem.map(k=>{ const r = ult[k];
+      return `<details><summary><span class="sig ${esc(r.sinal)}">${esc(SIG[r.sinal]||r.sinal)}</span><span class="txt"><b>${esc(PRODS[k].nome.charAt(0).toUpperCase()+PRODS[k].nome.slice(1))}</b></span><span class="conf">confiança ${esc(r.confianca)} <span class="chev" aria-hidden="true">›</span></span></summary>
+        <p style="margin:8px 0 0;font-size:.86rem">${esc(r.resumo)}</p>
+        <ul>${(r.motivos||[]).map(m=>`<li>${esc(m)}</li>`).join("")}</ul>
+        <div class="meta">Sinal do Radar de ${esc(dBR(r.data))} às ${esc(r.hora)}. Ajuda para decidir, não é recomendação de investimento.</div></details>`; }).join("");
+    $("sinal").hidden = false;
+  }
+  // placar: confere cada sinal com o CEPEA 7 e 15 dias depois
+  function renderPlacar(){
+    const itens = ((recs && recs.itens) || []).slice().sort((a,b)=>(a.data+a.hora)<(b.data+b.hora)?-1:1);
+    if (!itens.length) return;
+    const lq = quotes.slice().sort((a,b)=>a.date<b.date?-1:1);
+    const depois = (prod, d0, n) => { const alvo = new Date(d0+"T12:00:00"); alvo.setDate(alvo.getDate()+n); const iso = alvo.toISOString().slice(0,10);
+      const c = PRODS[prod].cep; return lq.find(x=>x.date>=iso && x[c]>0); };
+    const linhas = [], tot = {7:[0,0],15:[0,0]};
+    itens.forEach(r=>{
+      const res = {}; [7,15].forEach(n=>{ const q = depois(r.produto, r.cepeaData, n); if (!q || r.sinal==="aguardar") return;
+        const ret = q[PRODS[r.produto].cep]/r.cepeaRef - 1, ok = r.sinal==="vender" ? ret<0 : ret>0;
+        res[n] = { ret, ok }; tot[n][1]++; if (ok) tot[n][0]++; });
+      linhas.push({ r, res });
+    });
+    const resumo = [7,15].map(n=> tot[n][1] ? `<div class="row"><div class="l"><b>Depois de ${n} dias</b><span>o sinal teria ajudado em ${tot[n][0]} de ${tot[n][1]} vezes</span><div class="meter"><i style="width:${Math.round(tot[n][0]/tot[n][1]*100)}%"></i></div></div><div class="r num">${Math.round(tot[n][0]/tot[n][1]*100)}%</div></div>`
+      : `<div class="row"><div class="l"><b>Depois de ${n} dias</b><span>primeira conferência em ${dBR((()=>{const d=new Date(itens[0].cepeaData+"T12:00:00"); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10);})())}</span></div><div class="r num">–</div></div>`).join("");
+    const ult = linhas.slice(-6).reverse().map(({r,res})=>`<div><span class="sig ${esc(r.sinal)}" style="font-size:.62rem;padding:3px 6px">${esc(SIG[r.sinal]||r.sinal)}</span><span class="num">${esc(dBR(r.data))}</span><span style="color:var(--muted);min-width:0">${esc(PRODS[r.produto].nome)}</span><span class="num">${res[15] ? `<span class="${res[15].ok?"up":"down"}">${res[15].ok?"✓":"✗"} ${esc(pct(res[15].ret))}</span>` : res[7] ? `<span class="${res[7].ok?"up":"down"}">${res[7].ok?"✓":"✗"} ${esc(pct(res[7].ret))}</span>` : r.sinal==="aguardar" ? "sem placar" : "aguardando"}</span></div>`).join("");
+    $("placar").innerHTML = resumo + `<div class="eyebrow" style="margin-top:12px">Últimos sinais</div><div class="hist-sig">${ult}</div><p class="caption" style="margin-top:10px">"Vender parte" acerta se o CEPEA caiu depois; "Segurar" acerta se subiu. "Aguardar" não entra na conta.</p>`;
   }
 
   // ---------- calculadora ----------
@@ -633,7 +716,8 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   async function load(){
     const bust = "?t=" + Date.now();
     const get = f => fetch("data/" + f + bust, {cache:"no-store"}).then(r => { if(!r.ok) throw new Error(r.status); return r.json(); });
-    const [q, m, w, st, cf] = await Promise.allSettled([get("quotes.json"), get("meta.json"), get("weather.json"), get("status.json"), get("config.json")]);
+    const [q, m, w, st, cf, rc] = await Promise.allSettled([get("quotes.json"), get("meta.json"), get("weather.json"), get("status.json"), get("config.json"), get("recomendacoes.json")]);
+    if (rc.status === "fulfilled") recs = rc.value;
     if (cf.status === "fulfilled") config = cf.value;
     if (st.status === "fulfilled") fontes = st.value;
     if (q.status === "fulfilled") quotes = q.value;
@@ -641,7 +725,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     if (w.status === "fulfilled") weather = w.value;
     $("nodb").hidden = navigator.onLine;
     if (q.status === "rejected" && !quotes.length) $("fresh").textContent = "não foi possível carregar";
-    render(); renderFontes(); renderCalc(); renderBasis(); renderHist(); renderResumo();
+    render(); renderSinal(); renderPlacar(); renderFontes(); renderCalc(); renderBasis(); renderHist(); renderResumo();
   }
   load();
   setInterval(load, 10 * 60 * 1000);

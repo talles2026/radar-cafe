@@ -1,0 +1,36 @@
+{
+ "itens": [
+  {
+   "id": "2026-10-27-tarde-arabica",
+   "data": "2026-10-27",
+   "hora": "13:40",
+   "produto": "arabica",
+   "sinal": "segurar",
+   "confianca": "baixa",
+   "resumo": "Físico ficou barato em relação a NY depois da queda da bolsa; a previsão tem leve viés de alta, mas com faixa larga.",
+   "motivos": [
+    "CEPEA está 25,7% abaixo de NY em reais, mais que a média recente (22,2%): o físico não acompanhou a alta do dólar.",
+    "Previsão de 15 dias com 57% de chance de alta, faixa provável de R$ 1.427 a R$ 1.784.",
+    "Contra: chuva boa na florada em Minas reforça a expectativa de safra maior em 2027."
+   ],
+   "cepeaRef": 1627.46,
+   "cepeaData": "2026-10-26"
+  },
+  {
+   "id": "2026-10-27-tarde-conilon",
+   "data": "2026-10-27",
+   "hora": "13:40",
+   "produto": "conilon",
+   "sinal": "aguardar",
+   "confianca": "baixa",
+   "resumo": "Londres caiu 8% em cinco pregões e a previsão está sem direção; melhor esperar o mercado firmar.",
+   "motivos": [
+    "Londres recuou de US$ 3.484 para US$ 3.194 por tonelada desde 19/10.",
+    "Conilon CEPEA está 9,4% abaixo de Londres em reais, pouco abaixo da média recente (6,4%).",
+    "Previsão de 15 dias equilibrada (51% de chance de alta)."
+   ],
+   "cepeaRef": 954.64,
+   "cepeaData": "2026-10-26"
+  }
+ ]
+}

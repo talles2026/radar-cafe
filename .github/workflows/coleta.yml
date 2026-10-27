@@ -29,6 +29,8 @@ jobs:
           python-version: "3.12"
       - name: Buscar dados de mercado
         run: python scripts/collect.py
+      - name: Calcular indicadores do dia
+        run: python scripts/indicadores.py
       - name: Enviar resumo e alertas no Telegram
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
