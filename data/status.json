@@ -1,13 +1,17 @@
 {
- "updatedAt": "2026-10-27T16:30:27Z",
+ "updatedAt": "2026-10-27T16:47:58Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
    "detalhe": "512 pregões"
   },
+  "NY 2º vencimento (CNBC)": {
+   "ok": false,
+   "detalhe": "0 pregões"
+  },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "294.5 em 2026-10-27T12:20:23.000-0400"
+   "detalhe": "294.85 (KCZ6) em 2026-10-27T12:37:53.000-0400"
   },
   "Londres (Notícias Agrícolas)": {
    "ok": true,
@@ -17,13 +21,13 @@
    "ok": true,
    "detalhe": "276 dias"
   },
-  "Dólar agora (AwesomeAPI)": {
-   "ok": false,
-   "detalhe": "HTTP Error 429: Too Many Requests"
+  "Dólar comercial histórico (CNBC)": {
+   "ok": true,
+   "detalhe": "553 dias"
   },
   "Dólar agora (CNBC)": {
    "ok": true,
-   "detalhe": "5.347 em 2026-10-27T12:30:00.000-0400"
+   "detalhe": "5.3484 em 2026-10-27T12:47:00.000-0400"
   },
   "CEPEA arábica (Notícias Agrícolas)": {
    "ok": true,
@@ -32,6 +36,18 @@
   "CEPEA conilon (Notícias Agrícolas)": {
    "ok": true,
    "detalhe": "10 dias"
+  },
+  "CEPEA série completa (arábica)": {
+   "ok": false,
+   "detalhe": "Workbook corruption: seen[2] == 4"
+  },
+  "CEPEA série completa (conilon)": {
+   "ok": false,
+   "detalhe": "Workbook corruption: seen[2] == 4"
+  },
+  "Emenda de contratos": {
+   "ok": true,
+   "detalhe": "NY: 0 virada(s); Londres: 0 virada(s)"
   },
   "Clima (Open-Meteo)": {
    "ok": true,
