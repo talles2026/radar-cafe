@@ -139,8 +139,11 @@ def fetch_kc():
     try:
         l2 = cnbc_quote("@KC.2", -5)
         l2["preco"] = round(l2["preco"], 2)
-    except Exception:
-        pass
+        if not h2:
+            status("NY 2º vencimento (CNBC)", True, f"cotação do dia {l2['preco']} ({l2['contrato']}); suficiente para a emenda")
+    except Exception as e:
+        if not h2:
+            status("NY 2º vencimento (CNBC)", False, e)
     return h1, h2, l1, l2
 
 
