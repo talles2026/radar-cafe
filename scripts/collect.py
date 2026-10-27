@@ -57,48 +57,83 @@ def is_weekday(iso):
 
 # ---------------- fontes ----------------
 
+STATUS = {}
+
+
+def status(fonte, ok, detalhe=""):
+    STATUS[fonte] = {"ok": ok, "detalhe": str(detalhe)[:200]}
+    log(fonte, "OK" if ok else "FALHOU", detalhe)
+
+
+def cnbc_num(v):
+    return float(str(v).replace(",", "").replace("%", "").strip())
+
+
 def fetch_kc():
-    """Fechamentos diários do café arábica NY em ¢/lb -> {data: valor}."""
-    out = {}
+    """Café arábica NY em ¢/lb -> ({data: fechamento}, {data, preco, hora} do pregão em andamento)."""
+    hist, live = {}, None
+    # 1) CNBC: histórico de 1 ano
     try:
-        js = json.loads(get("https://query1.finance.yahoo.com/v8/finance/chart/KC=F?range=1y&interval=1d"))
-        res = js["chart"]["result"][0]
-        ts = res["timestamp"]
-        closes = res["indicators"]["quote"][0]["close"]
-        # o timestamp do Yahoo é a abertura do pregão em Nova York
-        for t, c in zip(ts, closes):
-            if c is None:
-                continue
-            d = datetime.fromtimestamp(t, tz=timezone(timedelta(hours=-5))).date().isoformat()
-            out[d] = round(float(c), 2)
-        log(f"KC Yahoo: {len(out)} pregões")
-        return out
+        js = json.loads(get("https://ts-api.cnbc.com/harmony/app/charts/1Y.json?symbol=%40KC.1"))
+        for b in js["barData"]["priceBars"]:
+            t = str(b.get("tradeTime") or "")
+            if len(t) >= 8 and b.get("close") not in (None, ""):
+                hist[f"{t[:4]}-{t[4:6]}-{t[6:8]}"] = round(cnbc_num(b["close"]), 2)
+        status("NY histórico (CNBC)", bool(hist), f"{len(hist)} pregões")
     except Exception as e:
-        log("KC Yahoo falhou:", e)
+        status("NY histórico (CNBC)", False, e)
+    # 2) Yahoo como reserva do histórico (e às vezes traz o dia corrente)
+    if len(hist) < 20:
+        for host in ("query2", "query1"):
+            try:
+                js = json.loads(get(f"https://{host}.finance.yahoo.com/v8/finance/chart/KC=F?range=1y&interval=1d"))
+                res = js["chart"]["result"][0]
+                for t, c in zip(res["timestamp"], res["indicators"]["quote"][0]["close"]):
+                    if c is not None:
+                        d = datetime.fromtimestamp(t, tz=timezone(timedelta(hours=-5))).date().isoformat()
+                        hist[d] = round(float(c), 2)
+                status("NY histórico (Yahoo)", True, f"{len(hist)} pregões")
+                break
+            except Exception as e:
+                status("NY histórico (Yahoo)", False, e)
+    # 3) Cotação do momento (CNBC)
     try:
-        txt = get("https://stooq.com/q/d/l/?s=kc.f&i=d")
-        for row in csv.DictReader(io.StringIO(txt)):
-            if row.get("Close"):
-                out[row["Date"]] = round(float(row["Close"]), 2)
-        log(f"KC Stooq: {len(out)} pregões")
+        js = json.loads(get("https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol"
+                            "?symbols=%40KC.1&requestMethod=itv&noform=1&partnerId=2&fund=1&exthrs=1&output=json"))
+        q = js["FormattedQuoteResult"]["FormattedQuote"][0]
+        preco = cnbc_num(q["last"])
+        hora = q.get("last_time") or q.get("last_timedate") or ""
+        try:
+            d = datetime.fromisoformat(hora.replace("Z", "+00:00")[:25]).date().isoformat()
+        except ValueError:
+            d = datetime.now(timezone(timedelta(hours=-5))).date().isoformat()
+        live = {"date": d, "preco": round(preco, 2), "hora": hora, "contrato": q.get("altSymbol") or q.get("symbol")}
+        status("NY agora (CNBC)", True, f"{preco} em {hora}")
     except Exception as e:
-        log("KC Stooq falhou:", e)
-    return out
+        status("NY agora (CNBC)", False, e)
+    return hist, live
 
 
 def fetch_usd():
-    """Dólar PTAX venda (SGS série 1) -> {data: valor}."""
-    out = {}
+    """Dólar PTAX venda (SGS série 1) -> {data: valor}; mais o comercial do momento."""
+    out, live = {}, None
     try:
         ini = (date.today() - timedelta(days=KEEP_DAYS)).strftime("%d/%m/%Y")
         js = json.loads(get(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json&dataInicial={ini}"))
         for item in js:
             d = datetime.strptime(item["data"], "%d/%m/%Y").date().isoformat()
             out[d] = float(item["valor"])
-        log(f"PTAX: {len(out)} dias")
+        status("Dólar PTAX (Banco Central)", True, f"{len(out)} dias")
     except Exception as e:
-        log("PTAX falhou:", e)
-    return out
+        status("Dólar PTAX (Banco Central)", False, e)
+    try:
+        js = json.loads(get("https://economia.awesomeapi.com.br/json/last/USD-BRL"))["USDBRL"]
+        d = datetime.fromtimestamp(int(js["timestamp"]), tz=timezone(timedelta(hours=-3))).date().isoformat()
+        live = {"date": d, "valor": float(js["bid"]), "hora": js.get("create_date", "")}
+        status("Dólar agora (AwesomeAPI)", True, f"{js['bid']} em {live['hora']}")
+    except Exception as e:
+        status("Dólar agora (AwesomeAPI)", False, e)
+    return out, live
 
 
 def parse_cepea_table(html):
@@ -133,9 +168,9 @@ def fetch_cepea():
                 out.setdefault(d, {})[key] = v
                 if var is not None:
                     out[d][vkey] = var
-            log(f"{key}: {len(rows)} dias")
+            status(f"CEPEA {'arábica' if key == 'cepeaArabica' else 'conilon'} (Notícias Agrícolas)", bool(rows), f"{len(rows)} dias")
         except Exception as e:
-            log(f"{key} falhou:", e)
+            status(f"CEPEA {'arábica' if key == 'cepeaArabica' else 'conilon'} (Notícias Agrícolas)", False, e)
     return out
 
 
@@ -165,6 +200,7 @@ def fetch_weather():
                         "dias": d["time"], "chuvaDia": d["precipitation_sum"], "nota": nota})
         except Exception as e:
             log(f"clima {nome} falhou:", e)
+    status("Clima (Open-Meteo)", bool(out), f"{len(out)} regiões")
     return out
 
 
@@ -178,17 +214,33 @@ def main():
     except Exception:
         quotes = {}
 
-    kc, usd, cep = fetch_kc(), fetch_usd(), fetch_cepea()
+    (kc, kc_live), (usd, usd_live), cep = fetch_kc(), fetch_usd(), fetch_cepea()
     changed = 0
-    for src, field in ((kc, "kc"), (usd, "usd")):
-        for d, v in src.items():
-            if not is_weekday(d):
-                continue
-            q = quotes.setdefault(d, {"date": d})
-            if q.get(field) != v:
-                q[field] = v
-                q["updatedAt"] = now
-                changed += 1
+
+    def put(d, field, v):
+        nonlocal changed
+        if not is_weekday(d):
+            return
+        q = quotes.setdefault(d, {"date": d})
+        if q.get(field) != v:
+            q[field] = v
+            q["updatedAt"] = now
+            changed += 1
+
+    for d, v in kc.items():
+        put(d, "kc", v)
+    # pregão em andamento: guarda o preço do momento até sair o fechamento
+    if kc_live:
+        put(kc_live["date"], "kc", kc_live["preco"])
+        quotes.get(kc_live["date"], {})["kcHora"] = kc_live["hora"]
+    for d, v in usd.items():
+        put(d, "usd", v)
+        quotes.get(d, {}).pop("usdAoVivo", None)
+    # dólar do dia: usa o comercial do momento até sair a PTAX
+    if usd_live and usd_live["date"] not in usd:
+        put(usd_live["date"], "usd", usd_live["valor"])
+        if usd_live["date"] in quotes:
+            quotes[usd_live["date"]]["usdAoVivo"] = True
     for d, fields in cep.items():
         if not is_weekday(d):
             continue
@@ -208,6 +260,7 @@ def main():
     if w:
         WEATHER.write_text(json.dumps({"updatedAt": now, "regioes": w}, ensure_ascii=False, indent=1), "utf-8")
         log(f"weather.json: {len(w)} regiões")
+    (DATA / "status.json").write_text(json.dumps({"updatedAt": now, "fontes": STATUS}, ensure_ascii=False, indent=1), "utf-8")
 
 
 if __name__ == "__main__":

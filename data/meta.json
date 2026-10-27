@@ -1,19 +1,23 @@
 {
- "updatedAt": "2026-10-27T13:10:00Z",
- "headline": "NY devolveu parte da alta da semana passada",
- "summary": "O contrato de dezembro em Nova York fechou a segunda-feira (26/10) em 300,95 ¢/lb, depois de bater 316 no dia 21. No mês ainda sobe cerca de 4%. O indicador CEPEA do arábica subiu 1,6% no dia, e as cooperativas do Sul de Minas e do Cerrado reajustaram para cima. Esta é a carga inicial; a partir das próximas coletas a leitura traz clima, safra e notícias do dia.",
+ "updatedAt": "2026-10-27T15:55:00Z",
+ "headline": "Dólar disparou e NY recuou: café em reais ficou mais caro",
+ "summary": "O dólar PTAX fechou a segunda-feira (26/10) em R$ 5,50, alta de 9,2% num só dia, numa forte reação do mercado ao resultado da eleição. Nesta terça ele opera um pouco abaixo, perto de R$ 5,40. Em Nova York, o contrato de dezembro caiu para 300,95 ¢/lb, longe do pico de 316 do dia 21. Com o dólar mais alto, o café em reais tende a subir mesmo com NY fraca, e as cooperativas de Minas reajustaram para cima. Nos próximos dias, o dólar deve pesar mais que a bolsa: atenção à volatilidade do câmbio e ao clima na florada.",
  "drivers": [
+  {
+   "dir": "alta",
+   "t": "Dólar PTAX subiu 9,2% em 26/10, para R$ 5,50."
+  },
   {
    "dir": "baixa",
    "t": "NY recuou cerca de 5% desde o pico de 21/10 (316 ¢/lb)."
   },
   {
    "dir": "alta",
-   "t": "Indicador CEPEA e praças de Minas subiram no dia 26/10."
+   "t": "Indicador CEPEA e praças de Minas subiram em 26/10."
   },
   {
    "dir": "neutro",
-   "t": "Dólar perto de R$ 5,04 (PTAX), estável nas últimas semanas."
+   "t": "Câmbio muito volátil: as faixas de previsão ficam mais largas."
   }
  ],
  "pracasDate": "2026-10-26",

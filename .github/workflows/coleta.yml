@@ -2,8 +2,9 @@ name: Coleta e publicação
 
 on:
   schedule:
-    # horários em UTC (Brasília = UTC-3): 9h40, 11h40, 13h40, 15h40, 17h40 e 19h40, de segunda a sexta
-    - cron: "40 12,14,16,18,20,22 * * 1-5"
+    # de hora em hora, das 9h10 às 19h10 de Brasília (UTC-3), de segunda a sexta.
+    # O GitHub pode atrasar execuções agendadas em alguns minutos.
+    - cron: "10 12-22 * * 1-5"
   push:
     branches: [main]
   workflow_dispatch: {}
@@ -19,7 +20,6 @@ concurrency:
 
 jobs:
   coletar:
-    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

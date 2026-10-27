@@ -128,8 +128,8 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
         <div class="chg" id="cepeaChg">&nbsp;</div>
       </div>
       <div class="minis">
-        <div class="mini"><div class="s">NY · ¢/lb</div><div class="v" id="kc">–</div><div class="s" id="kcChg">&nbsp;</div></div>
-        <div class="mini"><div class="s">Dólar</div><div class="v" id="usd">–</div><div class="s" id="usdChg">&nbsp;</div></div>
+        <div class="mini"><div class="s" id="kcLbl">NY · ¢/lb</div><div class="v" id="kc">–</div><div class="s" id="kcChg">&nbsp;</div></div>
+        <div class="mini"><div class="s" id="usdLbl">Dólar</div><div class="v" id="usd">–</div><div class="s" id="usdChg">&nbsp;</div></div>
         <div class="mini"><div class="s">Conilon</div><div class="v" id="con">–</div><div class="s" id="conChg">&nbsp;</div></div>
       </div>
     </section>
@@ -191,6 +191,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     <section class="span foot">
       <div><b>Como a previsão é feita.</b> O modelo mede a tendência recente e a volatilidade do café em NY convertido em reais, dá mais peso aos últimos pregões e devolve uma faixa de preço. Ele não sabe de geada, greve ou relatório que ainda vão sair. Use como referência para negociar, junto com o que você vê no mercado.</div>
       <div id="srcs"></div>
+      <div id="fontes"></div>
     </section>
   </main>
 </div>
@@ -207,7 +208,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   const esc = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const dBR = iso => { if(!iso) return ""; const [y,m,d]=iso.slice(0,10).split("-"); return d+"/"+m; };
 
-  let quotes = [], meta = null, weather = null, H = 7;
+  let quotes = [], meta = null, weather = null, fontes = null, H = 7;
   try { const s = localStorage.getItem("radar-h"); if (s && [3,7,15].includes(+s)) H = +s; } catch(e){}
 
   // ---------- modelo ----------
@@ -253,11 +254,14 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     if (cL){ $("cepea").innerHTML = esc(fmtN(cL.cepeaArabica)) + '<span class="unit">R$/saca</span>';
       const ch = cP ? cL.cepeaArabica/cP.cepeaArabica-1 : (cL.cepeaVar!=null? cL.cepeaVar/100 : null);
       $("cepeaChg").className = "chg " + (ch==null?"flat":cls(ch));
-      $("cepeaChg").textContent = (ch==null?"":pct(ch)+" no dia · ") + "em " + dBR(cL.date); }
+      $("cepeaChg").textContent = (ch==null?"":pct(ch)+" no dia · ") + "em " + dBR(cL.date) + " · o CEPEA sai no fim da tarde"; }
     if (L){ $("kc").textContent = fmtN(L.kc);
+      const today = new Date().toLocaleDateString("sv-SE",{timeZone:"America/Sao_Paulo"});
+      const lq = lastQ.find(x=>x.date===L.date) || {};
+      $("kcLbl").textContent = (L.date===today && lq.kcHora) ? "NY agora · ¢/lb" : "NY " + dBR(L.date) + " · ¢/lb";
       if (P){ const c=L.kc/P.kc-1; $("kcChg").textContent = pct(c); $("kcChg").className="s "+cls(c); }
       const us = lastQ.filter(x=>x.usd>0), uL=us[us.length-1], uP=us[us.length-2];
-      if (uL){ $("usd").textContent = fmtN(uL.usd,3); if(uP){ const c=uL.usd/uP.usd-1; $("usdChg").textContent=pct(c); $("usdChg").className="s "+cls(c);} } }
+      if (uL){ $("usd").textContent = fmtN(uL.usd,3); $("usdLbl").textContent = uL.usdAoVivo ? "Dólar agora" : "Dólar PTAX " + dBR(uL.date); if(uP){ const c=uL.usd/uP.usd-1; $("usdChg").textContent=pct(c); $("usdChg").className="s "+cls(c);} } }
     const nL = con[con.length-1], nP = con[con.length-2];
     if (nL){ $("con").textContent = fmtR0(nL.cepeaConilon).replace("R$ ","");
       const c = nP ? nL.cepeaConilon/nP.cepeaConilon-1 : (nL.conilonVar!=null? nL.conilonVar/100 : null);
@@ -326,6 +330,12 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     }
   }
 
+  function renderFontes(){
+    if (!fontes || !fontes.fontes) return;
+    const items = Object.entries(fontes.fontes);
+    $("fontes").innerHTML = "<b>Situação das fontes na última coleta:</b> " + items.map(([k,v])=>`<span class="${v.ok?"up":"down"}">${v.ok?"●":"○"}</span> ${esc(k)}`).join(" · ");
+  }
+
   function drawChart(S, base, f, L, target){
     const svg = $("chart"), W=360, Ht=170, padL=6, padR=52, padT=10, padB=20;
     const hist = S.slice(-30);
@@ -363,13 +373,14 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   async function load(){
     const bust = "?t=" + Date.now();
     const get = f => fetch("data/" + f + bust, {cache:"no-store"}).then(r => { if(!r.ok) throw new Error(r.status); return r.json(); });
-    const [q, m, w] = await Promise.allSettled([get("quotes.json"), get("meta.json"), get("weather.json")]);
+    const [q, m, w, st] = await Promise.allSettled([get("quotes.json"), get("meta.json"), get("weather.json"), get("status.json")]);
+    if (st.status === "fulfilled") fontes = st.value;
     if (q.status === "fulfilled") quotes = q.value;
     if (m.status === "fulfilled") meta = m.value;
     if (w.status === "fulfilled") weather = w.value;
     $("nodb").hidden = navigator.onLine;
     if (q.status === "rejected" && !quotes.length) $("fresh").textContent = "não foi possível carregar";
-    render();
+    render(); renderFontes();
   }
   load();
   setInterval(load, 10 * 60 * 1000);
