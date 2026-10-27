@@ -1,0 +1,33 @@
+{
+ "updatedAt": "2026-10-27T15:47:34Z",
+ "fontes": {
+  "NY histórico (CNBC)": {
+   "ok": true,
+   "detalhe": "512 pregões"
+  },
+  "NY agora (CNBC)": {
+   "ok": true,
+   "detalhe": "291.45 em 2026-10-27T11:37:31.000-0400"
+  },
+  "Dólar PTAX (Banco Central)": {
+   "ok": true,
+   "detalhe": "275 dias"
+  },
+  "Dólar agora (AwesomeAPI)": {
+   "ok": false,
+   "detalhe": "HTTP Error 429: Too Many Requests"
+  },
+  "CEPEA arábica (Notícias Agrícolas)": {
+   "ok": true,
+   "detalhe": "10 dias"
+  },
+  "CEPEA conilon (Notícias Agrícolas)": {
+   "ok": true,
+   "detalhe": "10 dias"
+  },
+  "Clima (Open-Meteo)": {
+   "ok": true,
+   "detalhe": "4 regiões"
+  }
+ }
+}
