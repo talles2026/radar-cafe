@@ -1,0 +1,70 @@
+{
+ "updatedAt": "2026-10-27T13:10:00Z",
+ "headline": "NY devolveu parte da alta da semana passada",
+ "summary": "O contrato de dezembro em Nova York fechou a segunda-feira (26/10) em 300,95 ¢/lb, depois de bater 316 no dia 21. No mês ainda sobe cerca de 4%. O indicador CEPEA do arábica subiu 1,6% no dia, e as cooperativas do Sul de Minas e do Cerrado reajustaram para cima. Esta é a carga inicial; a partir das próximas coletas a leitura traz clima, safra e notícias do dia.",
+ "drivers": [
+  {
+   "dir": "baixa",
+   "t": "NY recuou cerca de 5% desde o pico de 21/10 (316 ¢/lb)."
+  },
+  {
+   "dir": "alta",
+   "t": "Indicador CEPEA e praças de Minas subiram no dia 26/10."
+  },
+  {
+   "dir": "neutro",
+   "t": "Dólar perto de R$ 5,04 (PTAX), estável nas últimas semanas."
+  }
+ ],
+ "pracasDate": "2026-10-26",
+ "pracas": [
+  {
+   "praca": "Patrocínio (Expocaccer)",
+   "tipo": "Tipo 6 duro",
+   "preco": 1815,
+   "var": 5.22
+  },
+  {
+   "praca": "Guaxupé (Cooxupé)",
+   "tipo": "Tipo 6 duro",
+   "preco": 1800,
+   "var": 5.94
+  },
+  {
+   "praca": "Araguari (Coocacer)",
+   "tipo": "Tipo 6 duro",
+   "preco": 1750,
+   "var": 2.94
+  },
+  {
+   "praca": "Varginha (Minasul)",
+   "tipo": "Tipo 6 duro",
+   "preco": 1720,
+   "var": 6.17
+  },
+  {
+   "praca": "Machado (Coopama)",
+   "tipo": "Tipo 6 duro",
+   "preco": 1640,
+   "var": -7.34
+  }
+ ],
+ "sources": [
+  {
+   "nome": "Yahoo Finance (ICE KC)",
+   "url": "https://finance.yahoo.com/quote/KC%3DF/"
+  },
+  {
+   "nome": "Banco Central (PTAX)",
+   "url": "https://www.bcb.gov.br/estabilidadefinanceira/historicocotacoes"
+  },
+  {
+   "nome": "Notícias Agrícolas (CEPEA e praças)",
+   "url": "https://www.noticiasagricolas.com.br/cotacoes/cafe"
+  },
+  {
+   "nome": "Open-Meteo (clima)",
+   "url": "https://open-meteo.com/"
+  }
+ ]
+}

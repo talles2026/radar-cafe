@@ -1,0 +1,144 @@
+[
+ {
+  "date": "2026-09-28",
+  "kc": 288.75,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z"
+ },
+ {
+  "date": "2026-09-29",
+  "kc": 289.45,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z"
+ },
+ {
+  "date": "2026-09-30",
+  "kc": 290.7,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z"
+ },
+ {
+  "date": "2026-10-01",
+  "kc": 288.25,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z"
+ },
+ {
+  "date": "2026-10-02",
+  "kc": 288.75,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z"
+ },
+ {
+  "date": "2026-10-05",
+  "kc": 292.55,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z"
+ },
+ {
+  "date": "2026-10-06",
+  "kc": 304.45,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z"
+ },
+ {
+  "date": "2026-10-07",
+  "kc": 292.7,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "usd": 4.9929
+ },
+ {
+  "date": "2026-10-08",
+  "kc": 289.05,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "usd": 5.0113
+ },
+ {
+  "date": "2026-10-09",
+  "kc": 286.95,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "usd": 4.9886
+ },
+ {
+  "date": "2026-10-12",
+  "kc": 290.6,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z"
+ },
+ {
+  "date": "2026-10-13",
+  "kc": 292.7,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "usd": 5.009
+ },
+ {
+  "date": "2026-10-14",
+  "kc": 298.05,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "usd": 5.0435
+ },
+ {
+  "date": "2026-10-15",
+  "kc": 294.8,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "usd": 5.0515
+ },
+ {
+  "date": "2026-10-16",
+  "kc": 305.6,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "usd": 5.082
+ },
+ {
+  "date": "2026-10-19",
+  "kc": 315.7,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "usd": 5.0558
+ },
+ {
+  "date": "2026-10-20",
+  "kc": 311.3,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "usd": 5.0134
+ },
+ {
+  "date": "2026-10-21",
+  "kc": 316.15,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "usd": 5.027
+ },
+ {
+  "date": "2026-10-22",
+  "kc": 312.45,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "usd": 5.0377
+ },
+ {
+  "date": "2026-10-23",
+  "kc": 307.45,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "usd": 5.0371
+ },
+ {
+  "date": "2026-10-26",
+  "kc": 300.95,
+  "kcContract": "KCZ6",
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "cepeaArabica": 1627.46,
+  "cepeaVar": 1.59,
+  "cepeaConilon": 954.64,
+  "conilonVar": 1.91
+ }
+]
