@@ -47,16 +47,24 @@ def dbr(iso):
 
 # ---------- modelo (o mesmo do app) ----------
 
+def dolar(x):
+    return x.get("usdCom") or x.get("usd")
+
+
 def series(quotes):
-    q = sorted((x for x in quotes if x.get("kc")), key=lambda x: x["date"])
-    first = next((x["usd"] for x in q if x.get("usd")), None)
-    last, out = None, []
-    for x in q:
-        if x.get("usd"):
-            last = x["usd"]
-        u = last or first
-        if u:
-            out.append({**x, "parity": x["kc"] / 100 * LB_PER_SACA * u})
+    todos = sorted(quotes, key=lambda x: x["date"])
+    first = next((dolar(x) for x in todos if dolar(x)), None)
+    usd, last = {}, None
+    for x in todos:
+        if dolar(x):
+            last = dolar(x)
+        usd[x["date"]] = last
+    out = []
+    for x in todos:
+        if x.get("kc"):
+            u = usd.get(x["date"]) or first
+            if u:
+                out.append({**x, "parity": (x.get("kcAdj") or x["kc"]) / 100 * LB_PER_SACA * u})
     return out
 
 
@@ -88,7 +96,7 @@ def resumo(quotes, weather, meta, momento):
     q = sorted(quotes, key=lambda x: x["date"])
     cep = [x for x in q if x.get("cepeaArabica")]
     con = [x for x in q if x.get("cepeaConilon")]
-    us = [x for x in q if x.get("usd")]
+    us = [{**x, "usd": x["usdCom"]} for x in q if x.get("usdCom")] or [x for x in q if x.get("usd")]
     L, P = S[-1], S[-2]
     hoje = datetime.now(BRT).date().isoformat()
     linhas = [f"☕ <b>Radar do Café · {momento}</b>"]
@@ -105,7 +113,7 @@ def resumo(quotes, weather, meta, momento):
     linhas.append(f"NY {quando}: {br(L['kc'])} ¢/lb ({pct(L['kc'] / P['kc'] - 1)})")
     if us:
         u = us[-1]
-        linhas.append(f"Dólar {'agora' if u.get('usdAoVivo') else 'PTAX ' + dbr(u['date'])}: R$ {br(u['usd'], 3)}")
+        linhas.append(f"Dólar {'agora' if (u['date'] == hoje and u.get('usdComHora')) else dbr(u['date'])}: R$ {br(u['usd'], 3)}")
     m = fit([x["parity"] for x in S])
     base = cep[-1]["cepeaArabica"] if cep else L["parity"]
     if m:
@@ -140,7 +148,7 @@ def alertas(quotes, weather, cfg, estado):
         v = S[-1]["kc"] / S[-2]["kc"] - 1
         if abs(v) * 100 >= cfg["nyVariacao"]:
             out.append((f"ny-{'alta' if v > 0 else 'baixa'}-{hoje}", f"📊 NY {'sobe' if v > 0 else 'cai'} {br(abs(v) * 100)}% hoje: {br(S[-1]['kc'])} ¢/lb."))
-    us = [x for x in q if x.get("usd")]
+    us = [{**x, "usd": x["usdCom"]} for x in q if x.get("usdCom")] or [x for x in q if x.get("usd")]
     if len(us) >= 2 and us[-1]["date"] == hoje and cfg.get("dolarVariacao"):
         v = us[-1]["usd"] / us[-2]["usd"] - 1
         if abs(v) * 100 >= cfg["dolarVariacao"]:

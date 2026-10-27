@@ -59,6 +59,8 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
 .big{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,11vw,3.4rem);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .big .unit{font-family:var(--body);font-size:.95rem;font-weight:500;color:var(--muted);letter-spacing:0;margin-left:4px}
 .chg{font-family:var(--mono);font-size:.9rem;font-weight:500}
+.est{font-size:.86rem;color:var(--muted);margin-top:4px}
+.est b{color:var(--ink);font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums}
 .up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--muted)}
 .minis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .mini{background:var(--surface);padding:10px 10px 9px;min-width:0}
@@ -171,6 +173,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
         <div class="eyebrow" id="h-hoje">Indicador CEPEA/Esalq · arábica tipo 6</div>
         <div class="big" id="cepea">–<span class="unit">R$/saca</span></div>
         <div class="chg" id="cepeaChg">&nbsp;</div>
+        <div class="est" id="estHoje" hidden></div>
       </div>
       <div class="minis">
         <div class="mini"><div class="s" id="kcLbl">NY · ¢/lb</div><div class="v" id="kc">–</div><div class="s" id="kcChg">&nbsp;</div></div>
@@ -336,11 +339,13 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     const all = quotes.slice().sort((a,b)=>a.date<b.date?-1:1);
     let firstUsd = (all.find(x=>x.usd>0)||{}).usd || null;
     // dólar por data, preenchido para frente
-    const usdAt = {}; let last = null; for (const x of all){ if (x.usd>0) last = x.usd; usdAt[x.date] = last; }
-    return q.map(x => { const u = usdAt[x.date] || firstUsd;
-      return { date:x.date, kc:x.kc, rc:x.rc, usd:u, usdReal:x.usd>0, cepea:x.cepeaArabica>0?x.cepeaArabica:null,
+    // cálculos usam o dólar comercial (série única); a PTAX só entra onde não há comercial
+    const usdAt = {}; let last = null; for (const x of all){ const v = x.usdCom>0 ? x.usdCom : x.usd>0 ? x.usd : null; if (v) last = v; usdAt[x.date] = last; }
+    firstUsd = (all.find(x=>x.usdCom>0||x.usd>0)||{}); firstUsd = firstUsd.usdCom || firstUsd.usd || null;
+    return q.map(x => { const u = usdAt[x.date] || firstUsd, bolsa = x[P.field+"Adj"] || x[P.field];
+      return { date:x.date, kc:x.kc, rc:x.rc, usd:u, usdReal:(x.usdCom>0||x.usd>0), cepea:x.cepeaArabica>0?x.cepeaArabica:null,
                con:x.cepeaConilon>0?x.cepeaConilon:null, fis:x[P.cep]>0?x[P.cep]:null,
-               parity: u ? P.toSaca(x[P.field])*u : null }; })
+               parity: u ? P.toSaca(bolsa)*u : null }; })
       .filter(x=>x.parity);
   }
   // tendência e volatilidade (média móvel exponencial, com corte de choques extremos)
@@ -427,14 +432,19 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     if (cL){ $("cepea").innerHTML = esc(fmtN(cL.cepeaArabica)) + '<span class="unit">R$/saca</span>';
       const ch = cP ? cL.cepeaArabica/cP.cepeaArabica-1 : (cL.cepeaVar!=null? cL.cepeaVar/100 : null);
       $("cepeaChg").className = "chg " + (ch==null?"flat":cls(ch));
-      $("cepeaChg").textContent = (ch==null?"":pct(ch)+" no dia · ") + "em " + dBR(cL.date) + " · o CEPEA sai no fim da tarde"; }
+      $("cepeaChg").textContent = (ch==null?"":pct(ch)+" no dia · ") + "em " + dBR(cL.date); }
     if (L){ $("kc").textContent = fmtN(L.kc);
       const today = new Date().toLocaleDateString("sv-SE",{timeZone:"America/Sao_Paulo"});
       const lq = lastQ.find(x=>x.date===L.date) || {};
       $("kcLbl").textContent = (L.date===today && lq.kcHora) ? "NY agora · ¢/lb" : "NY " + dBR(L.date) + " · ¢/lb";
-      if (P){ const c=L.kc/P.kc-1; $("kcChg").textContent = pct(c); $("kcChg").className="s "+cls(c); }
-      const us = lastQ.filter(x=>x.usd>0), uL=us[us.length-1], uP=us[us.length-2];
-      if (uL){ $("usd").textContent = fmtN(uL.usd,3); $("usdLbl").textContent = uL.usdAoVivo ? "Dólar agora" : "Dólar PTAX " + dBR(uL.date); if(uP){ const c=uL.usd/uP.usd-1; $("usdChg").textContent=pct(c); $("usdChg").className="s "+cls(c);} } }
+      if (P){ const lqp = lastQ.find(x=>x.date===P.date)||{}; const virada = lq.kcVirada && lqp.kc2;
+        const c = virada ? L.kc/lqp.kc2-1 : L.kc/P.kc-1; $("kcChg").textContent = pct(c) + (virada ? " · contrato novo" : ""); $("kcChg").className="s "+cls(c); }
+      const uc = lastQ.filter(x=>x.usdCom>0), us = uc.length ? uc : lastQ.filter(x=>x.usd>0), fld = uc.length ? "usdCom" : "usd";
+      const uL=us[us.length-1], uP=us[us.length-2];
+      if (uL){ $("usd").textContent = fmtN(uL[fld],3);
+        $("usdLbl").textContent = (fld==="usdCom" && uL.date===todayISO() && uL.usdComHora) ? "Dólar agora" : (fld==="usdCom" ? "Dólar " : "Dólar PTAX ") + dBR(uL.date);
+        const pt = lastQ.filter(x=>x.usd>0).pop();
+        if(uP){ const c=uL[fld]/uP[fld]-1; $("usdChg").textContent=pct(c) + (fld==="usdCom" && pt ? " · PTAX " + fmtN(pt.usd,3) : ""); $("usdChg").className="s "+cls(c);} } }
     { const rcs = lastQ.filter(x=>x.rc>0), rL = rcs[rcs.length-1], rP = rcs[rcs.length-2];
       if (rL){ $("rc").textContent = fmtN(rL.rc,0);
         $("rcLbl").textContent = (rL.date===todayISO() && rL.rcHora) ? "Londres agora · US$/t" : "Londres " + dBR(rL.date) + " · US$/t";
@@ -452,6 +462,12 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
       $("dot").className = "dot " + (h<8?"ok":"old");
       $("fresh").textContent = h<1 ? "atualizado agora" : h<24 ? "atualizado há "+Math.round(h)+" h" : "atualizado há "+Math.round(h/24)+" dias";
     } else { $("fresh").textContent = quotes.length ? "sem horário" : "aguardando dados"; }
+
+    // estimativa de hoje no topo (só quando o CEPEA é de dia anterior)
+    { const Fa = forecastFor("arabica", 7);
+      if (Fa && Fa.cL && Fa.ajuste){ $("estHoje").hidden = false;
+        $("estHoje").innerHTML = `Estimado para hoje: <b>${esc(fmtR0(Fa.base))}</b> <span class="${cls(Fa.ajuste)}">(${esc(pct(Fa.ajuste))})</span>, pelo movimento de NY e do dólar. O CEPEA sai no fim da tarde.`; }
+      else $("estHoje").hidden = true; }
 
     // previsão
     document.querySelectorAll(".seg.fc button").forEach(b=>b.setAttribute("aria-pressed", String(+b.dataset.h===H)));
@@ -640,14 +656,14 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     const today = agora.toLocaleDateString("sv-SE",{timeZone:"America/Sao_Paulo"});
     const SA = buildSeries("arabica"), L = SA[SA.length-1], P = SA[SA.length-2], lq = q.find(x=>x.date===L.date)||{};
     const rcs = q.filter(x=>x.rc>0), rL = rcs[rcs.length-1], rP = rcs[rcs.length-2];
-    const us = q.filter(x=>x.usd>0), uL = us[us.length-1];
+    const ucs = q.filter(x=>x.usdCom>0), uL0 = ucs[ucs.length-1], uL = uL0 ? { usd: uL0.usdCom, date: uL0.date, usdAoVivo: uL0.date===today && !!uL0.usdComHora } : null;
     const con = q.filter(x=>x.cepeaConilon>0), nL = con[con.length-1];
     const linhas = ["☕ *Radar do Café* · " + agora.toLocaleString("pt-BR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit",timeZone:"America/Sao_Paulo"})];
     if (CTX.cL) linhas.push("Arábica CEPEA (" + dBR(CTX.cL.date) + "): " + fmtR(CTX.cL.cepeaArabica) + (CTX.cL.cepeaVar!=null?" ("+pct(CTX.cL.cepeaVar/100)+")":""));
     if (nL) linhas.push("Conilon CEPEA (" + dBR(nL.date) + "): " + fmtR(nL.cepeaConilon));
     linhas.push("NY " + ((L.date===today && lq.kcHora)?"agora":dBR(L.date)) + ": " + fmtN(L.kc) + " ¢/lb" + (P?" ("+pct(L.kc/P.kc-1)+")":""));
     if (rL) linhas.push("Londres " + (rL.date===today && rL.rcHora?"agora":dBR(rL.date)) + ": US$ " + fmtN(rL.rc,0) + "/t" + (rP?" ("+pct(rL.rc/rP.rc-1)+")":""));
-    if (uL) linhas.push("Dólar " + (uL.usdAoVivo?"agora":"PTAX "+dBR(uL.date)) + ": R$ " + fmtN(uL.usd,3));
+    if (uL) linhas.push("Dólar " + (uL.usdAoVivo?"agora":dBR(uL.date)) + ": R$ " + fmtN(uL.usd,3));
     linhas.push("");
     ["arabica","conilon"].forEach(prod=>{
       const a = forecastFor(prod,7), b = forecastFor(prod,15); if (!a || !b) return;

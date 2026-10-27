@@ -19,13 +19,13 @@ def serie(quotes, campo, conv):
     todos = sorted(quotes, key=lambda x: x["date"])
     usd, ult = {}, None
     for x in todos:
-        if x.get("usd"):
-            ult = x["usd"]
+        if x.get("usdCom") or x.get("usd"):
+            ult = x.get("usdCom") or x["usd"]
         usd[x["date"]] = ult
     out = []
     for x in todos:
         if x.get(campo) and usd.get(x["date"]):
-            out.append({"date": x["date"], "par": conv(x[campo]) * usd[x["date"]], "bolsa": x[campo]})
+            out.append({"date": x["date"], "par": conv(x.get(campo + "Adj") or x[campo]) * usd[x["date"]], "bolsa": x[campo]})
     return out
 
 
@@ -63,7 +63,8 @@ def produto(quotes, campo, conv, cep):
 
 def main():
     quotes = load("quotes.json", [])
-    us = [x for x in sorted(quotes, key=lambda x: x["date"]) if x.get("usd")]
+    us = [{**x, "usd": x["usdCom"]} for x in sorted(quotes, key=lambda x: x["date"]) if x.get("usdCom")] or \
+        [x for x in sorted(quotes, key=lambda x: x["date"]) if x.get("usd")]
     out = {
         "geradoEm": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "arabica": produto(quotes, "kc", lambda v: v / 100 * LB_PER_SACA, "cepeaArabica"),

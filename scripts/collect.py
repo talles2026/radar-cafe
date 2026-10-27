@@ -13,6 +13,7 @@ se uma falhar, as outras continuam e o histórico já salvo é mantido.
 import csv
 import io
 import json
+import math
 import re
 import sys
 import urllib.parse
@@ -70,53 +71,57 @@ def cnbc_num(v):
     return float(str(v).replace(",", "").replace("%", "").strip())
 
 
-def fetch_kc():
-    """Café arábica NY em ¢/lb -> ({data: fechamento}, {data, preco, hora} do pregão em andamento)."""
-    hist, live = {}, None
-    # 1) CNBC: histórico de 1 ano
+def cnbc_hist(sym):
+    js = json.loads(get("https://ts-api.cnbc.com/harmony/app/charts/1Y.json?symbol=" + urllib.parse.quote(sym)))
+    out = {}
+    for b in js["barData"]["priceBars"]:
+        t = str(b.get("tradeTime") or "")
+        if len(t) >= 8 and b.get("close") not in (None, ""):
+            out[f"{t[:4]}-{t[4:6]}-{t[6:8]}"] = cnbc_num(b["close"])
+    return out
+
+
+def cnbc_quote(sym, tz_horas):
+    js = json.loads(get("https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol"
+                        "?symbols=" + urllib.parse.quote(sym) + "&requestMethod=itv&noform=1&partnerId=2&fund=1&exthrs=1&output=json"))
+    q = js["FormattedQuoteResult"]["FormattedQuote"][0]
+    hora = q.get("last_time") or ""
     try:
-        js = json.loads(get("https://ts-api.cnbc.com/harmony/app/charts/1Y.json?symbol=%40KC.1"))
-        for b in js["barData"]["priceBars"]:
-            t = str(b.get("tradeTime") or "")
-            if len(t) >= 8 and b.get("close") not in (None, ""):
-                hist[f"{t[:4]}-{t[4:6]}-{t[6:8]}"] = round(cnbc_num(b["close"]), 2)
-        status("NY histórico (CNBC)", bool(hist), f"{len(hist)} pregões")
+        d = datetime.fromisoformat(hora[:19]).date().isoformat()
+    except ValueError:
+        d = datetime.now(timezone(timedelta(hours=tz_horas))).date().isoformat()
+    return {"date": d, "preco": cnbc_num(q["last"]), "hora": hora, "contrato": q.get("altSymbol") or q.get("symbol")}
+
+
+def fetch_kc():
+    """Café arábica NY em ¢/lb, 1º e 2º vencimentos -> (hist1, hist2, live1, live2)."""
+    h1, h2, l1, l2 = {}, {}, None, None
+    try:
+        h1 = {d: round(v, 2) for d, v in cnbc_hist("@KC.1").items()}
+        status("NY histórico (CNBC)", bool(h1), f"{len(h1)} pregões")
     except Exception as e:
         status("NY histórico (CNBC)", False, e)
-    # 2) Yahoo como reserva do histórico (e às vezes traz o dia corrente)
-    if len(hist) < 20:
-        for host in ("query2", "query1"):
-            try:
-                js = json.loads(get(f"https://{host}.finance.yahoo.com/v8/finance/chart/KC=F?range=1y&interval=1d"))
-                res = js["chart"]["result"][0]
-                for t, c in zip(res["timestamp"], res["indicators"]["quote"][0]["close"]):
-                    if c is not None:
-                        d = datetime.fromtimestamp(t, tz=timezone(timedelta(hours=-5))).date().isoformat()
-                        hist[d] = round(float(c), 2)
-                status("NY histórico (Yahoo)", True, f"{len(hist)} pregões")
-                break
-            except Exception as e:
-                status("NY histórico (Yahoo)", False, e)
-    # 3) Cotação do momento (CNBC)
     try:
-        js = json.loads(get("https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol"
-                            "?symbols=%40KC.1&requestMethod=itv&noform=1&partnerId=2&fund=1&exthrs=1&output=json"))
-        q = js["FormattedQuoteResult"]["FormattedQuote"][0]
-        preco = cnbc_num(q["last"])
-        hora = q.get("last_time") or q.get("last_timedate") or ""
-        try:
-            d = datetime.fromisoformat(hora.replace("Z", "+00:00")[:25]).date().isoformat()
-        except ValueError:
-            d = datetime.now(timezone(timedelta(hours=-5))).date().isoformat()
-        live = {"date": d, "preco": round(preco, 2), "hora": hora, "contrato": q.get("altSymbol") or q.get("symbol")}
-        status("NY agora (CNBC)", True, f"{preco} em {hora}")
+        h2 = {d: round(v, 2) for d, v in cnbc_hist("@KC.2").items()}
+        status("NY 2º vencimento (CNBC)", bool(h2), f"{len(h2)} pregões")
+    except Exception as e:
+        status("NY 2º vencimento (CNBC)", False, e)
+    try:
+        l1 = cnbc_quote("@KC.1", -5)
+        l1["preco"] = round(l1["preco"], 2)
+        status("NY agora (CNBC)", True, f"{l1['preco']} ({l1['contrato']}) em {l1['hora']}")
     except Exception as e:
         status("NY agora (CNBC)", False, e)
-    return hist, live
+    try:
+        l2 = cnbc_quote("@KC.2", -5)
+        l2["preco"] = round(l2["preco"], 2)
+    except Exception:
+        pass
+    return h1, h2, l1, l2
 
 
 def fetch_rc():
-    """Café robusta Londres (ICE Europe), primeiro vencimento, em US$/tonelada -> ({data: fechamento}, None).
+    """Café robusta Londres (ICE Europe) em US$/t: 1º e 2º contratos com nomes -> {data: (c1, v1, c2, v2)}.
 
     Fonte: Notícias Agrícolas (dados Barchart), que mostra os últimos ~10 pregões, cada um
     com o rótulo "Fechamento: dd/mm/aaaa" antes da tabela de contratos."""
@@ -125,24 +130,82 @@ def fetch_rc():
         html = get("https://www.noticiasagricolas.com.br/cotacoes/cafe/cafe-bolsa-de-londres-liffe")
         text = re.sub(r"<[^>]+>", "|", html)
         text = re.sub(r"\s+", " ", text)
-        blocos = re.split(r"Fechamento:\s*", text)[1:]
-        for b in blocos:
+        for b in re.split(r"Fechamento:\s*", text)[1:]:
             md = re.match(r"(\d{2}/\d{2}/\d{4})", b)
-            mc = re.search(r"([A-Za-zçÇ]+/\d{2})\s*\|[\s|]*([\d.]+,\d{2})", b)
-            if md and mc:
+            rows = re.findall(r"([A-Za-zçÇ]+/\d{2})\s*\|[\s|]*([\d.]+,\d{2})", b)
+            if md and rows:
                 d = datetime.strptime(md.group(1), "%d/%m/%Y").date().isoformat()
-                v = br_num(mc.group(2))
-                if 1000 < v < 15000 and d not in hist:
-                    hist[d] = round(v, 0)
+                v1 = br_num(rows[0][1])
+                if 1000 < v1 < 15000 and d not in hist:
+                    c2, v2 = (rows[1][0], br_num(rows[1][1])) if len(rows) > 1 else (None, None)
+                    hist[d] = (rows[0][0], round(v1, 0), c2, round(v2, 0) if v2 else None)
         status("Londres (Notícias Agrícolas)", bool(hist), f"{len(hist)} pregões até {max(hist) if hist else '-'}")
     except Exception as e:
         status("Londres (Notícias Agrícolas)", False, e)
-    return hist, None
+    return hist
+
+
+def fetch_usd_comercial():
+    """Dólar comercial (fechamento diário e agora), usado nos cálculos: série única, sem misturar com a PTAX."""
+    hist, live = {}, None
+    try:
+        hist = {d: round(v, 4) for d, v in cnbc_hist("BRL=").items() if 2 < v < 10}
+        status("Dólar comercial histórico (CNBC)", bool(hist), f"{len(hist)} dias")
+    except Exception as e:
+        status("Dólar comercial histórico (CNBC)", False, e)
+    try:
+        live = cnbc_quote("BRL=", -3)
+        live["preco"] = round(live["preco"], 4)
+        status("Dólar agora (CNBC)", True, f"{live['preco']} em {live['hora']}")
+    except Exception as e:
+        status("Dólar agora (CNBC)", False, e)
+    return hist, live
+
+
+def fetch_cepea_hist():
+    """Série completa dos indicadores CEPEA no site do CEPEA (planilha). Melhor esforço."""
+    out = {}
+    for campo, cid in (("cepeaArabica", 23), ("cepeaConilon", 24)):
+        try:
+            req = urllib.request.Request(f"https://www.cepea.org.br/br/indicador/series/cafe.aspx?id={cid}", headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=60) as r:
+                raw = r.read()
+            linhas = []
+            if raw[:8] == b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1":  # planilha .xls antiga
+                import xlrd
+                sh = xlrd.open_workbook(file_contents=raw).sheet_by_index(0)
+                linhas = [[str(c.value) for c in sh.row(i)] for i in range(sh.nrows)]
+            elif raw[:2] == b"PK":  # .xlsx
+                import openpyxl
+                wb = openpyxl.load_workbook(io.BytesIO(raw), read_only=True)
+                linhas = [[str(c) if c is not None else "" for c in row] for row in wb.active.iter_rows(values_only=True)]
+            else:
+                txt = raw.decode("utf-8", errors="replace")
+                for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", txt, re.S | re.I):
+                    linhas.append([re.sub(r"<[^>]+>", "", td).strip() for td in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S | re.I)])
+            n = 0
+            for ln in linhas:
+                if len(ln) < 2:
+                    continue
+                m = re.match(r"(\d{2})/(\d{2})/(\d{4})", ln[0])
+                if not m:
+                    continue
+                try:
+                    v = float(ln[1]) if re.match(r"^\d+(\.\d+)?$", ln[1]) else br_num(ln[1])
+                except ValueError:
+                    continue
+                if 50 < v < 10000:
+                    out.setdefault(f"{m.group(3)}-{m.group(2)}-{m.group(1)}", {})[campo] = round(v, 2)
+                    n += 1
+            status(f"CEPEA série completa ({'arábica' if cid == 23 else 'conilon'})", n > 0, f"{n} dias")
+        except Exception as e:
+            status(f"CEPEA série completa ({'arábica' if cid == 23 else 'conilon'})", False, e)
+    return out
 
 
 def fetch_usd():
-    """Dólar PTAX venda (SGS série 1) -> {data: valor}; mais o comercial do momento."""
-    out, live = {}, None
+    """Dólar PTAX venda (SGS série 1) -> {data: valor}. Só para exibir; os cálculos usam o comercial."""
+    out = {}
     try:
         ini = (date.today() - timedelta(days=KEEP_DAYS)).strftime("%d/%m/%Y")
         js = json.loads(get(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json&dataInicial={ini}"))
@@ -152,28 +215,7 @@ def fetch_usd():
         status("Dólar PTAX (Banco Central)", True, f"{len(out)} dias")
     except Exception as e:
         status("Dólar PTAX (Banco Central)", False, e)
-    try:
-        js = json.loads(get("https://economia.awesomeapi.com.br/json/last/USD-BRL"))["USDBRL"]
-        d = datetime.fromtimestamp(int(js["timestamp"]), tz=timezone(timedelta(hours=-3))).date().isoformat()
-        live = {"date": d, "valor": float(js["bid"]), "hora": js.get("create_date", "")}
-        status("Dólar agora (AwesomeAPI)", True, f"{js['bid']} em {live['hora']}")
-    except Exception as e:
-        status("Dólar agora (AwesomeAPI)", False, e)
-    if live is None:
-        try:
-            js = json.loads(get("https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol"
-                                "?symbols=BRL%3D&requestMethod=itv&noform=1&partnerId=2&fund=1&exthrs=1&output=json"))
-            q = js["FormattedQuoteResult"]["FormattedQuote"][0]
-            hora = q.get("last_time") or ""
-            try:
-                d = datetime.fromisoformat(hora[:19]).date().isoformat()
-            except ValueError:
-                d = datetime.now(timezone(timedelta(hours=-3))).date().isoformat()
-            live = {"date": d, "valor": round(cnbc_num(q["last"]), 4), "hora": hora}
-            status("Dólar agora (CNBC)", True, f"{q['last']} em {hora}")
-        except Exception as e:
-            status("Dólar agora (CNBC)", False, e)
-    return out, live
+    return out
 
 
 def parse_cepea_table(html):
@@ -246,6 +288,39 @@ def fetch_weather():
 
 # ---------------- gravação ----------------
 
+def ajustar(quotes, f1, f2, contrato=None, meses_virada=()):
+    """Emenda os vencimentos: na troca de contrato, o retorno do dia é medido contra o 2º vencimento
+    da véspera (que vira o 1º), e o histórico é ajustado para trás. Grava f1+"Adj" e marca a virada."""
+    ds = sorted(d for d, q in quotes.items() if q.get(f1))
+    if len(ds) < 2:
+        return 0
+    rets, viradas = {}, 0
+    for a, b in zip(ds, ds[1:]):
+        qa, qb = quotes[a], quotes[b]
+        r_front = math.log(qb[f1] / qa[f1])
+        virada = False
+        if contrato and qa.get(contrato) and qb.get(contrato):
+            virada = qa[contrato] != qb[contrato]
+        elif qa.get(f2):
+            m, dia = int(b[5:7]), int(b[8:10])
+            perto = m in meses_virada or ((m - 1) in meses_virada and dia <= 10)
+            r_sw = math.log(qb[f1] / qa[f2])
+            virada = perto and abs(r_sw) + 0.015 < abs(r_front)
+        qb.pop(f1 + "Virada", None)
+        if virada and qa.get(f2):
+            rets[b] = math.log(qb[f1] / qa[f2])
+            qb[f1 + "Virada"] = True
+            viradas += 1
+        else:
+            rets[b] = r_front
+    adj = {ds[-1]: quotes[ds[-1]][f1]}
+    for a, b in reversed(list(zip(ds, ds[1:]))):
+        adj[a] = adj[b] / math.exp(rets[b])
+    for d in ds:
+        quotes[d][f1 + "Adj"] = round(adj[d], 4)
+    return viradas
+
+
 def main():
     DATA.mkdir(exist_ok=True)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -254,12 +329,20 @@ def main():
     except Exception:
         quotes = {}
 
-    (kc, kc_live), (rc, rc_live), (usd, usd_live), cep = fetch_kc(), fetch_rc(), fetch_usd(), fetch_cepea()
+    kc1, kc2, kl1, kl2 = fetch_kc()
+    rc = fetch_rc()
+    ptax = fetch_usd()
+    ucom, ulive = fetch_usd_comercial()
+    cep = fetch_cepea()
+    if sum(1 for q in quotes.values() if q.get("cepeaArabica")) < 150:
+        for d, f in fetch_cepea_hist().items():
+            for k, v in f.items():
+                cep.setdefault(d, {}).setdefault(k, v)
     changed = 0
 
     def put(d, field, v):
         nonlocal changed
-        if not is_weekday(d):
+        if not is_weekday(d) or v is None:
             return
         q = quotes.setdefault(d, {"date": d})
         if q.get(field) != v:
@@ -267,37 +350,41 @@ def main():
             q["updatedAt"] = now
             changed += 1
 
-    for d, v in kc.items():
+    # limpa o formato antigo (dólar do momento gravado no campo da PTAX)
+    for q in quotes.values():
+        if q.pop("usdAoVivo", None):
+            q.pop("usd", None)
+
+    for d, v in kc1.items():
         put(d, "kc", v)
-    # pregão em andamento: guarda o preço do momento até sair o fechamento
-    if kc_live:
-        put(kc_live["date"], "kc", kc_live["preco"])
-        quotes.get(kc_live["date"], {})["kcHora"] = kc_live["hora"]
-    for d, v in rc.items():
-        put(d, "rc", v)
-    if rc_live:
-        put(rc_live["date"], "rc", rc_live["preco"])
-        quotes.get(rc_live["date"], {})["rcHora"] = rc_live["hora"]
-    for d, v in usd.items():
+    for d, v in kc2.items():
+        put(d, "kc2", v)
+    if kl1:  # pregão em andamento: preço do momento até sair o fechamento
+        put(kl1["date"], "kc", kl1["preco"])
+        quotes.get(kl1["date"], {})["kcHora"] = kl1["hora"]
+        if kl2:
+            put(kl2["date"], "kc2", kl2["preco"])
+    for d, (c1, v1, c2, v2) in rc.items():
+        put(d, "rc", v1)
+        put(d, "rcContrato", c1)
+        put(d, "rc2", v2)
+    for d, v in ptax.items():
         put(d, "usd", v)
-        quotes.get(d, {}).pop("usdAoVivo", None)
-    # dólar do dia: usa o comercial do momento até sair a PTAX
-    if usd_live and usd_live["date"] not in usd:
-        put(usd_live["date"], "usd", usd_live["valor"])
-        if usd_live["date"] in quotes:
-            quotes[usd_live["date"]]["usdAoVivo"] = True
+    for d, v in ucom.items():
+        put(d, "usdCom", v)
+    if ulive:
+        put(ulive["date"], "usdCom", ulive["preco"])
+        quotes.get(ulive["date"], {})["usdComHora"] = ulive["hora"]
     for d, fields in cep.items():
-        if not is_weekday(d):
-            continue
-        q = quotes.setdefault(d, {"date": d})
         for k, v in fields.items():
-            if q.get(k) != v:
-                q[k] = v
-                q["updatedAt"] = now
-                changed += 1
+            put(d, k, v)
 
     cutoff = (date.today() - timedelta(days=KEEP_DAYS)).isoformat()
-    rows = sorted((q for d, q in quotes.items() if d >= cutoff), key=lambda q: q["date"])
+    quotes = {d: q for d, q in quotes.items() if d >= cutoff}
+    vk = ajustar(quotes, "kc", "kc2", meses_virada=(2, 4, 6, 8, 11))
+    vr = ajustar(quotes, "rc", "rc2", contrato="rcContrato", meses_virada=(12, 2, 4, 6, 8, 10))
+    status("Emenda de contratos", True, f"NY: {vk} virada(s); Londres: {vr} virada(s)")
+    rows = sorted(quotes.values(), key=lambda q: q["date"])
     QUOTES.write_text(json.dumps(rows, ensure_ascii=False, indent=1), "utf-8")
     log(f"quotes.json: {len(rows)} dias, {changed} campos alterados")
 
