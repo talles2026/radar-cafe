@@ -1518,125 +1518,144 @@
   "date": "2026-09-16",
   "usd": 5.1527,
   "updatedAt": "2026-10-27T15:47:34Z",
-  "kc": 281.55
+  "kc": 281.55,
+  "rc": 3430.0
  },
  {
   "date": "2026-09-17",
   "usd": 5.1521,
   "updatedAt": "2026-10-27T15:47:34Z",
-  "kc": 276.5
+  "kc": 276.5,
+  "rc": 3391.0
  },
  {
   "date": "2026-09-18",
   "usd": 5.1575,
   "updatedAt": "2026-10-27T15:47:34Z",
-  "kc": 280.5
+  "kc": 280.5,
+  "rc": 3396.0
  },
  {
   "date": "2026-09-21",
   "usd": 5.1117,
   "updatedAt": "2026-10-27T15:47:34Z",
-  "kc": 276.4
+  "kc": 276.4,
+  "rc": 3307.0
  },
  {
   "date": "2026-09-22",
   "usd": 5.1161,
   "updatedAt": "2026-10-27T15:47:34Z",
-  "kc": 272.3
+  "kc": 272.3,
+  "rc": 3230.0
  },
  {
   "date": "2026-09-23",
   "usd": 5.1414,
   "updatedAt": "2026-10-27T15:47:34Z",
-  "kc": 275.9
+  "kc": 275.9,
+  "rc": 3287.0
  },
  {
   "date": "2026-09-24",
   "usd": 5.1795,
   "updatedAt": "2026-10-27T15:47:34Z",
-  "kc": 275.35
+  "kc": 275.35,
+  "rc": 3287.0
  },
  {
   "date": "2026-09-25",
   "usd": 5.1991,
   "updatedAt": "2026-10-27T15:47:34Z",
-  "kc": 278.6
+  "kc": 278.6,
+  "rc": 3367.0
  },
  {
   "date": "2026-09-28",
   "kc": 288.75,
   "kcContract": "KCZ6",
   "updatedAt": "2026-10-27T15:25:00Z",
-  "usd": 5.2132
+  "usd": 5.2132,
+  "rc": 3412.0
  },
  {
   "date": "2026-09-29",
   "kc": 289.45,
   "kcContract": "KCZ6",
   "updatedAt": "2026-10-27T15:25:00Z",
-  "usd": 5.2204
+  "usd": 5.2204,
+  "rc": 3410.0
  },
  {
   "date": "2026-09-30",
   "kc": 290.7,
   "kcContract": "KCZ6",
   "updatedAt": "2026-10-27T15:25:00Z",
-  "usd": 5.1809
+  "usd": 5.1809,
+  "rc": 3445.0
  },
  {
   "date": "2026-10-01",
   "kc": 288.25,
   "kcContract": "KCZ6",
   "updatedAt": "2026-10-27T15:25:00Z",
-  "usd": 5.2079
+  "usd": 5.2079,
+  "rc": 3448.0
  },
  {
   "date": "2026-10-02",
   "kc": 288.75,
   "kcContract": "KCZ6",
   "updatedAt": "2026-10-27T15:25:00Z",
-  "usd": 5.2238
+  "usd": 5.2238,
+  "rc": 3469.0
  },
  {
   "date": "2026-10-05",
   "kc": 292.55,
   "kcContract": "KCZ6",
   "updatedAt": "2026-10-27T15:25:00Z",
-  "usd": 4.9859
+  "usd": 4.9859,
+  "rc": 3528.0
  },
  {
   "date": "2026-10-06",
   "kc": 304.45,
   "kcContract": "KCZ6",
   "updatedAt": "2026-10-27T15:25:00Z",
-  "usd": 4.9698
+  "usd": 4.9698,
+  "rc": 3590.0
  },
  {
   "date": "2026-10-07",
   "kc": 292.7,
   "kcContract": "KCZ6",
   "updatedAt": "2026-10-27T15:25:00Z",
-  "usd": 4.9935
+  "usd": 4.9935,
+  "rc": 3485.0
  },
  {
   "date": "2026-10-08",
   "kc": 289.05,
   "kcContract": "KCZ6",
   "updatedAt": "2026-10-27T15:25:00Z",
-  "usd": 5.0119
+  "usd": 5.0119,
+  "rc": 3423.0
  },
  {
   "date": "2026-10-09",
   "kc": 286.95,
   "kcContract": "KCZ6",
   "updatedAt": "2026-10-27T15:25:00Z",
-  "usd": 4.9892
+  "usd": 4.9892,
+  "rc": 3470.0
  },
  {
   "date": "2026-10-12",
   "kc": 290.6,
   "kcContract": "KCZ6",
-  "updatedAt": "2026-10-27T13:10:00Z"
+  "updatedAt": "2026-10-27T13:10:00Z",
+  "rc": 3478.0
  },
  {
   "date": "2026-10-13",
@@ -1647,7 +1666,8 @@
   "cepeaArabica": 1547.28,
   "cepeaVar": 1.01,
   "cepeaConilon": 971.18,
-  "conilonVar": 1.03
+  "conilonVar": 1.03,
+  "rc": 3459.0
  },
  {
   "date": "2026-10-14",
@@ -1658,7 +1678,8 @@
   "cepeaArabica": 1571.19,
   "cepeaVar": 1.55,
   "cepeaConilon": 972.64,
-  "conilonVar": 0.15
+  "conilonVar": 0.15,
+  "rc": 3483.0
  },
  {
   "date": "2026-10-15",
@@ -1669,7 +1690,8 @@
   "cepeaArabica": 1577.21,
   "cepeaVar": 0.38,
   "cepeaConilon": 968.1,
-  "conilonVar": -0.47
+  "conilonVar": -0.47,
+  "rc": 3375.0
  },
  {
   "date": "2026-10-16",
@@ -1680,7 +1702,8 @@
   "cepeaArabica": 1601.25,
   "cepeaVar": 1.52,
   "cepeaConilon": 963.28,
-  "conilonVar": -0.5
+  "conilonVar": -0.5,
+  "rc": 3414.0
  },
  {
   "date": "2026-10-19",
@@ -1691,7 +1714,8 @@
   "cepeaArabica": 1606.94,
   "cepeaVar": 0.36,
   "cepeaConilon": 973.27,
-  "conilonVar": 1.04
+  "conilonVar": 1.04,
+  "rc": 3484.0
  },
  {
   "date": "2026-10-20",
@@ -1702,7 +1726,8 @@
   "cepeaArabica": 1610.14,
   "cepeaVar": 0.2,
   "cepeaConilon": 967.97,
-  "conilonVar": -0.54
+  "conilonVar": -0.54,
+  "rc": 3410.0
  },
  {
   "date": "2026-10-21",
@@ -1713,7 +1738,8 @@
   "cepeaArabica": 1620.92,
   "cepeaVar": 0.67,
   "cepeaConilon": 968.87,
-  "conilonVar": 0.09
+  "conilonVar": 0.09,
+  "rc": 3352.0
  },
  {
   "date": "2026-10-22",
@@ -1724,7 +1750,8 @@
   "cepeaArabica": 1619.85,
   "cepeaVar": -0.07,
   "cepeaConilon": 942.15,
-  "conilonVar": -2.76
+  "conilonVar": -2.76,
+  "rc": 3288.0
  },
  {
   "date": "2026-10-23",
@@ -1735,7 +1762,8 @@
   "cepeaArabica": 1601.95,
   "cepeaVar": -1.11,
   "cepeaConilon": 936.73,
-  "conilonVar": -0.58
+  "conilonVar": -0.58,
+  "rc": 3228.0
  },
  {
   "date": "2026-10-26",
@@ -1746,7 +1774,8 @@
   "cepeaVar": 1.59,
   "cepeaConilon": 954.64,
   "conilonVar": 1.91,
-  "usd": 5.5007
+  "usd": 5.5007,
+  "rc": 3194.0
  },
  {
   "date": "2026-10-27",

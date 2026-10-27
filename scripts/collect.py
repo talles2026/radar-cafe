@@ -115,51 +115,29 @@ def fetch_kc():
     return hist, live
 
 
-RC_CANDIDATOS = ("@RC.1", "@LRC.1", "@RCA.1", "@RM.1", "@LRC.2", "LRC.1", "@KRC.1")
-
-
 def fetch_rc():
-    """Café robusta Londres (ICE Europe) em US$/tonelada -> ({data: fechamento}, pregão em andamento).
+    """Café robusta Londres (ICE Europe), primeiro vencimento, em US$/tonelada -> ({data: fechamento}, None).
 
-    Testa vários códigos da CNBC e fica com o que tem o pregão mais recente."""
-    melhor, testes = None, []
-    for sym in RC_CANDIDATOS:
-        try:
-            js = json.loads(get("https://ts-api.cnbc.com/harmony/app/charts/1Y.json?symbol=" + urllib.parse.quote(sym)))
-            hist = {}
-            for b in js["barData"]["priceBars"]:
-                t = str(b.get("tradeTime") or "")
-                if len(t) >= 8 and b.get("close") not in (None, ""):
-                    v = cnbc_num(b["close"])
-                    if 1000 < v < 15000:
-                        hist[f"{t[:4]}-{t[4:6]}-{t[6:8]}"] = round(v, 0)
-            ult = max(hist) if hist else ""
-            testes.append(f"{sym}:{len(hist)}/{ult}")
-            if hist and (melhor is None or ult > max(melhor[1])):
-                melhor = (sym, hist)
-        except Exception as e:
-            testes.append(f"{sym}:erro")
-    hoje = date.today()
-    if not melhor or (hoje - date.fromisoformat(max(melhor[1]))).days > 7:
-        status("Londres histórico (CNBC)", False, "sem código atualizado; " + " ".join(testes))
-        return {}, None
-    sym, hist = melhor
-    status("Londres histórico (CNBC)", True, f"{sym}: {len(hist)} pregões até {max(hist)}")
-    live = None
+    Fonte: Notícias Agrícolas (dados Barchart), que mostra os últimos ~10 pregões, cada um
+    com o rótulo "Fechamento: dd/mm/aaaa" antes da tabela de contratos."""
+    hist = {}
     try:
-        js = json.loads(get("https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol"
-                            "?symbols=" + urllib.parse.quote(sym) + "&requestMethod=itv&noform=1&partnerId=2&fund=1&exthrs=1&output=json"))
-        q = js["FormattedQuoteResult"]["FormattedQuote"][0]
-        hora = q.get("last_time") or ""
-        try:
-            d = datetime.fromisoformat(hora[:19]).date().isoformat()
-        except ValueError:
-            d = datetime.now(timezone.utc).date().isoformat()
-        live = {"date": d, "preco": round(cnbc_num(q["last"]), 0), "hora": hora}
-        status("Londres agora (CNBC)", True, f"{q['last']} em {hora}")
+        html = get("https://www.noticiasagricolas.com.br/cotacoes/cafe/cafe-bolsa-de-londres-liffe")
+        text = re.sub(r"<[^>]+>", "|", html)
+        text = re.sub(r"\s+", " ", text)
+        blocos = re.split(r"Fechamento:\s*", text)[1:]
+        for b in blocos:
+            md = re.match(r"(\d{2}/\d{2}/\d{4})", b)
+            mc = re.search(r"([A-Za-zçÇ]+/\d{2})\s*\|[\s|]*([\d.]+,\d{2})", b)
+            if md and mc:
+                d = datetime.strptime(md.group(1), "%d/%m/%Y").date().isoformat()
+                v = br_num(mc.group(2))
+                if 1000 < v < 15000 and d not in hist:
+                    hist[d] = round(v, 0)
+        status("Londres (Notícias Agrícolas)", bool(hist), f"{len(hist)} pregões até {max(hist) if hist else '-'}")
     except Exception as e:
-        status("Londres agora (CNBC)", False, e)
-    return hist, live
+        status("Londres (Notícias Agrícolas)", False, e)
+    return hist, None
 
 
 def fetch_usd():
@@ -295,10 +273,6 @@ def main():
     if kc_live:
         put(kc_live["date"], "kc", kc_live["preco"])
         quotes.get(kc_live["date"], {})["kcHora"] = kc_live["hora"]
-    if rc:
-        for q in quotes.values():
-            if "rc" in q and q["date"] not in rc and q["date"] != (rc_live or {}).get("date"):
-                q.pop("rc", None); q.pop("rcHora", None)
     for d, v in rc.items():
         put(d, "rc", v)
     if rc_live:
