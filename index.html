@@ -60,10 +60,11 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
 .big .unit{font-family:var(--body);font-size:.95rem;font-weight:500;color:var(--muted);letter-spacing:0;margin-left:4px}
 .chg{font-family:var(--mono);font-size:.9rem;font-weight:500}
 .up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--muted)}
-.minis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.minis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .mini{background:var(--surface);padding:10px 10px 9px;min-width:0}
 .mini .v{font-family:var(--mono);font-size:1rem;font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap}
 .mini .s{font-size:.7rem;color:var(--muted)}
+@media (max-width:560px){.minis{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* previsão */
 .forecast{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:14px}
 .seg{display:grid;grid-template-columns:repeat(3,1fr);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:3px;gap:3px}
@@ -153,13 +154,18 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
       <div class="minis">
         <div class="mini"><div class="s" id="kcLbl">NY · ¢/lb</div><div class="v" id="kc">–</div><div class="s" id="kcChg">&nbsp;</div></div>
         <div class="mini"><div class="s" id="usdLbl">Dólar</div><div class="v" id="usd">–</div><div class="s" id="usdChg">&nbsp;</div></div>
-        <div class="mini"><div class="s">Conilon</div><div class="v" id="con">–</div><div class="s" id="conChg">&nbsp;</div></div>
+        <div class="mini"><div class="s" id="rcLbl">Londres · US$/t</div><div class="v" id="rc">–</div><div class="s" id="rcChg">&nbsp;</div></div>
+        <div class="mini"><div class="s">Conilon CEPEA</div><div class="v" id="con">–</div><div class="s" id="conChg">&nbsp;</div></div>
       </div>
     </section>
 
     <section aria-labelledby="h-prev">
-      <h2 id="h-prev">Previsão do arábica físico</h2>
+      <h2 id="h-prev">Previsão do preço físico</h2>
       <div class="forecast">
+        <div class="seg prod" role="group" aria-label="Produto" style="grid-template-columns:1fr 1fr">
+          <button type="button" id="prA" data-prod="arabica" aria-pressed="true">Arábica</button>
+          <button type="button" id="prC" data-prod="conilon" aria-pressed="false">Conilon</button>
+        </div>
         <div class="seg fc" role="group" aria-label="Horizonte da previsão">
           <button type="button" id="h3" data-h="3" aria-pressed="false">3 dias</button>
           <button type="button" id="h7" data-h="7" aria-pressed="true">7 dias</button>
@@ -178,20 +184,20 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
           <div class="band"><span>Faixa ampla (9 em 10 vezes)</span><b class="num" id="b90">–</b></div>
           <div class="band"><span>Chance de estar acima de hoje</span><b class="num" id="pUp">–</b></div>
         </div>
-        <p class="caption" id="fcNote">A previsão usa a variação de NY convertida pelo dólar e aplica ao último indicador CEPEA.</p>
+        <p class="caption" id="fcNote">A previsão usa a bolsa (NY para arábica, Londres para conilon) convertida pelo dólar e aplica ao último indicador CEPEA.</p>
       </div>
     </section>
 
     <section aria-labelledby="h-calc">
-      <h2 id="h-calc">Vender agora ou esperar?</h2>
+      <h2 id="h-calc">Vender agora ou esperar? <span class="eyebrow" id="calcProd">arábica</span></h2>
       <div class="panel">
         <div class="fields">
           <div class="field"><label for="cSacas">Sacas para vender</label><input id="cSacas" type="number" inputmode="numeric" min="1" step="1" value="100"></div>
           <div class="field"><label for="cPreco">Seu preço hoje (R$/saca)</label><input id="cPreco" type="number" inputmode="decimal" min="1" step="1" placeholder="CEPEA"></div>
         </div>
         <div class="kv hero"><span>Valor do lote hoje</span><b id="cHoje">–</b></div>
-        <div class="kv"><span>Em 7 dias úteis (faixa provável)</span><b id="c7">–</b></div>
-        <div class="kv"><span>Em 15 dias úteis (faixa provável)</span><b id="c15">–</b></div>
+        <div class="kv"><span>Em 7 dias (faixa provável)</span><b id="c7">–</b></div>
+        <div class="kv"><span>Em 15 dias (faixa provável)</span><b id="c15">–</b></div>
         <div class="kv"><span>Chance de valer mais em 15 dias</span><b id="cChance">–</b></div>
         <p class="caption" id="cNote">Deixe o preço em branco para usar o indicador CEPEA. Se a sua cooperativa paga outro valor, digite-o.</p>
       </div>
@@ -291,21 +297,34 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   try { const s = localStorage.getItem("radar-h"); if (s && [3,7,15].includes(+s)) H = +s; } catch(e){}
 
   // ---------- modelo ----------
-  function buildSeries(){
-    const q = quotes.filter(x => x.kc>0).sort((a,b)=>a.date<b.date?-1:1);
-    // dólar: preenche para frente; antes do primeiro valor conhecido usa o primeiro (só para continuidade)
-    let firstUsd = (q.find(x=>x.usd>0)||{}).usd || null, last = null;
-    return q.map(x => { if (x.usd>0) last = x.usd; const u = last || firstUsd;
-      return { date:x.date, kc:x.kc, usd:u, usdReal:x.usd>0, cepea:x.cepeaArabica>0?x.cepeaArabica:null,
-               con:x.cepeaConilon>0?x.cepeaConilon:null, parity: u ? x.kc/100*LB_PER_SACA*u : null }; })
+  const PRODS = {
+    arabica: { nome:"arábica", bolsa:"NY", field:"kc", cep:"cepeaArabica", toSaca: v => v/100*LB_PER_SACA },
+    conilon: { nome:"conilon", bolsa:"Londres", field:"rc", cep:"cepeaConilon", toSaca: v => v*0.06 }
+  };
+  let PROD = "arabica";
+  try { const v = localStorage.getItem("radar-prod"); if (PRODS[v]) PROD = v; } catch(e){}
+
+  // série da bolsa convertida em R$/saca (paridade), com dólar preenchido para frente
+  function buildSeries(prod){
+    const P = PRODS[prod || "arabica"];
+    const q = quotes.filter(x => x[P.field]>0).sort((a,b)=>a.date<b.date?-1:1);
+    const all = quotes.slice().sort((a,b)=>a.date<b.date?-1:1);
+    let firstUsd = (all.find(x=>x.usd>0)||{}).usd || null;
+    // dólar por data, preenchido para frente
+    const usdAt = {}; let last = null; for (const x of all){ if (x.usd>0) last = x.usd; usdAt[x.date] = last; }
+    return q.map(x => { const u = usdAt[x.date] || firstUsd;
+      return { date:x.date, kc:x.kc, rc:x.rc, usd:u, usdReal:x.usd>0, cepea:x.cepeaArabica>0?x.cepeaArabica:null,
+               con:x.cepeaConilon>0?x.cepeaConilon:null, fis:x[P.cep]>0?x[P.cep]:null,
+               parity: u ? P.toSaca(x[P.field])*u : null }; })
       .filter(x=>x.parity);
   }
-  function fit(p){ // p: array de preços
+  // tendência e volatilidade (média móvel exponencial, com corte de choques extremos)
+  function fit(p){
     const r = []; for (let i=1;i<p.length;i++) r.push(Math.log(p[i]/p[i-1]));
     if (r.length < 5) return null;
-    const k = Math.min(10, r.length);
+    const k = Math.min(20, r.length);
     let v = r.slice(0,k).reduce((s,x)=>s+x*x,0)/k;
-    for (const x of r) v = 0.94*v + 0.06*x*x;
+    for (const x of r){ const lim = 3*Math.sqrt(v), c = Math.max(-lim, Math.min(lim, x)); v = 0.94*v + 0.06*c*c; }
     const sig = Math.sqrt(v);
     const mom = r.slice(-10).reduce((s,x)=>s+x,0)/Math.min(10,r.length);
     const mu = Math.max(-0.25*sig, Math.min(0.25*sig, 0.25*mom));
@@ -313,14 +332,64 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   }
   function Phi(x){ const t=1/(1+0.2316419*Math.abs(x)); const d=0.3989423*Math.exp(-x*x/2);
     const p=d*t*(0.3193815+t*(-0.3565638+t*(1.781478+t*(-1.821256+t*1.330274)))); return x>0?1-p:p; }
-  function project(m, h){ const mm=m.mu*h, s=m.sig*Math.sqrt(h)*1.1;
-    return { mid:Math.exp(mm), lo70:Math.exp(mm-1.036*s), hi70:Math.exp(mm+1.036*s),
-             lo90:Math.exp(mm-1.645*s), hi90:Math.exp(mm+1.645*s), up:Phi(mm/s) }; }
-  function addBiz(iso, h){ const d=new Date(iso+"T12:00:00"); let n=0; while(n<h){ d.setDate(d.getDate()+1); const w=d.getDay(); if(w!==0&&w!==6) n++; } return d; }
-  function backtest(p, h){ let hits=0, tot=0;
-    for (let t=12; t+h<p.length; t++){ const m=fit(p.slice(0,t+1)); if(!m) continue; const f=project(m,h);
-      const ratio=p[t+h]/p[t]; tot++; if(ratio>=f.lo70 && ratio<=f.hi70) hits++; }
-    return { hits, tot }; }
+  const quant = (sorted, x) => { const i = x*(sorted.length-1), lo = Math.floor(i), hi = Math.min(lo+1, sorted.length-1); return sorted[lo] + (sorted[hi]-sorted[lo])*(i-lo); };
+  // calibração: compara o que o modelo previu com o que aconteceu, para h pregões à frente.
+  // As faixas usam os erros reais observados; a taxa de acerto é medida só com erros já conhecidos na época.
+  const CAL = {};
+  function calibrate(p, h, key){
+    const ck = key + ":" + h + ":" + p.length + ":" + p[p.length-1];
+    if (CAL[ck]) return CAL[ck];
+    const zs = []; let in70 = 0, in90 = 0, n = 0;
+    const kf = Math.min(1.15, 1 + 0.03*h), W = 120; // alarga um pouco os prazos maiores; usa os 120 erros mais recentes
+    for (let t = 30; t + h < p.length; t++){
+      const m = fit(p.slice(0, t+1)); if (!m) continue;
+      const s = m.sig*Math.sqrt(h), z = (Math.log(p[t+h]/p[t]) - m.mu*h)/s;
+      const known = zs.slice(0, Math.max(0, zs.length - h + 1)).slice(-W).sort((a,b)=>a-b);
+      if (known.length >= 40){ n++; if (z>=kf*quant(known,.15) && z<=kf*quant(known,.85)) in70++; if (z>=kf*quant(known,.05) && z<=kf*quant(known,.95)) in90++; }
+      zs.push(z);
+    }
+    const sorted = zs.slice(-W).map(z=>z*kf).sort((a,b)=>a-b);
+    return CAL[ck] = { sorted, n, in70, in90 };
+  }
+  function project(m, h, cal){
+    const mm = m.mu*h, s = m.sig*Math.sqrt(h);
+    if (cal && cal.sorted.length >= 40){
+      const z = cal.sorted, q = x => Math.exp(mm + quant(z,x)*s);
+      const up = z.filter(v => v > -mm/s).length / z.length;
+      return { mid:q(.5), lo70:q(.15), hi70:q(.85), lo90:q(.05), hi90:q(.95), up, calibrado:true };
+    }
+    const k = 1.1*s;
+    return { mid:Math.exp(mm), lo70:Math.exp(mm-1.036*k), hi70:Math.exp(mm+1.036*k), lo90:Math.exp(mm-1.645*k), hi90:Math.exp(mm+1.645*k), up:Phi(mm/k), calibrado:false };
+  }
+  // horizonte em dias corridos a partir de hoje -> pregões entre o último dado e a data-alvo
+  const todayISO = () => new Date().toLocaleDateString("sv-SE",{timeZone:"America/Sao_Paulo"});
+  function horizon(lastDate, N){
+    const target = new Date(todayISO()+"T12:00:00"); target.setDate(target.getDate()+N);
+    const d = new Date(lastDate+"T12:00:00"); let h = 0;
+    while (d < target){ d.setDate(d.getDate()+1); const w = d.getDay(); if (w!==0 && w!==6) h++; }
+    return { h: Math.max(1,h), target };
+  }
+  // quanto do movimento da bolsa em reais chega ao físico no mesmo dia (medido nos dias com CEPEA; 0,7 até ter histórico)
+  function repasse(S){
+    const d = S.filter(x=>x.fis); const xs = [], ys = [];
+    for (let i=1;i<d.length;i++){ xs.push(Math.log(d[i].parity/d[i-1].parity)); ys.push(Math.log(d[i].fis/d[i-1].fis)); }
+    if (xs.length < 20) return 0.7;
+    const mx = xs.reduce((a,b)=>a+b,0)/xs.length, my = ys.reduce((a,b)=>a+b,0)/ys.length;
+    let c=0, v=0; xs.forEach((x,i)=>{ c+=(x-mx)*(ys[i]-my); v+=(x-mx)**2; });
+    return Math.max(0.3, Math.min(1.1, v ? c/v : 0.7));
+  }
+  function forecastFor(prod, N){
+    const S = buildSeries(prod); if (S.length < 8) return null;
+    const p = S.map(x=>x.parity), m = fit(p); if (!m) return null;
+    const L = S[S.length-1], fisArr = S.filter(x=>x.fis), lastQ = quotes.slice().sort((a,b)=>a.date<b.date?-1:1);
+    const cep = lastQ.filter(x=>x[PRODS[prod].cep]>0), cL = cep[cep.length-1];
+    // ponto de partida: último CEPEA, corrigido pelo que a bolsa e o dólar já andaram desde aquele dia
+    let base = L.parity, ajuste = 0;
+    if (cL){ const ref = S.find(x=>x.date===cL.date) || [...S].reverse().find(x=>x.date<=cL.date);
+      base = cL[PRODS[prod].cep]; if (ref && ref.date < L.date){ ajuste = Math.exp(repasse(S)*Math.log(L.parity/ref.parity)) - 1; base *= 1 + ajuste; } }
+    const { h, target } = horizon(L.date, N), cal = calibrate(p, h, prod);
+    return { S, p, m, L, cL, base, ajuste, h, target, cal, f: project(m, h, cal) };
+  }
 
   // ---------- render ----------
   function render(){
@@ -341,6 +410,11 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
       if (P){ const c=L.kc/P.kc-1; $("kcChg").textContent = pct(c); $("kcChg").className="s "+cls(c); }
       const us = lastQ.filter(x=>x.usd>0), uL=us[us.length-1], uP=us[us.length-2];
       if (uL){ $("usd").textContent = fmtN(uL.usd,3); $("usdLbl").textContent = uL.usdAoVivo ? "Dólar agora" : "Dólar PTAX " + dBR(uL.date); if(uP){ const c=uL.usd/uP.usd-1; $("usdChg").textContent=pct(c); $("usdChg").className="s "+cls(c);} } }
+    { const rcs = lastQ.filter(x=>x.rc>0), rL = rcs[rcs.length-1], rP = rcs[rcs.length-2];
+      if (rL){ $("rc").textContent = fmtN(rL.rc,0);
+        $("rcLbl").textContent = (rL.date===todayISO() && rL.rcHora) ? "Londres agora · US$/t" : "Londres " + dBR(rL.date) + " · US$/t";
+        if (rP){ const c=rL.rc/rP.rc-1; $("rcChg").textContent=pct(c); $("rcChg").className="s "+cls(c); } }
+      else { $("rc").textContent = "–"; $("rcChg").textContent = "aguardando coleta"; } }
     const nL = con[con.length-1], nP = con[con.length-2];
     if (nL){ $("con").textContent = fmtR0(nL.cepeaConilon).replace("R$ ","");
       const c = nP ? nL.cepeaConilon/nP.cepeaConilon-1 : (nL.conilonVar!=null? nL.conilonVar/100 : null);
@@ -351,16 +425,16 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     const ts = stamps[stamps.length-1];
     if (ts){ const h=(Date.now()-new Date(ts).getTime())/36e5;
       $("dot").className = "dot " + (h<8?"ok":"old");
-      $("fresh").textContent = h<1 ? "atualizado agora há pouco" : h<24 ? "atualizado há "+Math.round(h)+" h" : "atualizado há "+Math.round(h/24)+" dias";
+      $("fresh").textContent = h<1 ? "atualizado agora" : h<24 ? "atualizado há "+Math.round(h)+" h" : "atualizado há "+Math.round(h/24)+" dias";
     } else { $("fresh").textContent = quotes.length ? "sem horário" : "aguardando dados"; }
 
     // previsão
-    const p = S.map(x=>x.parity), m = fit(p);
-    const base = cL ? cL.cepeaArabica : (L ? L.parity : null);
     document.querySelectorAll(".seg.fc button").forEach(b=>b.setAttribute("aria-pressed", String(+b.dataset.h===H)));
-    if (m && base && L){
-      const f = project(m,H), target = addBiz(L.date,H);
-      $("fcDate").textContent = "Valor central em " + target.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"}) + " ("+H+" dias úteis)";
+    document.querySelectorAll(".seg.prod button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.prod===PROD)));
+    const PR = PRODS[PROD], F = forecastFor(PROD, H);
+    if (F){
+      const { f, base, target } = F;
+      $("fcDate").textContent = "Valor central em " + target.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"}) + " (daqui a " + H + " dias, " + F.h + " pregões)";
       $("fcMid").textContent = fmtR0(base*f.mid);
       $("b70").textContent = fmtR0(base*f.lo70) + " a " + fmtR0(base*f.hi70);
       $("b90").textContent = fmtR0(base*f.lo90) + " a " + fmtR0(base*f.hi90);
@@ -369,23 +443,26 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
       if (f.up>=0.58){ pill.className="pill up"; pill.textContent="Viés de alta"; }
       else if (f.up<=0.42){ pill.className="pill down"; pill.textContent="Viés de baixa"; }
       else { pill.className="pill"; pill.textContent="Sem direção clara"; }
-      $("fcNote").textContent = "Base: " + (cL ? "indicador CEPEA de " + dBR(cL.date) : "NY convertido pelo dólar") +
-        ". Modelo calibrado com " + m.n + " pregões; a faixa fica mais estreita conforme o histórico cresce.";
-      drawChart(S, base, f, L, target);
-      CTX = { base, cL, L, m, S, lastQ, f3:project(m,3), f7:project(m,7), f15:project(m,15) };
-    } else { CTX = null;
-      $("fcMid").textContent = "–"; $("fcPill").textContent = "Histórico curto";
-      $("fcNote").textContent = "São precisos pelo menos 6 pregões de NY e dólar para calcular a previsão.";
+      $("fcNote").textContent = "Ponto de partida: " + (F.cL ? (F.ajuste ? "CEPEA do " + PR.nome + " de " + dBR(F.cL.date) + " (" + fmtR0(F.cL[PR.cep]) + ") corrigido em " + pct(F.ajuste) + " pelo que " + PR.bolsa + " e o dólar andaram depois, estimado hoje em " + fmtR0(base) : "CEPEA do " + PR.nome + " de " + dBR(F.cL.date)) : PR.bolsa + " convertida pelo dólar") +
+        ". Movimento previsto pela bolsa de " + PR.bolsa + " em reais. " +
+        (f.calibrado ? "Faixas ajustadas pelos erros reais do modelo nas últimas " + F.cal.sorted.length + " previsões." : "Ainda com pouco histórico: faixas estimadas, ficam mais precisas com o tempo.");
+      drawChart(F.S, base, f, F.L, target, F.h);
+    } else {
+      $("fcMid").textContent = "–"; $("fcPill").className="pill"; $("fcPill").textContent = "Aguardando dados";
+      ["b70","b90","pUp"].forEach(id=>$(id).textContent="–");
+      $("fcNote").textContent = PROD==="conilon" ? "A previsão do conilon aparece depois que o histórico da bolsa de Londres for coletado." : "São precisos mais pregões de NY e dólar para calcular a previsão.";
       $("chart").innerHTML = "";
     }
+    const S7 = forecastFor(PROD,7), S15 = forecastFor(PROD,15);
+    CTX = (S7 && S15) ? { prod:PROD, base:S7.base, ajuste:S7.ajuste, cL:S7.cL, L:S7.L, S:buildSeries("arabica"), lastQ, f7:S7.f, f15:S15.f } : null;
 
-    // acerto
-    if (p.length){
-      const rows = [3,7,15].map(h=>{ const b=backtest(p,h); return {h,...b}; });
-      $("acc").innerHTML = rows.map(r=> r.tot<5
-        ? `<div class="row"><div class="l"><b>${r.h} dias</b><span>ainda acumulando histórico (${r.tot} testes)</span></div><div class="r num">–</div></div>`
-        : `<div class="row"><div class="l"><b>${r.h} dias</b><span>preço caiu dentro da faixa provável em ${r.hits} de ${r.tot} testes</span><div class="meter"><i style="width:${Math.round(r.hits/r.tot*100)}%"></i></div></div><div class="r num">${Math.round(r.hits/r.tot*100)}%</div></div>`
-      ).join("") + `<p class="caption" style="padding-bottom:4px">O ideal é ficar perto de 70%. Bem abaixo disso, o mercado está mais nervoso do que o modelo supõe.</p>`;
+    // acerto (fora da amostra)
+    {
+      const rows = [3,7,15].map(N=>{ const F = forecastFor(PROD,N); return { N, c: F ? F.cal : null }; });
+      $("acc").innerHTML = rows.map(r=> (!r.c || r.c.n<20)
+        ? `<div class="row"><div class="l"><b>${r.N} dias</b><span>ainda acumulando histórico</span></div><div class="r num">–</div></div>`
+        : `<div class="row"><div class="l"><b>${r.N} dias</b><span>preço ficou dentro da faixa provável em ${r.c.in70} de ${r.c.n} testes</span><div class="meter"><i style="width:${Math.round(r.c.in70/r.c.n*100)}%"></i></div></div><div class="r num">${Math.round(r.c.in70/r.c.n*100)}%</div></div>`
+      ).join("") + `<p class="caption" style="padding-bottom:4px">Teste com o histórico de ${PRODS[PROD].bolsa} em reais, sempre usando só o que se sabia na época. O ideal é ficar perto de 70%. Abaixo disso, o mercado andou mais nervoso do que o modelo esperava.</p>`;
     }
 
     // análise, praças, clima, fontes
@@ -416,6 +493,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   function renderCalc(){
     let sacas = +$("cSacas").value || 0, preco = +$("cPreco").value || 0;
     if (!CTX){ return; }
+    $("calcProd").textContent = PRODS[CTX.prod].nome;
     const usaCepea = !preco; if (usaCepea) preco = CTX.base;
     const v = sacas*preco, r = (f,a,b) => fmtR0(v*f[a]) + " a " + fmtR0(v*f[b]);
     $("cHoje").textContent = fmtR0(v);
@@ -423,8 +501,8 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     $("c15").textContent = r(CTX.f15,"lo70","hi70");
     $("cChance").textContent = Math.round(CTX.f15.up*100) + "%";
     $("cPreco").placeholder = "CEPEA " + fmtN(CTX.base,0);
-    $("cNote").textContent = (usaCepea ? "Usando o indicador CEPEA (" + fmtR0(CTX.base) + "/saca)." : "Usando o seu preço de " + fmtR0(preco) + "/saca.") +
-      " Esperar 15 dias: em 7 de cada 10 vezes o lote fica entre os valores acima. Não inclui custo de armazenagem nem juros.";
+    $("cNote").textContent = (usaCepea ? "Usando o preço físico estimado do " + PRODS[CTX.prod].nome + " para hoje (" + fmtR0(CTX.base) + "/saca)." : "Usando o seu preço de " + fmtR0(preco) + "/saca.") +
+      (usaCepea && CTX.ajuste ? " Já corrigido pelo movimento da bolsa e do dólar desde o último CEPEA." : "") + " Esperar 15 dias: em 7 de cada 10 vezes o lote fica entre os valores acima. Não inclui custo de armazenagem nem juros.";
   }
   ["cSacas","cPreco"].forEach(id=>$(id).addEventListener("input",()=>{ try{ localStorage.setItem("radar-"+id, $(id).value); }catch(e){} renderCalc(); renderResumo(); }));
   try { ["cSacas","cPreco"].forEach(id=>{ const v=localStorage.getItem("radar-"+id); if(v!==null) $(id).value=v; }); } catch(e){}
@@ -477,17 +555,22 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     if (!CTX) return "";
     const agora = new Date(), q = CTX.lastQ;
     const today = agora.toLocaleDateString("sv-SE",{timeZone:"America/Sao_Paulo"});
-    const L = CTX.L, P = CTX.S[CTX.S.length-2], lq = q.find(x=>x.date===L.date)||{};
+    const SA = buildSeries("arabica"), L = SA[SA.length-1], P = SA[SA.length-2], lq = q.find(x=>x.date===L.date)||{};
+    const rcs = q.filter(x=>x.rc>0), rL = rcs[rcs.length-1], rP = rcs[rcs.length-2];
     const us = q.filter(x=>x.usd>0), uL = us[us.length-1];
     const con = q.filter(x=>x.cepeaConilon>0), nL = con[con.length-1];
     const linhas = ["☕ *Radar do Café* · " + agora.toLocaleString("pt-BR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit",timeZone:"America/Sao_Paulo"})];
     if (CTX.cL) linhas.push("Arábica CEPEA (" + dBR(CTX.cL.date) + "): " + fmtR(CTX.cL.cepeaArabica) + (CTX.cL.cepeaVar!=null?" ("+pct(CTX.cL.cepeaVar/100)+")":""));
     if (nL) linhas.push("Conilon CEPEA (" + dBR(nL.date) + "): " + fmtR(nL.cepeaConilon));
     linhas.push("NY " + ((L.date===today && lq.kcHora)?"agora":dBR(L.date)) + ": " + fmtN(L.kc) + " ¢/lb" + (P?" ("+pct(L.kc/P.kc-1)+")":""));
+    if (rL) linhas.push("Londres " + (rL.date===today && rL.rcHora?"agora":dBR(rL.date)) + ": US$ " + fmtN(rL.rc,0) + "/t" + (rP?" ("+pct(rL.rc/rP.rc-1)+")":""));
     if (uL) linhas.push("Dólar " + (uL.usdAoVivo?"agora":"PTAX "+dBR(uL.date)) + ": R$ " + fmtN(uL.usd,3));
     linhas.push("");
-    linhas.push("Previsão do arábica físico:");
-    [[7,CTX.f7],[15,CTX.f15]].forEach(([h,f])=>linhas.push("• " + h + " dias úteis: " + fmtR0(CTX.base*f.lo70) + " a " + fmtR0(CTX.base*f.hi70) + " (" + Math.round(f.up*100) + "% de chance de alta)"));
+    ["arabica","conilon"].forEach(prod=>{
+      const a = forecastFor(prod,7), b = forecastFor(prod,15); if (!a || !b) return;
+      linhas.push("Previsão " + PRODS[prod].nome + " (faixa provável):");
+      [[7,a],[15,b]].forEach(([N,F])=>linhas.push("• " + N + " dias: " + fmtR0(F.base*F.f.lo70) + " a " + fmtR0(F.base*F.f.hi70) + " (" + Math.round(F.f.up*100) + "% de chance de alta)"));
+    });
     if (weather && weather.regioes && weather.regioes.length){ linhas.push(""); linhas.push("Chuva em 7 dias: " + weather.regioes.map(w=>w.regiao.split(" (")[0] + " " + fmtN(w.chuva7d,0) + " mm").join(" · ")); }
     linhas.push(""); linhas.push(location.href.split("#")[0].split("?")[0]);
     return linhas.join("\n");
@@ -511,14 +594,14 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     $("fontes").innerHTML = "<b>Situação das fontes na última coleta:</b> " + items.map(([k,v])=>`<span class="${v.ok?"up":"down"}">${v.ok?"●":"○"}</span> ${esc(k)}`).join(" · ");
   }
 
-  function drawChart(S, base, f, L, target){
+  function drawChart(S, base, f, L, target, fanN){
     const svg = $("chart"), W=360, Ht=170, padL=6, padR=52, padT=10, padB=20;
     const hist = S.slice(-30);
     // série de referência em R$: CEPEA quando existe, senão NY×dólar ajustado pelo diferencial do último CEPEA
-    const lastCep = [...S].reverse().find(x=>x.cepea);
-    const basis = lastCep ? lastCep.cepea/lastCep.parity : 1;
-    const ref = hist.map(x=> x.cepea || x.parity*basis);
-    const fanN = H, total = hist.length - 1 + fanN;
+    const lastCep = [...S].reverse().find(x=>x.fis);
+    const basis = lastCep ? lastCep.fis/lastCep.parity : 1;
+    const ref = hist.map(x=> x.fis || x.parity*basis); ref[ref.length-1] = base;
+    const total = hist.length - 1 + fanN;
     const ys = ref.concat([base*f.lo90, base*f.hi90]);
     let lo=Math.min(...ys), hi=Math.max(...ys); const pad=(hi-lo)*0.08||1; lo-=pad; hi+=pad;
     const X = i => padL + i*(W-padL-padR)/total, Y = v => padT + (hi-v)*(Ht-padT-padB)/(hi-lo);
@@ -539,6 +622,8 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     svg.innerHTML = g;
   }
 
+  document.querySelectorAll(".seg.prod button").forEach(b=>b.addEventListener("click",()=>{
+    PROD = b.dataset.prod; try{ localStorage.setItem("radar-prod", PROD); }catch(e){} render(); renderCalc(); }));
   document.querySelectorAll(".seg.fc button").forEach(b=>b.addEventListener("click",()=>{
     H = +b.dataset.h; try{ localStorage.setItem("radar-h", String(H)); }catch(e){} render(); }));
 

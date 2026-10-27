@@ -110,9 +110,12 @@ def resumo(quotes, weather, meta, momento):
     base = cep[-1]["cepeaArabica"] if cep else L["parity"]
     if m:
         linhas += ["", "<b>Previsão do arábica físico</b>"]
-        for h in (7, 15):
+        for n in (7, 15):
+            alvo = datetime.now(BRT).date() + timedelta(days=n)
+            d0 = date.fromisoformat(L["date"])
+            h = max(1, sum(1 for i in range(1, (alvo - d0).days + 1) if (d0 + timedelta(days=i)).weekday() < 5))
             f = project(m, h)
-            linhas.append(f"• {h} dias úteis: R$ {br(base * f['lo'], 0)} a R$ {br(base * f['hi'], 0)} ({round(f['up'] * 100)}% de chance de alta)")
+            linhas.append(f"• {n} dias: R$ {br(base * f['lo'], 0)} a R$ {br(base * f['hi'], 0)} ({round(f['up'] * 100)}% de chance de alta)")
     regs = (weather or {}).get("regioes") or []
     if regs:
         linhas += ["", "Chuva em 7 dias: " + " · ".join(f"{r['regiao'].split(' (')[0]} {br(r['chuva7d'], 0)} mm" for r in regs)]

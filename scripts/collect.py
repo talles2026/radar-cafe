@@ -15,6 +15,7 @@ import io
 import json
 import re
 import sys
+import urllib.parse
 import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -111,6 +112,40 @@ def fetch_kc():
         status("NY agora (CNBC)", True, f"{preco} em {hora}")
     except Exception as e:
         status("NY agora (CNBC)", False, e)
+    return hist, live
+
+
+def fetch_rc():
+    """Café robusta Londres (ICE Europe) em US$/tonelada -> ({data: fechamento}, pregão em andamento)."""
+    hist, live = {}, None
+    for sym in ("@RC.1", "@LRC.1", "@RCA.1"):
+        try:
+            js = json.loads(get("https://ts-api.cnbc.com/harmony/app/charts/1Y.json?symbol=" + urllib.parse.quote(sym)))
+            for b in js["barData"]["priceBars"]:
+                t = str(b.get("tradeTime") or "")
+                if len(t) >= 8 and b.get("close") not in (None, ""):
+                    v = cnbc_num(b["close"])
+                    if 1000 < v < 15000:
+                        hist[f"{t[:4]}-{t[4:6]}-{t[6:8]}"] = round(v, 0)
+            if hist:
+                status("Londres histórico (CNBC)", True, f"{sym}: {len(hist)} pregões")
+                try:
+                    js = json.loads(get("https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol"
+                                        "?symbols=" + urllib.parse.quote(sym) + "&requestMethod=itv&noform=1&partnerId=2&fund=1&exthrs=1&output=json"))
+                    q = js["FormattedQuoteResult"]["FormattedQuote"][0]
+                    hora = q.get("last_time") or ""
+                    try:
+                        d = datetime.fromisoformat(hora[:19]).date().isoformat()
+                    except ValueError:
+                        d = datetime.now(timezone.utc).date().isoformat()
+                    live = {"date": d, "preco": round(cnbc_num(q["last"]), 0), "hora": hora}
+                    status("Londres agora (CNBC)", True, f"{q['last']} em {hora}")
+                except Exception as e:
+                    status("Londres agora (CNBC)", False, e)
+                return hist, live
+        except Exception as e:
+            log("Londres", sym, "falhou:", e)
+    status("Londres histórico (CNBC)", False, "nenhum código respondeu")
     return hist, live
 
 
@@ -228,7 +263,7 @@ def main():
     except Exception:
         quotes = {}
 
-    (kc, kc_live), (usd, usd_live), cep = fetch_kc(), fetch_usd(), fetch_cepea()
+    (kc, kc_live), (rc, rc_live), (usd, usd_live), cep = fetch_kc(), fetch_rc(), fetch_usd(), fetch_cepea()
     changed = 0
 
     def put(d, field, v):
@@ -247,6 +282,11 @@ def main():
     if kc_live:
         put(kc_live["date"], "kc", kc_live["preco"])
         quotes.get(kc_live["date"], {})["kcHora"] = kc_live["hora"]
+    for d, v in rc.items():
+        put(d, "rc", v)
+    if rc_live:
+        put(rc_live["date"], "rc", rc_live["preco"])
+        quotes.get(rc_live["date"], {})["rcHora"] = rc_live["hora"]
     for d, v in usd.items():
         put(d, "usd", v)
         quotes.get(d, {}).pop("usdAoVivo", None)
