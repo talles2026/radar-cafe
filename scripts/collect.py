@@ -40,8 +40,8 @@ def log(*a):
     print(*a, file=sys.stderr)
 
 
-def get(url, timeout=30):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
+def get(url, timeout=30, ua=None):
+    req = urllib.request.Request(url, headers={"User-Agent": ua or UA, "Accept": "*/*"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         raw = r.read()
         charset = r.headers.get_content_charset() or "utf-8"
@@ -51,6 +51,30 @@ def get(url, timeout=30):
 def br_num(s):
     s = s.strip().replace(".", "").replace(",", ".")
     return float(s)
+
+
+def ultimo_dia_util(atras=0, ref=None):
+    """Data ISO do dia útil `atras` dias úteis antes de hoje (0 = hoje, se for dia útil)."""
+    d = ref or datetime.now(timezone(timedelta(hours=-3))).date()
+    while d.weekday() >= 5:
+        d -= timedelta(days=1)
+    n = 0
+    while n < atras:
+        d -= timedelta(days=1)
+        if d.weekday() < 5:
+            n += 1
+    return d.isoformat()
+
+
+def dias_uteis_entre(a, b):
+    """Dias úteis depois de a até b (b >= a)."""
+    da, db = date.fromisoformat(a), date.fromisoformat(b)
+    n = 0
+    while da < db:
+        da += timedelta(days=1)
+        if da.weekday() < 5:
+            n += 1
+    return n
 
 
 def is_weekday(iso):
@@ -120,28 +144,38 @@ def fetch_kc():
     return h1, h2, l1, l2
 
 
-def fetch_rc():
-    """Café robusta Londres (ICE Europe) em US$/t: 1º e 2º contratos com nomes -> {data: (c1, v1, c2, v2)}.
-
-    Fonte: Notícias Agrícolas (dados Barchart), que mostra os últimos ~10 pregões, cada um
-    com o rótulo "Fechamento: dd/mm/aaaa" antes da tabela de contratos."""
+def parse_londres(html):
+    """Blocos "Fechamento: dd/mm/aaaa" seguidos da tabela de contratos -> {data: (c1, v1, c2, v2)}."""
     hist = {}
-    try:
-        html = get("https://www.noticiasagricolas.com.br/cotacoes/cafe/cafe-bolsa-de-londres-liffe")
-        text = re.sub(r"<[^>]+>", "|", html)
-        text = re.sub(r"\s+", " ", text)
-        for b in re.split(r"Fechamento:\s*", text)[1:]:
-            md = re.match(r"(\d{2}/\d{2}/\d{4})", b)
-            rows = re.findall(r"([A-Za-zçÇ]+/\d{2})\s*\|[\s|]*([\d.]+,\d{2})", b)
-            if md and rows:
-                d = datetime.strptime(md.group(1), "%d/%m/%Y").date().isoformat()
-                v1 = br_num(rows[0][1])
-                if 1000 < v1 < 15000 and d not in hist:
-                    c2, v2 = (rows[1][0], br_num(rows[1][1])) if len(rows) > 1 else (None, None)
-                    hist[d] = (rows[0][0], round(v1, 0), c2, round(v2, 0) if v2 else None)
-        status("Londres (Notícias Agrícolas)", bool(hist), f"{len(hist)} pregões até {max(hist) if hist else '-'}")
-    except Exception as e:
-        status("Londres (Notícias Agrícolas)", False, e)
+    text = re.sub(r"<[^>]+>", "|", html)
+    text = re.sub(r"\s+", " ", text)
+    for b in re.split(r"Fechamento:\s*", text)[1:]:
+        md = re.match(r"(\d{2}/\d{2}/\d{4})", b)
+        rows = re.findall(r"([A-Za-zçÇ]+/\d{2})\s*\|[\s|]*([\d.]+,\d{2})", b[:1500])
+        if md and rows:
+            d = datetime.strptime(md.group(1), "%d/%m/%Y").date().isoformat()
+            v1 = br_num(rows[0][1])
+            if 1000 < v1 < 15000 and d not in hist:
+                c2, v2 = (rows[1][0], br_num(rows[1][1])) if len(rows) > 1 else (None, None)
+                hist[d] = (rows[0][0], round(v1, 0), c2, round(v2, 0) if v2 and 1000 < v2 < 15000 else None)
+    return hist
+
+
+def fetch_rc():
+    """Café robusta Londres (ICE Europe) em US$/t: 1º e 2º contratos -> {data: (c1, v1, c2, v2)}.
+    Fonte principal: página de Londres do Notícias Agrícolas; reserva: página geral de café do mesmo site."""
+    hist = {}
+    for nome, url in (("Londres (Notícias Agrícolas)", "https://www.noticiasagricolas.com.br/cotacoes/cafe/cafe-bolsa-de-londres-liffe"),
+                      ("Londres reserva (Notícias Agrícolas, página geral)", "https://www.noticiasagricolas.com.br/cotacoes/cafe")):
+        try:
+            h = parse_londres(get(url))
+            for d, v in h.items():
+                hist.setdefault(d, v)
+            status(nome, bool(h), f"{len(h)} pregões até {max(h) if h else '-'}")
+            if h and max(h) >= ultimo_dia_util(1):
+                break
+        except Exception as e:
+            status(nome, False, e)
     return hist
 
 
@@ -283,6 +317,36 @@ def fetch_weather():
         except Exception as e:
             log(f"clima {nome} falhou:", e)
     status("Clima (Open-Meteo)", bool(out), f"{len(out)} regiões")
+    if not out:
+        out = fetch_weather_metno()
+    return out
+
+
+def fetch_weather_metno():
+    """Reserva do clima: serviço meteorológico da Noruega (met.no), gratuito, cobre o mundo todo."""
+    out = []
+    for nome, lat, lon in REGIONS:
+        try:
+            js = json.loads(get(f"https://api.met.no/weatherapi/locationforecast/2.0/compact?lat={lat}&lon={lon}",
+                               ua="radar-cafe/1.0 github.com/talles2026/radar-cafe"))
+            dias = {}
+            for t in js["properties"]["timeseries"]:
+                d = (datetime.fromisoformat(t["time"].replace("Z", "+00:00")) - timedelta(hours=3)).date().isoformat()
+                inst = t["data"]["instant"]["details"]
+                chuva = ((t["data"].get("next_1_hours") or t["data"].get("next_6_hours") or {}).get("details") or {}).get("precipitation_amount", 0)
+                x = dias.setdefault(d, {"chuva": 0.0, "tmin": 99.0, "tmax": -99.0})
+                x["chuva"] += chuva if t["data"].get("next_1_hours") else chuva / 6
+                x["tmin"] = min(x["tmin"], inst["air_temperature"])
+                x["tmax"] = max(x["tmax"], inst["air_temperature"])
+            ds = sorted(dias)[:7]
+            chuva = round(sum(dias[d]["chuva"] for d in ds), 1)
+            tmin = round(min(dias[d]["tmin"] for d in ds), 1)
+            tmax = round(max(dias[d]["tmax"] for d in ds), 1)
+            out.append({"regiao": nome, "chuva7d": chuva, "tmin": tmin, "tmax": tmax, "dias": ds,
+                        "chuvaDia": [round(dias[d]["chuva"], 1) for d in ds], "nota": ""})
+        except Exception as e:
+            log(f"clima reserva {nome} falhou:", e)
+    status("Clima reserva (met.no)", bool(out), f"{len(out)} regiões")
     return out
 
 
@@ -321,6 +385,48 @@ def ajustar(quotes, f1, f2, contrato=None, meses_virada=()):
     return viradas
 
 
+def escrever_saude(rows, weather, now):
+    agora = datetime.now(timezone(timedelta(hours=-3)))
+    hora = agora.hour
+    def ult(campo):
+        ds = [q["date"] for q in rows if q.get(campo)]
+        return max(ds) if ds else None
+    try:
+        meta = json.loads((DATA / "meta.json").read_text("utf-8"))
+    except Exception:
+        meta = {}
+    hoje_util = ultimo_dia_util(0)
+    # data que cada dado deveria ter agora (sem contar feriados)
+    esperado = {
+        "NY": hoje_util if hora >= 7 and agora.weekday() < 5 else ultimo_dia_util(1),
+        "Dólar": hoje_util if hora >= 9 and agora.weekday() < 5 else ultimo_dia_util(1),
+        "Londres": hoje_util if hora >= 17 and agora.weekday() < 5 else ultimo_dia_util(1),
+        "CEPEA arábica": ultimo_dia_util(1),
+        "CEPEA conilon": ultimo_dia_util(1),
+    }
+    ultimo = {"NY": ult("kc"), "Dólar": ult("usdCom") or ult("usd"), "Londres": ult("rc"),
+              "CEPEA arábica": ult("cepeaArabica"), "CEPEA conilon": ult("cepeaConilon")}
+    itens = {}
+    for k, u in ultimo.items():
+        atraso = dias_uteis_entre(u, esperado[k]) if u and u < esperado[k] else (0 if u else 99)
+        itens[k] = {"ultimo": u, "esperado": esperado[k], "atrasoDiasUteis": atraso,
+                    "estado": "ok" if atraso == 0 else ("atencao" if atraso == 1 else "falha")}
+    def idade_h(iso):
+        try:
+            return (datetime.now(timezone.utc) - datetime.fromisoformat(iso.replace("Z", "+00:00"))).total_seconds() / 3600
+        except Exception:
+            return 999
+    wa = idade_h((weather and now) or (json.loads((DATA / "weather.json").read_text("utf-8")).get("updatedAt") if WEATHER.exists() else "")) if not weather else 0
+    itens["Clima"] = {"ultimo": now if weather else None, "estado": "ok" if weather or wa < 30 else "falha"}
+    pa = meta.get("pracasDate")
+    itens["Praças"] = {"ultimo": pa, "estado": "ok" if pa and dias_uteis_entre(pa, ultimo_dia_util(1)) <= 1 else ("atencao" if pa and dias_uteis_entre(pa, ultimo_dia_util(1)) <= 2 else "falha")}
+    an = idade_h(meta.get("updatedAt") or "")
+    itens["Análise do dia"] = {"ultimo": meta.get("updatedAt"), "estado": "ok" if an < 30 or agora.weekday() >= 5 else ("atencao" if an < 54 else "falha")}
+    problemas = [k for k, v in itens.items() if v["estado"] == "falha"]
+    (DATA / "saude.json").write_text(json.dumps({"verificadoEm": now, "itens": itens, "problemas": problemas},
+                                                 ensure_ascii=False, indent=1), "utf-8")
+
+
 def main():
     DATA.mkdir(exist_ok=True)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -334,15 +440,34 @@ def main():
     ptax = fetch_usd()
     ucom, ulive = fetch_usd_comercial()
     cep = fetch_cepea()
-    if sum(1 for q in quotes.values() if q.get("cepeaArabica")) < 150:
+    atrasado = not cep or max(cep) < ultimo_dia_util(1)
+    if atrasado:
+        status("CEPEA (Notícias Agrícolas)", False, "sem o dia útil anterior; usando a planilha do CEPEA como reserva")
+    if atrasado or sum(1 for q in quotes.values() if q.get("cepeaArabica")) < 150:
         for d, f in fetch_cepea_hist().items():
             for k, v in f.items():
                 cep.setdefault(d, {}).setdefault(k, v)
     changed = 0
 
+    LIMITE = {"kc": 0.15, "rc": 0.15, "cepeaArabica": 0.15, "cepeaConilon": 0.15, "usdCom": 0.12, "usd": 0.12}
+    rejeitados = []
+
+    def plausivel(d, field, v):
+        if field not in LIMITE:
+            return True
+        ant = [q for dd, q in quotes.items() if dd < d and q.get(field)]
+        if not ant:
+            return True
+        ref = max(ant, key=lambda q: q["date"])[field]
+        dias = max(1, dias_uteis_entre(max(ant, key=lambda q: q["date"])["date"], d))
+        return abs(v / ref - 1) <= LIMITE[field] * min(3, dias) ** 0.5 or field in ("kc", "rc") and abs(v / ref - 1) <= 0.25
+
     def put(d, field, v):
         nonlocal changed
         if not is_weekday(d) or v is None:
+            return
+        if isinstance(v, (int, float)) and not plausivel(d, field, v):
+            rejeitados.append(f"{field} {d}={v}")
             return
         q = quotes.setdefault(d, {"date": d})
         if q.get(field) != v:
@@ -384,6 +509,7 @@ def main():
     vk = ajustar(quotes, "kc", "kc2", meses_virada=(2, 4, 6, 8, 11))
     vr = ajustar(quotes, "rc", "rc2", contrato="rcContrato", meses_virada=(12, 2, 4, 6, 8, 10))
     status("Emenda de contratos", True, f"NY: {vk} virada(s); Londres: {vr} virada(s)")
+    status("Conferência de valores", not rejeitados, ("rejeitados por salto impossível: " + ", ".join(rejeitados[:6])) if rejeitados else "nenhum valor estranho")
     rows = sorted(quotes.values(), key=lambda q: q["date"])
     QUOTES.write_text(json.dumps(rows, ensure_ascii=False, indent=1), "utf-8")
     log(f"quotes.json: {len(rows)} dias, {changed} campos alterados")
@@ -392,6 +518,7 @@ def main():
     if w:
         WEATHER.write_text(json.dumps({"updatedAt": now, "regioes": w}, ensure_ascii=False, indent=1), "utf-8")
         log(f"weather.json: {len(w)} regiões")
+    escrever_saude(rows, w, now)
     (DATA / "status.json").write_text(json.dumps({"updatedAt": now, "fontes": STATUS}, ensure_ascii=False, indent=1), "utf-8")
 
 

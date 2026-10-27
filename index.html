@@ -59,6 +59,8 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
 .big{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,11vw,3.4rem);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .big .unit{font-family:var(--body);font-size:.95rem;font-weight:500;color:var(--muted);letter-spacing:0;margin-left:4px}
 .chg{font-family:var(--mono);font-size:.9rem;font-weight:500}
+.warn{color:var(--warn)}
+.stale{color:var(--warn);font-weight:600}
 .est{font-size:.86rem;color:var(--muted);margin-top:4px}
 .est b{color:var(--ink);font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums}
 .up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--muted)}
@@ -305,6 +307,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
           <label><input type="checkbox" id="nForte" checked> Movimento forte na bolsa (2% ou mais)</label>
           <label><input type="checkbox" id="nSinal" checked> Mudança no Sinal do Radar</label>
           <label><input type="checkbox" id="nAbertura"> Abertura do mercado (por volta das 6h30)</label>
+          <label id="nManutWrap" hidden><input type="checkbox" id="nManut"> Manutenção: avisar se algum dado parar de atualizar</label>
         </fieldset>
         <div class="fields">
           <div class="field"><label for="nAA">Arábica acima de (R$)</label><input id="nAA" type="number" inputmode="numeric" placeholder="ex.: 1700"></div>
@@ -339,7 +342,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   <footer class="assinatura">
     <span class="marca">Radar do Café</span>
     <span>desenvolvido por <b>Talles Eugenio</b></span>
-    <span class="versao">versão 27/10 · 16h45</span>
+    <span class="versao">versão 27/10 · 17h20</span>
   </footer>
 </div>
 
@@ -355,7 +358,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   const esc = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const dBR = iso => { if(!iso) return ""; const [y,m,d]=iso.slice(0,10).split("-"); return d+"/"+m; };
 
-  let quotes = [], meta = null, weather = null, fontes = null, config = null, recs = null, H = 7, PER = 66, CTX = null;
+  let quotes = [], meta = null, weather = null, fontes = null, saude = null, manut = null, config = null, recs = null, H = 7, PER = 66, CTX = null;
   try { const v = localStorage.getItem("radar-per"); if (v && [22,66,130,260].includes(+v)) PER = +v; } catch(e){}
   try { const s = localStorage.getItem("radar-h"); if (s && [3,7,15].includes(+s)) H = +s; } catch(e){}
 
@@ -723,10 +726,18 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     setTimeout(()=>{ $("btnCopy").textContent = "Copiar texto"; }, 2500);
   });
 
+  // situação de cada dado: o app nunca fica vazio; se uma fonte atrasar, mostra o último dado bom e avisa a data
   function renderFontes(){
-    if (!fontes || !fontes.fontes) return;
-    const items = Object.entries(fontes.fontes);
-    $("fontes").innerHTML = "<b>Situação das fontes na última coleta:</b> " + items.map(([k,v])=>`<span class="${v.ok?"up":"down"}">${v.ok?"●":"○"}</span> ${esc(k)}`).join(" · ");
+    const it = (saude && saude.itens) || null;
+    if (!it){ if (fontes && fontes.fontes) $("fontes").innerHTML = "<b>Fontes:</b> " + Object.entries(fontes.fontes).map(([k,v])=>`<span class="${v.ok?"up":"down"}">${v.ok?"●":"○"}</span> ${esc(k)}`).join(" · "); return; }
+    const cor = e => e==="ok" ? "up" : e==="atencao" ? "warn" : "down";
+    const rot = (k,v) => v.estado==="ok" ? "em dia" : v.ultimo ? "último dado " + dBR(String(v.ultimo).slice(0,10)) : "sem dado";
+    $("fontes").innerHTML = "<b>Situação dos dados:</b> " + Object.entries(it).map(([k,v])=>`<span class="${cor(v.estado)}">●</span> ${esc(k)} <span style="opacity:.75">(${esc(rot(k,v))})</span>`).join(" · ") +
+      (manut && manut.texto ? `<br><b>Vigia automático (${esc(dBR(String(manut.data||"").slice(0,10)))}):</b> ${esc(manut.texto)}` : "");
+    // marca nos quadros do topo quando o dado está atrasado
+    const tag = (lblId, k) => { const v = it[k]; const el = $(lblId); if (!el || !v) return; el.querySelector(".stale")?.remove(); if (v.estado==="falha"){ const t=document.createElement("span"); t.className="stale"; t.textContent=" · atrasado"; el.appendChild(t); } };
+    tag("kcLbl","NY"); tag("usdLbl","Dólar"); tag("rcLbl","Londres");
+    const c = it["CEPEA arábica"]; if (c && c.estado==="falha") $("cepeaChg").textContent += " · fonte em manutenção, mostrando o último dado";
   }
 
   function drawChart(S, base, f, L, target, fanN){
@@ -771,7 +782,9 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   async function load(){
     const bust = "?t=" + Date.now();
     const get = f => fetch("data/" + f + bust, {cache:"no-store"}).then(r => { if(!r.ok) throw new Error(r.status); return r.json(); });
-    const [q, m, w, st, cf, rc] = await Promise.allSettled([get("quotes.json"), get("meta.json"), get("weather.json"), get("status.json"), get("config.json"), get("recomendacoes.json")]);
+    const [q, m, w, st, cf, rc, sd, mt] = await Promise.allSettled([get("quotes.json"), get("meta.json"), get("weather.json"), get("status.json"), get("config.json"), get("recomendacoes.json"), get("saude.json"), get("manutencao.json")]);
+    if (sd.status === "fulfilled") saude = sd.value;
+    if (mt.status === "fulfilled") manut = mt.value;
     if (rc.status === "fulfilled") recs = rc.value;
     if (cf.status === "fulfilled") config = cf.value;
     if (st.status === "fulfilled") fontes = st.value;
@@ -787,11 +800,11 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   document.addEventListener("visibilitychange", () => { if (!document.hidden) load(); });
 
   // ---------- notificações ----------
-  const N_IDS = ["nArabica","nConilon","nCepea","nForte","nSinal","nAbertura","nAA","nAB","nCA","nCB"];
+  const N_IDS = ["nArabica","nConilon","nCepea","nForte","nSinal","nAbertura","nManut","nAA","nAB","nCA","nCB"];
   try { const v = JSON.parse(localStorage.getItem("radar-notif-prefs")||"null"); if (v) N_IDS.forEach(id=>{ if (id in v){ const el=$(id); if (el.type==="checkbox") el.checked=!!v[id]; else el.value=v[id]; } }); } catch(e){}
   const num = id => { const v = +$(id).value; return v>0 ? v : null; };
   function nPrefs(){
-    return { arabica:$("nArabica").checked, conilon:$("nConilon").checked, cepea:$("nCepea").checked, forte:$("nForte").checked, sinal:$("nSinal").checked, abertura:$("nAbertura").checked,
+    return { arabica:$("nArabica").checked, conilon:$("nConilon").checked, cepea:$("nCepea").checked, forte:$("nForte").checked, sinal:$("nSinal").checked, abertura:$("nAbertura").checked, manutencao:$("nManut").checked,
       alvos:{ arabica:{acima:num("nAA"), abaixo:num("nAB")}, conilon:{acima:num("nCA"), abaixo:num("nCB")} } };
   }
   function nSaveLocal(){ try{ const o={}; N_IDS.forEach(id=>{ const el=$(id); o[id]= el.type==="checkbox" ? el.checked : el.value; }); localStorage.setItem("radar-notif-prefs", JSON.stringify(o)); }catch(e){} }
@@ -836,6 +849,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     } catch(e){ $("nHint").textContent = "Não consegui enviar o teste agora: " + e.message; }
     $("nTeste").disabled = false; $("nTeste").textContent = "Enviar notificação de teste";
   });
+  try { if (location.hash === "#manutencao") localStorage.setItem("radar-manut","1"); if (localStorage.getItem("radar-manut")==="1") $("nManutWrap").hidden = false; } catch(e){ if (location.hash === "#manutencao") $("nManutWrap").hidden = false; }
   N_IDS.forEach(id=>$(id).addEventListener("change", ()=>{ nSaveLocal(); clearTimeout(nTimer); nTimer = setTimeout(nSync, 600); }));
   $("nBtn").addEventListener("click", async ()=>{
     if (!nOk()){ $("nHint").textContent = "As notificações ainda estão sendo configuradas. Volte daqui a pouco."; return; }

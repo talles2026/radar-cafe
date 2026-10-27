@@ -109,6 +109,15 @@ Deno.serve(async (req: Request) => {
     ev.push({ chave: `abertura-${hoje}`, prod: "*", tipo: "abertura", titulo: `Abertura do café · ${dbr(hoje)}`, texto: partes.join(" · ") });
   }
 
+  // ---- manutenção: dado parado há 2 dias úteis ou mais (só para quem marcou a opção de manutenção) ----
+  const saude = await json("data/saude.json").catch(() => null);
+  for (const k of saude?.problemas ?? []) {
+    const it = saude.itens?.[k] ?? {};
+    const desde = it.ultimo ? ` desde ${dbr(String(it.ultimo).slice(0, 10))}` : "";
+    ev.push({ chave: `manut-${k}-${hoje}`, prod: "*", tipo: "manutencao", titulo: "⚠️ Radar do Café: dado parado",
+      texto: `${k} sem atualizar${desde}. O vigia automático vai tentar corrigir; o app mostra o último dado bom.` });
+  }
+
   // ---- envio por celular ----
   const { data: subs } = await db.from("radar_inscricoes").select("id,endpoint,p256dh,auth,prefs,visto");
   let enviados = 0, removidos = 0;
