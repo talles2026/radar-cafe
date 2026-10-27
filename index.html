@@ -705,14 +705,17 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     const svg = $("chart"), W=360, Ht=170, padL=6, padR=52, padT=10, padB=20;
     const hist = S.slice(-30);
     // série de referência em R$: CEPEA quando existe, senão NY×dólar ajustado pelo diferencial do último CEPEA
-    const lastCep = [...S].reverse().find(x=>x.fis);
-    const basis = lastCep ? lastCep.fis/lastCep.parity : 1;
-    const ref = hist.map(x=> x.fis || x.parity*basis); ref[ref.length-1] = base;
-    const total = hist.length - 1 + fanN;
+    // dias sem CEPEA (feriados): usa o diferencial do último dia com CEPEA, não o de hoje
+    let basis = (()=>{ const c = S.slice(0, S.length-hist.length).reverse().find(x=>x.fis); return c ? c.fis/c.parity : null; })();
+    const ref = hist.map(x=>{ if (x.fis){ basis = x.fis/x.parity; return x.fis; } return basis ? x.parity*basis : null; });
+    for (let i=0;i<ref.length;i++) if (ref[i]==null) ref[i] = ref.find(v=>v!=null) ?? base;
+    ref[ref.length-1] = base;
     const ys = ref.concat([base*f.lo90, base*f.hi90]);
     let lo=Math.min(...ys), hi=Math.max(...ys); const pad=(hi-lo)*0.08||1; lo-=pad; hi+=pad;
-    const X = i => padL + i*(W-padL-padR)/total, Y = v => padT + (hi-v)*(Ht-padT-padB)/(hi-lo);
-    const i0 = hist.length-1;
+    // área fixa para a previsão (30% da largura), qualquer que seja o prazo: os rótulos nunca se encostam
+    const i0 = hist.length-1, split = padL + (W-padL-padR)*0.70;
+    const X = i => i <= i0 ? padL + i*(split-padL)/Math.max(1,i0) : split + (i-i0)*(W-padR-split)/fanN;
+    const Y = v => padT + (hi-v)*(Ht-padT-padB)/(hi-lo);
     const fan = (a,b) => { let up=[],dn=[]; for(let k=0;k<=fanN;k++){ const s=Math.sqrt(k/fanN);
         const mid = Math.pow(f.mid, k/fanN); const ua = 1 + (b/f.mid-1)*s, da = 1 - (1-a/f.mid)*s;
         up.push([X(i0+k), Y(base*mid*ua)]); dn.push([X(i0+k), Y(base*mid*da)]); }
@@ -725,7 +728,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     g += `<path d="M${X(i0)},${Y(base)}L${X(i0+fanN)},${Y(base*f.mid)}" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>`;
     g += `<path d="${line}" stroke="var(--ink)" stroke-width="1.8" fill="none" stroke-linejoin="round"/>`;
     g += `<circle cx="${X(i0)}" cy="${Y(base)}" r="3.5" fill="var(--accent)"/>`;
-    g += `<text x="${padL}" y="${Ht-5}">${dBR(hist[0].date)}</text><text x="${X(i0)}" y="${Ht-5}" text-anchor="middle">hoje</text><text x="${W-padR}" y="${Ht-5}" text-anchor="end">${target.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})}</text>`;
+    g += `<text x="${padL}" y="${Ht-5}">${dBR(hist[0].date)}</text><text x="${X(i0)-4}" y="${Ht-5}" text-anchor="end">hoje</text><text x="${W-padR}" y="${Ht-5}" text-anchor="end">${target.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})}</text>`;
     svg.innerHTML = g;
   }
 
