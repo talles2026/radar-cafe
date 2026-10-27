@@ -2,346 +2,432 @@
  {
   "date": "2025-09-22",
   "usd": 5.3457,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 367.35,
   "usdCom": 5.3345,
-  "kcAdj": 367.35
+  "kcAdj": 367.35,
+  "cepeaArabica": 2133.08,
+  "cepeaConilon": 1313.22
  },
  {
   "date": "2025-09-23",
   "usd": 5.3063,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 350.15,
   "usdCom": 5.2826,
-  "kcAdj": 350.15
+  "kcAdj": 350.15,
+  "cepeaArabica": 2055.69,
+  "cepeaConilon": 1278.86
  },
  {
   "date": "2025-09-24",
   "usd": 5.3112,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 367.75,
   "usdCom": 5.3324,
-  "kcAdj": 367.75
+  "kcAdj": 367.75,
+  "cepeaArabica": 2075.25,
+  "cepeaConilon": 1303.92
  },
  {
   "date": "2025-09-25",
   "usd": 5.3425,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 371.35,
   "usdCom": 5.3634,
-  "kcAdj": 371.35
+  "kcAdj": 371.35,
+  "cepeaArabica": 2121.88,
+  "cepeaConilon": 1288.92
  },
  {
   "date": "2025-09-26",
   "usd": 5.3445,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 378.05,
   "usdCom": 5.3426,
-  "kcAdj": 378.05
+  "kcAdj": 378.05,
+  "cepeaArabica": 2124.03,
+  "cepeaConilon": 1321.13
  },
  {
   "date": "2025-09-29",
   "usd": 5.3229,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 372.2,
   "usdCom": 5.3216,
-  "kcAdj": 372.2
+  "kcAdj": 372.2,
+  "cepeaArabica": 2134.16,
+  "cepeaConilon": 1313.84
  },
  {
   "date": "2025-09-30",
   "usd": 5.3186,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 374.85,
   "usdCom": 5.3224,
-  "kcAdj": 374.85
+  "kcAdj": 374.85,
+  "cepeaArabica": 2127.5,
+  "cepeaConilon": 1342.46
  },
  {
   "date": "2025-10-01",
   "usd": 5.3208,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 383.9,
   "usdCom": 5.3286,
-  "kcAdj": 383.9
+  "kcAdj": 383.9,
+  "cepeaArabica": 2163.99,
+  "cepeaConilon": 1353.43
  },
  {
   "date": "2025-10-02",
   "usd": 5.3449,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 378.1,
   "usdCom": 5.338,
-  "kcAdj": 378.1
+  "kcAdj": 378.1,
+  "cepeaArabica": 2147.82,
+  "cepeaConilon": 1344.89
  },
  {
   "date": "2025-10-03",
   "usd": 5.3498,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 390.75,
   "usdCom": 5.337,
-  "kcAdj": 390.75
+  "kcAdj": 390.75,
+  "cepeaArabica": 2184.71,
+  "cepeaConilon": 1389.41
  },
  {
   "date": "2025-10-06",
   "usd": 5.3226,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 381.35,
   "usdCom": 5.3127,
-  "kcAdj": 381.35
+  "kcAdj": 381.35,
+  "cepeaArabica": 2169.21,
+  "cepeaConilon": 1393.91
  },
  {
   "date": "2025-10-07",
   "usd": 5.3363,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 375.4,
   "usdCom": 5.3501,
-  "kcAdj": 375.4
+  "kcAdj": 375.4,
+  "cepeaArabica": 2176.74,
+  "cepeaConilon": 1387.19
  },
  {
   "date": "2025-10-08",
   "usd": 5.3427,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 385.1,
   "usdCom": 5.3426,
-  "kcAdj": 385.1
+  "kcAdj": 385.1,
+  "cepeaArabica": 2186.03,
+  "cepeaConilon": 1388.96
  },
  {
   "date": "2025-10-09",
   "usd": 5.3538,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 377.25,
   "usdCom": 5.368,
-  "kcAdj": 377.25
+  "kcAdj": 377.25,
+  "cepeaArabica": 2182.41,
+  "cepeaConilon": 1395.41
  },
  {
   "date": "2025-10-10",
   "usd": 5.4446,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 373.05,
   "usdCom": 5.5217,
-  "kcAdj": 373.05
+  "kcAdj": 373.05,
+  "cepeaArabica": 2191.74,
+  "cepeaConilon": 1388.41
  },
  {
   "date": "2025-10-13",
   "usd": 5.4629,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 385.2,
   "usdCom": 5.4637,
-  "kcAdj": 385.2
+  "kcAdj": 385.2,
+  "cepeaArabica": 2219.96,
+  "cepeaConilon": 1414.4
  },
  {
   "date": "2025-10-14",
   "usd": 5.4982,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 399.65,
   "usdCom": 5.4817,
-  "kcAdj": 399.65
+  "kcAdj": 399.65,
+  "cepeaArabica": 2301.24,
+  "cepeaConilon": 1416.62
  },
  {
   "date": "2025-10-15",
   "usd": 5.4464,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 394.9,
   "usdCom": 5.4546,
-  "kcAdj": 394.9
+  "kcAdj": 394.9,
+  "cepeaArabica": 2314.21,
+  "cepeaConilon": 1425.51
  },
  {
   "date": "2025-10-16",
   "usd": 5.4354,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 393.8,
   "usdCom": 5.4452,
-  "kcAdj": 393.8
+  "kcAdj": 393.8,
+  "cepeaArabica": 2269.67,
+  "cepeaConilon": 1420.51
  },
  {
   "date": "2025-10-17",
   "usd": 5.439,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 397.45,
   "usdCom": 5.408,
-  "kcAdj": 397.45
+  "kcAdj": 397.45,
+  "cepeaArabica": 2262.88,
+  "cepeaConilon": 1400.77
  },
  {
   "date": "2025-10-20",
   "usd": 5.3771,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 406.05,
   "usdCom": 5.3743,
-  "kcAdj": 406.05
+  "kcAdj": 406.05,
+  "cepeaArabica": 2275.55,
+  "cepeaConilon": 1407.41
  },
  {
   "date": "2025-10-21",
   "usd": 5.3848,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 413.55,
   "usdCom": 5.3876,
-  "kcAdj": 413.55
+  "kcAdj": 413.55,
+  "cepeaArabica": 2300.49,
+  "cepeaConilon": 1423.4
  },
  {
   "date": "2025-10-22",
   "usd": 5.3898,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 420.85,
   "usdCom": 5.3997,
-  "kcAdj": 420.85
+  "kcAdj": 420.85,
+  "cepeaArabica": 2323.66,
+  "cepeaConilon": 1429.9
  },
  {
   "date": "2025-10-23",
   "usd": 5.384,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 410.15,
   "usdCom": 5.3821,
-  "kcAdj": 410.15
+  "kcAdj": 410.15,
+  "cepeaArabica": 2307.6,
+  "cepeaConilon": 1428.84
  },
  {
   "date": "2025-10-24",
   "usd": 5.3797,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 403.0,
   "usdCom": 5.3887,
-  "kcAdj": 403.0
+  "kcAdj": 403.0,
+  "cepeaArabica": 2289.68,
+  "cepeaConilon": 1401.63
  },
  {
   "date": "2025-10-27",
   "usd": 5.3744,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 390.1,
   "usdCom": 5.3728,
-  "kcAdj": 390.1
+  "kcAdj": 390.1,
+  "cepeaArabica": 2266.09,
+  "cepeaConilon": 1381.42
  },
  {
   "date": "2025-10-28",
   "usd": 5.369,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 387.9,
   "usdCom": 5.3578,
-  "kcAdj": 387.9
+  "kcAdj": 387.9,
+  "cepeaArabica": 2214.0,
+  "cepeaConilon": 1371.3
  },
  {
   "date": "2025-10-29",
   "usd": 5.3416,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 390.7,
   "usdCom": 5.3605,
-  "kcAdj": 390.7
+  "kcAdj": 390.7,
+  "cepeaArabica": 2217.39,
+  "cepeaConilon": 1389.91
  },
  {
   "date": "2025-10-30",
   "usd": 5.385,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 392.0,
   "usdCom": 5.3807,
-  "kcAdj": 392.0
+  "kcAdj": 392.0,
+  "cepeaArabica": 2210.41,
+  "cepeaConilon": 1405.03
  },
  {
   "date": "2025-10-31",
   "usd": 5.3843,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 392.05,
   "usdCom": 5.3739,
-  "kcAdj": 392.05
+  "kcAdj": 392.05,
+  "cepeaArabica": 2206.59,
+  "cepeaConilon": 1405.91
  },
  {
   "date": "2025-11-03",
   "usd": 5.3505,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 406.65,
   "usdCom": 5.3568,
-  "kcAdj": 406.65
+  "kcAdj": 406.65,
+  "cepeaArabica": 2253.33,
+  "cepeaConilon": 1412.98
  },
  {
   "date": "2025-11-04",
   "usd": 5.3846,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 405.25,
   "usdCom": 5.3972,
-  "kcAdj": 405.25
+  "kcAdj": 405.25,
+  "cepeaArabica": 2272.55,
+  "cepeaConilon": 1434.97
  },
  {
   "date": "2025-11-05",
   "usd": 5.3798,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 413.6,
   "usdCom": 5.3595,
-  "kcAdj": 413.6
+  "kcAdj": 413.6,
+  "cepeaArabica": 2305.83,
+  "cepeaConilon": 1431.75
  },
  {
   "date": "2025-11-06",
   "usd": 5.3451,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 379.05,
   "usdCom": 5.3498,
-  "kcAdj": 379.05
+  "kcAdj": 379.05,
+  "cepeaArabica": 2250.02,
+  "cepeaConilon": 1392.99
  },
  {
   "date": "2025-11-07",
   "usd": 5.3567,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 385.85,
   "usdCom": 5.3321,
-  "kcAdj": 385.85
+  "kcAdj": 385.85,
+  "cepeaArabica": 2290.64,
+  "cepeaConilon": 1409.48
  },
  {
   "date": "2025-11-10",
   "usd": 5.3181,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 393.15,
   "usdCom": 5.2907,
-  "kcAdj": 393.15
+  "kcAdj": 393.15,
+  "cepeaArabica": 2291.24,
+  "cepeaConilon": 1393.99
  },
  {
   "date": "2025-11-11",
   "usd": 5.2729,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 399.3,
   "usdCom": 5.2717,
-  "kcAdj": 399.3
+  "kcAdj": 399.3,
+  "cepeaArabica": 2294.47,
+  "cepeaConilon": 1380.12
  },
  {
   "date": "2025-11-12",
   "usd": 5.2885,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 376.65,
   "usdCom": 5.2925,
-  "kcAdj": 376.65
+  "kcAdj": 376.65,
+  "cepeaArabica": 2241.18,
+  "cepeaConilon": 1350.22
  },
  {
   "date": "2025-11-13",
   "usd": 5.282,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 374.25,
   "usdCom": 5.2978,
-  "kcAdj": 374.25
+  "kcAdj": 374.25,
+  "cepeaArabica": 2218.7,
+  "cepeaConilon": 1345.51
  },
  {
   "date": "2025-11-14",
   "usd": 5.2952,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 374.0,
   "usdCom": 5.2964,
-  "kcAdj": 374.0
+  "kcAdj": 374.0,
+  "cepeaArabica": 2204.71,
+  "cepeaConilon": 1316.18
  },
  {
   "date": "2025-11-17",
   "usd": 5.3108,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 376.6,
   "usdCom": 5.329,
-  "kcAdj": 376.6
+  "kcAdj": 376.6,
+  "cepeaArabica": 2207.42,
+  "cepeaConilon": 1346.38
  },
  {
   "date": "2025-11-18",
   "usd": 5.3361,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 387.7,
   "usdCom": 5.3218,
-  "kcAdj": 387.7
+  "kcAdj": 387.7,
+  "cepeaArabica": 2231.54,
+  "cepeaConilon": 1383.49
  },
  {
   "date": "2025-11-19",
   "usd": 5.3346,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 374.85,
   "usdCom": 5.3304,
-  "kcAdj": 374.85
+  "kcAdj": 374.85,
+  "cepeaArabica": 2232.1,
+  "cepeaConilon": 1389.49
  },
  {
   "date": "2025-11-20",
@@ -353,186 +439,232 @@
  {
   "date": "2025-11-21",
   "usd": 5.3902,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 369.45,
   "usdCom": 5.4028,
-  "kcAdj": 369.45
+  "kcAdj": 369.45,
+  "cepeaArabica": 2181.7,
+  "cepeaConilon": 1347.28
  },
  {
   "date": "2025-11-24",
   "usd": 5.3948,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 376.55,
   "usdCom": 5.3884,
-  "kcAdj": 376.55
+  "kcAdj": 376.55,
+  "cepeaArabica": 2198.88,
+  "cepeaConilon": 1373.5
  },
  {
   "date": "2025-11-25",
   "usd": 5.3841,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 383.3,
   "usdCom": 5.381,
-  "kcAdj": 383.3
+  "kcAdj": 383.3,
+  "cepeaArabica": 2250.1,
+  "cepeaConilon": 1397.67
  },
  {
   "date": "2025-11-26",
   "usd": 5.3694,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 379.7,
   "usdCom": 5.3319,
-  "kcAdj": 379.7
+  "kcAdj": 379.7,
+  "cepeaArabica": 2239.07,
+  "cepeaConilon": 1396.99
  },
  {
   "date": "2025-11-27",
   "usd": 5.349,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 379.7,
   "usdCom": 5.3562,
-  "kcAdj": 379.7
+  "kcAdj": 379.7,
+  "cepeaArabica": 2241.53,
+  "cepeaConilon": 1397.26
  },
  {
   "date": "2025-11-28",
   "usd": 5.3338,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 381.2,
   "usdCom": 5.3363,
-  "kcAdj": 381.2
+  "kcAdj": 381.2,
+  "cepeaArabica": 2252.95,
+  "cepeaConilon": 1404.48
  },
  {
   "date": "2025-12-01",
   "usd": 5.3469,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 379.7,
   "usdCom": 5.3571,
-  "kcAdj": 379.7
+  "kcAdj": 379.7,
+  "cepeaArabica": 2233.34,
+  "cepeaConilon": 1386.08
  },
  {
   "date": "2025-12-02",
   "usd": 5.3465,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 373.45,
   "usdCom": 5.3274,
-  "kcAdj": 373.45
+  "kcAdj": 373.45,
+  "cepeaArabica": 2231.43,
+  "cepeaConilon": 1373.17
  },
  {
   "date": "2025-12-03",
   "usd": 5.3114,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 372.45,
   "usdCom": 5.3074,
-  "kcAdj": 372.45
+  "kcAdj": 372.45,
+  "cepeaArabica": 2217.5,
+  "cepeaConilon": 1373.92
  },
  {
   "date": "2025-12-04",
   "usd": 5.2952,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 380.5,
   "usdCom": 5.3092,
-  "kcAdj": 380.5
+  "kcAdj": 380.5,
+  "cepeaArabica": 2235.73,
+  "cepeaConilon": 1377.92
  },
  {
   "date": "2025-12-05",
   "usd": 5.3405,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 374.85,
   "usdCom": 5.439,
-  "kcAdj": 374.85
+  "kcAdj": 374.85,
+  "cepeaArabica": 2217.02,
+  "cepeaConilon": 1372.42
  },
  {
   "date": "2025-12-08",
   "usd": 5.4249,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 366.2,
   "usdCom": 5.4298,
-  "kcAdj": 366.2
+  "kcAdj": 366.2,
+  "cepeaArabica": 2223.46,
+  "cepeaConilon": 1367.15
  },
  {
   "date": "2025-12-09",
   "usd": 5.457,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 368.75,
   "usdCom": 5.4331,
-  "kcAdj": 368.75
+  "kcAdj": 368.75,
+  "cepeaArabica": 2241.23,
+  "cepeaConilon": 1373.92
  },
  {
   "date": "2025-12-10",
   "usd": 5.4656,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 372.3,
   "usdCom": 5.4725,
-  "kcAdj": 372.3
+  "kcAdj": 372.3,
+  "cepeaArabica": 2258.89,
+  "cepeaConilon": 1363.31
  },
  {
   "date": "2025-12-11",
   "usd": 5.4237,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 376.2,
   "usdCom": 5.4079,
-  "kcAdj": 376.2
+  "kcAdj": 376.2,
+  "cepeaArabica": 2283.45,
+  "cepeaConilon": 1358.87
  },
  {
   "date": "2025-12-12",
   "usd": 5.4011,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 369.3,
   "usdCom": 5.4186,
-  "kcAdj": 369.3
+  "kcAdj": 369.3,
+  "cepeaArabica": 2253.93,
+  "cepeaConilon": 1332.56
  },
  {
   "date": "2025-12-15",
   "usd": 5.3929,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 360.3,
   "usdCom": 5.4143,
-  "kcAdj": 360.3
+  "kcAdj": 360.3,
+  "cepeaArabica": 2217.3,
+  "cepeaConilon": 1284.46
  },
  {
   "date": "2025-12-16",
   "usd": 5.4505,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 352.1,
   "usdCom": 5.5088,
-  "kcAdj": 352.1
+  "kcAdj": 352.1,
+  "cepeaArabica": 2175.81,
+  "cepeaConilon": 1255.09
  },
  {
   "date": "2025-12-17",
   "usd": 5.5093,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 347.4,
   "usdCom": 5.52,
-  "kcAdj": 347.4
+  "kcAdj": 347.4,
+  "cepeaArabica": 2158.72,
+  "cepeaConilon": 1222.34
  },
  {
   "date": "2025-12-18",
   "usd": 5.5283,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 345.1,
   "usdCom": 5.5216,
-  "kcAdj": 345.1
+  "kcAdj": 345.1,
+  "cepeaArabica": 2149.88,
+  "cepeaConilon": 1229.48
  },
  {
   "date": "2025-12-19",
   "usd": 5.516,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 340.65,
   "usdCom": 5.5425,
-  "kcAdj": 340.65
+  "kcAdj": 340.65,
+  "cepeaArabica": 2135.34,
+  "cepeaConilon": 1223.77
  },
  {
   "date": "2025-12-22",
   "usd": 5.5389,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 347.35,
   "usdCom": 5.5896,
-  "kcAdj": 347.35
+  "kcAdj": 347.35,
+  "cepeaArabica": 2159.06,
+  "cepeaConilon": 1240.19
  },
  {
   "date": "2025-12-23",
   "usd": 5.5643,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 346.95,
   "usdCom": 5.5203,
-  "kcAdj": 346.95
+  "kcAdj": 346.95,
+  "cepeaArabica": 2162.0,
+  "cepeaConilon": 1255.97
  },
  {
   "date": "2025-12-24",
@@ -550,26 +682,32 @@
  {
   "date": "2025-12-26",
   "usd": 5.5413,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 350.25,
   "usdCom": 5.5434,
-  "kcAdj": 350.25
+  "kcAdj": 350.25,
+  "cepeaArabica": 2167.55,
+  "cepeaConilon": 1256.47
  },
  {
   "date": "2025-12-29",
   "usd": 5.5739,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 352.15,
   "usdCom": 5.5702,
-  "kcAdj": 352.15
+  "kcAdj": 352.15,
+  "cepeaArabica": 2176.02,
+  "cepeaConilon": 1250.58
  },
  {
   "date": "2025-12-30",
   "usd": 5.5024,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 350.2,
   "usdCom": 5.477,
-  "kcAdj": 350.2
+  "kcAdj": 350.2,
+  "cepeaArabica": 2174.74,
+  "cepeaConilon": 1263.91
  },
  {
   "date": "2025-12-31",
@@ -587,250 +725,312 @@
  {
   "date": "2026-01-02",
   "usd": 5.4372,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 357.3,
   "usdCom": 5.4223,
-  "kcAdj": 357.3
+  "kcAdj": 357.3,
+  "cepeaArabica": 2171.95,
+  "cepeaConilon": 1263.38
  },
  {
   "date": "2026-01-05",
   "usd": 5.4351,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 359.35,
   "usdCom": 5.4094,
-  "kcAdj": 359.35
+  "kcAdj": 359.35,
+  "cepeaArabica": 2191.97,
+  "cepeaConilon": 1250.12
  },
  {
   "date": "2026-01-06",
   "usd": 5.3797,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 373.85,
   "usdCom": 5.3718,
-  "kcAdj": 373.85
+  "kcAdj": 373.85,
+  "cepeaArabica": 2237.54,
+  "cepeaConilon": 1265.99
  },
  {
   "date": "2026-01-07",
   "usd": 5.388,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 375.45,
   "usdCom": 5.3848,
-  "kcAdj": 375.45
+  "kcAdj": 375.45,
+  "cepeaArabica": 2263.04,
+  "cepeaConilon": 1282.66
  },
  {
   "date": "2026-01-08",
   "usd": 5.386,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 372.35,
   "usdCom": 5.3878,
-  "kcAdj": 372.35
+  "kcAdj": 372.35,
+  "cepeaArabica": 2266.21,
+  "cepeaConilon": 1285.25
  },
  {
   "date": "2026-01-09",
   "usd": 5.3707,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 357.65,
   "usdCom": 5.3708,
-  "kcAdj": 357.65
+  "kcAdj": 357.65,
+  "cepeaArabica": 2225.39,
+  "cepeaConilon": 1282.4
  },
  {
   "date": "2026-01-12",
   "usd": 5.376,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 356.05,
   "usdCom": 5.3752,
-  "kcAdj": 356.05
+  "kcAdj": 356.05,
+  "cepeaArabica": 2205.19,
+  "cepeaConilon": 1278.33
  },
  {
   "date": "2026-01-13",
   "usd": 5.3764,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 360.25,
   "usdCom": 5.3723,
-  "kcAdj": 360.25
+  "kcAdj": 360.25,
+  "cepeaArabica": 2216.15,
+  "cepeaConilon": 1280.59
  },
  {
   "date": "2026-01-14",
   "usd": 5.3795,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 356.0,
   "usdCom": 5.3967,
-  "kcAdj": 356.0
+  "kcAdj": 356.0,
+  "cepeaArabica": 2196.97,
+  "cepeaConilon": 1298.48
  },
  {
   "date": "2026-01-15",
   "usd": 5.3846,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 358.1,
   "usdCom": 5.3678,
-  "kcAdj": 358.1
+  "kcAdj": 358.1,
+  "cepeaArabica": 2201.88,
+  "cepeaConilon": 1288.37
  },
  {
   "date": "2026-01-16",
   "usd": 5.3798,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 355.3,
   "usdCom": 5.3694,
-  "kcAdj": 355.3
+  "kcAdj": 355.3,
+  "cepeaArabica": 2180.2,
+  "cepeaConilon": 1300.57
  },
  {
   "date": "2026-01-19",
   "usd": 5.3653,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 355.3,
   "usdCom": 5.3697,
-  "kcAdj": 355.3
+  "kcAdj": 355.3,
+  "cepeaArabica": 2184.18,
+  "cepeaConilon": 1301.47
  },
  {
   "date": "2026-01-20",
   "usd": 5.379,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 346.5,
   "usdCom": 5.3764,
-  "kcAdj": 346.5
+  "kcAdj": 346.5,
+  "cepeaArabica": 2146.33,
+  "cepeaConilon": 1281.48
  },
  {
   "date": "2026-01-21",
   "usd": 5.3368,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 347.5,
   "usdCom": 5.3196,
-  "kcAdj": 347.5
+  "kcAdj": 347.5,
+  "cepeaArabica": 2135.9,
+  "cepeaConilon": 1283.65
  },
  {
   "date": "2026-01-22",
   "usd": 5.3118,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 347.7,
   "usdCom": 5.2844,
-  "kcAdj": 347.7
+  "kcAdj": 347.7,
+  "cepeaArabica": 2107.84,
+  "cepeaConilon": 1276.76
  },
  {
   "date": "2026-01-23",
   "usd": 5.2879,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 350.9,
   "usdCom": 5.2895,
-  "kcAdj": 350.9
+  "kcAdj": 350.9,
+  "cepeaArabica": 2135.31,
+  "cepeaConilon": 1286.48
  },
  {
   "date": "2026-01-26",
   "usd": 5.276,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 356.25,
   "usdCom": 5.281,
-  "kcAdj": 356.25
+  "kcAdj": 356.25,
+  "cepeaArabica": 2144.25,
+  "cepeaConilon": 1290.03
  },
  {
   "date": "2026-01-27",
   "usd": 5.2392,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 367.25,
   "usdCom": 5.1806,
-  "kcAdj": 367.25
+  "kcAdj": 367.25,
+  "cepeaArabica": 2185.59,
+  "cepeaConilon": 1282.21
  },
  {
   "date": "2026-01-28",
   "usd": 5.1838,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 351.0,
   "usdCom": 5.1939,
-  "kcAdj": 351.0
+  "kcAdj": 351.0,
+  "cepeaArabica": 2156.49,
+  "cepeaConilon": 1239.04
  },
  {
   "date": "2026-01-29",
   "usd": 5.1956,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 345.5,
   "usdCom": 5.1898,
-  "kcAdj": 345.5
+  "kcAdj": 345.5,
+  "cepeaArabica": 2108.35,
+  "cepeaConilon": 1227.5
  },
  {
   "date": "2026-01-30",
   "usd": 5.2301,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 332.25,
   "usdCom": 5.2571,
-  "kcAdj": 332.25
+  "kcAdj": 332.25,
+  "cepeaArabica": 2094.55,
+  "cepeaConilon": 1212.01
  },
  {
   "date": "2026-02-02",
   "usd": 5.2587,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 333.25,
   "usdCom": 5.2604,
-  "kcAdj": 333.25
+  "kcAdj": 333.25,
+  "cepeaArabica": 2060.33,
+  "cepeaConilon": 1155.13
  },
  {
   "date": "2026-02-03",
   "usd": 5.2236,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 317.1,
   "usdCom": 5.2387,
-  "kcAdj": 317.1
+  "kcAdj": 317.1,
+  "cepeaArabica": 1971.48,
+  "cepeaConilon": 1095.1
  },
  {
   "date": "2026-02-04",
   "usd": 5.2359,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 308.65,
   "usdCom": 5.239,
-  "kcAdj": 308.65
+  "kcAdj": 308.65,
+  "cepeaArabica": 1931.5,
+  "cepeaConilon": 1079.1
  },
  {
   "date": "2026-02-05",
   "usd": 5.258,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 308.4,
   "usdCom": 5.2723,
-  "kcAdj": 308.4
+  "kcAdj": 308.4,
+  "cepeaArabica": 1916.31,
+  "cepeaConilon": 1073.36
  },
  {
   "date": "2026-02-06",
   "usd": 5.2341,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 289.3,
   "usdCom": 5.2166,
-  "kcAdj": 289.3
+  "kcAdj": 289.3,
+  "cepeaArabica": 1884.66,
+  "cepeaConilon": 1068.7
  },
  {
   "date": "2026-02-09",
   "usd": 5.1943,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 293.85,
   "usdCom": 5.193,
-  "kcAdj": 293.85
+  "kcAdj": 293.85,
+  "cepeaArabica": 1861.69,
+  "cepeaConilon": 1063.5
  },
  {
   "date": "2026-02-10",
   "usd": 5.2021,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 290.7,
   "usdCom": 5.192,
-  "kcAdj": 290.7
+  "kcAdj": 290.7,
+  "cepeaArabica": 1861.64,
+  "cepeaConilon": 1069.05
  },
  {
   "date": "2026-02-11",
   "usd": 5.1836,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 292.85,
   "usdCom": 5.1832,
-  "kcAdj": 292.85
+  "kcAdj": 292.85,
+  "cepeaArabica": 1863.8,
+  "cepeaConilon": 1058.11
  },
  {
   "date": "2026-02-12",
   "usd": 5.1674,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 297.45,
   "usdCom": 5.2115,
-  "kcAdj": 297.45
+  "kcAdj": 297.45,
+  "cepeaArabica": 1891.03,
+  "cepeaConilon": 1067.94
  },
  {
   "date": "2026-02-13",
   "usd": 5.2288,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 298.3,
   "usdCom": 5.2191,
-  "kcAdj": 298.3
+  "kcAdj": 298.3,
+  "cepeaArabica": 1901.38,
+  "cepeaConilon": 1092.1
  },
  {
   "date": "2026-02-16",
@@ -849,258 +1049,322 @@
  {
   "date": "2026-02-18",
   "usd": 5.2349,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 285.15,
   "usdCom": 5.2354,
-  "kcAdj": 285.15
+  "kcAdj": 285.15,
+  "cepeaArabica": 1862.4,
+  "cepeaConilon": 1056.49
  },
  {
   "date": "2026-02-19",
   "usd": 5.2257,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 285.4,
   "usdCom": 5.2104,
-  "kcAdj": 285.4
+  "kcAdj": 285.4,
+  "cepeaArabica": 1818.91,
+  "cepeaConilon": 1027.75
  },
  {
   "date": "2026-02-20",
   "usd": 5.2006,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 285.7,
   "usdCom": 5.1763,
-  "kcAdj": 285.7
+  "kcAdj": 285.7,
+  "cepeaArabica": 1806.48,
+  "cepeaConilon": 1042.95
  },
  {
   "date": "2026-02-23",
   "usd": 5.1635,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 278.05,
   "usdCom": 5.1718,
-  "kcAdj": 278.05
+  "kcAdj": 278.05,
+  "cepeaArabica": 1781.98,
+  "cepeaConilon": 1030.25
  },
  {
   "date": "2026-02-24",
   "usd": 5.1682,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 285.5,
   "usdCom": 5.1537,
-  "kcAdj": 285.5
+  "kcAdj": 285.5,
+  "cepeaArabica": 1811.91,
+  "cepeaConilon": 1044.06
  },
  {
   "date": "2026-02-25",
   "usd": 5.144,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 284.85,
   "usdCom": 5.1246,
-  "kcAdj": 284.85
+  "kcAdj": 284.85,
+  "cepeaArabica": 1796.0,
+  "cepeaConilon": 1055.17
  },
  {
   "date": "2026-02-26",
   "usd": 5.1382,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 282.3,
   "usdCom": 5.137,
-  "kcAdj": 282.3
+  "kcAdj": 282.3,
+  "cepeaArabica": 1796.15,
+  "cepeaConilon": 1042.39
  },
  {
   "date": "2026-02-27",
   "usd": 5.1495,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 280.75,
   "usdCom": 5.13,
-  "kcAdj": 280.75
+  "kcAdj": 280.75,
+  "cepeaArabica": 1797.61,
+  "cepeaConilon": 1032.75
  },
  {
   "date": "2026-03-02",
   "usd": 5.2001,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 284.6,
   "usdCom": 5.1712,
-  "kcAdj": 284.6
+  "kcAdj": 284.6,
+  "cepeaArabica": 1840.71,
+  "cepeaConilon": 1056.07
  },
  {
   "date": "2026-03-03",
   "usd": 5.287,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 283.15,
   "usdCom": 5.277,
-  "kcAdj": 283.15
+  "kcAdj": 283.15,
+  "cepeaArabica": 1853.29,
+  "cepeaConilon": 1075.07
  },
  {
   "date": "2026-03-04",
   "usd": 5.2091,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 286.25,
   "usdCom": 5.2312,
-  "kcAdj": 286.25
+  "kcAdj": 286.25,
+  "cepeaArabica": 1859.96,
+  "cepeaConilon": 1067.9
  },
  {
   "date": "2026-03-05",
   "usd": 5.2447,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 288.8,
   "usdCom": 5.2639,
-  "kcAdj": 288.8
+  "kcAdj": 288.8,
+  "cepeaArabica": 1874.79,
+  "cepeaConilon": 1065.57
  },
  {
   "date": "2026-03-06",
   "usd": 5.2878,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 293.3,
   "usdCom": 5.244,
-  "kcAdj": 293.3
+  "kcAdj": 293.3,
+  "cepeaArabica": 1913.12,
+  "cepeaConilon": 1070.68
  },
  {
   "date": "2026-03-09",
   "usd": 5.2139,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 296.9,
   "usdCom": 5.1602,
-  "kcAdj": 296.9
+  "kcAdj": 296.9,
+  "cepeaArabica": 1929.37,
+  "cepeaConilon": 1067.07
  },
  {
   "date": "2026-03-10",
   "usd": 5.1622,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 295.8,
   "usdCom": 5.1594,
-  "kcAdj": 295.8
+  "kcAdj": 295.8,
+  "cepeaArabica": 1918.6,
+  "cepeaConilon": 1037.08
  },
  {
   "date": "2026-03-11",
   "usd": 5.1596,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 287.4,
   "usdCom": 5.1569,
-  "kcAdj": 287.4
+  "kcAdj": 287.4,
+  "cepeaArabica": 1872.75,
+  "cepeaConilon": 998.97
  },
  {
   "date": "2026-03-12",
   "usd": 5.2051,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 291.9,
   "usdCom": 5.2438,
-  "kcAdj": 291.9
+  "kcAdj": 291.9,
+  "cepeaArabica": 1901.07,
+  "cepeaConilon": 1011.41
  },
  {
   "date": "2026-03-13",
   "usd": 5.2541,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 285.15,
   "usdCom": 5.3232,
-  "kcAdj": 285.15
+  "kcAdj": 285.15,
+  "cepeaArabica": 1878.47,
+  "cepeaConilon": 1000.05
  },
  {
   "date": "2026-03-16",
   "usd": 5.2647,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 292.85,
   "usdCom": 5.231,
-  "kcAdj": 292.85
+  "kcAdj": 292.85,
+  "cepeaArabica": 1908.03,
+  "cepeaConilon": 994.04
  },
  {
   "date": "2026-03-17",
   "usd": 5.2022,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 294.75,
   "usdCom": 5.1923,
-  "kcAdj": 294.75
+  "kcAdj": 294.75,
+  "cepeaArabica": 1927.15,
+  "cepeaConilon": 989.6
  },
  {
   "date": "2026-03-18",
   "usd": 5.2112,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 292.9,
   "usdCom": 5.2673,
-  "kcAdj": 292.9
+  "kcAdj": 292.9,
+  "cepeaArabica": 1917.02,
+  "cepeaConilon": 995.85
  },
  {
   "date": "2026-03-19",
   "usd": 5.2587,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 300.9,
   "usdCom": 5.2198,
-  "kcAdj": 300.9
+  "kcAdj": 300.9,
+  "cepeaArabica": 1924.51,
+  "cepeaConilon": 1005.22
  },
  {
   "date": "2026-03-20",
   "usd": 5.28,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 309.75,
   "usdCom": 5.3136,
-  "kcAdj": 309.75
+  "kcAdj": 309.75,
+  "cepeaArabica": 1962.67,
+  "cepeaConilon": 1014.04
  },
  {
   "date": "2026-03-23",
   "usd": 5.244,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 307.0,
   "usdCom": 5.2331,
-  "kcAdj": 307.0
+  "kcAdj": 307.0,
+  "cepeaArabica": 1963.83,
+  "cepeaConilon": 1012.93
  },
  {
   "date": "2026-03-24",
   "usd": 5.2599,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 317.85,
   "usdCom": 5.2331,
-  "kcAdj": 317.85
+  "kcAdj": 317.85,
+  "cepeaArabica": 1979.36,
+  "cepeaConilon": 1028.09
  },
  {
   "date": "2026-03-25",
   "usd": 5.2275,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 316.1,
   "usdCom": 5.2268,
-  "kcAdj": 316.1
+  "kcAdj": 316.1,
+  "cepeaArabica": 1977.91,
+  "cepeaConilon": 1026.26
  },
  {
   "date": "2026-03-26",
   "usd": 5.2308,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 307.65,
   "usdCom": 5.2401,
-  "kcAdj": 307.65
+  "kcAdj": 307.65,
+  "cepeaArabica": 1968.47,
+  "cepeaConilon": 1017.1
  },
  {
   "date": "2026-03-27",
   "usd": 5.2376,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 301.7,
   "usdCom": 5.2374,
-  "kcAdj": 301.7
+  "kcAdj": 301.7,
+  "cepeaArabica": 1947.89,
+  "cepeaConilon": 1016.6
  },
  {
   "date": "2026-03-30",
   "usd": 5.2353,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 292.55,
   "usdCom": 5.252,
-  "kcAdj": 292.55
+  "kcAdj": 292.55,
+  "cepeaArabica": 1898.9,
+  "cepeaConilon": 966.84
  },
  {
   "date": "2026-03-31",
   "usd": 5.2194,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 298.35,
   "usdCom": 5.1813,
-  "kcAdj": 298.35
+  "kcAdj": 298.35,
+  "cepeaArabica": 1887.79,
+  "cepeaConilon": 965.73
  },
  {
   "date": "2026-04-01",
   "usd": 5.1606,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 297.8,
   "usdCom": 5.1546,
-  "kcAdj": 297.8
+  "kcAdj": 297.8,
+  "cepeaArabica": 1880.08,
+  "cepeaConilon": 949.07
  },
  {
   "date": "2026-04-02",
   "usd": 5.1655,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 295.4,
   "usdCom": 5.1572,
-  "kcAdj": 295.4
+  "kcAdj": 295.4,
+  "cepeaArabica": 1870.64,
+  "cepeaConilon": 937.13
  },
  {
   "date": "2026-04-03",
@@ -1110,90 +1374,112 @@
  {
   "date": "2026-04-06",
   "usd": 5.1532,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 298.05,
   "usdCom": 5.1393,
-  "kcAdj": 298.05
+  "kcAdj": 298.05,
+  "cepeaArabica": 1885.21,
+  "cepeaConilon": 921.86
  },
  {
   "date": "2026-04-07",
   "usd": 5.1625,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 286.1,
   "usdCom": 5.1533,
-  "kcAdj": 286.1
+  "kcAdj": 286.1,
+  "cepeaArabica": 1821.69,
+  "cepeaConilon": 901.31
  },
  {
   "date": "2026-04-08",
   "usd": 5.0899,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 294.05,
   "usdCom": 5.0986,
-  "kcAdj": 294.05
+  "kcAdj": 294.05,
+  "cepeaArabica": 1829.2,
+  "cepeaConilon": 891.15
  },
  {
   "date": "2026-04-09",
   "usd": 5.0821,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 293.7,
   "usdCom": 5.0573,
-  "kcAdj": 293.7
+  "kcAdj": 293.7,
+  "cepeaArabica": 1821.38,
+  "cepeaConilon": 899.64
  },
  {
   "date": "2026-04-10",
   "usd": 5.0229,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 295.9,
   "usdCom": 5.0034,
-  "kcAdj": 295.9
+  "kcAdj": 295.9,
+  "cepeaArabica": 1814.56,
+  "cepeaConilon": 879.03
  },
  {
   "date": "2026-04-13",
   "usd": 5.0244,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 296.25,
   "usdCom": 4.9961,
-  "kcAdj": 296.25
+  "kcAdj": 296.25,
+  "cepeaArabica": 1821.25,
+  "cepeaConilon": 878.82
  },
  {
   "date": "2026-04-14",
   "usd": 4.9806,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 297.6,
   "usdCom": 4.9874,
-  "kcAdj": 297.6
+  "kcAdj": 297.6,
+  "cepeaArabica": 1814.65,
+  "cepeaConilon": 899.64
  },
  {
   "date": "2026-04-15",
   "usd": 4.9928,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 298.25,
   "usdCom": 4.9931,
-  "kcAdj": 298.25
+  "kcAdj": 298.25,
+  "cepeaArabica": 1822.96,
+  "cepeaConilon": 901.64
  },
  {
   "date": "2026-04-16",
   "usd": 5.0007,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 290.4,
   "usdCom": 4.992,
-  "kcAdj": 290.4
+  "kcAdj": 290.4,
+  "cepeaArabica": 1800.72,
+  "cepeaConilon": 896.31
  },
  {
   "date": "2026-04-17",
   "usd": 4.9695,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 284.25,
   "usdCom": 4.9782,
-  "kcAdj": 284.25
+  "kcAdj": 284.25,
+  "cepeaArabica": 1765.66,
+  "cepeaConilon": 885.48
  },
  {
   "date": "2026-04-20",
   "usd": 4.9844,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 287.75,
   "usdCom": 4.966,
-  "kcAdj": 287.75
+  "kcAdj": 287.75,
+  "cepeaArabica": 1775.85,
+  "cepeaConilon": 909.64
  },
  {
   "date": "2026-04-21",
@@ -1205,58 +1491,72 @@
  {
   "date": "2026-04-22",
   "usd": 4.9653,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 289.15,
   "usdCom": 4.9625,
-  "kcAdj": 289.15
+  "kcAdj": 289.15,
+  "cepeaArabica": 1770.08,
+  "cepeaConilon": 933.13
  },
  {
   "date": "2026-04-23",
   "usd": 4.9539,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 300.35,
   "usdCom": 5.0203,
-  "kcAdj": 300.35
+  "kcAdj": 300.35,
+  "cepeaArabica": 1817.26,
+  "cepeaConilon": 941.63
  },
  {
   "date": "2026-04-24",
   "usd": 5.0083,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 294.9,
   "usdCom": 4.9798,
-  "kcAdj": 294.9
+  "kcAdj": 294.9,
+  "cepeaArabica": 1831.26,
+  "cepeaConilon": 955.12
  },
  {
   "date": "2026-04-27",
   "usd": 4.97,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 288.5,
   "usdCom": 4.9829,
-  "kcAdj": 288.5
+  "kcAdj": 288.5,
+  "cepeaArabica": 1784.03,
+  "cepeaConilon": 941.05
  },
  {
   "date": "2026-04-28",
   "usd": 4.9878,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 290.7,
   "usdCom": 4.9739,
-  "kcAdj": 290.7
+  "kcAdj": 290.7,
+  "cepeaArabica": 1774.88,
+  "cepeaConilon": 953.19
  },
  {
   "date": "2026-04-29",
   "usd": 4.9985,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 290.7,
   "usdCom": 4.996,
-  "kcAdj": 290.7
+  "kcAdj": 290.7,
+  "cepeaArabica": 1774.5,
+  "cepeaConilon": 940.88
  },
  {
   "date": "2026-04-30",
   "usd": 4.9886,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 285.55,
   "usdCom": 4.9539,
-  "kcAdj": 285.55
+  "kcAdj": 285.55,
+  "cepeaArabica": 1761.57,
+  "cepeaConilon": 925.26
  },
  {
   "date": "2026-05-01",
@@ -1268,186 +1568,232 @@
  {
   "date": "2026-05-04",
   "usd": 4.9587,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 285.5,
   "usdCom": 4.962,
-  "kcAdj": 285.5
+  "kcAdj": 285.5,
+  "cepeaArabica": 1759.77,
+  "cepeaConilon": 910.36
  },
  {
   "date": "2026-05-05",
   "usd": 4.9242,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 289.75,
   "usdCom": 4.9105,
-  "kcAdj": 289.75
+  "kcAdj": 289.75,
+  "cepeaArabica": 1758.67,
+  "cepeaConilon": 924.65
  },
  {
   "date": "2026-05-06",
   "usd": 4.9274,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 283.85,
   "usdCom": 4.9233,
-  "kcAdj": 283.85
+  "kcAdj": 283.85,
+  "cepeaArabica": 1744.04,
+  "cepeaConilon": 916.32
  },
  {
   "date": "2026-05-07",
   "usd": 4.917,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 273.25,
   "usdCom": 4.9239,
-  "kcAdj": 273.25
+  "kcAdj": 273.25,
+  "cepeaArabica": 1704.29,
+  "cepeaConilon": 916.93
  },
  {
   "date": "2026-05-08",
   "usd": 4.8999,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 274.8,
   "usdCom": 4.8933,
-  "kcAdj": 274.8
+  "kcAdj": 274.8,
+  "cepeaArabica": 1669.93,
+  "cepeaConilon": 912.99
  },
  {
   "date": "2026-05-11",
   "usd": 4.8973,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 282.3,
   "usdCom": 4.8908,
-  "kcAdj": 282.3
+  "kcAdj": 282.3,
+  "cepeaArabica": 1716.3,
+  "cepeaConilon": 943.54
  },
  {
   "date": "2026-05-12",
   "usd": 4.8977,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 280.15,
   "usdCom": 4.8928,
-  "kcAdj": 280.15
+  "kcAdj": 280.15,
+  "cepeaArabica": 1673.43,
+  "cepeaConilon": 933.65
  },
  {
   "date": "2026-05-13",
   "usd": 4.9118,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 280.75,
   "usdCom": 5.0101,
-  "kcAdj": 280.75
+  "kcAdj": 280.75,
+  "cepeaArabica": 1687.47,
+  "cepeaConilon": 969.64
  },
  {
   "date": "2026-05-14",
   "usd": 4.9809,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 275.7,
   "usdCom": 4.98,
-  "kcAdj": 275.7
+  "kcAdj": 275.7,
+  "cepeaArabica": 1646.98,
+  "cepeaConilon": 952.98
  },
  {
   "date": "2026-05-15",
   "usd": 5.0654,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 266.9,
   "usdCom": 5.0552,
-  "kcAdj": 266.9
+  "kcAdj": 266.9,
+  "cepeaArabica": 1637.88,
+  "cepeaConilon": 930.15
  },
  {
   "date": "2026-05-18",
   "usd": 5.0093,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 264.2,
   "usdCom": 4.9906,
-  "kcAdj": 264.2
+  "kcAdj": 264.2,
+  "cepeaArabica": 1605.75,
+  "cepeaConilon": 914.16
  },
  {
   "date": "2026-05-19",
   "usd": 5.0378,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 270.15,
   "usdCom": 5.0475,
-  "kcAdj": 270.15
+  "kcAdj": 270.15,
+  "cepeaArabica": 1589.67,
+  "cepeaConilon": 921.88
  },
  {
   "date": "2026-05-20",
   "usd": 5.0301,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 268.3,
   "usdCom": 4.998,
-  "kcAdj": 268.3
+  "kcAdj": 268.3,
+  "cepeaArabica": 1606.03,
+  "cepeaConilon": 919.16
  },
  {
   "date": "2026-05-21",
   "usd": 5.0077,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 273.4,
   "usdCom": 5.0033,
-  "kcAdj": 273.4
+  "kcAdj": 273.4,
+  "cepeaArabica": 1614.77,
+  "cepeaConilon": 921.88
  },
  {
   "date": "2026-05-22",
   "usd": 5.014,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 272.35,
   "usdCom": 5.0369,
-  "kcAdj": 272.35
+  "kcAdj": 272.35,
+  "cepeaArabica": 1612.87,
+  "cepeaConilon": 941.92
  },
  {
   "date": "2026-05-25",
   "usd": 5.0072,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 272.35,
   "usdCom": 5.0158,
-  "kcAdj": 272.35
+  "kcAdj": 272.35,
+  "cepeaArabica": 1643.77,
+  "cepeaConilon": 937.65
  },
  {
   "date": "2026-05-26",
   "usd": 5.0211,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 274.0,
   "usdCom": 5.0341,
-  "kcAdj": 274.0
+  "kcAdj": 274.0,
+  "cepeaArabica": 1637.8,
+  "cepeaConilon": 961.86
  },
  {
   "date": "2026-05-27",
   "usd": 5.0579,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 269.85,
   "usdCom": 5.0586,
-  "kcAdj": 269.85
+  "kcAdj": 269.85,
+  "cepeaArabica": 1611.97,
+  "cepeaConilon": 959.64
  },
  {
   "date": "2026-05-28",
   "usd": 5.0517,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 274.25,
   "usdCom": 5.0385,
-  "kcAdj": 274.25
+  "kcAdj": 274.25,
+  "cepeaArabica": 1601.33,
+  "cepeaConilon": 970.14
  },
  {
   "date": "2026-05-29",
   "usd": 5.0569,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 265.6,
   "usdCom": 5.0363,
-  "kcAdj": 265.6
+  "kcAdj": 265.6,
+  "cepeaArabica": 1555.67,
+  "cepeaConilon": 952.56
  },
  {
   "date": "2026-06-01",
   "usd": 5.0303,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 260.6,
   "usdCom": 5.026,
-  "kcAdj": 260.6
+  "kcAdj": 260.6,
+  "cepeaArabica": 1533.85,
+  "cepeaConilon": 939.28
  },
  {
   "date": "2026-06-02",
   "usd": 5.016,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 259.2,
   "usdCom": 5.0055,
-  "kcAdj": 259.2
+  "kcAdj": 259.2,
+  "cepeaArabica": 1521.66,
+  "cepeaConilon": 942.13
  },
  {
   "date": "2026-06-03",
   "usd": 5.0415,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 253.1,
   "usdCom": 5.0645,
-  "kcAdj": 253.1
+  "kcAdj": 253.1,
+  "cepeaArabica": 1489.38,
+  "cepeaConilon": 932.97
  },
  {
   "date": "2026-06-04",
@@ -1459,526 +1805,658 @@
  {
   "date": "2026-06-05",
   "usd": 5.1244,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 246.5,
   "usdCom": 5.1677,
-  "kcAdj": 246.5
+  "kcAdj": 246.5,
+  "cepeaArabica": 1433.64,
+  "cepeaConilon": 921.46
  },
  {
   "date": "2026-06-08",
   "usd": 5.1695,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 245.9,
   "usdCom": 5.1935,
-  "kcAdj": 245.9
+  "kcAdj": 245.9,
+  "cepeaArabica": 1395.16,
+  "cepeaConilon": 948.38
  },
  {
   "date": "2026-06-09",
   "usd": 5.1693,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 244.4,
   "usdCom": 5.1717,
-  "kcAdj": 244.4
+  "kcAdj": 244.4,
+  "cepeaArabica": 1383.57,
+  "cepeaConilon": 945.74
  },
  {
   "date": "2026-06-10",
   "usd": 5.1763,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 244.6,
   "usdCom": 5.1853,
-  "kcAdj": 244.6
+  "kcAdj": 244.6,
+  "cepeaArabica": 1398.09,
+  "cepeaConilon": 955.13
  },
  {
   "date": "2026-06-11",
   "usd": 5.1478,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 250.25,
   "usdCom": 5.0948,
-  "kcAdj": 250.25
+  "kcAdj": 250.25,
+  "cepeaArabica": 1412.22,
+  "cepeaConilon": 967.4
  },
  {
   "date": "2026-06-12",
   "usd": 5.0827,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 253.4,
   "usdCom": 5.0586,
-  "kcAdj": 253.4
+  "kcAdj": 253.4,
+  "cepeaArabica": 1416.69,
+  "cepeaConilon": 975.12
  },
  {
   "date": "2026-06-15",
   "usd": 5.043,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 259.2,
   "usdCom": 5.0612,
-  "kcAdj": 259.2
+  "kcAdj": 259.2,
+  "cepeaArabica": 1427.63,
+  "cepeaConilon": 974.12
  },
  {
   "date": "2026-06-16",
   "usd": 5.078,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 272.8,
   "usdCom": 5.089,
-  "kcAdj": 272.8
+  "kcAdj": 272.8,
+  "cepeaArabica": 1474.18,
+  "cepeaConilon": 988.5
  },
  {
   "date": "2026-06-17",
   "usd": 5.0641,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 271.9,
   "usdCom": 5.111,
-  "kcAdj": 271.9
+  "kcAdj": 271.9,
+  "cepeaArabica": 1505.1,
+  "cepeaConilon": 1005.16
  },
  {
   "date": "2026-06-18",
   "usd": 5.1613,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 267.8,
   "usdCom": 5.1665,
-  "kcAdj": 267.8
+  "kcAdj": 267.8,
+  "cepeaArabica": 1495.05,
+  "cepeaConilon": 1018.24
  },
  {
   "date": "2026-06-19",
   "usd": 5.1442,
-  "updatedAt": "2026-10-27T16:47:58Z",
-  "usdCom": 5.151
+  "updatedAt": "2026-10-27T16:48:37Z",
+  "usdCom": 5.151,
+  "cepeaArabica": 1503.88,
+  "cepeaConilon": 1025.96
  },
  {
   "date": "2026-06-22",
   "usd": 5.1395,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 267.0,
   "usdCom": 5.1423,
-  "kcAdj": 267.0
+  "kcAdj": 267.0,
+  "cepeaArabica": 1472.2,
+  "cepeaConilon": 1007.34
  },
  {
   "date": "2026-06-23",
   "usd": 5.1743,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 275.95,
   "usdCom": 5.1798,
-  "kcAdj": 275.95
+  "kcAdj": 275.95,
+  "cepeaArabica": 1491.84,
+  "cepeaConilon": 1018.11
  },
  {
   "date": "2026-06-24",
   "usd": 5.2098,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 277.2,
   "usdCom": 5.1954,
-  "kcAdj": 277.2
+  "kcAdj": 277.2,
+  "cepeaArabica": 1517.29,
+  "cepeaConilon": 1037.93
  },
  {
   "date": "2026-06-25",
   "usd": 5.1892,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 276.4,
   "usdCom": 5.177,
-  "kcAdj": 276.4
+  "kcAdj": 276.4,
+  "cepeaArabica": 1530.95,
+  "cepeaConilon": 1054.04
  },
  {
   "date": "2026-06-26",
   "usd": 5.1695,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 273.2,
   "usdCom": 5.1717,
-  "kcAdj": 273.2
+  "kcAdj": 273.2,
+  "cepeaArabica": 1517.04,
+  "cepeaConilon": 1049.14
  },
  {
   "date": "2026-06-29",
   "usd": 5.1717,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 277.8,
   "usdCom": 5.1745,
-  "kcAdj": 277.8
+  "kcAdj": 277.8,
+  "cepeaArabica": 1514.13,
+  "cepeaConilon": 1017.39
  },
  {
   "date": "2026-06-30",
   "usd": 5.1766,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 296.45,
   "usdCom": 5.161,
-  "kcAdj": 296.45
+  "kcAdj": 296.45,
+  "cepeaArabica": 1578.69,
+  "cepeaConilon": 1061.81
  },
  {
   "date": "2026-07-01",
   "usd": 5.195,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 309.9,
   "usdCom": 5.2074,
-  "kcAdj": 309.9
+  "kcAdj": 309.9,
+  "cepeaArabica": 1665.59,
+  "cepeaConilon": 1071.24
  },
  {
   "date": "2026-07-02",
   "usd": 5.1945,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 301.2,
   "usdCom": 5.2024,
-  "kcAdj": 301.2
+  "kcAdj": 301.2,
+  "cepeaArabica": 1656.79,
+  "cepeaConilon": 1089.06
  },
  {
   "date": "2026-07-03",
   "usd": 5.1717,
-  "updatedAt": "2026-10-27T16:47:58Z",
-  "usdCom": 5.1682
+  "updatedAt": "2026-10-27T16:48:37Z",
+  "usdCom": 5.1682,
+  "cepeaArabica": 1636.25,
+  "cepeaConilon": 1070.57
  },
  {
   "date": "2026-07-06",
   "usd": 5.167,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 349.95,
   "usdCom": 5.1273,
-  "kcAdj": 349.95
+  "kcAdj": 349.95,
+  "cepeaArabica": 1787.48,
+  "cepeaConilon": 1117.33
  },
  {
   "date": "2026-07-07",
   "usd": 5.1458,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 317.6,
   "usdCom": 5.1581,
-  "kcAdj": 317.6
+  "kcAdj": 317.6,
+  "cepeaArabica": 1737.76,
+  "cepeaConilon": 1100.67
  },
  {
   "date": "2026-07-08",
   "usd": 5.1552,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 309.8,
   "usdCom": 5.1502,
-  "kcAdj": 309.8
+  "kcAdj": 309.8,
+  "cepeaArabica": 1712.39,
+  "cepeaConilon": 1090.56
  },
  {
   "date": "2026-07-09",
   "usd": 5.1329,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 347.9,
   "usdCom": 5.1156,
-  "kcAdj": 347.9
+  "kcAdj": 347.9,
+  "cepeaArabica": 1762.83,
+  "cepeaConilon": 1109.55
  },
  {
   "date": "2026-07-10",
   "usd": 5.1088,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 334.25,
   "usdCom": 5.1089,
-  "kcAdj": 334.25
+  "kcAdj": 334.25,
+  "cepeaArabica": 1722.48,
+  "cepeaConilon": 1087.74
  },
  {
   "date": "2026-07-13",
   "usd": 5.1183,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 330.0,
   "usdCom": 5.1368,
-  "kcAdj": 330.0
+  "kcAdj": 330.0,
+  "cepeaArabica": 1728.97,
+  "cepeaConilon": 1096.83
  },
  {
   "date": "2026-07-14",
   "usd": 5.0742,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 326.1,
   "usdCom": 5.0715,
-  "kcAdj": 326.1
+  "kcAdj": 326.1,
+  "cepeaArabica": 1755.35,
+  "cepeaConilon": 1105.01
  },
  {
   "date": "2026-07-15",
   "usd": 5.0727,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 326.75,
   "usdCom": 5.0784,
-  "kcAdj": 326.75
+  "kcAdj": 326.75,
+  "cepeaArabica": 1738.26,
+  "cepeaConilon": 1107.68
  },
  {
   "date": "2026-07-16",
   "usd": 5.0975,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 312.6,
   "usdCom": 5.1007,
-  "kcAdj": 312.6
+  "kcAdj": 312.6,
+  "cepeaArabica": 1706.75,
+  "cepeaConilon": 1092.56
  },
  {
   "date": "2026-07-17",
   "usd": 5.1176,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 320.3,
   "usdCom": 5.1119,
-  "kcAdj": 320.3
+  "kcAdj": 320.3,
+  "cepeaArabica": 1712.23,
+  "cepeaConilon": 1110.8
  },
  {
   "date": "2026-07-20",
   "usd": 5.0894,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 324.55,
   "usdCom": 5.0897,
-  "kcAdj": 324.55
+  "kcAdj": 324.55,
+  "cepeaArabica": 1753.28,
+  "cepeaConilon": 1104.56
  },
  {
   "date": "2026-07-21",
   "usd": 5.078,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 322.1,
   "usdCom": 5.0722,
-  "kcAdj": 322.1
+  "kcAdj": 322.1,
+  "cepeaArabica": 1732.75,
+  "cepeaConilon": 1102.56
  },
  {
   "date": "2026-07-22",
   "usd": 5.0638,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 316.65,
   "usdCom": 5.054,
-  "kcAdj": 316.65
+  "kcAdj": 316.65,
+  "cepeaArabica": 1701.33,
+  "cepeaConilon": 1082.29
  },
  {
   "date": "2026-07-23",
   "usd": 5.0807,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 309.4,
   "usdCom": 5.0839,
-  "kcAdj": 309.4
+  "kcAdj": 309.4,
+  "cepeaArabica": 1692.59,
+  "cepeaConilon": 1066.24
  },
  {
   "date": "2026-07-24",
   "usd": 5.0666,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 313.8,
   "usdCom": 5.0837,
-  "kcAdj": 313.8
+  "kcAdj": 313.8,
+  "cepeaArabica": 1676.28,
+  "cepeaConilon": 1070.72
  },
  {
   "date": "2026-07-27",
   "usd": 5.1005,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 324.55,
   "usdCom": 5.1155,
-  "kcAdj": 324.55
+  "kcAdj": 324.55,
+  "cepeaArabica": 1725.66,
+  "cepeaConilon": 1087.34
  },
  {
   "date": "2026-07-28",
   "usd": 5.1177,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 339.4,
   "usdCom": 5.1207,
-  "kcAdj": 339.4
+  "kcAdj": 339.4,
+  "cepeaArabica": 1782.18,
+  "cepeaConilon": 1114.0
  },
  {
   "date": "2026-07-29",
   "usd": 5.1217,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 325.8,
   "usdCom": 5.1173,
-  "kcAdj": 325.8
+  "kcAdj": 325.8,
+  "cepeaArabica": 1761.96,
+  "cepeaConilon": 1079.57
  },
  {
   "date": "2026-07-30",
   "usd": 5.0739,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 323.05,
   "usdCom": 5.0587,
-  "kcAdj": 323.05
+  "kcAdj": 323.05,
+  "cepeaArabica": 1746.47,
+  "cepeaConilon": 1080.81
  },
  {
   "date": "2026-07-31",
   "usd": 5.0773,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 314.65,
   "usdCom": 5.0753,
-  "kcAdj": 314.65
+  "kcAdj": 314.65,
+  "cepeaArabica": 1744.18,
+  "cepeaConilon": 1092.56
  },
  {
   "date": "2026-08-03",
   "usd": 5.0723,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 304.7,
   "usdCom": 5.0876,
-  "kcAdj": 304.7
+  "kcAdj": 304.7,
+  "cepeaArabica": 1712.28,
+  "cepeaConilon": 1087.68
  },
  {
   "date": "2026-08-04",
   "usd": 5.1053,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 308.8,
   "usdCom": 5.1279,
-  "kcAdj": 308.8
+  "kcAdj": 308.8,
+  "cepeaArabica": 1729.84,
+  "cepeaConilon": 1095.15
  },
  {
   "date": "2026-08-05",
   "usd": 5.1154,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 311.45,
   "usdCom": 5.1203,
-  "kcAdj": 311.45
+  "kcAdj": 311.45,
+  "cepeaArabica": 1730.24,
+  "cepeaConilon": 1111.86
  },
  {
   "date": "2026-08-06",
   "usd": 5.1017,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 306.1,
   "usdCom": 5.1102,
-  "kcAdj": 306.1
+  "kcAdj": 306.1,
+  "cepeaArabica": 1727.89,
+  "cepeaConilon": 1090.51
  },
  {
   "date": "2026-08-07",
   "usd": 5.0908,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 315.9,
   "usdCom": 5.0814,
-  "kcAdj": 315.9
+  "kcAdj": 315.9,
+  "cepeaArabica": 1732.12,
+  "cepeaConilon": 1089.15
  },
  {
   "date": "2026-08-10",
   "usd": 5.0963,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 313.9,
   "usdCom": 5.1091,
-  "kcAdj": 313.9
+  "kcAdj": 313.9,
+  "cepeaArabica": 1750.23,
+  "cepeaConilon": 1092.38
  },
  {
   "date": "2026-08-11",
   "usd": 5.1285,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 315.7,
   "usdCom": 5.1626,
-  "kcAdj": 315.7
+  "kcAdj": 315.7,
+  "cepeaArabica": 1762.44,
+  "cepeaConilon": 1086.88
  },
  {
   "date": "2026-08-12",
   "usd": 5.1639,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 319.95,
   "usdCom": 5.1779,
-  "kcAdj": 319.95
+  "kcAdj": 319.95,
+  "cepeaArabica": 1771.09,
+  "cepeaConilon": 1077.11
  },
  {
   "date": "2026-08-13",
   "usd": 5.1859,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 312.8,
   "usdCom": 5.1884,
-  "kcAdj": 312.8
+  "kcAdj": 312.8,
+  "cepeaArabica": 1779.4,
+  "cepeaConilon": 1064.62
  },
  {
   "date": "2026-08-14",
   "usd": 5.2236,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 314.3,
   "usdCom": 5.2223,
-  "kcAdj": 314.3
+  "kcAdj": 314.3,
+  "cepeaArabica": 1794.15,
+  "cepeaConilon": 1049.17
  },
  {
   "date": "2026-08-17",
   "usd": 5.2014,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 317.9,
   "usdCom": 5.2013,
-  "kcAdj": 317.9
+  "kcAdj": 317.9,
+  "cepeaArabica": 1784.82,
+  "cepeaConilon": 1052.95
  },
  {
   "date": "2026-08-18",
   "usd": 5.2043,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 332.45,
   "usdCom": 5.2182,
-  "kcAdj": 332.45
+  "kcAdj": 332.45,
+  "cepeaArabica": 1815.45,
+  "cepeaConilon": 1075.11
  },
  {
   "date": "2026-08-19",
   "usd": 5.1714,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 328.2,
   "usdCom": 5.1749,
-  "kcAdj": 328.2
+  "kcAdj": 328.2,
+  "cepeaArabica": 1804.65,
+  "cepeaConilon": 1062.69
  },
  {
   "date": "2026-08-20",
   "usd": 5.1862,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 329.3,
   "usdCom": 5.1975,
-  "kcAdj": 329.3
+  "kcAdj": 329.3,
+  "cepeaArabica": 1821.66,
+  "cepeaConilon": 1066.15
  },
  {
   "date": "2026-08-21",
   "usd": 5.1625,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 322.65,
   "usdCom": 5.1387,
-  "kcAdj": 322.65
+  "kcAdj": 322.65,
+  "cepeaArabica": 1803.76,
+  "cepeaConilon": 1051.93
  },
  {
   "date": "2026-08-24",
   "usd": 5.1512,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 341.65,
   "usdCom": 5.1526,
-  "kcAdj": 341.65
+  "kcAdj": 341.65,
+  "cepeaArabica": 1826.58,
+  "cepeaConilon": 1058.71
  },
  {
   "date": "2026-08-25",
   "usd": 5.149,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 335.5,
   "usdCom": 5.1494,
-  "kcAdj": 335.5
+  "kcAdj": 335.5,
+  "cepeaArabica": 1821.25,
+  "cepeaConilon": 1048.71
  },
  {
   "date": "2026-08-26",
   "usd": 5.1604,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 322.15,
   "usdCom": 5.15,
-  "kcAdj": 322.15
+  "kcAdj": 322.15,
+  "cepeaArabica": 1800.79,
+  "cepeaConilon": 1036.13
  },
  {
   "date": "2026-08-27",
   "usd": 5.1642,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 309.65,
   "usdCom": 5.1615,
-  "kcAdj": 309.65
+  "kcAdj": 309.65,
+  "cepeaArabica": 1742.74,
+  "cepeaConilon": 1021.9
  },
  {
   "date": "2026-08-28",
   "usd": 5.2005,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 312.85,
   "usdCom": 5.1928,
-  "kcAdj": 312.85
+  "kcAdj": 312.85,
+  "cepeaArabica": 1728.61,
+  "cepeaConilon": 1027.55
  },
  {
   "date": "2026-08-31",
   "usd": 5.1816,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 311.5,
   "usdCom": 5.1827,
-  "kcAdj": 311.5
+  "kcAdj": 311.5,
+  "cepeaArabica": 1748.44,
+  "cepeaConilon": 1022.13
  },
  {
   "date": "2026-09-01",
   "usd": 5.157,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 309.45,
   "usdCom": 5.1557,
-  "kcAdj": 309.45
+  "kcAdj": 309.45,
+  "cepeaArabica": 1730.56,
+  "cepeaConilon": 1007.35
  },
  {
   "date": "2026-09-02",
   "usd": 5.1273,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 298.1,
   "usdCom": 5.0908,
-  "kcAdj": 298.1
+  "kcAdj": 298.1,
+  "cepeaArabica": 1696.62,
+  "cepeaConilon": 991.71
  },
  {
   "date": "2026-09-03",
   "usd": 5.0962,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 295.35,
   "usdCom": 5.1073,
-  "kcAdj": 295.35
+  "kcAdj": 295.35,
+  "cepeaArabica": 1672.25,
+  "cepeaConilon": 980.05
  },
  {
   "date": "2026-09-04",
   "usd": 5.1253,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 295.6,
   "usdCom": 5.1271,
-  "kcAdj": 295.6
+  "kcAdj": 295.6,
+  "cepeaArabica": 1659.93,
+  "cepeaConilon": 976.71
  },
  {
   "date": "2026-09-07",
@@ -1990,240 +2468,288 @@
  {
   "date": "2026-09-08",
   "usd": 5.0856,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 291.3,
   "usdCom": 5.0852,
-  "kcAdj": 291.3
+  "kcAdj": 291.3,
+  "cepeaArabica": 1635.57,
+  "cepeaConilon": 980.78
  },
  {
   "date": "2026-09-09",
   "usd": 5.0979,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 292.05,
   "usdCom": 5.1083,
-  "kcAdj": 292.05
+  "kcAdj": 292.05,
+  "cepeaArabica": 1647.29,
+  "cepeaConilon": 996.9
  },
  {
   "date": "2026-09-10",
   "usd": 5.1149,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 288.15,
   "usdCom": 5.1058,
-  "kcAdj": 288.15
+  "kcAdj": 288.15,
+  "cepeaArabica": 1618.91,
+  "cepeaConilon": 986.16
  },
  {
   "date": "2026-09-11",
   "usd": 5.0918,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 285.7,
   "usdCom": 5.1204,
-  "kcAdj": 285.7
+  "kcAdj": 285.7,
+  "cepeaArabica": 1596.87,
+  "cepeaConilon": 992.96
  },
  {
   "date": "2026-09-14",
   "usd": 5.1696,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 290.5,
   "usdCom": 5.1501,
-  "kcAdj": 290.5
+  "kcAdj": 290.5,
+  "cepeaArabica": 1594.86,
+  "cepeaConilon": 992.35
  },
  {
   "date": "2026-09-15",
   "usd": 5.149,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 283.65,
   "usdCom": 5.1516,
-  "kcAdj": 283.65
+  "kcAdj": 283.65,
+  "cepeaArabica": 1588.43,
+  "cepeaConilon": 985.78
  },
  {
   "date": "2026-09-16",
   "usd": 5.1527,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 281.55,
   "rc": 3430.0,
   "usdCom": 5.1533,
   "kcAdj": 281.55,
-  "rcAdj": 3430.0
+  "rcAdj": 3430.0,
+  "cepeaArabica": 1566.48,
+  "cepeaConilon": 977.32
  },
  {
   "date": "2026-09-17",
   "usd": 5.1521,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 276.5,
   "rc": 3391.0,
   "usdCom": 5.1286,
   "kcAdj": 276.5,
-  "rcAdj": 3391.0
+  "rcAdj": 3391.0,
+  "cepeaArabica": 1541.97,
+  "cepeaConilon": 965.02
  },
  {
   "date": "2026-09-18",
   "usd": 5.1575,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 280.5,
   "rc": 3396.0,
   "usdCom": 5.141,
   "kcAdj": 280.5,
-  "rcAdj": 3396.0
+  "rcAdj": 3396.0,
+  "cepeaArabica": 1546.58,
+  "cepeaConilon": 965.79
  },
  {
   "date": "2026-09-21",
   "usd": 5.1117,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 276.4,
   "rc": 3307.0,
   "usdCom": 5.1085,
   "kcAdj": 276.4,
-  "rcAdj": 3307.0
+  "rcAdj": 3307.0,
+  "cepeaArabica": 1534.23,
+  "cepeaConilon": 957.72
  },
  {
   "date": "2026-09-22",
   "usd": 5.1161,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 272.3,
   "rc": 3230.0,
   "usdCom": 5.1003,
   "kcAdj": 272.3,
-  "rcAdj": 3230.0
+  "rcAdj": 3230.0,
+  "cepeaArabica": 1511.31,
+  "cepeaConilon": 936.96
  },
  {
   "date": "2026-09-23",
   "usd": 5.1414,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 275.9,
   "rc": 3287.0,
   "usdCom": 5.1698,
   "kcAdj": 275.9,
-  "rcAdj": 3287.0
+  "rcAdj": 3287.0,
+  "cepeaArabica": 1513.01,
+  "cepeaConilon": 938.4
  },
  {
   "date": "2026-09-24",
   "usd": 5.1795,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 275.35,
   "rc": 3287.0,
   "usdCom": 5.1924,
   "kcAdj": 275.35,
-  "rcAdj": 3287.0
+  "rcAdj": 3287.0,
+  "cepeaArabica": 1516.81,
+  "cepeaConilon": 941.57
  },
  {
   "date": "2026-09-25",
   "usd": 5.1991,
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "kc": 278.6,
   "rc": 3367.0,
   "usdCom": 5.1806,
   "kcAdj": 278.6,
-  "rcAdj": 3367.0
+  "rcAdj": 3367.0,
+  "cepeaArabica": 1538.29,
+  "cepeaConilon": 952.72
  },
  {
   "date": "2026-09-28",
   "kc": 288.75,
   "kcContract": "KCZ6",
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "usd": 5.2132,
   "rc": 3412.0,
   "usdCom": 5.2249,
   "kcAdj": 288.75,
-  "rcAdj": 3412.0
+  "rcAdj": 3412.0,
+  "cepeaArabica": 1556.57,
+  "cepeaConilon": 963.39
  },
  {
   "date": "2026-09-29",
   "kc": 289.45,
   "kcContract": "KCZ6",
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "usd": 5.2204,
   "rc": 3410.0,
   "usdCom": 5.2013,
   "kcAdj": 289.45,
-  "rcAdj": 3410.0
+  "rcAdj": 3410.0,
+  "cepeaArabica": 1564.02,
+  "cepeaConilon": 967.14
  },
  {
   "date": "2026-09-30",
   "kc": 290.7,
   "kcContract": "KCZ6",
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "usd": 5.1809,
   "rc": 3445.0,
   "usdCom": 5.174,
   "kcAdj": 290.7,
-  "rcAdj": 3445.0
+  "rcAdj": 3445.0,
+  "cepeaArabica": 1576.85,
+  "cepeaConilon": 985.47
  },
  {
   "date": "2026-10-01",
   "kc": 288.25,
   "kcContract": "KCZ6",
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "usd": 5.2079,
   "rc": 3448.0,
   "usdCom": 5.2162,
   "kcAdj": 288.25,
-  "rcAdj": 3448.0
+  "rcAdj": 3448.0,
+  "cepeaArabica": 1577.42,
+  "cepeaConilon": 972.44
  },
  {
   "date": "2026-10-02",
   "kc": 288.75,
   "kcContract": "KCZ6",
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "usd": 5.2238,
   "rc": 3469.0,
   "usdCom": 5.2132,
   "kcAdj": 288.75,
-  "rcAdj": 3469.0
+  "rcAdj": 3469.0,
+  "cepeaArabica": 1572.01,
+  "cepeaConilon": 992.41
  },
  {
   "date": "2026-10-05",
   "kc": 292.55,
   "kcContract": "KCZ6",
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "usd": 4.9859,
   "rc": 3528.0,
   "usdCom": 4.9931,
   "kcAdj": 292.55,
-  "rcAdj": 3528.0
+  "rcAdj": 3528.0,
+  "cepeaArabica": 1568.56,
+  "cepeaConilon": 966.0
  },
  {
   "date": "2026-10-06",
   "kc": 304.45,
   "kcContract": "KCZ6",
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "usd": 4.9698,
   "rc": 3590.0,
   "usdCom": 4.9813,
   "kcAdj": 304.45,
-  "rcAdj": 3590.0
+  "rcAdj": 3590.0,
+  "cepeaArabica": 1568.95,
+  "cepeaConilon": 976.94
  },
  {
   "date": "2026-10-07",
   "kc": 292.7,
   "kcContract": "KCZ6",
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "usd": 4.9935,
   "rc": 3485.0,
   "usdCom": 5.0165,
   "kcAdj": 292.7,
-  "rcAdj": 3485.0
+  "rcAdj": 3485.0,
+  "cepeaArabica": 1566.59,
+  "cepeaConilon": 970.02
  },
  {
   "date": "2026-10-08",
   "kc": 289.05,
   "kcContract": "KCZ6",
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "usd": 5.0119,
   "rc": 3423.0,
   "usdCom": 5.0238,
   "kcAdj": 289.05,
-  "rcAdj": 3423.0
+  "rcAdj": 3423.0,
+  "cepeaArabica": 1544.99,
+  "cepeaConilon": 955.89
  },
  {
   "date": "2026-10-09",
   "kc": 286.95,
   "kcContract": "KCZ6",
-  "updatedAt": "2026-10-27T16:47:58Z",
+  "updatedAt": "2026-10-27T16:48:37Z",
   "usd": 4.9892,
   "rc": 3470.0,
   "usdCom": 4.9869,
   "kcAdj": 286.95,
-  "rcAdj": 3470.0
+  "rcAdj": 3470.0,
+  "cepeaArabica": 1531.88,
+  "cepeaConilon": 961.31
  },
  {
   "date": "2026-10-12",
@@ -2407,13 +2933,13 @@
  },
  {
   "date": "2026-10-27",
-  "kc": 294.85,
-  "updatedAt": "2026-10-27T16:47:58Z",
-  "kcHora": "2026-10-27T12:37:53.000-0400",
+  "kc": 295.0,
+  "updatedAt": "2026-10-27T16:48:37Z",
+  "kcHora": "2026-10-27T12:38:32.000-0400",
   "usd": 5.3346,
   "kc2": 281.95,
-  "usdCom": 5.3484,
-  "usdComHora": "2026-10-27T12:47:00.000-0400",
-  "kcAdj": 294.85
+  "usdCom": 5.3495,
+  "usdComHora": "2026-10-27T12:49:00.000-0400",
+  "kcAdj": 295.0
  }
 ]
