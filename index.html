@@ -105,6 +105,9 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
 .meter i{display:block;height:100%;background:var(--accent)}
 .foot{font-size:.75rem;color:var(--muted);display:grid;gap:6px;max-width:70ch}
 .foot a{color:var(--accent)}
+.assinatura{display:flex;flex-direction:column;align-items:center;gap:2px;padding-block:28px 8px;margin-top:28px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted);text-align:center}
+.assinatura .marca{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--ink);letter-spacing:-.01em}
+.assinatura b{color:var(--accent);font-weight:600}
 .notice{background:var(--accent-soft);color:var(--ink);border-radius:12px;padding:12px 14px;font-size:.88rem}
 @media (prefers-reduced-motion:no-preference){.seg button{transition:background .15s,color .15s}}
 .actions{display:flex;gap:8px;flex-wrap:wrap}
@@ -161,7 +164,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
 
 <div class="wrap">
   <header class="top">
-    <div class="brand">Radar do Café<small>Talles Eugenio · arábica e conilon</small></div>
+    <div class="brand">Radar do Café<small>Arábica e conilon</small></div>
     <div class="fresh"><span class="dot" id="dot"></span><span id="fresh">carregando…</span></div>
   </header>
 
@@ -306,6 +309,10 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
       <div id="fontes"></div>
     </section>
   </main>
+  <footer class="assinatura">
+    <span class="marca">Radar do Café</span>
+    <span>desenvolvido por <b>Talles Eugenio</b></span>
+  </footer>
 </div>
 
 <script>
