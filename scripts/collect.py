@@ -173,7 +173,7 @@ def fetch_cepea_hist():
             linhas = []
             if raw[:8] == b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1":  # planilha .xls antiga
                 import xlrd
-                sh = xlrd.open_workbook(file_contents=raw).sheet_by_index(0)
+                sh = xlrd.open_workbook(file_contents=raw, ignore_workbook_corruption=True).sheet_by_index(0)
                 linhas = [[str(c.value) for c in sh.row(i)] for i in range(sh.nrows)]
             elif raw[:2] == b"PK":  # .xlsx
                 import openpyxl
