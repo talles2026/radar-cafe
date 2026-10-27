@@ -338,7 +338,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   <footer class="assinatura">
     <span class="marca">Radar do Café</span>
     <span>desenvolvido por <b>Talles Eugenio</b></span>
-    <span class="versao">versão 27/10 · 16h15</span>
+    <span class="versao">versão 27/10 · 16h35</span>
   </footer>
 </div>
 
@@ -845,6 +845,15 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     } catch(e){ $("nHint").textContent = "Não foi possível ativar: " + e.message; }
     $("nBtn").disabled = false; nRender();
   });
+
+  // ---------- limpar o número no ícone ----------
+  // Ao abrir o app (ou voltar para ele), apaga o contador do ícone e tira os avisos já vistos da bandeja.
+  async function limparAvisos(){
+    try { if (navigator.clearAppBadge) await navigator.clearAppBadge(); } catch(e){}
+    try { if ("serviceWorker" in navigator){ const reg = await navigator.serviceWorker.ready; const ns = await reg.getNotifications(); ns.forEach(n=>n.close()); } } catch(e){}
+  }
+  limparAvisos();
+  document.addEventListener("visibilitychange", ()=>{ if (!document.hidden) limparAvisos(); });
 
   // ---------- app ----------
   if ("serviceWorker" in navigator){

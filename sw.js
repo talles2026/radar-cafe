@@ -1,5 +1,5 @@
 // Radar do Café: dados sempre da rede quando houver sinal; sem sinal, mostra a última versão salva.
-const CACHE = "radar-cafe-v8";
+const CACHE = "radar-cafe-v9";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL))); self.skipWaiting(); });
 self.addEventListener("activate", e => {
@@ -26,6 +26,7 @@ self.addEventListener("push", e => {
 });
 self.addEventListener("notificationclick", e => {
   e.notification.close();
+  if (self.navigator && self.navigator.clearAppBadge) self.navigator.clearAppBadge().catch(() => {});
   const url = (e.notification.data && e.notification.data.url) || "./";
   e.waitUntil(self.clients.matchAll({ type: "window", includeUncontrolled: true }).then(ws => {
     for (const w of ws) { if ("focus" in w) { w.navigate && w.navigate(url); return w.focus(); } }
