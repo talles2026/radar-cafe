@@ -1,6 +1,6 @@
 {
  "telegram": null,
  "vapidPublic": "BHor8Fa27BtK97A6O-F6rtbHgVVVcJ6MUKuXmuQBfN8xkVDJsLz7wgSzWB4ETzD_rgn6ZD44b6sjsSdVVBemNZk",
- "supabaseUrl": null,
- "supabaseAnon": null
+ "supabaseUrl": "https://gqfuuqvnlkcdztufygfu.supabase.co",
+ "supabaseAnon": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdxZnV1cXZubGtjZHp0dWZ5Z2Z1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMxMjMzOTYsImV4cCI6MjEwODY5OTM5Nn0.rnE-65nPuI_oIR0g53FWGkgUu8ih_Cumyq5s4W4stn0"
 }
