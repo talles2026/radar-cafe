@@ -293,7 +293,6 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
       <h2 id="h-app">Levar no celular</h2>
       <div class="actions">
         <button class="btn primary" type="button" id="btnInstall" hidden>Instalar app</button>
-        <button class="btn" type="button" id="btnShare">Compartilhar link</button>
       </div>
       <div class="panel" id="notif" style="margin-top:12px">
         <div class="kv" style="border:0;padding:0"><span><b style="font-family:var(--body);color:var(--ink)">Notificações no celular</b><br><span id="nStatus">Desligadas</span></span>
@@ -342,7 +341,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   <footer class="assinatura">
     <span class="marca">Radar do Café</span>
     <span>desenvolvido por <b>Talles Eugenio</b></span>
-    <span class="versao">versão 27/10 · 17h55</span>
+    <span class="versao">versão 28/10 · 13h50</span>
   </footer>
 </div>
 
@@ -927,13 +926,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   let deferred = null;
   window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferred = e; $("btnInstall").hidden = false; });
   $("btnInstall").addEventListener("click", async () => { if (!deferred) return; deferred.prompt(); await deferred.userChoice.catch(()=>{}); deferred = null; $("btnInstall").hidden = true; });
-  if (window.matchMedia("(display-mode: standalone)").matches) $("installHint").textContent = "App instalado. Para mandar a alguém, use o botão de compartilhar.";
-  $("btnShare").addEventListener("click", async () => {
-    const url = location.href.split("#")[0].split("?")[0];
-    if (navigator.share) { try { await navigator.share({ title: "Radar do Café", text: "Cotação e previsão do café", url }); return; } catch(e) { if (e.name === "AbortError") return; } }
-    try { await navigator.clipboard.writeText(url); $("btnShare").textContent = "Link copiado"; } catch(e) { $("btnShare").textContent = url; }
-    setTimeout(() => { $("btnShare").textContent = "Compartilhar link"; }, 2500);
-  });
+  if (window.matchMedia("(display-mode: standalone)").matches) $("installHint").textContent = "App instalado neste celular.";
 })();
 </script>
 </body>
