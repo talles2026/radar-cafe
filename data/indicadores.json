@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-10-28T12:16:53Z",
+ "geradoEm": "2026-10-28T12:53:01Z",
  "arabica": {
   "cepea": 1610.19,
   "cepeaData": "2026-10-27",
-  "fisicoEstimadoHoje": 1585,
-  "bolsaUltimo": 286.6,
+  "fisicoEstimadoHoje": 1579,
+  "bolsaUltimo": 285.95,
   "bolsaData": "2026-10-28",
-  "bolsaVar1d": -0.024340425531914844,
-  "bolsaVar5d": -0.0934682903684958,
-  "bolsaVar20d": -0.01410388716890254,
+  "bolsaVar1d": -0.02655319148936175,
+  "bolsaVar5d": -0.09552427645105166,
+  "bolsaVar20d": -0.016339869281045805,
   "previsao": {
    "7d": {
-    "centro": 1589,
+    "centro": 1583,
     "faixa70": [
-     1485,
-     1701
+     1478,
+     1695
     ],
-    "chanceAlta": 0.52
+    "chanceAlta": 0.51
    },
    "15d": {
-    "centro": 1595,
+    "centro": 1588,
     "faixa70": [
-     1442,
-     1764
+     1434,
+     1757
     ],
-    "chanceAlta": 0.53
+    "chanceAlta": 0.52
    }
   },
   "fisicoVsBolsa": {
@@ -67,39 +67,39 @@
   }
  },
  "dolar": {
-  "ultimo": 5.3548,
+  "ultimo": 5.3414,
   "data": "2026-10-28",
-  "var1d": 0.0016835646675896765,
-  "var5d": 0.06586516451362479
+  "var1d": -0.0008230760597103259,
+  "var5d": 0.06319791397121755
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 61.0,
+   "chuva7d": 54.9,
    "tmin": 15.4,
-   "tmax": 28.9,
+   "tmax": 27.8,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 66.9,
-   "tmin": 15.3,
-   "tmax": 27.5,
+   "chuva7d": 58.4,
+   "tmin": 15.6,
+   "tmax": 26.9,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 60.2,
-   "tmin": 18.3,
+   "chuva7d": 47.2,
+   "tmin": 18.1,
    "tmax": 28.2,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 42.9,
-   "tmin": 20.3,
-   "tmax": 31.9,
-   "nota": "Chuva boa para a florada e o pegamento"
+   "chuva7d": 33.7,
+   "tmin": 20.4,
+   "tmax": 30.7,
+   "nota": "Chuva moderada prevista"
   }
  ]
 }
