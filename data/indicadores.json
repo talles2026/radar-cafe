@@ -1,9 +1,9 @@
 {
- "geradoEm": "2026-10-28T17:46:17Z",
+ "geradoEm": "2026-10-28T18:48:08Z",
  "arabica": {
   "cepea": 1610.19,
   "cepeaData": "2026-10-27",
-  "fisicoEstimadoHoje": 1587,
+  "fisicoEstimadoHoje": 1584,
   "bolsaUltimo": 286.35,
   "bolsaData": "2026-10-28",
   "bolsaVar1d": -0.025191489361702013,
@@ -11,18 +11,18 @@
   "bolsaVar20d": -0.014963880288957565,
   "previsao": {
    "7d": {
-    "centro": 1593,
+    "centro": 1589,
     "faixa70": [
-     1489,
-     1704
+     1485,
+     1700
     ],
     "chanceAlta": 0.52
    },
    "15d": {
-    "centro": 1599,
+    "centro": 1595,
     "faixa70": [
-     1447,
-     1767
+     1442,
+     1763
     ],
     "chanceAlta": 0.53
    }
@@ -36,28 +36,28 @@
  "conilon": {
   "cepea": 967.97,
   "cepeaData": "2026-10-27",
-  "fisicoEstimadoHoje": 968,
-  "bolsaUltimo": 3240.0,
-  "bolsaData": "2026-10-27",
-  "bolsaVar1d": 0.01440200375704448,
-  "bolsaVar5d": -0.04985337243401755,
-  "bolsaVar20d": -0.04985337243401755,
+  "fisicoEstimadoHoje": 961,
+  "bolsaUltimo": 3200.0,
+  "bolsaData": "2026-10-28",
+  "bolsaVar1d": -0.012345679012345734,
+  "bolsaVar5d": -0.04534606205250602,
+  "bolsaVar20d": -0.0711175616835994,
   "previsao": {
    "7d": {
-    "centro": 968,
+    "centro": 959,
     "faixa70": [
-     909,
-     1030
+     902,
+     1019
     ],
-    "chanceAlta": 0.5
+    "chanceAlta": 0.48
    },
    "15d": {
-    "centro": 967,
+    "centro": 956,
     "faixa70": [
-     882,
-     1060
+     873,
+     1046
     ],
-    "chanceAlta": 0.5
+    "chanceAlta": 0.47
    }
   },
   "fisicoVsBolsa": {
@@ -67,10 +67,10 @@
   }
  },
  "dolar": {
-  "ultimo": 5.3729,
+  "ultimo": 5.3584,
   "data": "2026-10-28",
-  "var1d": 0.005069400276852765,
-  "var5d": 0.06946794323135408
+  "var1d": 0.0023569905346252362,
+  "var5d": 0.0665817392862118
  },
  "clima": [
   {
@@ -82,14 +82,14 @@
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 58.4,
+   "chuva7d": 62.1,
    "tmin": 15.6,
    "tmax": 26.9,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 47.2,
+   "chuva7d": 50.3,
    "tmin": 18.1,
    "tmax": 28.2,
    "nota": "Chuva boa para a florada e o pegamento"
