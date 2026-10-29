@@ -1,11 +1,11 @@
 {
- "updatedAt": "2026-10-29T20:43:57Z",
+ "updatedAt": "2026-10-29T21:42:48Z",
  "regioes": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 23.6,
+   "chuva7d": 24.1,
    "tmin": 16.8,
-   "tmax": 31.4,
+   "tmax": 30.6,
    "dias": [
     "2026-10-29",
     "2026-10-30",
@@ -16,13 +16,13 @@
     "2026-11-04"
    ],
    "chuvaDia": [
-    0.4,
-    5.6,
-    4.8,
-    7.7,
-    3.6,
     0.3,
-    1.2
+    6.9,
+    1.4,
+    7.6,
+    3.2,
+    2.7,
+    2.0
    ],
    "nota": "Chuva moderada prevista"
   },
@@ -78,9 +78,9 @@
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 25.1,
+   "chuva7d": 30.9,
    "tmin": 21.4,
-   "tmax": 34.0,
+   "tmax": 32.5,
    "dias": [
     "2026-10-29",
     "2026-10-30",
@@ -91,13 +91,13 @@
     "2026-11-04"
    ],
    "chuvaDia": [
-    0.1,
-    0.4,
-    10.2,
-    9.0,
-    4.8,
     0.0,
-    0.6
+    3.4,
+    15.6,
+    5.9,
+    5.7,
+    0.0,
+    0.3
    ],
    "nota": "Chuva moderada prevista"
   }
