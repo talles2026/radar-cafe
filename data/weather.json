@@ -1,10 +1,10 @@
 {
- "updatedAt": "2026-10-29T11:43:28Z",
+ "updatedAt": "2026-10-29T12:53:50Z",
  "regioes": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 33.0,
-   "tmin": 16.7,
+   "chuva7d": 23.6,
+   "tmin": 16.8,
    "tmax": 31.4,
    "dias": [
     "2026-10-29",
@@ -16,19 +16,19 @@
     "2026-11-04"
    ],
    "chuvaDia": [
-    0.5,
-    2.7,
-    2.7,
-    11.6,
-    13.1,
-    1.2,
+    0.4,
+    5.6,
+    4.8,
+    7.7,
+    3.6,
+    0.3,
     1.2
    ],
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 57.4,
+   "chuva7d": 68.2,
    "tmin": 16.8,
    "tmax": 28.0,
    "dias": [
@@ -41,20 +41,20 @@
     "2026-11-04"
    ],
    "chuvaDia": [
-    11.2,
-    24.1,
-    4.0,
-    7.4,
-    6.1,
-    0.6,
-    4.0
+    21.4,
+    25.1,
+    2.7,
+    7.1,
+    4.3,
+    2.7,
+    4.9
    ],
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 59.5,
-   "tmin": 18.0,
+   "chuva7d": 72.4,
+   "tmin": 17.4,
    "tmax": 29.0,
    "dias": [
     "2026-10-29",
@@ -66,19 +66,19 @@
     "2026-11-04"
    ],
    "chuvaDia": [
-    15.3,
-    18.1,
-    4.0,
-    10.4,
-    3.9,
-    1.2,
-    6.6
+    17.7,
+    16.9,
+    8.8,
+    7.9,
+    11.0,
+    3.2,
+    6.9
    ],
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 20.0,
+   "chuva7d": 25.1,
    "tmin": 21.4,
    "tmax": 34.0,
    "dias": [
@@ -91,11 +91,11 @@
     "2026-11-04"
    ],
    "chuvaDia": [
-    0.0,
-    2.6,
-    8.4,
-    4.7,
-    3.7,
+    0.1,
+    0.4,
+    10.2,
+    9.0,
+    4.8,
     0.0,
     0.6
    ],
