@@ -1,5 +1,5 @@
 {
- "verificadoEm": "2026-10-30T21:39:06Z",
+ "verificadoEm": "2026-10-30T22:39:54Z",
  "itens": {
   "NY": {
    "ultimo": "2026-10-30",
@@ -20,19 +20,19 @@
    "estado": "ok"
   },
   "CEPEA arábica": {
-   "ultimo": "2026-10-29",
+   "ultimo": "2026-10-30",
    "esperado": "2026-10-29",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
   "CEPEA conilon": {
-   "ultimo": "2026-10-29",
+   "ultimo": "2026-10-30",
    "esperado": "2026-10-29",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
   "Clima": {
-   "ultimo": "2026-10-30T21:39:06Z",
+   "ultimo": "2026-10-30T22:39:54Z",
    "estado": "ok"
   },
   "Praças": {

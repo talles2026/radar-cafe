@@ -1,9 +1,9 @@
 {
- "geradoEm": "2026-10-30T21:39:09Z",
+ "geradoEm": "2026-10-30T22:39:59Z",
  "arabica": {
-  "cepea": 1590.72,
-  "cepeaData": "2026-10-29",
-  "fisicoEstimadoHoje": 1610,
+  "cepea": 1598.37,
+  "cepeaData": "2026-10-30",
+  "fisicoEstimadoHoje": 1598,
   "bolsaUltimo": 287.15,
   "bolsaData": "2026-10-30",
   "bolsaVar1d": 0.005955508845682189,
@@ -11,32 +11,32 @@
   "bolsaVar20d": -0.005541125541125624,
   "previsao": {
    "7d": {
-    "centro": 1612,
+    "centro": 1600,
     "faixa70": [
-     1511,
-     1719
+     1500,
+     1707
     ],
     "chanceAlta": 0.51
    },
    "15d": {
-    "centro": 1614,
+    "centro": 1603,
     "faixa70": [
-     1467,
-     1776
+     1456,
+     1764
     ],
     "chanceAlta": 0.51
    }
   },
   "fisicoVsBolsa": {
-   "hoje": -0.217,
-   "media": -0.1498,
-   "dias": 271
+   "hoje": -0.2263,
+   "media": -0.1501,
+   "dias": 272
   }
  },
  "conilon": {
-  "cepea": 965.47,
-  "cepeaData": "2026-10-29",
-  "fisicoEstimadoHoje": 982,
+  "cepea": 972.44,
+  "cepeaData": "2026-10-30",
+  "fisicoEstimadoHoje": 972,
   "bolsaUltimo": 3219.0,
   "bolsaData": "2026-10-30",
   "bolsaVar1d": 0.013220018885741203,
@@ -44,33 +44,33 @@
   "bolsaVar20d": -0.07206687806284229,
   "previsao": {
    "7d": {
-    "centro": 984,
+    "centro": 974,
     "faixa70": [
-     927,
-     1043
+     918,
+     1033
     ],
     "chanceAlta": 0.51
    },
    "15d": {
-    "centro": 986,
+    "centro": 976,
     "faixa70": [
-     903,
-     1076
+     894,
+     1065
     ],
     "chanceAlta": 0.52
    }
   },
   "fisicoVsBolsa": {
-   "hoje": -0.0586,
-   "media": -0.0724,
-   "dias": 31
+   "hoje": -0.0743,
+   "media": -0.0725,
+   "dias": 32
   }
  },
  "dolar": {
-  "ultimo": 5.44,
+  "ultimo": 5.4392,
   "data": "2026-10-30",
-  "var1d": 0.011096035537051963,
-  "var5d": 0.09296204769654248
+  "var1d": 0.010947344943590398,
+  "var5d": 0.09280131798364577
  },
  "clima": [
   {
