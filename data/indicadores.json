@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-30T18:46:11Z",
+ "geradoEm": "2026-10-30T19:47:42Z",
  "arabica": {
   "cepea": 1590.72,
   "cepeaData": "2026-10-29",
@@ -11,7 +11,7 @@
   "bolsaVar20d": -0.005541125541125624,
   "previsao": {
    "7d": {
-    "centro": 1615,
+    "centro": 1614,
     "faixa70": [
      1513,
      1723
@@ -19,7 +19,7 @@
     "chanceAlta": 0.51
    },
    "15d": {
-    "centro": 1618,
+    "centro": 1617,
     "faixa70": [
      1469,
      1781
@@ -36,7 +36,7 @@
  "conilon": {
   "cepea": 965.47,
   "cepeaData": "2026-10-29",
-  "fisicoEstimadoHoje": 984,
+  "fisicoEstimadoHoje": 983,
   "bolsaUltimo": 3219.0,
   "bolsaData": "2026-10-30",
   "bolsaVar1d": 0.013220018885741203,
@@ -44,18 +44,18 @@
   "bolsaVar20d": -0.07206687806284229,
   "previsao": {
    "7d": {
-    "centro": 986,
+    "centro": 985,
     "faixa70": [
-     929,
-     1046
+     928,
+     1045
     ],
     "chanceAlta": 0.51
    },
    "15d": {
-    "centro": 988,
+    "centro": 987,
     "faixa70": [
      904,
-     1079
+     1078
     ],
     "chanceAlta": 0.52
    }
@@ -67,10 +67,10 @@
   }
  },
  "dolar": {
-  "ultimo": 5.453,
+  "ultimo": 5.451,
   "data": "2026-10-30",
-  "var1d": 0.013512257680798445,
-  "var5d": 0.09557390553111134
+  "var1d": 0.013140531197145089,
+  "var5d": 0.09517208124886989
  },
  "clima": [
   {
@@ -82,23 +82,23 @@
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 39.1,
-   "tmin": 16.9,
+   "chuva7d": 36.6,
+   "tmin": 17.4,
    "tmax": 28.7,
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 44.0,
-   "tmin": 17.5,
-   "tmax": 29.2,
-   "nota": "Chuva boa para a florada e o pegamento"
+   "chuva7d": 35.5,
+   "tmin": 17.7,
+   "tmax": 29.4,
+   "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 35.7,
+   "chuva7d": 33.7,
    "tmin": 22.3,
-   "tmax": 34.3,
+   "tmax": 34.2,
    "nota": "Chuva moderada prevista"
   }
  ]
