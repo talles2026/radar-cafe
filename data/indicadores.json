@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-10-30T11:40:30Z",
+ "geradoEm": "2026-10-30T12:53:39Z",
  "arabica": {
   "cepea": 1590.72,
   "cepeaData": "2026-10-29",
-  "fisicoEstimadoHoje": 1600,
-  "bolsaUltimo": 287.75,
+  "fisicoEstimadoHoje": 1620,
+  "bolsaUltimo": 289.75,
   "bolsaData": "2026-10-30",
-  "bolsaVar1d": 0.0080574531441584,
-  "bolsaVar5d": -0.0640754594242966,
-  "bolsaVar20d": -0.0034632034632035014,
+  "bolsaVar1d": 0.015063934139078583,
+  "bolsaVar5d": -0.057570336640104025,
+  "bolsaVar20d": 0.0034632034632033903,
   "previsao": {
    "7d": {
-    "centro": 1600,
+    "centro": 1624,
     "faixa70": [
-     1501,
-     1705
+     1521,
+     1735
     ],
-    "chanceAlta": 0.5
+    "chanceAlta": 0.51
    },
    "15d": {
-    "centro": 1600,
+    "centro": 1629,
     "faixa70": [
-     1455,
-     1759
+     1477,
+     1796
     ],
-    "chanceAlta": 0.5
+    "chanceAlta": 0.52
    }
   },
   "fisicoVsBolsa": {
@@ -67,36 +67,36 @@
   }
  },
  "dolar": {
-  "ultimo": 5.3796,
+  "ultimo": 5.4412,
   "data": "2026-10-30",
-  "var1d": -0.0001301042692787302,
-  "var5d": 0.08082695437285281
+  "var1d": 0.011319071427243976,
+  "var5d": 0.09320314226588722
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 34.3,
+   "chuva7d": 44.1,
    "tmin": 18.3,
    "tmax": 31.4,
-   "nota": "Chuva moderada prevista"
-  },
-  {
-   "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 43.4,
-   "tmin": 17.0,
-   "tmax": 28.7,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
+   "regiao": "Sul de Minas (Varginha)",
+   "chuva7d": 39.1,
+   "tmin": 16.9,
+   "tmax": 28.7,
+   "nota": "Chuva moderada prevista"
+  },
+  {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 44.6,
-   "tmin": 18.0,
-   "tmax": 29.3,
+   "chuva7d": 44.0,
+   "tmin": 17.5,
+   "tmax": 29.2,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 31.7,
+   "chuva7d": 35.7,
    "tmin": 22.3,
    "tmax": 34.3,
    "nota": "Chuva moderada prevista"
