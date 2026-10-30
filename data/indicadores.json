@@ -1,9 +1,9 @@
 {
- "geradoEm": "2026-10-30T19:47:42Z",
+ "geradoEm": "2026-10-30T20:40:15Z",
  "arabica": {
   "cepea": 1590.72,
   "cepeaData": "2026-10-29",
-  "fisicoEstimadoHoje": 1612,
+  "fisicoEstimadoHoje": 1610,
   "bolsaUltimo": 287.15,
   "bolsaData": "2026-10-30",
   "bolsaVar1d": 0.005955508845682189,
@@ -11,18 +11,18 @@
   "bolsaVar20d": -0.005541125541125624,
   "previsao": {
    "7d": {
-    "centro": 1614,
+    "centro": 1612,
     "faixa70": [
-     1513,
-     1723
+     1511,
+     1720
     ],
     "chanceAlta": 0.51
    },
    "15d": {
-    "centro": 1617,
+    "centro": 1615,
     "faixa70": [
-     1469,
-     1781
+     1467,
+     1778
     ],
     "chanceAlta": 0.51
    }
@@ -36,7 +36,7 @@
  "conilon": {
   "cepea": 965.47,
   "cepeaData": "2026-10-29",
-  "fisicoEstimadoHoje": 983,
+  "fisicoEstimadoHoje": 982,
   "bolsaUltimo": 3219.0,
   "bolsaData": "2026-10-30",
   "bolsaVar1d": 0.013220018885741203,
@@ -44,18 +44,18 @@
   "bolsaVar20d": -0.07206687806284229,
   "previsao": {
    "7d": {
-    "centro": 985,
+    "centro": 984,
     "faixa70": [
      928,
-     1045
+     1044
     ],
     "chanceAlta": 0.51
    },
    "15d": {
-    "centro": 987,
+    "centro": 986,
     "faixa70": [
-     904,
-     1078
+     903,
+     1076
     ],
     "chanceAlta": 0.52
    }
@@ -67,17 +67,17 @@
   }
  },
  "dolar": {
-  "ultimo": 5.451,
+  "ultimo": 5.443,
   "data": "2026-10-30",
-  "var1d": 0.013140531197145089,
-  "var5d": 0.09517208124886989
+  "var1d": 0.011653625262531664,
+  "var5d": 0.09356478411990432
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 44.1,
+   "chuva7d": 65.2,
    "tmin": 18.3,
-   "tmax": 31.4,
+   "tmax": 31.2,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
