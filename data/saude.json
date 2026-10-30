@@ -1,14 +1,14 @@
 {
- "verificadoEm": "2026-10-29T22:42:17Z",
+ "verificadoEm": "2026-10-30T09:51:36Z",
  "itens": {
   "NY": {
-   "ultimo": "2026-10-29",
+   "ultimo": "2026-10-30",
    "esperado": "2026-10-29",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
   "Dólar": {
-   "ultimo": "2026-10-29",
+   "ultimo": "2026-10-30",
    "esperado": "2026-10-29",
    "atrasoDiasUteis": 0,
    "estado": "ok"
@@ -21,23 +21,23 @@
   },
   "CEPEA arábica": {
    "ultimo": "2026-10-29",
-   "esperado": "2026-10-28",
+   "esperado": "2026-10-29",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
   "CEPEA conilon": {
    "ultimo": "2026-10-29",
-   "esperado": "2026-10-28",
+   "esperado": "2026-10-29",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
   "Clima": {
-   "ultimo": "2026-10-29T22:42:17Z",
+   "ultimo": "2026-10-30T09:51:36Z",
    "estado": "ok"
   },
   "Praças": {
    "ultimo": "2026-10-26",
-   "estado": "atencao"
+   "estado": "falha"
   },
   "Análise do dia": {
    "ultimo": "2026-10-27T15:55:00Z",
@@ -45,6 +45,7 @@
   }
  },
  "problemas": [
+  "Praças",
   "Análise do dia"
  ]
 }
