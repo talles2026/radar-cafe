@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Radar de Preços</title>
+<meta name="description" content="Menor preço de qualquer produto no Mercado Livre, Shopee, Amazon, AliExpress e Google; veículos na OLX, Mercado Livre e Facebook.">
+<meta name="theme-color" content="#0d1116">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Radar Preços">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Uma coluna para celular: busca no topo, resultado da busca, meus produtos (abrem para detalhes), alertas e instalar no fim */
+:root{
+  --bg:#f3f5f8; --panel:#fff; --soft:#eef1f5; --line:#dbe1e8; --fg:#121820; --muted:#5b6876;
+  --accent:#d95f00; --accent-soft:#d95f0018; --good:#138a57; --warn:#a86a00; --bad:#c53030;
+  --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Figtree",ui-sans-serif,system-ui,sans-serif;
+  --f-num:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d1116; --panel:#151b22; --soft:#1b232c; --line:#25303b; --fg:#e8edf2; --muted:#8d9aa8;
+  --accent:#ff7a1a; --accent-soft:#ff7a1a22; --good:#3ecf8e; --warn:#f5b84b; --bad:#ff6b6b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1116; --panel:#151b22; --soft:#1b232c; --line:#25303b; --fg:#e8edf2; --muted:#8d9aa8;
+  --accent:#ff7a1a; --accent-soft:#ff7a1a22; --good:#3ecf8e; --warn:#f5b84b; --bad:#ff6b6b; color-scheme:dark}
+*{box-sizing:border-box}
+html{color-scheme:light}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 var(--f-body)}
+[hidden]{display:none!important}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:14px max(16px,env(safe-area-inset-left,0px)) 48px max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:18px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.top{display:flex;align-items:center;gap:10px}
+.dot{width:11px;height:11px;border-radius:50%;background:var(--accent);flex:none;animation:ping 2.4s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 var(--accent-soft)}70%{box-shadow:0 0 0 11px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}}
+h1{font:800 clamp(22px,6vw,28px)/1.1 var(--f-display);margin:0;letter-spacing:-.01em}
+h2{font:600 18px/1.2 var(--f-display);margin:0}
+.status{margin-left:auto;font-size:12px;color:var(--muted);text-align:right;line-height:1.3}
+.icon{background:var(--panel);border:1px solid var(--line);color:var(--fg);border-radius:10px;width:38px;height:38px;display:grid;place-items:center;cursor:pointer;flex:none}
+.icon.gira svg{animation:gira 1s linear infinite}@keyframes gira{to{transform:rotate(360deg)}}
+form.busca{display:flex;gap:8px}
+form.busca input{flex:1;min-width:0;font:500 16px var(--f-body);padding:14px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--panel);color:var(--fg)}
+form.busca input:focus{outline:none;border-color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--accent);color:#fff;border:0;border-radius:12px;padding:12px 16px;font:700 15px var(--f-body);text-decoration:none;cursor:pointer;white-space:nowrap}
+.btn[disabled]{opacity:.55;cursor:default}
+.btn.sec{background:transparent;color:var(--fg);border:1px solid var(--line);font-weight:600}
+.btn.mini{padding:8px 11px;font-size:13px;border-radius:10px}
+.btn.perigo{background:transparent;color:var(--bad);border:1px solid var(--bad)}
+.dica{font-size:12.5px;color:var(--muted);margin:-8px 2px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:12px}
+.chip{display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.chip.ac{color:var(--accent);border-color:currentColor}.chip.ok{color:var(--good);border-color:currentColor}.chip.wa{color:var(--warn);border-color:currentColor}
+.eyebrow{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.big{font:700 clamp(32px,10vw,46px)/1 var(--f-num);color:var(--accent)}
+.lojas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.lj{background:var(--soft);border:1px solid transparent;border-radius:12px;padding:10px 12px;display:grid;gap:3px;align-content:start;min-width:0}
+.lj.best{border-color:var(--accent)}
+.lj b{font-size:13.5px}
+.lj .v{font:700 17px var(--f-num)}
+.lj .v.nada{font:500 13px var(--f-body);color:var(--muted)}
+.lj .s{font-size:12px;color:var(--muted);overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.lj a{font-size:13px;font-weight:700;text-decoration:none}
+.linha{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.alvo{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.alvo input{width:130px;font:600 15px var(--f-num);padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--fg)}
+.msg{font-size:13px;color:var(--muted)}
+.lista{display:grid;gap:10px}
+.prod{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.prod>button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:14px 16px;cursor:pointer}
+.prod>button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.prod .nome{font-weight:700;overflow-wrap:anywhere}
+.prod .pr{font:700 18px var(--f-num);text-align:right;color:var(--accent)}
+.prod .sub{font-size:12.5px;color:var(--muted);grid-column:1/-1;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.prod .det{padding:0 16px 16px;display:grid;gap:14px}
+.var.dn{color:var(--good)}.var.up{color:var(--bad)}
+.chart{width:100%;height:140px;display:block}
+.chart text{fill:var(--muted);font:11px var(--f-num)}
+.prev{background:var(--soft);border-radius:12px;padding:12px;display:grid;gap:6px;font-size:14px}
+.prev .nums{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.prev .nums b{font-family:var(--f-num);color:var(--fg)}
+.vazio{color:var(--muted);font-size:14px;padding:6px 2px}
+.toast{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:9;max-width:90vw}
+.toast.on{opacity:1}
+.skel{height:110px;border-radius:14px;background:linear-gradient(90deg,var(--panel),var(--soft),var(--panel));background-size:200% 100%;animation:sk 1.2s infinite}
+@keyframes sk{to{background-position:-200% 0}}
+footer{font-size:12px;color:var(--muted);text-align:center;display:grid;gap:6px}
+footer button{all:unset;color:var(--accent);cursor:pointer;font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="dot" aria-hidden="true"></span>
+    <h1>Radar de Preços</h1>
+    <div class="status" id="status">carregando…</div>
+    <button class="icon" id="btnAtualizar" type="button" aria-label="Atualizar agora"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 4v5h-5"/></svg></button>
+  </header>
+
+  <form class="busca" id="formBusca" role="search">
+    <input id="q" type="search" placeholder="Qualquer produto: geladeira, notebook, Hilux 2015…" autocomplete="off" enterkeyhint="search" aria-label="Produto para buscar" maxlength="120">
+    <button class="btn" type="submit" id="btnBuscar">Buscar</button>
+  </form>
+  <p class="dica">Eu identifico o tipo sozinho. Veículos: OLX, Mercado Livre, Facebook e Google. Demais: Mercado Livre, Shopee, Amazon, AliExpress e Google.</p>
+
+  <section id="resultado" hidden></section>
+
+  <section style="display:grid;gap:10px">
+    <div class="linha"><h2>Meus produtos</h2><span class="msg" id="qtd"></span></div>
+    <div class="lista" id="lista"><div class="skel"></div></div>
+  </section>
+
+  <section class="card" id="cardAlertas">
+    <h2>Alertas no celular</h2>
+    <div id="alertasCorpo"></div>
+  </section>
+
+  <section class="card" id="cardApp">
+    <h2>Instalar no celular</h2>
+    <div class="linha"><button class="btn" type="button" id="btnInstall" hidden>Instalar app</button></div>
+    <p class="msg" id="installHint" style="margin:0">No iPhone: no Safari, toque em Compartilhar e depois em "Adicionar à Tela de Início". No Android: menu do Chrome, "Instalar app" ou "Adicionar à tela inicial".</p>
+  </section>
+
+  <footer>
+    <span>Preços lidos nas lojas e em comparadores (Bing Shopping e Buscapé). Confira na loja antes de pagar.</span>
+    <span>Código deste aparelho: <b class="num" id="codigo"></b> · <button type="button" id="trocarCodigo">usar o código de outro aparelho</button> · <button type="button" id="lnkTema">tema claro/escuro</button></span>
+    <span id="versao"></span>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const VERSAO = "1";
+const FN = "https://xgwdrrxbqopsfhjgkvdq.supabase.co/functions/v1/precos";
+const $ = id => document.getElementById(id);
+const store = { get(k, d) { try { const v = localStorage.getItem("rp:" + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem("rp:" + k, JSON.stringify(v)); } catch (e) {} } };
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+const brl = v => v == null || !isFinite(v) ? "–" : (+v).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+const hora = iso => iso ? new Date(iso).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }) : "";
+const quando = iso => { if (!iso) return ""; const d = new Date(iso), hoje = new Date(); return d.toDateString() === hoje.toDateString() ? "hoje " + hora(iso) : d.toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }); };
+const parse = s => { s = String(s ?? "").trim().replace(/[R$\s]/g, ""); if (s.includes(",")) s = s.replace(/\./g, "").replace(",", "."); const n = parseFloat(s); return isFinite(n) && n > 0 ? n : null; };
+function toast(t) { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 3200); }
+$("versao").textContent = "versão " + VERSAO;
+
+// tema (escuro por padrão)
+const tema = store.get("tema", "dark"); document.documentElement.dataset.theme = tema;
+$("lnkTema").onclick = () => { const t = document.documentElement.dataset.theme === "dark" ? "light" : "dark"; document.documentElement.dataset.theme = t; store.set("tema", t); };
+
+// código do aparelho: os produtos ficam guardados no servidor com ele
+let dono = store.get("dono", null);
+if (!dono) { dono = (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2)).toLowerCase(); store.set("dono", dono); }
+$("codigo").textContent = dono.slice(0, 8);
+$("trocarCodigo").onclick = () => {
+  const c = prompt("Cole o código completo do outro aparelho (em Alertas no celular > Copiar código completo):");
+  if (c && /^[a-z0-9-]{16,64}$/.test(c.trim().toLowerCase())) { dono = c.trim().toLowerCase(); store.set("dono", dono); store.set("cache", null); location.reload(); }
+  else if (c) toast("Código inválido.");
+};
+
+async function api(corpo, ms = 100000) {
+  const r = await fetch(FN, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ dono, ...corpo }), signal: AbortSignal.timeout(ms) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || j.erro) throw new Error(j.erro || "falha " + r.status);
+  return j;
+}
+
+// ---------- cartões das lojas obrigatórias
+function cartoesLojas(r) {
+  const melhor = r.melhor;
+  return `<div class="lojas">${(r.lojas || []).map(l => {
+    const m = l.melhor, best = melhor && m && m.link === melhor.link;
+    return `<div class="lj ${best ? "best" : ""}"><b>${esc(l.nome)}${best ? " · menor" : ""}</b>
+      ${m ? `<span class="v">${brl(m.preco)}</span>${m.suspeito ? `<span class="chip wa" style="justify-self:start">muito abaixo da média: confira bem</span>` : ""}<span class="s">${esc(m.titulo)}${m.via ? ` · via ${esc(m.via)}` : ""}</span><a href="${esc(m.link)}" target="_blank" rel="noopener">Abrir oferta →</a>`
+          : `<span class="v nada">Sem preço lido</span><span class="s">${esc(l.motivo || "")}</span>`}
+      <a href="${esc(l.link)}" target="_blank" rel="noopener" style="font-weight:600">${m ? "Ver mais na loja" : "Ver na loja, do menor preço →"}</a></div>`;
+  }).join("")}</div>
+  ${r.outras?.length ? `<p class="msg" style="margin:0">Fora das lojas da lista: ${r.outras.map(o => `<a href="${esc(o.link)}" target="_blank" rel="noopener">${esc(o.vendedor || "loja")} ${brl(o.preco)}</a>`).join(" · ")}</p>` : ""}`;
+}
+function destaque(r, rotulo) {
+  const m = r.melhor;
+  if (!m) return `<div><span class="eyebrow">${rotulo}</span><p style="margin:6px 0 0"><b>Não achei preço igual ao buscado nas lojas que deixam ler.</b> Use os atalhos abaixo; cada um já abre a busca ordenada pelo menor preço.</p></div>`;
+  return `<div style="display:grid;gap:6px"><span class="eyebrow">${rotulo}</span><div class="big">${brl(m.preco)}</div>
+    <div>${esc(m.lojaNome || "")} · <span class="msg">${esc(m.titulo)}</span></div>
+    ${m.suspeito ? `<div class="chip wa" style="justify-self:start">Bem abaixo dos outros anúncios: confira estado, vendedor e se não é golpe</div>` : ""}
+    <div><a class="btn" href="${esc(m.link)}" target="_blank" rel="noopener">Abrir oferta · ${esc(m.lojaNome || "loja")}</a></div></div>`;
+}
+
+// ---------- busca
+let ultimaBusca = null;
+$("formBusca").onsubmit = async e => {
+  e.preventDefault();
+  const q = $("q").value.trim(); if (q.length < 2) return $("q").focus();
+  const el = $("resultado"); el.hidden = false;
+  el.innerHTML = `<div class="card"><span class="msg">Procurando “${esc(q)}” nas lojas… leva uns 10 segundos.</span><div class="skel"></div></div>`;
+  $("btnBuscar").disabled = true;
+  try {
+    const r = await api({ acao: "buscar", q }, 60000); ultimaBusca = r;
+    const ja = produtos.find(p => p.termo.toLowerCase() === q.toLowerCase());
+    el.innerHTML = `<div class="card">
+      <div class="linha"><span class="chip ac">${esc(r.tipo.nome)}</span><span class="msg">${r.relevantes} ofertas iguais ao buscado · ${hora(r.quando)}</span></div>
+      ${destaque(r, "Menor preço agora")}
+      ${cartoesLojas(r)}
+      ${ja ? `<p class="msg" style="margin:0">Este produto já está na sua lista.</p>` : `<div class="alvo"><label class="msg" for="novoAlvo">Me avise quando chegar a</label><input id="novoAlvo" inputmode="decimal" placeholder="${r.melhor ? brl(Math.floor(r.melhor.preco * 0.9)).replace("R$", "").trim() : "R$"}"><button class="btn" id="btnAcomp" type="button">Acompanhar</button></div>`}
+    </div>`;
+    if (!ja) $("btnAcomp").onclick = async () => {
+      const b = $("btnAcomp"); b.disabled = true; b.textContent = "Salvando…";
+      try { await api({ acao: "adicionar", q, alvo: parse($("novoAlvo").value), resultado: r }); toast("Adicionado. Atualizo a cada 30 min."); el.hidden = true; $("q").value = ""; await carregar(false); if (!(await inscrito())) toast("Ligue os alertas no celular para ser avisado."); }
+      catch (err) { b.disabled = false; b.textContent = "Acompanhar"; toast(err.message); }
+    };
+  } catch (err) { el.innerHTML = `<div class="card"><span class="msg">Não consegui buscar agora (${esc(err.message)}). Tente de novo.</span></div>`; }
+  $("btnBuscar").disabled = false;
+};
+
+// ---------- meus produtos
+let produtos = store.get("cache", null)?.produtos || [], aberto = new URLSearchParams(location.search).get("p") || store.get("aberto", null), ultimaAtualizacao = store.get("cache", null)?.agora || null;
+function grafico(h) {
+  const pts = (h?.dias || []).slice(-60);
+  if (pts.length < 2) return `<p class="msg" style="margin:0">O gráfico aparece a partir do segundo dia de acompanhamento${pts.length ? ` (hoje: ${brl(pts[0].v)})` : ""}.</p>`;
+  const W = 600, H = 140, pl = 6, pr = 6, pt = 18, pb = 20, vs = pts.map(p => p.v), mn = Math.min(...vs), mx = Math.max(...vs), rg = (mx - mn) || mx * 0.05 || 1;
+  const X = i => pl + i * (W - pl - pr) / (pts.length - 1), Y = v => pt + (1 - (v - mn) / rg) * (H - pt - pb);
+  const d = pts.map((p, i) => `${i ? "L" : "M"}${X(i).toFixed(1)},${Y(p.v).toFixed(1)}`).join("");
+  const n = pts.length - 1, iMin = vs.indexOf(mn), dt = s => s.slice(8, 10) + "/" + s.slice(5, 7);
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Menor preço por dia">
+    <path d="${d} L${X(n)},${H - pb} L${X(0)},${H - pb}Z" fill="var(--accent-soft)"/>
+    <path d="${d}" fill="none" stroke="var(--accent)" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+    <circle cx="${X(iMin)}" cy="${Y(mn)}" r="4" fill="var(--good)"/><circle cx="${X(n)}" cy="${Y(vs[n])}" r="4" fill="var(--accent)"/>
+    <text x="${pl}" y="12">máx ${brl(mx)}</text><text x="${W - pr}" y="12" text-anchor="end">mín ${brl(mn)}</text>
+    <text x="${pl}" y="${H - 4}">${dt(pts[0].d)}</text><text x="${W - pr}" y="${H - 4}" text-anchor="end">${dt(pts[n].d)}</text></svg>`;
+}
+function blocoPrevisao(p) {
+  const v = p.previsao || {};
+  return `<div class="prev"><b>Previsão</b><span>${esc(v.texto || "")}</span>
+    ${v.status === "ok" ? `<div class="nums"><span>em 7 dias <b>${brl(v.p7)}</b></span><span>em 30 dias <b>${brl(v.p30)}</b></span><span>faixa provável <b>${brl(v.faixa30[0])} – ${brl(v.faixa30[1])}</b></span></div>` : ""}
+    ${v.dica ? `<span class="msg">${esc(v.dica)}</span>` : ""}</div>`;
+}
+function variacao(p) {
+  const d = p.hist?.dias || []; if (d.length < 2) return "";
+  const a = d[d.length - 2].v, b = d[d.length - 1].v, x = (b / a - 1) * 100;
+  if (Math.abs(x) < 0.5) return `<span>estável</span>`;
+  return `<span class="var ${x < 0 ? "dn" : "up"}">${x < 0 ? "▼" : "▲"} ${Math.abs(x).toFixed(1).replace(".", ",")}% desde ontem</span>`;
+}
+function render() {
+  $("qtd").textContent = produtos.length ? `${produtos.length} acompanhando` : "";
+  if (!produtos.length) { $("lista").innerHTML = `<p class="vazio">Nenhum produto ainda. Busque acima e toque em <b>Acompanhar</b>: eu atualizo a cada 30 minutos e aviso no celular quando o preço chegar onde você quer.</p>`; return; }
+  $("lista").innerHTML = produtos.map(p => {
+    const u = p.ultimo || {}, m = u.melhor, abre = p.id === aberto, naMeta = p.alvo && m && m.preco <= +p.alvo;
+    return `<article class="prod" id="p-${p.id}">
+      <button type="button" data-abrir="${p.id}" aria-expanded="${abre}">
+        <span class="nome">${esc(p.termo)}</span><span class="pr">${m ? brl(m.preco) : "–"}</span>
+        <span class="sub"><span class="chip">${esc(p.tipo?.nome || "Produto")}</span>${m ? `<span>${esc(m.lojaNome || "")}</span>` : `<span>sem preço lido agora</span>`}${variacao(p)}
+          ${p.alvo ? `<span class="chip ${naMeta ? "ok" : ""}">${naMeta ? "no alvo" : "alvo"} ${brl(+p.alvo)}</span>` : ""}${p.hist?.min ? `<span>menor visto ${brl(p.hist.min)}</span>` : ""}</span>
+      </button>
+      ${abre ? `<div class="det">
+        ${m ? `<div class="linha"><a class="btn mini" href="${esc(m.link)}" target="_blank" rel="noopener">Abrir oferta · ${esc(m.lojaNome || "loja")}</a><span class="msg">${esc(m.titulo)}</span></div>` : ""}
+        ${u.lojas ? cartoesLojas(u) : `<p class="msg">Buscando pela primeira vez…</p>`}
+        <div style="display:grid;gap:6px"><b>Histórico do menor preço</b>${grafico(p.hist)}</div>
+        ${blocoPrevisao(p)}
+        <div class="alvo"><label class="msg" for="alvo-${p.id}">Alerta quando chegar a</label><input id="alvo-${p.id}" inputmode="decimal" value="${p.alvo ? String(+p.alvo).replace(".", ",") : ""}" placeholder="sem alvo"><button class="btn mini sec" data-alvo="${p.id}" type="button">Salvar</button></div>
+        <p class="msg" style="margin:0">Sem alvo, aviso quando aparecer o menor preço já visto. Atualizado ${quando(p.atualizado)}.</p>
+        <div class="linha"><button class="btn mini perigo" data-rem="${p.id}" type="button">Remover produto</button></div>
+      </div>` : ""}
+    </article>`;
+  }).join("");
+  document.querySelectorAll("[data-abrir]").forEach(b => b.onclick = () => { aberto = aberto === b.dataset.abrir ? null : b.dataset.abrir; store.set("aberto", aberto); render(); });
+  document.querySelectorAll("[data-alvo]").forEach(b => b.onclick = async () => {
+    const id = b.dataset.alvo, v = parse($("alvo-" + id).value);
+    try { await api({ acao: "alvo", id, alvo: v }); const p = produtos.find(x => x.id === id); p.alvo = v; render(); toast(v ? `Aviso quando chegar a ${brl(v)}.` : "Alvo removido."); } catch (e) { toast(e.message); }
+  });
+  document.querySelectorAll("[data-rem]").forEach(b => b.onclick = async () => {
+    if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "Toque de novo para remover"; setTimeout(() => { b.dataset.ok = ""; b.textContent = "Remover produto"; }, 4000); return; }
+    try { await api({ acao: "remover", id: b.dataset.rem }); produtos = produtos.filter(x => x.id !== b.dataset.rem); salvarCache(); render(); toast("Removido. Alertas dele desligados."); } catch (e) { toast(e.message); }
+  });
+}
+function salvarCache() { store.set("cache", { produtos, agora: ultimaAtualizacao }); }
+function mostrarStatus(txt) { $("status").innerHTML = txt || (ultimaAtualizacao ? `atualizado ${hora(ultimaAtualizacao)}<br>próxima ${hora(new Date(Date.parse(ultimaAtualizacao) + 30 * 60e3).toISOString())}` : ""); }
+
+let carregando = false;
+async function carregar(atualizar = true) {
+  if (carregando) return; carregando = true;
+  $("btnAtualizar").classList.add("gira"); if (atualizar) mostrarStatus("atualizando…");
+  try {
+    const r = await api({ acao: "meus", atualizar });
+    produtos = r.produtos; ultimaAtualizacao = r.agora; salvarCache(); render(); mostrarStatus();
+    if (aberto && new URLSearchParams(location.search).get("p")) { document.getElementById("p-" + aberto)?.scrollIntoView({ block: "start", behavior: "smooth" }); history.replaceState(null, "", location.pathname); }
+  } catch (e) { mostrarStatus("sem conexão"); if (!produtos.length) $("lista").innerHTML = `<p class="vazio">Não consegui carregar agora. Toque em atualizar.</p>`; }
+  $("btnAtualizar").classList.remove("gira"); carregando = false;
+}
+$("btnAtualizar").onclick = () => carregar(true);
+render(); mostrarStatus();
+carregar(true);                                      // ao abrir: busca na hora
+setInterval(() => carregar(true), 30 * 60e3);        // e a cada meia hora com o app aberto
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && (!ultimaAtualizacao || Date.now() - Date.parse(ultimaAtualizacao) > 5 * 60e3)) carregar(true); });
+
+// ---------- alertas no celular
+let chaveVapid = null;
+const b64 = s => { const p = "=".repeat((4 - s.length % 4) % 4), b = atob((s + p).replace(/-/g, "+").replace(/_/g, "/")); return Uint8Array.from([...b].map(c => c.charCodeAt(0))); };
+async function inscricao() { if (!("serviceWorker" in navigator)) return null; const reg = await navigator.serviceWorker.ready; return reg.pushManager.getSubscription(); }
+async function inscrito() { try { return !!(await inscricao()); } catch (e) { return false; } }
+async function renderAlertas() {
+  const el = $("alertasCorpo");
+  const suporta = "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent), standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+  if (!suporta) { el.innerHTML = ios && !standalone ? `<p class="msg" style="margin:0">No iPhone, os alertas funcionam com o app na Tela de Início (veja "Instalar no celular" abaixo).</p>` : `<p class="msg" style="margin:0">Este navegador não aceita alertas. No Android, use o Chrome.</p>`; return; }
+  const sub = await inscricao().catch(() => null);
+  if (!sub) {
+    el.innerHTML = `<p class="msg" style="margin:0">Receba aviso quando um produto chegar no preço que você quer, ou bater o menor preço já visto. Chega mesmo com o app fechado.</p><div class="linha"><button class="btn" id="aLigar" type="button">🔔 Ligar alertas</button></div>`;
+    $("aLigar").onclick = async () => {
+      try {
+        if (await Notification.requestPermission() !== "granted") return toast("Permissão negada. Libere as notificações nas configurações do celular.");
+        if (!chaveVapid) chaveVapid = (await (await fetch(FN + "?acao=chave")).json()).chave;
+        const reg = await navigator.serviceWorker.ready;
+        const s = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64(chaveVapid) });
+        await api({ acao: "inscrever", sub: s.toJSON() }); toast("Alertas ligados!"); renderAlertas();
+      } catch (e) { toast("Não foi possível ligar: " + e.message); }
+    };
+    return;
+  }
+  api({ acao: "inscrever", sub: sub.toJSON() }).catch(() => {});
+  el.innerHTML = `<p class="msg" style="margin:0">Alertas ligados neste aparelho. Confiro os preços a cada 30 minutos.</p>
+    <div class="linha"><button class="btn sec mini" id="aTeste" type="button">Enviar teste</button><button class="btn sec mini" id="aCod" type="button">Copiar código completo</button><button class="btn sec mini" id="aDesl" type="button">Desligar alertas</button></div>`;
+  $("aTeste").onclick = async () => { try { const r = await api({ acao: "teste" }); toast(r.ok ? "Teste enviado." : "Não chegou: tente desligar e ligar de novo."); } catch (e) { toast(e.message); } };
+  $("aCod").onclick = async () => { try { await navigator.clipboard.writeText(dono); toast("Código copiado."); } catch (e) { prompt("Seu código:", dono); } };
+  $("aDesl").onclick = async () => { await api({ acao: "desinscrever" }).catch(() => {}); await sub.unsubscribe(); toast("Alertas desligados."); renderAlertas(); };
+}
+
+// ---------- instalar
+let pedidoInstalar = null;
+const instalado = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+if (instalado()) $("cardApp").hidden = true;
+addEventListener("beforeinstallprompt", e => { e.preventDefault(); pedidoInstalar = e; $("btnInstall").hidden = false; });
+addEventListener("appinstalled", () => { $("cardApp").hidden = true; toast("App instalado na tela inicial."); });
+$("btnInstall").onclick = async () => { if (!pedidoInstalar) return; pedidoInstalar.prompt(); const r = await pedidoInstalar.userChoice; if (r.outcome === "accepted") $("cardApp").hidden = true; pedidoInstalar = null; };
+
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").then(() => renderAlertas()).catch(() => renderAlertas()); else renderAlertas();
+// versão nova publicada: recarrega uma vez
+fetch("versao.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.json()).then(j => { if (j.v && j.v !== VERSAO && store.get("recarregou") !== j.v) { store.set("recarregou", j.v); location.reload(); } }).catch(() => {});
+</script>
+</body>
+</html>
