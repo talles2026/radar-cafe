@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-30T22:39:54Z",
+ "updatedAt": "2026-11-01T00:54:11Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -11,7 +11,7 @@
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "287.15 (KCZ6) em 2026-10-30T18:00:00.000-0400"
+   "detalhe": "287.15 (KCZ6) em 2026-10-31T18:00:00.000-0400"
   },
   "Londres (Notícias Agrícolas)": {
    "ok": true,
@@ -19,11 +19,11 @@
   },
   "Dólar PTAX (Banco Central)": {
    "ok": true,
-   "detalhe": "276 dias"
+   "detalhe": "274 dias"
   },
   "Dólar comercial histórico (CNBC)": {
    "ok": true,
-   "detalhe": "553 dias"
+   "detalhe": "545 dias"
   },
   "Dólar agora (CNBC)": {
    "ok": true,
