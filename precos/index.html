@@ -44,6 +44,8 @@ a{color:var(--accent)}
 h1{font:800 clamp(22px,6vw,28px)/1.1 var(--f-display);margin:0;letter-spacing:-.01em}
 h2{font:600 18px/1.2 var(--f-display);margin:0}
 .status{margin-left:auto;font-size:12px;color:var(--muted);text-align:right;line-height:1.3}
+.status{white-space:nowrap}
+@media (max-width:420px){h1{font-size:20px}.top{gap:8px}.top .btn.mini{padding:8px 9px}}
 .icon{background:var(--panel);border:1px solid var(--line);color:var(--fg);border-radius:10px;width:38px;height:38px;display:grid;place-items:center;cursor:pointer;flex:none}
 .icon.gira svg{animation:gira 1s linear infinite}@keyframes gira{to{transform:rotate(360deg)}}
 form.busca{display:flex;gap:8px}
@@ -101,6 +103,7 @@ footer button{all:unset;color:var(--accent);cursor:pointer;font-weight:600}
     <span class="dot" aria-hidden="true"></span>
     <h1>Radar de Preços</h1>
     <div class="status" id="status">carregando…</div>
+    <button class="btn mini" id="btnInstalarTopo" type="button" hidden>📲 Instalar</button>
     <button class="icon" id="btnAtualizar" type="button" aria-label="Atualizar agora"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 4v5h-5"/></svg></button>
   </header>
 
@@ -124,8 +127,9 @@ footer button{all:unset;color:var(--accent);cursor:pointer;font-weight:600}
 
   <section class="card" id="cardApp">
     <h2>Instalar no celular</h2>
-    <div class="linha"><button class="btn" type="button" id="btnInstall" hidden>Instalar app</button></div>
-    <p class="msg" id="installHint" style="margin:0">No iPhone: no Safari, toque em Compartilhar e depois em "Adicionar à Tela de Início". No Android: menu do Chrome, "Instalar app" ou "Adicionar à tela inicial".</p>
+    <p class="msg" style="margin:0">Fica com ícone na tela inicial e abre como aplicativo, sem barra do navegador.</p>
+    <div class="linha"><button class="btn" type="button" id="btnInstall">📲 Instalar no celular</button></div>
+    <div class="prev" id="installHint" hidden></div>
   </section>
 
   <footer>
@@ -137,7 +141,7 @@ footer button{all:unset;color:var(--accent);cursor:pointer;font-weight:600}
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-const VERSAO = "1";
+const VERSAO = "2";
 const FN = "https://xgwdrrxbqopsfhjgkvdq.supabase.co/functions/v1/precos";
 const $ = id => document.getElementById(id);
 const store = { get(k, d) { try { const v = localStorage.getItem("rp:" + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
@@ -279,7 +283,7 @@ function render() {
   });
 }
 function salvarCache() { store.set("cache", { produtos, agora: ultimaAtualizacao }); }
-function mostrarStatus(txt) { $("status").innerHTML = txt || (ultimaAtualizacao ? `atualizado ${hora(ultimaAtualizacao)}<br>próxima ${hora(new Date(Date.parse(ultimaAtualizacao) + 30 * 60e3).toISOString())}` : ""); }
+function mostrarStatus(txt) { $("status").innerHTML = txt || (ultimaAtualizacao ? `✓ ${hora(ultimaAtualizacao)}<br>próx. ${hora(new Date(Date.parse(ultimaAtualizacao) + 30 * 60e3).toISOString())}` : ""); }
 
 let carregando = false;
 async function carregar(atualizar = true) {
@@ -333,10 +337,31 @@ async function renderAlertas() {
 // ---------- instalar
 let pedidoInstalar = null;
 const instalado = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone;
-if (instalado()) $("cardApp").hidden = true;
-addEventListener("beforeinstallprompt", e => { e.preventDefault(); pedidoInstalar = e; $("btnInstall").hidden = false; });
-addEventListener("appinstalled", () => { $("cardApp").hidden = true; toast("App instalado na tela inicial."); });
-$("btnInstall").onclick = async () => { if (!pedidoInstalar) return; pedidoInstalar.prompt(); const r = await pedidoInstalar.userChoice; if (r.outcome === "accepted") $("cardApp").hidden = true; pedidoInstalar = null; };
+const esconderInstalar = () => { $("cardApp").hidden = true; $("btnInstalarTopo").hidden = true; };
+if (instalado()) esconderInstalar(); else $("btnInstalarTopo").hidden = false;
+addEventListener("beforeinstallprompt", e => { e.preventDefault(); pedidoInstalar = e; });
+addEventListener("appinstalled", () => { esconderInstalar(); toast("App instalado na tela inicial."); });
+async function instalar() {
+  // Android/Chrome/Edge: abre a janela de instalação do próprio celular
+  if (pedidoInstalar) {
+    pedidoInstalar.prompt(); const r = await pedidoInstalar.userChoice; pedidoInstalar = null;
+    if (r.outcome === "accepted") esconderInstalar();
+    return;
+  }
+  // sem a janela automática: mostra o passo a passo certo para o aparelho
+  const ua = navigator.userAgent, ios = /iphone|ipad|ipod/i.test(ua), android = /android/i.test(ua);
+  const dentroDeApp = /FBAN|FBAV|Instagram|WhatsApp|Line\/|wv\)/i.test(ua), safari = ios && /Safari/i.test(ua) && !/CriOS|FxiOS|EdgiOS/i.test(ua);
+  let passos;
+  if (dentroDeApp) passos = `Este link abriu dentro de outro aplicativo. Toque nos três pontinhos (⋮ ou ⋯) e escolha <b>Abrir no navegador</b> (${ios ? "Safari" : "Chrome"}). Depois toque de novo em Instalar.`;
+  else if (ios && !safari) passos = `No iPhone, a instalação só funciona pelo <b>Safari</b>. Copie o endereço desta página, abra no Safari e toque de novo em Instalar.`;
+  else if (ios) passos = `<ol style="margin:0;padding-left:20px"><li>Toque no botão <b>Compartilhar</b> (quadrado com seta para cima, embaixo da tela).</li><li>Role e toque em <b>Adicionar à Tela de Início</b>.</li><li>Toque em <b>Adicionar</b>. O ícone do Radar de Preços aparece na tela inicial.</li></ol>`;
+  else if (android) passos = `<ol style="margin:0;padding-left:20px"><li>Toque nos <b>três pontinhos ⋮</b> no canto de cima do Chrome.</li><li>Toque em <b>Instalar app</b> (ou <b>Adicionar à tela inicial</b>).</li><li>Confirme em <b>Instalar</b>.</li></ol>`;
+  else passos = `No computador: clique no ícone de instalar na barra de endereço do Chrome ou Edge (monitor com seta), ou no menu ⋮ → <b>Instalar Radar de Preços</b>.`;
+  $("installHint").innerHTML = passos; $("installHint").hidden = false;
+  $("cardApp").scrollIntoView({ behavior: "smooth", block: "center" });
+}
+$("btnInstall").onclick = instalar;
+$("btnInstalarTopo").onclick = instalar;
 
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").then(() => renderAlertas()).catch(() => renderAlertas()); else renderAlertas();
 // versão nova publicada: recarrega uma vez
