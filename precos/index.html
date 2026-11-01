@@ -141,7 +141,7 @@ footer button{all:unset;color:var(--accent);cursor:pointer;font-weight:600}
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-const VERSAO = "2";
+const VERSAO = "3";
 const FN = "https://xgwdrrxbqopsfhjgkvdq.supabase.co/functions/v1/precos";
 const $ = id => document.getElementById(id);
 const store = { get(k, d) { try { const v = localStorage.getItem("rp:" + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
@@ -354,7 +354,7 @@ async function instalar() {
   let passos;
   if (dentroDeApp) passos = `Este link abriu dentro de outro aplicativo. Toque nos três pontinhos (⋮ ou ⋯) e escolha <b>Abrir no navegador</b> (${ios ? "Safari" : "Chrome"}). Depois toque de novo em Instalar.`;
   else if (ios && !safari) passos = `No iPhone, a instalação só funciona pelo <b>Safari</b>. Copie o endereço desta página, abra no Safari e toque de novo em Instalar.`;
-  else if (ios) passos = `<ol style="margin:0;padding-left:20px"><li>Toque no botão <b>Compartilhar</b> (quadrado com seta para cima, embaixo da tela).</li><li>Role e toque em <b>Adicionar à Tela de Início</b>.</li><li>Toque em <b>Adicionar</b>. O ícone do Radar de Preços aparece na tela inicial.</li></ol>`;
+  else if (ios) passos = `<ol style="margin:0;padding-left:20px"><li><b>Abra no app Safari.</b> Se você tocou no link dentro do Claude, WhatsApp, e-mail ou outro app, ele abriu numa janela que <b>não tem</b> a opção de instalar: toque no ícone da <b>bússola</b> ou em <b>Abrir no Safari</b> (canto de baixo ou ⋯). Ou abra o Safari e digite <b>talles2026.github.io/radar-cafe/precos</b>.</li><li>No Safari, toque em <b>Compartilhar</b> (quadrado com seta para cima, na barra de baixo).</li><li>Role a lista e toque em <b>Adicionar à Tela de Início</b> (se não aparecer, toque em <b>Editar Ações</b> no fim da lista e ative). Depois toque em <b>Adicionar</b>.</li><li>Abra pelo ícone novo na tela inicial.</li></ol>`;
   else if (android) passos = `<ol style="margin:0;padding-left:20px"><li>Toque nos <b>três pontinhos ⋮</b> no canto de cima do Chrome.</li><li>Toque em <b>Instalar app</b> (ou <b>Adicionar à tela inicial</b>).</li><li>Confirme em <b>Instalar</b>.</li></ol>`;
   else passos = `No computador: clique no ícone de instalar na barra de endereço do Chrome ou Edge (monitor com seta), ou no menu ⋮ → <b>Instalar Radar de Preços</b>.`;
   $("installHint").innerHTML = passos; $("installHint").hidden = false;
