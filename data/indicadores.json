@@ -1,28 +1,28 @@
 {
- "geradoEm": "2026-11-02T10:04:11Z",
+ "geradoEm": "2026-11-02T10:59:29Z",
  "arabica": {
   "cepea": 1598.37,
   "cepeaData": "2026-10-30",
   "fisicoEstimadoHoje": 1635,
-  "bolsaUltimo": 296.6,
+  "bolsaUltimo": 296.4,
   "bolsaData": "2026-11-02",
-  "bolsaVar1d": 0.03272980501392775,
-  "bolsaVar5d": -0.014454228277122283,
-  "bolsaVar20d": 0.013843787386771611,
+  "bolsaVar1d": 0.03203342618384397,
+  "bolsaVar5d": -0.015118790496760348,
+  "bolsaVar20d": 0.013160143565202453,
   "previsao": {
    "7d": {
-    "centro": 1639,
+    "centro": 1638,
     "faixa70": [
-     1534,
-     1750
+     1533,
+     1749
     ],
     "chanceAlta": 0.51
    },
    "15d": {
-    "centro": 1642,
+    "centro": 1641,
     "faixa70": [
-     1490,
-     1811
+     1489,
+     1810
     ],
     "chanceAlta": 0.52
    }
