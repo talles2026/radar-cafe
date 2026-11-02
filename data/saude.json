@@ -1,5 +1,5 @@
 {
- "verificadoEm": "2026-11-02T19:53:22Z",
+ "verificadoEm": "2026-11-02T20:45:21Z",
  "itens": {
   "NY": {
    "ultimo": "2026-11-02",
@@ -15,9 +15,9 @@
   },
   "Londres": {
    "ultimo": "2026-10-30",
-   "esperado": "2026-10-30",
-   "atrasoDiasUteis": 0,
-   "estado": "ok"
+   "esperado": "2026-11-02",
+   "atrasoDiasUteis": 1,
+   "estado": "atencao"
   },
   "CEPEA arábica": {
    "ultimo": "2026-10-30",
@@ -32,7 +32,7 @@
    "estado": "ok"
   },
   "Clima": {
-   "ultimo": "2026-11-02T19:53:22Z",
+   "ultimo": "2026-11-02T20:45:21Z",
    "estado": "ok"
   },
   "Praças": {
