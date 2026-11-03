@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-11-02T22:42:53Z",
+ "geradoEm": "2026-11-03T09:56:10Z",
  "arabica": {
   "cepea": 1598.37,
   "cepeaData": "2026-10-30",
   "fisicoEstimadoHoje": 1625,
-  "bolsaUltimo": 294.15,
-  "bolsaData": "2026-11-02",
-  "bolsaVar1d": 0.024199164345403812,
-  "bolsaVar5d": -0.022595115467685667,
-  "bolsaVar20d": 0.005469150572551484,
+  "bolsaUltimo": 294.1,
+  "bolsaData": "2026-11-03",
+  "bolsaVar1d": 0.006846970215679482,
+  "bolsaVar5d": 0.0011914893617022138,
+  "bolsaVar20d": -0.03399573000492684,
   "previsao": {
    "7d": {
-    "centro": 1626,
+    "centro": 1629,
     "faixa70": [
-     1525,
-     1735
+     1532,
+     1733
     ],
-    "chanceAlta": 0.51
+    "chanceAlta": 0.52
    },
    "15d": {
-    "centro": 1628,
+    "centro": 1635,
     "faixa70": [
-     1480,
+     1492,
      1791
     ],
-    "chanceAlta": 0.51
+    "chanceAlta": 0.53
    }
   },
   "fisicoVsBolsa": {
@@ -75,30 +75,30 @@
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 68.9,
-   "tmin": 16.5,
-   "tmax": 32.9,
+   "chuva7d": 72.7,
+   "tmin": 14.1,
+   "tmax": 32.6,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 51.7,
-   "tmin": 11.5,
-   "tmax": 29.9,
-   "nota": "Chuva boa para a florada e o pegamento"
+   "chuva7d": 21.0,
+   "tmin": 10.0,
+   "tmax": 29.7,
+   "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 31.3,
-   "tmin": 14.8,
-   "tmax": 30.7,
+   "chuva7d": 17.5,
+   "tmin": 15.2,
+   "tmax": 31.3,
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 31.3,
-   "tmin": 19.2,
-   "tmax": 34.7,
+   "chuva7d": 34.1,
+   "tmin": 18.7,
+   "tmax": 34.4,
    "nota": "Chuva moderada prevista"
   }
  ]
