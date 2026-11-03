@@ -1,9 +1,9 @@
 {
- "geradoEm": "2026-11-03T20:47:30Z",
+ "geradoEm": "2026-11-03T21:44:46Z",
  "arabica": {
-  "cepea": 1598.37,
-  "cepeaData": "2026-10-30",
-  "fisicoEstimadoHoje": 1637,
+  "cepea": 1611.06,
+  "cepeaData": "2026-11-03",
+  "fisicoEstimadoHoje": 1611,
   "bolsaUltimo": 284.05,
   "bolsaData": "2026-11-03",
   "bolsaVar1d": -0.0275590551181103,
@@ -11,32 +11,32 @@
   "bolsaVar20d": -0.06700607653145008,
   "previsao": {
    "7d": {
-    "centro": 1643,
+    "centro": 1617,
     "faixa70": [
-     1544,
-     1749
+     1519,
+     1721
     ],
     "chanceAlta": 0.53
    },
    "15d": {
-    "centro": 1651,
+    "centro": 1625,
     "faixa70": [
-     1505,
-     1811
+     1481,
+     1782
     ],
     "chanceAlta": 0.54
    }
   },
   "fisicoVsBolsa": {
-   "hoje": -0.1994,
-   "media": -0.1202,
-   "dias": 270
+   "hoje": -0.219,
+   "media": -0.1205,
+   "dias": 271
   }
  },
  "conilon": {
-  "cepea": 972.44,
-  "cepeaData": "2026-10-30",
-  "fisicoEstimadoHoje": 981,
+  "cepea": 975.32,
+  "cepeaData": "2026-11-03",
+  "fisicoEstimadoHoje": 975,
   "bolsaUltimo": 3225.0,
   "bolsaData": "2026-11-03",
   "bolsaVar1d": 0.0018639328984155767,
@@ -44,33 +44,33 @@
   "bolsaVar20d": -0.08588435374149661,
   "previsao": {
    "7d": {
-    "centro": 982,
+    "centro": 977,
     "faixa70": [
-     927,
-     1041
+     922,
+     1034
     ],
     "chanceAlta": 0.51
    },
    "15d": {
-    "centro": 984,
+    "centro": 978,
     "faixa70": [
-     903,
-     1072
+     898,
+     1065
     ],
     "chanceAlta": 0.51
    }
   },
   "fisicoVsBolsa": {
-   "hoje": -0.0741,
-   "media": -0.0725,
-   "dias": 32
+   "hoje": -0.0819,
+   "media": -0.0728,
+   "dias": 33
   }
  },
  "dolar": {
-  "ultimo": 5.4961,
+  "ultimo": 5.4899,
   "data": "2026-11-03",
-  "var1d": 0.010869965054257857,
-  "var5d": 0.028115529948745
+  "var1d": 0.00972963031083296,
+  "var5d": 0.02695574095551656
  },
  "clima": [
   {
@@ -89,16 +89,16 @@
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 19.3,
-   "tmin": 15.2,
-   "tmax": 31.2,
+   "chuva7d": 33.3,
+   "tmin": 16.1,
+   "tmax": 30.4,
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 34.7,
-   "tmin": 18.7,
-   "tmax": 34.0,
+   "chuva7d": 23.4,
+   "tmin": 20.4,
+   "tmax": 34.5,
    "nota": "Chuva moderada prevista"
   }
  ]
