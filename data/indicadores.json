@@ -1,9 +1,9 @@
 {
- "geradoEm": "2026-11-03T18:51:38Z",
+ "geradoEm": "2026-11-03T19:53:32Z",
  "arabica": {
   "cepea": 1598.37,
   "cepeaData": "2026-10-30",
-  "fisicoEstimadoHoje": 1636,
+  "fisicoEstimadoHoje": 1634,
   "bolsaUltimo": 284.05,
   "bolsaData": "2026-11-03",
   "bolsaVar1d": -0.0275590551181103,
@@ -11,18 +11,18 @@
   "bolsaVar20d": -0.06700607653145008,
   "previsao": {
    "7d": {
-    "centro": 1643,
+    "centro": 1640,
     "faixa70": [
-     1543,
-     1748
+     1541,
+     1745
     ],
-    "chanceAlta": 0.53
+    "chanceAlta": 0.52
    },
    "15d": {
-    "centro": 1650,
+    "centro": 1647,
     "faixa70": [
-     1504,
-     1810
+     1502,
+     1807
     ],
     "chanceAlta": 0.54
    }
@@ -36,7 +36,7 @@
  "conilon": {
   "cepea": 972.44,
   "cepeaData": "2026-10-30",
-  "fisicoEstimadoHoje": 981,
+  "fisicoEstimadoHoje": 979,
   "bolsaUltimo": 3225.0,
   "bolsaData": "2026-11-03",
   "bolsaVar1d": 0.0018639328984155767,
@@ -44,18 +44,18 @@
   "bolsaVar20d": -0.08588435374149661,
   "previsao": {
    "7d": {
-    "centro": 982,
+    "centro": 981,
     "faixa70": [
-     927,
-     1040
+     926,
+     1039
     ],
     "chanceAlta": 0.51
    },
    "15d": {
-    "centro": 984,
+    "centro": 982,
     "faixa70": [
-     903,
-     1071
+     902,
+     1069
     ],
     "chanceAlta": 0.51
    }
@@ -67,38 +67,38 @@
   }
  },
  "dolar": {
-  "ultimo": 5.4943,
+  "ultimo": 5.4842,
   "data": "2026-11-03",
-  "var1d": 0.010538900128747475,
-  "var5d": 0.027778817015226887
+  "var1d": 0.008681258046717044,
+  "var5d": 0.025889483332709906
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 75.6,
-   "tmin": 14.1,
-   "tmax": 33.0,
+   "chuva7d": 86.5,
+   "tmin": 14.2,
+   "tmax": 32.2,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 20.8,
-   "tmin": 10.0,
-   "tmax": 29.7,
+   "chuva7d": 19.7,
+   "tmin": 13.0,
+   "tmax": 29.9,
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 19.3,
-   "tmin": 15.2,
-   "tmax": 31.2,
+   "chuva7d": 33.3,
+   "tmin": 16.1,
+   "tmax": 30.4,
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 34.7,
-   "tmin": 18.7,
-   "tmax": 34.0,
+   "chuva7d": 23.4,
+   "tmin": 20.4,
+   "tmax": 34.5,
    "nota": "Chuva moderada prevista"
   }
  ]
