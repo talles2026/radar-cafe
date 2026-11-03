@@ -1,9 +1,9 @@
 {
- "geradoEm": "2026-11-03T19:53:32Z",
+ "geradoEm": "2026-11-03T20:47:30Z",
  "arabica": {
   "cepea": 1598.37,
   "cepeaData": "2026-10-30",
-  "fisicoEstimadoHoje": 1634,
+  "fisicoEstimadoHoje": 1637,
   "bolsaUltimo": 284.05,
   "bolsaData": "2026-11-03",
   "bolsaVar1d": -0.0275590551181103,
@@ -11,18 +11,18 @@
   "bolsaVar20d": -0.06700607653145008,
   "previsao": {
    "7d": {
-    "centro": 1640,
+    "centro": 1643,
     "faixa70": [
-     1541,
-     1745
+     1544,
+     1749
     ],
-    "chanceAlta": 0.52
+    "chanceAlta": 0.53
    },
    "15d": {
-    "centro": 1647,
+    "centro": 1651,
     "faixa70": [
-     1502,
-     1807
+     1505,
+     1811
     ],
     "chanceAlta": 0.54
    }
@@ -36,7 +36,7 @@
  "conilon": {
   "cepea": 972.44,
   "cepeaData": "2026-10-30",
-  "fisicoEstimadoHoje": 979,
+  "fisicoEstimadoHoje": 981,
   "bolsaUltimo": 3225.0,
   "bolsaData": "2026-11-03",
   "bolsaVar1d": 0.0018639328984155767,
@@ -44,18 +44,18 @@
   "bolsaVar20d": -0.08588435374149661,
   "previsao": {
    "7d": {
-    "centro": 981,
+    "centro": 982,
     "faixa70": [
-     926,
-     1039
+     927,
+     1041
     ],
     "chanceAlta": 0.51
    },
    "15d": {
-    "centro": 982,
+    "centro": 984,
     "faixa70": [
-     902,
-     1069
+     903,
+     1072
     ],
     "chanceAlta": 0.51
    }
@@ -67,10 +67,10 @@
   }
  },
  "dolar": {
-  "ultimo": 5.4842,
+  "ultimo": 5.4961,
   "data": "2026-11-03",
-  "var1d": 0.008681258046717044,
-  "var5d": 0.025889483332709906
+  "var1d": 0.010869965054257857,
+  "var5d": 0.028115529948745
  },
  "clima": [
   {
@@ -89,16 +89,16 @@
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 33.3,
-   "tmin": 16.1,
-   "tmax": 30.4,
+   "chuva7d": 19.3,
+   "tmin": 15.2,
+   "tmax": 31.2,
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 23.4,
-   "tmin": 20.4,
-   "tmax": 34.5,
+   "chuva7d": 34.7,
+   "tmin": 18.7,
+   "tmax": 34.0,
    "nota": "Chuva moderada prevista"
   }
  ]
