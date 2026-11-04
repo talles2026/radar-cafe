@@ -1,10 +1,10 @@
 {
- "updatedAt": "2026-11-04T19:57:39Z",
+ "updatedAt": "2026-11-04T20:53:04Z",
  "regioes": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 72.0,
-   "tmin": 14.0,
+   "chuva7d": 68.3,
+   "tmin": 14.1,
    "tmax": 32.3,
    "dias": [
     "2026-11-04",
@@ -16,13 +16,13 @@
     "2026-11-10"
    ],
    "chuvaDia": [
-    1.4,
-    0.8,
-    17.1,
-    4.4,
-    19.7,
-    19.4,
-    9.2
+    1.6,
+    2.3,
+    8.9,
+    3.3,
+    24.9,
+    17.4,
+    9.9
    ],
    "nota": "Chuva boa para a florada e o pegamento"
   },
@@ -53,9 +53,9 @@
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 32.9,
-   "tmin": 16.4,
-   "tmax": 31.6,
+   "chuva7d": 28.6,
+   "tmin": 16.7,
+   "tmax": 31.3,
    "dias": [
     "2026-11-04",
     "2026-11-05",
@@ -66,13 +66,13 @@
     "2026-11-10"
    ],
    "chuvaDia": [
-    1.2,
-    1.0,
-    4.8,
-    10.0,
-    7.9,
-    8.0,
-    0.0
+    0.3,
+    4.3,
+    0.1,
+    8.2,
+    3.5,
+    11.9,
+    0.3
    ],
    "nota": "Chuva moderada prevista"
   },

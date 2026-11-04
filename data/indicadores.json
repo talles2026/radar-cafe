@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-11-04T19:57:48Z",
+ "geradoEm": "2026-11-04T20:53:10Z",
  "arabica": {
   "cepea": 1611.06,
   "cepeaData": "2026-11-03",
@@ -11,18 +11,18 @@
   "bolsaVar20d": -0.04509736932012298,
   "previsao": {
    "7d": {
-    "centro": 1584,
+    "centro": 1585,
     "faixa70": [
-     1489,
+     1490,
      1686
     ],
     "chanceAlta": 0.49
    },
    "15d": {
-    "centro": 1583,
+    "centro": 1584,
     "faixa70": [
-     1444,
-     1735
+     1445,
+     1736
     ],
     "chanceAlta": 0.49
    }
@@ -44,9 +44,9 @@
   "bolsaVar20d": -0.09665738161559889,
   "previsao": {
    "7d": {
-    "centro": 978,
+    "centro": 979,
     "faixa70": [
-     925,
+     926,
      1035
     ],
     "chanceAlta": 0.53
@@ -67,16 +67,16 @@
   }
  },
  "dolar": {
-  "ultimo": 5.4531,
+  "ultimo": 5.456,
   "data": "2026-11-04",
-  "var1d": -0.006703218637862163,
-  "var5d": 0.019328186627287414
+  "var1d": -0.006174975864769672,
+  "var5d": 0.01987027309942624
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 72.0,
-   "tmin": 14.0,
+   "chuva7d": 68.3,
+   "tmin": 14.1,
    "tmax": 32.3,
    "nota": "Chuva boa para a florada e o pegamento"
   },
@@ -89,9 +89,9 @@
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 32.9,
-   "tmin": 16.4,
-   "tmax": 31.6,
+   "chuva7d": 28.6,
+   "tmin": 16.7,
+   "tmax": 31.3,
    "nota": "Chuva moderada prevista"
   },
   {
