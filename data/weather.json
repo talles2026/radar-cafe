@@ -1,9 +1,9 @@
 {
- "updatedAt": "2026-11-05T17:13:33Z",
+ "updatedAt": "2026-11-05T18:54:29Z",
  "regioes": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 76.3,
+   "chuva7d": 76.6,
    "tmin": 14.1,
    "tmax": 32.7,
    "dias": [
@@ -22,7 +22,7 @@
     36.1,
     13.9,
     5.3,
-    3.5
+    3.8
    ],
    "nota": "Chuva boa para a florada e o pegamento"
   },
@@ -78,7 +78,7 @@
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 24.8,
+   "chuva7d": 26.1,
    "tmin": 20.0,
    "tmax": 35.4,
    "dias": [
@@ -97,7 +97,7 @@
     17.6,
     2.9,
     2.7,
-    1.2
+    2.5
    ],
    "nota": "Chuva moderada prevista"
   }
