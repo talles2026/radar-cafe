@@ -1,36 +1,11 @@
 {
- "updatedAt": "2026-11-05T18:54:29Z",
+ "updatedAt": "2026-11-05T19:54:04Z",
  "regioes": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 76.6,
-   "tmin": 14.1,
-   "tmax": 32.7,
-   "dias": [
-    "2026-11-05",
-    "2026-11-06",
-    "2026-11-07",
-    "2026-11-08",
-    "2026-11-09",
-    "2026-11-10",
-    "2026-11-11"
-   ],
-   "chuvaDia": [
-    14.1,
-    1.5,
-    1.9,
-    36.1,
-    13.9,
-    5.3,
-    3.8
-   ],
-   "nota": "Chuva boa para a florada e o pegamento"
-  },
-  {
-   "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 41.3,
-   "tmin": 13.6,
-   "tmax": 29.8,
+   "chuva7d": 72.3,
+   "tmin": 14.4,
+   "tmax": 32.2,
    "dias": [
     "2026-11-05",
     "2026-11-06",
@@ -42,20 +17,20 @@
    ],
    "chuvaDia": [
     15.2,
-    5.3,
-    2.5,
-    15.1,
+    7.6,
     2.1,
-    0.9,
-    0.2
+    17.4,
+    17.7,
+    3.8,
+    8.5
    ],
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
-   "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 37.4,
-   "tmin": 16.4,
-   "tmax": 30.6,
+   "regiao": "Sul de Minas (Varginha)",
+   "chuva7d": 34.7,
+   "tmin": 13.6,
+   "tmax": 29.9,
    "dias": [
     "2026-11-05",
     "2026-11-06",
@@ -66,20 +41,45 @@
     "2026-11-11"
    ],
    "chuvaDia": [
-    5.0,
-    0.5,
-    15.0,
-    2.6,
-    12.4,
-    0.9,
-    1.0
+    7.5,
+    5.2,
+    2.3,
+    17.3,
+    1.9,
+    0.3,
+    0.2
    ],
    "nota": "Chuva moderada prevista"
   },
   {
+   "regiao": "Cerrado Mineiro (Patrocínio)",
+   "chuva7d": 40.5,
+   "tmin": 16.4,
+   "tmax": 30.4,
+   "dias": [
+    "2026-11-05",
+    "2026-11-06",
+    "2026-11-07",
+    "2026-11-08",
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11"
+   ],
+   "chuvaDia": [
+    8.7,
+    2.2,
+    2.2,
+    6.1,
+    18.7,
+    1.0,
+    1.6
+   ],
+   "nota": "Chuva boa para a florada e o pegamento"
+  },
+  {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 26.1,
-   "tmin": 20.0,
+   "chuva7d": 32.9,
+   "tmin": 20.2,
    "tmax": 35.4,
    "dias": [
     "2026-11-05",
@@ -92,12 +92,12 @@
    ],
    "chuvaDia": [
     0.0,
-    0.1,
-    0.3,
-    17.6,
-    2.9,
-    2.7,
-    2.5
+    4.0,
+    0.7,
+    11.6,
+    5.5,
+    3.7,
+    7.4
    ],
    "nota": "Chuva moderada prevista"
   }
