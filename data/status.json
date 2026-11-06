@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-06T10:02:03Z",
+ "updatedAt": "2026-11-06T11:01:58Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -7,11 +7,11 @@
   },
   "NY 2º vencimento (CNBC)": {
    "ok": true,
-   "detalhe": "cotação do dia 265.2 (KCK7); suficiente para a emenda"
+   "detalhe": "cotação do dia 265.65 (KCK7); suficiente para a emenda"
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "268.95 (KCH7) em 2026-11-06T04:52:01.000-0500"
+   "detalhe": "269.5 (KCH7) em 2026-11-06T05:51:57.000-0500"
   },
   "Londres (Notícias Agrícolas)": {
    "ok": true,
