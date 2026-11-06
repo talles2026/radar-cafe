@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-11-06T13:00:21Z",
+ "geradoEm": "2026-11-06T14:15:29Z",
  "arabica": {
   "cepea": 1603.86,
   "cepeaData": "2026-11-05",
-  "fisicoEstimadoHoje": 1605,
-  "bolsaUltimo": 269.5,
+  "fisicoEstimadoHoje": 1612,
+  "bolsaUltimo": 270.25,
   "bolsaData": "2026-11-06",
-  "bolsaVar1d": -0.027602381381923058,
-  "bolsaVar5d": -0.0616295264623955,
-  "bolsaVar20d": -0.06081198815124578,
+  "bolsaVar1d": -0.024896265560165887,
+  "bolsaVar5d": -0.059018105849582114,
+  "bolsaVar20d": -0.05819829238543295,
   "previsao": {
    "7d": {
-    "centro": 1611,
+    "centro": 1620,
     "faixa70": [
-     1520,
-     1707
+     1528,
+     1717
     ],
     "chanceAlta": 0.53
    },
    "15d": {
-    "centro": 1619,
+    "centro": 1629,
     "faixa70": [
-     1485,
-     1764
+     1494,
+     1776
     ],
-    "chanceAlta": 0.54
+    "chanceAlta": 0.55
    }
   },
   "fisicoVsBolsa": {
@@ -67,39 +67,39 @@
   }
  },
  "dolar": {
-  "ultimo": 5.5048,
+  "ultimo": 5.5244,
   "data": "2026-11-06",
-  "var1d": 3.633324855578657e-05,
-  "var5d": 0.012283927914674697
+  "var1d": 0.0035969916070195396,
+  "var5d": 0.015888194189040084
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 62.8,
-   "tmin": 14.3,
-   "tmax": 31.9,
+   "chuva7d": 46.6,
+   "tmin": 14.2,
+   "tmax": 31.3,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 36.5,
-   "tmin": 13.6,
-   "tmax": 30.1,
+   "chuva7d": 39.6,
+   "tmin": 13.5,
+   "tmax": 29.6,
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 28.9,
-   "tmin": 16.5,
-   "tmax": 30.9,
+   "chuva7d": 28.4,
+   "tmin": 16.1,
+   "tmax": 31.3,
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 26.1,
-   "tmin": 20.1,
-   "tmax": 34.9,
-   "nota": "Chuva moderada prevista"
+   "chuva7d": 44.5,
+   "tmin": 20.4,
+   "tmax": 33.4,
+   "nota": "Chuva boa para a florada e o pegamento"
   }
  ]
 }
