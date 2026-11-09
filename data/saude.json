@@ -1,5 +1,5 @@
 {
- "verificadoEm": "2026-11-09T11:56:53Z",
+ "verificadoEm": "2026-11-09T13:10:47Z",
  "itens": {
   "NY": {
    "ultimo": "2026-11-09",
@@ -9,7 +9,7 @@
   },
   "Dólar": {
    "ultimo": "2026-11-09",
-   "esperado": "2026-11-06",
+   "esperado": "2026-11-09",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
@@ -32,7 +32,7 @@
    "estado": "ok"
   },
   "Clima": {
-   "ultimo": "2026-11-09T11:56:53Z",
+   "ultimo": "2026-11-09T13:10:47Z",
    "estado": "ok"
   },
   "Praças": {
