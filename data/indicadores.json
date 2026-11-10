@@ -1,9 +1,9 @@
 {
- "geradoEm": "2026-11-10T18:52:06Z",
+ "geradoEm": "2026-11-10T19:53:45Z",
  "arabica": {
   "cepea": 1597.0,
   "cepeaData": "2026-11-09",
-  "fisicoEstimadoHoje": 1611,
+  "fisicoEstimadoHoje": 1610,
   "bolsaUltimo": 266.75,
   "bolsaData": "2026-11-10",
   "bolsaVar1d": -0.00187090739008422,
@@ -11,18 +11,18 @@
   "bolsaVar20d": -0.0886573283225145,
   "previsao": {
    "7d": {
-    "centro": 1617,
+    "centro": 1616,
     "faixa70": [
-     1530,
-     1709
+     1529,
+     1708
     ],
     "chanceAlta": 0.53
    },
    "15d": {
-    "centro": 1624,
+    "centro": 1622,
     "faixa70": [
-     1495,
-     1763
+     1494,
+     1761
     ],
     "chanceAlta": 0.54
    }
@@ -44,17 +44,17 @@
   "bolsaVar20d": -0.06124209315698681,
   "previsao": {
    "7d": {
-    "centro": 989,
+    "centro": 988,
     "faixa70": [
      940,
-     1040
+     1039
     ],
     "chanceAlta": 0.55
    },
    "15d": {
-    "centro": 997,
+    "centro": 996,
     "faixa70": [
-     925,
+     924,
      1074
     ],
     "chanceAlta": 0.58
@@ -67,38 +67,38 @@
   }
  },
  "dolar": {
-  "ultimo": 5.5881,
+  "ultimo": 5.5836,
   "data": "2026-11-10",
-  "var1d": 0.014579323867969007,
-  "var5d": 0.017887393212991265
+  "var1d": 0.013762300737136357,
+  "var5d": 0.017067706151296047
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 52.7,
+   "chuva7d": 42.8,
    "tmin": 14.1,
-   "tmax": 28.3,
+   "tmax": 28.1,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 22.6,
+   "chuva7d": 16.1,
    "tmin": 13.7,
-   "tmax": 27.8,
+   "tmax": 28.1,
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 37.0,
-   "tmin": 16.7,
-   "tmax": 27.5,
+   "chuva7d": 31.3,
+   "tmin": 16.3,
+   "tmax": 28.0,
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 52.3,
-   "tmin": 19.1,
-   "tmax": 32.3,
+   "chuva7d": 76.9,
+   "tmin": 19.5,
+   "tmax": 30.6,
    "nota": "Chuva boa para a florada e o pegamento"
   }
  ]
