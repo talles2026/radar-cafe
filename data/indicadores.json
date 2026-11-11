@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-11-11T13:06:26Z",
+ "geradoEm": "2026-11-11T14:19:13Z",
  "arabica": {
   "cepea": 1611.3,
   "cepeaData": "2026-11-10",
-  "fisicoEstimadoHoje": 1597,
-  "bolsaUltimo": 263.75,
+  "fisicoEstimadoHoje": 1592,
+  "bolsaUltimo": 262.5,
   "bolsaData": "2026-11-11",
-  "bolsaVar1d": -0.008085746521248494,
-  "bolsaVar5d": -0.05719392314566574,
-  "bolsaVar20d": -0.1150813621875525,
+  "bolsaVar1d": -0.012786761940579039,
+  "bolsaVar5d": -0.06166219839142095,
+  "bolsaVar20d": -0.11927528938097642,
   "previsao": {
    "7d": {
-    "centro": 1604,
+    "centro": 1598,
     "faixa70": [
-     1520,
-     1693
+     1513,
+     1688
     ],
     "chanceAlta": 0.53
    },
    "15d": {
-    "centro": 1613,
+    "centro": 1606,
     "faixa70": [
-     1488,
-     1747
+     1481,
+     1741
     ],
-    "chanceAlta": 0.55
+    "chanceAlta": 0.54
    }
   },
   "fisicoVsBolsa": {
@@ -67,10 +67,10 @@
   }
  },
  "dolar": {
-  "ultimo": 5.5587,
+  "ultimo": 5.5599,
   "data": "2026-11-11",
-  "var1d": -0.004388164493480451,
-  "var5d": 0.01824476562070676
+  "var1d": -0.004173233987677327,
+  "var5d": 0.018464582073968172
  },
  "clima": [
   {
@@ -82,9 +82,9 @@
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 27.7,
-   "tmin": 15.0,
-   "tmax": 29.1,
+   "chuva7d": 24.5,
+   "tmin": 15.2,
+   "tmax": 28.7,
    "nota": "Chuva moderada prevista"
   },
   {
