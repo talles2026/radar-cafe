@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-11-11T14:19:13Z",
+ "geradoEm": "2026-11-11T15:53:07Z",
  "arabica": {
   "cepea": 1611.3,
   "cepeaData": "2026-11-10",
-  "fisicoEstimadoHoje": 1592,
-  "bolsaUltimo": 262.5,
+  "fisicoEstimadoHoje": 1610,
+  "bolsaUltimo": 266.45,
   "bolsaData": "2026-11-11",
-  "bolsaVar1d": -0.012786761940579039,
-  "bolsaVar5d": -0.06166219839142095,
-  "bolsaVar20d": -0.11927528938097642,
+  "bolsaVar1d": 0.002068446784505573,
+  "bolsaVar5d": -0.0475424486148347,
+  "bolsaVar20d": -0.10602247944975685,
   "previsao": {
    "7d": {
-    "centro": 1598,
+    "centro": 1620,
     "faixa70": [
-     1513,
-     1688
-    ],
-    "chanceAlta": 0.53
-   },
-   "15d": {
-    "centro": 1606,
-    "faixa70": [
-     1481,
-     1741
+     1535,
+     1709
     ],
     "chanceAlta": 0.54
+   },
+   "15d": {
+    "centro": 1631,
+    "faixa70": [
+     1506,
+     1766
+    ],
+    "chanceAlta": 0.57
    }
   },
   "fisicoVsBolsa": {
@@ -67,17 +67,17 @@
   }
  },
  "dolar": {
-  "ultimo": 5.5599,
+  "ultimo": 5.566,
   "data": "2026-11-11",
-  "var1d": -0.004173233987677327,
-  "var5d": 0.018464582073968172
+  "var1d": -0.003080670583178069,
+  "var5d": 0.019581982378047647
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 32.9,
-   "tmin": 14.4,
-   "tmax": 28.9,
+   "chuva7d": 32.6,
+   "tmin": 14.3,
+   "tmax": 28.3,
    "nota": "Chuva moderada prevista"
   },
   {
@@ -89,16 +89,16 @@
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 33.5,
-   "tmin": 16.0,
+   "chuva7d": 31.4,
+   "tmin": 16.5,
    "tmax": 28.5,
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 41.1,
+   "chuva7d": 45.6,
    "tmin": 19.4,
-   "tmax": 32.0,
+   "tmax": 31.8,
    "nota": "Chuva boa para a florada e o pegamento"
   }
  ]
