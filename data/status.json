@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-12T16:00:05Z",
+ "updatedAt": "2026-11-12T17:02:14Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -7,43 +7,59 @@
   },
   "NY 2º vencimento (CNBC)": {
    "ok": true,
-   "detalhe": "cotação do dia 267.25 (KCK7); suficiente para a emenda"
+   "detalhe": "cotação do dia 269.8 (KCK7); suficiente para a emenda"
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "271.7 (KCH7) em 2026-11-12T10:50:10.000-0500"
+   "detalhe": "274.6 (KCH7) em 2026-11-12T11:52:14.000-0500"
   },
   "Londres (Notícias Agrícolas)": {
-   "ok": true,
-   "detalhe": "10 pregões até 2026-11-11"
+   "ok": false,
+   "detalhe": "HTTP Error 403: Forbidden"
+  },
+  "Londres reserva (Notícias Agrícolas, página geral)": {
+   "ok": false,
+   "detalhe": "HTTP Error 403: Forbidden"
   },
   "Dólar PTAX (Banco Central)": {
    "ok": true,
-   "detalhe": "274 dias"
+   "detalhe": "275 dias"
   },
   "Dólar comercial histórico (CNBC)": {
    "ok": true,
-   "detalhe": "559 dias"
+   "detalhe": "544 dias"
   },
   "Dólar agora (CNBC)": {
    "ok": true,
-   "detalhe": "5.6306 em 2026-11-12T11:00:00.000-0500"
+   "detalhe": "5.6328 em 2026-11-12T12:02:00.000-0500"
   },
   "CEPEA arábica (Notícias Agrícolas)": {
-   "ok": true,
-   "detalhe": "10 dias"
+   "ok": false,
+   "detalhe": "HTTP Error 403: Forbidden"
   },
   "CEPEA conilon (Notícias Agrícolas)": {
+   "ok": false,
+   "detalhe": "HTTP Error 403: Forbidden"
+  },
+  "CEPEA (Notícias Agrícolas)": {
+   "ok": false,
+   "detalhe": "sem o dia útil anterior; usando a planilha do CEPEA como reserva"
+  },
+  "CEPEA série completa (arábica)": {
    "ok": true,
-   "detalhe": "10 dias"
+   "detalhe": "7519 dias"
+  },
+  "CEPEA série completa (conilon)": {
+   "ok": true,
+   "detalhe": "6162 dias"
   },
   "Emenda de contratos": {
    "ok": true,
    "detalhe": "NY: 2 virada(s); Londres: 0 virada(s)"
   },
   "Conferência de valores": {
-   "ok": true,
-   "detalhe": "nenhum valor estranho"
+   "ok": false,
+   "detalhe": "rejeitados por salto impossível: cepeaArabica 1999-10-13=214.27, cepeaArabica 2000-07-18=195.57"
   },
   "Clima (Open-Meteo)": {
    "ok": true,
