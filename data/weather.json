@@ -1,11 +1,11 @@
 {
- "updatedAt": "2026-11-12T17:54:39Z",
+ "updatedAt": "2026-11-12T18:54:32Z",
  "regioes": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 70.9,
-   "tmin": 16.3,
-   "tmax": 27.9,
+   "chuva7d": 28.3,
+   "tmin": 16.1,
+   "tmax": 27.2,
    "dias": [
     "2026-11-12",
     "2026-11-13",
@@ -16,21 +16,21 @@
     "2026-11-18"
    ],
    "chuvaDia": [
-    3.5,
-    12.0,
-    8.9,
     0.8,
-    4.2,
-    20.9,
-    20.6
+    11.1,
+    8.2,
+    0.3,
+    2.3,
+    2.8,
+    2.8
    ],
-   "nota": "Chuva boa para a florada e o pegamento"
+   "nota": ""
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 26.8,
+   "chuva7d": 12.2,
    "tmin": 16.2,
-   "tmax": 28.4,
+   "tmax": 27.8,
    "dias": [
     "2026-11-12",
     "2026-11-13",
@@ -41,21 +41,21 @@
     "2026-11-18"
    ],
    "chuvaDia": [
-    2.4,
-    1.7,
-    1.1,
-    4.7,
-    1.5,
-    1.7,
-    13.7
+    1.6,
+    3.0,
+    1.2,
+    0.9,
+    0.2,
+    3.2,
+    2.0
    ],
-   "nota": "Chuva moderada prevista"
+   "nota": ""
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 46.4,
+   "chuva7d": 20.3,
    "tmin": 17.6,
-   "tmax": 28.5,
+   "tmax": 28.8,
    "dias": [
     "2026-11-12",
     "2026-11-13",
@@ -66,21 +66,21 @@
     "2026-11-18"
    ],
    "chuvaDia": [
-    12.1,
-    2.2,
-    1.5,
-    4.3,
-    5.7,
-    7.2,
-    13.4
+    9.2,
+    2.0,
+    1.8,
+    1.4,
+    0.9,
+    1.7,
+    3.2
    ],
-   "nota": "Chuva boa para a florada e o pegamento"
+   "nota": ""
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 76.4,
-   "tmin": 21.2,
-   "tmax": 32.5,
+   "chuva7d": 34.9,
+   "tmin": 21.1,
+   "tmax": 31.2,
    "dias": [
     "2026-11-12",
     "2026-11-13",
@@ -91,15 +91,15 @@
     "2026-11-18"
    ],
    "chuvaDia": [
-    9.5,
-    6.0,
-    19.8,
-    1.2,
-    15.3,
-    1.2,
-    23.4
+    0.7,
+    4.5,
+    18.4,
+    0.9,
+    2.6,
+    2.6,
+    5.2
    ],
-   "nota": "Chuva boa para a florada e o pegamento"
+   "nota": ""
   }
  ]
 }
