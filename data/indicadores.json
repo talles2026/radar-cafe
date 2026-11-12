@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-11-12T11:02:35Z",
+ "geradoEm": "2026-11-12T11:58:31Z",
  "arabica": {
   "cepea": 1593.28,
   "cepeaData": "2026-11-11",
-  "fisicoEstimadoHoje": 1595,
-  "bolsaUltimo": 265.0,
+  "fisicoEstimadoHoje": 1601,
+  "bolsaUltimo": 266.05,
   "bolsaData": "2026-11-12",
-  "bolsaVar1d": 0.0013225014169659932,
-  "bolsaVar5d": -0.043839076312466085,
-  "bolsaVar20d": -0.10108548168249665,
+  "bolsaVar1d": 0.005290005667863307,
+  "bolsaVar5d": -0.040050514162006,
+  "bolsaVar20d": -0.0975237449118046,
   "previsao": {
    "7d": {
-    "centro": 1604,
+    "centro": 1610,
     "faixa70": [
-     1522,
-     1689
+     1529,
+     1697
     ],
-    "chanceAlta": 0.54
+    "chanceAlta": 0.55
    },
    "15d": {
-    "centro": 1614,
+    "centro": 1622,
     "faixa70": [
-     1494,
-     1743
+     1501,
+     1752
     ],
-    "chanceAlta": 0.56
+    "chanceAlta": 0.57
    }
   },
   "fisicoVsBolsa": {
@@ -67,10 +67,10 @@
   }
  },
  "dolar": {
-  "ultimo": 5.584,
+  "ultimo": 5.5903,
   "data": "2026-11-12",
-  "var1d": 0.00025077920682115007,
-  "var5d": 0.014424299676633945
+  "var1d": 0.0013792856375165474,
+  "var5d": 0.015568797006140445
  },
  "clima": [
   {
