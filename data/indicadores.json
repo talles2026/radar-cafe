@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-11-12T21:47:23Z",
+ "geradoEm": "2026-11-12T22:47:56Z",
  "arabica": {
   "cepea": 1619.43,
   "cepeaData": "2026-11-12",
@@ -28,7 +28,7 @@
    }
   },
   "fisicoVsBolsa": {
-   "hoje": -0.2111,
+   "hoje": -0.2112,
    "media": -0.0805,
    "dias": 271
   }
@@ -67,10 +67,10 @@
   }
  },
  "dolar": {
-  "ultimo": 5.6408,
+  "ultimo": 5.6421,
   "data": "2026-11-12",
-  "var1d": 0.010425249883566634,
-  "var5d": 0.024742942266468004
+  "var1d": 0.010658116289900654,
+  "var5d": 0.024979108382080506
  },
  "clima": [
   {
@@ -79,13 +79,6 @@
    "tmin": 16.3,
    "tmax": 27.9,
    "nota": "Chuva boa para a florada e o pegamento"
-  },
-  {
-   "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 31.5,
-   "tmin": 16.4,
-   "tmax": 27.5,
-   "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
