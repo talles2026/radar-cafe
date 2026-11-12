@@ -1,14 +1,14 @@
 {
- "verificadoEm": "2026-11-11T22:51:24Z",
+ "verificadoEm": "2026-11-12T10:00:26Z",
  "itens": {
   "NY": {
-   "ultimo": "2026-11-11",
-   "esperado": "2026-11-11",
+   "ultimo": "2026-11-12",
+   "esperado": "2026-11-12",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
   "Dólar": {
-   "ultimo": "2026-11-11",
+   "ultimo": "2026-11-12",
    "esperado": "2026-11-11",
    "atrasoDiasUteis": 0,
    "estado": "ok"
@@ -21,18 +21,18 @@
   },
   "CEPEA arábica": {
    "ultimo": "2026-11-11",
-   "esperado": "2026-11-10",
+   "esperado": "2026-11-11",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
   "CEPEA conilon": {
    "ultimo": "2026-11-11",
-   "esperado": "2026-11-10",
+   "esperado": "2026-11-11",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
   "Clima": {
-   "ultimo": "2026-11-11T22:51:24Z",
+   "ultimo": "2026-11-12T10:00:26Z",
    "estado": "ok"
   },
   "Praças": {
