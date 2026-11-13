@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-13T20:54:29Z",
+ "updatedAt": "2026-11-13T21:48:53Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -11,7 +11,7 @@
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "274.0 (KCH7) em 2026-11-13T15:44:29.000-0500"
+   "detalhe": "274.0 (KCH7) em 2026-11-13T16:38:44.000-0500"
   },
   "Londres (Notícias Agrícolas)": {
    "ok": false,
@@ -27,11 +27,11 @@
   },
   "Dólar comercial histórico (CNBC)": {
    "ok": true,
-   "detalhe": "543 dias"
+   "detalhe": "559 dias"
   },
   "Dólar agora (CNBC)": {
    "ok": true,
-   "detalhe": "5.6573 em 2026-11-13T15:54:00.000-0500"
+   "detalhe": "5.667 em 2026-11-13T16:30:00.000-0500"
   },
   "CEPEA arábica (Notícias Agrícolas)": {
    "ok": false,
@@ -47,11 +47,11 @@
   },
   "CEPEA série completa (arábica)": {
    "ok": true,
-   "detalhe": "7520 dias"
+   "detalhe": "7521 dias"
   },
   "CEPEA série completa (conilon)": {
    "ok": true,
-   "detalhe": "6163 dias"
+   "detalhe": "6164 dias"
   },
   "Emenda de contratos": {
    "ok": true,
