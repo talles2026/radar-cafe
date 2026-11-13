@@ -1,5 +1,4 @@
 [
-{"date":"2025-10-08","usd":5.3427,"updatedAt":"2026-10-27T16:48:37Z","kc":385.1,"usdCom":5.3426,"kcAdj":355.4317,"cepeaArabica":2186.03,"cepeaConilon":1388.96},
 {"date":"2025-10-09","usd":5.3538,"updatedAt":"2026-10-27T16:48:37Z","kc":377.25,"usdCom":5.368,"kcAdj":348.1865,"cepeaArabica":2182.41,"cepeaConilon":1395.41},
 {"date":"2025-10-10","usd":5.4446,"updatedAt":"2026-10-27T16:48:37Z","kc":373.05,"usdCom":5.5217,"kcAdj":344.3101,"cepeaArabica":2191.74,"cepeaConilon":1388.41},
 {"date":"2025-10-13","usd":5.4629,"updatedAt":"2026-10-27T16:48:37Z","kc":385.2,"usdCom":5.4637,"kcAdj":355.524,"cepeaArabica":2219.96,"cepeaConilon":1414.4},
@@ -285,5 +284,6 @@
 {"date":"2026-11-09","kc":267.25,"updatedAt":"2026-11-10T09:55:55Z","kcHora":"2026-11-09T17:35:29.000-0500","kc2":262.55,"usdCom":5.5078,"usdComHora":"2026-11-09T17:43:00.000-0500","kcAdj":267.25,"usd":5.5146,"rc":3282.0,"rcContrato":"Novembro/26","rc2":3267.0,"rcAdj":3282.0,"cepeaConilon":976.02,"conilonVar":-0.14,"cepeaArabica":1597.0,"cepeaVar":-0.88,"kcVirada":true},
 {"date":"2026-11-10","kc":265.9,"updatedAt":"2026-11-11T09:58:53Z","kcHora":"2026-11-10T17:33:14.000-0500","kc2":262.2,"usdCom":5.5832,"usdComHora":"2026-11-10T17:05:00.000-0500","kcAdj":265.9,"usd":5.584,"rc":3265.0,"rcContrato":"Novembro/26","rc2":3250.0,"rcAdj":3265.0,"cepeaArabica":1611.3,"cepeaVar":0.9,"cepeaConilon":977.99,"conilonVar":0.2},
 {"date":"2026-11-11","kc":264.65,"updatedAt":"2026-11-12T10:00:26Z","kcHora":"2026-11-11T17:40:59.000-0500","kc2":261.25,"usdCom":5.5826,"usdComHora":"2026-11-11T17:41:00.000-0500","kcAdj":264.65,"usd":5.5606,"rc":3260.0,"rcContrato":"Novembro/26","rc2":3245.0,"rcAdj":3260.0,"cepeaArabica":1593.28,"cepeaVar":-1.12,"cepeaConilon":974.24,"conilonVar":-0.38},
-{"date":"2026-11-12","kc":275.1,"updatedAt":"2026-11-12T22:47:11Z","kcHora":"2026-11-12T17:36:59.000-0500","kc2":270.55,"usdCom":5.6421,"usdComHora":"2026-11-12T17:41:00.000-0500","kcAdj":275.1,"usd":5.6143,"cepeaArabica":1619.43,"cepeaConilon":969.24}
+{"date":"2026-11-12","kc":274.55,"updatedAt":"2026-11-13T09:59:00Z","kcHora":"2026-11-12T17:36:59.000-0500","kc2":270.55,"usdCom":5.6408,"usdComHora":"2026-11-12T17:41:00.000-0500","kcAdj":274.55,"usd":5.6143,"cepeaArabica":1619.43,"cepeaConilon":969.24},
+{"date":"2026-11-13","kc":273.7,"updatedAt":"2026-11-13T09:59:00Z","kcHora":"2026-11-13T04:48:56.000-0500","kc2":269.35,"usdCom":5.6422,"usdComHora":"2026-11-13T02:37:00.000-0500","kcAdj":273.7}
 ]

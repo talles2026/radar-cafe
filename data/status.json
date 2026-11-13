@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-12T22:47:11Z",
+ "updatedAt": "2026-11-13T09:59:00Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -7,11 +7,11 @@
   },
   "NY 2º vencimento (CNBC)": {
    "ok": true,
-   "detalhe": "cotação do dia 270.55 (KCK7); suficiente para a emenda"
+   "detalhe": "cotação do dia 269.35 (KCK7); suficiente para a emenda"
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "275.1 (KCH7) em 2026-11-12T17:36:59.000-0500"
+   "detalhe": "273.7 (KCH7) em 2026-11-13T04:48:56.000-0500"
   },
   "Londres (Notícias Agrícolas)": {
    "ok": false,
@@ -23,15 +23,15 @@
   },
   "Dólar PTAX (Banco Central)": {
    "ok": true,
-   "detalhe": "275 dias"
+   "detalhe": "274 dias"
   },
   "Dólar comercial histórico (CNBC)": {
    "ok": true,
-   "detalhe": "543 dias"
+   "detalhe": "544 dias"
   },
   "Dólar agora (CNBC)": {
    "ok": true,
-   "detalhe": "5.6421 em 2026-11-12T17:41:00.000-0500"
+   "detalhe": "5.6422 em 2026-11-13T02:37:00.000-0500"
   },
   "CEPEA arábica (Notícias Agrícolas)": {
    "ok": false,
@@ -46,24 +46,24 @@
    "detalhe": "sem o dia útil anterior; usando a planilha do CEPEA como reserva"
   },
   "CEPEA série completa (arábica)": {
-   "ok": true,
-   "detalhe": "7520 dias"
+   "ok": false,
+   "detalhe": "The read operation timed out"
   },
   "CEPEA série completa (conilon)": {
-   "ok": true,
-   "detalhe": "6163 dias"
+   "ok": false,
+   "detalhe": "The read operation timed out"
   },
   "Emenda de contratos": {
    "ok": true,
    "detalhe": "NY: 2 virada(s); Londres: 0 virada(s)"
   },
   "Conferência de valores": {
-   "ok": false,
-   "detalhe": "rejeitados por salto impossível: cepeaArabica 1999-10-13=214.27, cepeaArabica 2000-07-18=195.57"
+   "ok": true,
+   "detalhe": "nenhum valor estranho"
   },
   "Clima (Open-Meteo)": {
    "ok": true,
-   "detalhe": "3 regiões"
+   "detalhe": "4 regiões"
   }
  }
 }
