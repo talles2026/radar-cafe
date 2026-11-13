@@ -1,9 +1,9 @@
 {
- "geradoEm": "2026-11-13T18:53:47Z",
+ "geradoEm": "2026-11-13T19:56:10Z",
  "arabica": {
   "cepea": 1619.43,
   "cepeaData": "2026-11-12",
-  "fisicoEstimadoHoje": 1619,
+  "fisicoEstimadoHoje": 1620,
   "bolsaUltimo": 274.0,
   "bolsaData": "2026-11-13",
   "bolsaVar1d": -0.0020032780914224224,
@@ -11,18 +11,18 @@
   "bolsaVar20d": -0.10340314136125661,
   "previsao": {
    "7d": {
-    "centro": 1633,
+    "centro": 1635,
     "faixa70": [
-     1541,
-     1730
+     1543,
+     1732
     ],
     "chanceAlta": 0.56
    },
    "15d": {
-    "centro": 1650,
+    "centro": 1653,
     "faixa70": [
-     1515,
-     1798
+     1517,
+     1801
     ],
     "chanceAlta": 0.59
    }
@@ -67,10 +67,10 @@
   }
  },
  "dolar": {
-  "ultimo": 5.6477,
+  "ultimo": 5.6553,
   "data": "2026-11-13",
-  "var1d": 0.0012232307474118187,
-  "var5d": 0.025735561205957103
+  "var1d": 0.002570557367749471,
+  "var5d": 0.027115873592444606
  },
  "clima": [
   {
@@ -78,27 +78,6 @@
    "chuva7d": 94.5,
    "tmin": 16.1,
    "tmax": 28.7,
-   "nota": "Chuva boa para a florada e o pegamento"
-  },
-  {
-   "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 29.5,
-   "tmin": 16.5,
-   "tmax": 27.6,
-   "nota": "Chuva moderada prevista"
-  },
-  {
-   "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 48.1,
-   "tmin": 16.8,
-   "tmax": 29.1,
-   "nota": "Chuva boa para a florada e o pegamento"
-  },
-  {
-   "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 127.4,
-   "tmin": 21.3,
-   "tmax": 31.3,
    "nota": "Chuva boa para a florada e o pegamento"
   }
  ]

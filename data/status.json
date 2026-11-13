@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-13T18:53:11Z",
+ "updatedAt": "2026-11-13T19:55:38Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -11,7 +11,7 @@
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "274.0 (KCH7) em 2026-11-13T13:40:23.000-0500"
+   "detalhe": "274.0 (KCH7) em 2026-11-13T14:45:29.000-0500"
   },
   "Londres (Notícias Agrícolas)": {
    "ok": false,
@@ -31,7 +31,7 @@
   },
   "Dólar agora (CNBC)": {
    "ok": true,
-   "detalhe": "5.6477 em 2026-11-13T13:53:00.000-0500"
+   "detalhe": "5.6553 em 2026-11-13T14:55:00.000-0500"
   },
   "CEPEA arábica (Notícias Agrícolas)": {
    "ok": false,
@@ -63,7 +63,7 @@
   },
   "Clima (Open-Meteo)": {
    "ok": true,
-   "detalhe": "4 regiões"
+   "detalhe": "1 regiões"
   }
  }
 }
