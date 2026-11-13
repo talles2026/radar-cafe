@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-11-13T21:49:15Z",
+ "geradoEm": "2026-11-13T22:47:22Z",
  "arabica": {
   "cepea": 1647.96,
   "cepeaData": "2026-11-13",
@@ -75,31 +75,31 @@
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 98.4,
+   "chuva7d": 29.1,
    "tmin": 16.1,
-   "tmax": 28.3,
-   "nota": "Chuva boa para a florada e o pegamento"
+   "tmax": 27.2,
+   "nota": ""
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 30.3,
-   "tmin": 16.1,
-   "tmax": 27.5,
-   "nota": "Chuva moderada prevista"
+   "chuva7d": 9.6,
+   "tmin": 15.8,
+   "tmax": 27.2,
+   "nota": ""
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 52.8,
-   "tmin": 16.8,
-   "tmax": 29.3,
-   "nota": "Chuva boa para a florada e o pegamento"
+   "chuva7d": 20.3,
+   "tmin": 17.0,
+   "tmax": 29.4,
+   "nota": ""
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 90.6,
-   "tmin": 21.3,
-   "tmax": 31.2,
-   "nota": "Chuva boa para a florada e o pegamento"
+   "chuva7d": 38.0,
+   "tmin": 21.2,
+   "tmax": 31.1,
+   "nota": ""
   }
  ]
 }
