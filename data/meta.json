@@ -1,74 +1,77 @@
 {
- "updatedAt": "2026-10-27T15:55:00Z",
- "headline": "Dólar disparou e NY recuou: café em reais ficou mais caro",
- "summary": "O dólar PTAX fechou a segunda-feira (26/10) em R$ 5,50, alta de 9,2% num só dia, numa forte reação do mercado ao resultado da eleição. Nesta terça ele opera um pouco abaixo, perto de R$ 5,40. Em Nova York, o contrato de dezembro caiu para 300,95 ¢/lb, longe do pico de 316 do dia 21. Com o dólar mais alto, o café em reais tende a subir mesmo com NY fraca, e as cooperativas de Minas reajustaram para cima. Nos próximos dias, o dólar deve pesar mais que a bolsa: atenção à volatilidade do câmbio e ao clima na florada.",
+ "updatedAt": "2026-11-14T02:07:44Z",
+ "automatico": true,
+ "headline": "Café em reais estável: NY -0,2% e dólar +0,5%",
+ "summary": "Em Nova York, o arábica está em 274,00 ¢/lb, -0,2% no dia e -2,1% em 5 pregões. O dólar comercial está em R$ 5,667 (+0,5% no dia). O CEPEA arábica de 13/11 ficou em R$ 1.647,96 por saca (+1,8%), e o conilon em R$ 972,99 (+0,4%). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.682, numa faixa provável de R$ 1.544 a R$ 1.833.",
  "drivers": [
   {
-   "dir": "alta",
-   "t": "Dólar PTAX subiu 9,2% em 26/10, para R$ 5,50."
-  },
-  {
-   "dir": "baixa",
-   "t": "NY recuou cerca de 5% desde o pico de 21/10 (316 ¢/lb)."
+   "dir": "neutro",
+   "t": "NY ficou quase estável (-0,2%) no dia (-2,1% na semana)."
   },
   {
    "dir": "alta",
-   "t": "Indicador CEPEA e praças de Minas subiram em 26/10."
+   "t": "Dólar subiu 0,5%: café em reais tende a subir."
+  },
+  {
+   "dir": "alta",
+   "t": "Previsão de 15 dias: 60% de chance de alta para o arábica."
   },
   {
    "dir": "neutro",
-   "t": "Câmbio muito volátil: as faixas de previsão ficam mais largas."
-  }
- ],
- "pracasDate": "2026-10-26",
- "pracas": [
-  {
-   "praca": "Patrocínio (Expocaccer)",
-   "tipo": "Tipo 6 duro",
-   "preco": 1815,
-   "var": 5.22
-  },
-  {
-   "praca": "Guaxupé (Cooxupé)",
-   "tipo": "Tipo 6 duro",
-   "preco": 1800,
-   "var": 5.94
-  },
-  {
-   "praca": "Araguari (Coocacer)",
-   "tipo": "Tipo 6 duro",
-   "preco": 1750,
-   "var": 2.94
-  },
-  {
-   "praca": "Varginha (Minasul)",
-   "tipo": "Tipo 6 duro",
-   "preco": 1720,
-   "var": 6.17
-  },
-  {
-   "praca": "Machado (Coopama)",
-   "tipo": "Tipo 6 duro",
-   "preco": 1640,
-   "var": -7.34
+   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -19,8% contra -8,1% na média."
   }
  ],
  "sources": [
   {
-   "nome": "Yahoo Finance (ICE KC)",
-   "url": "https://finance.yahoo.com/quote/KC%3DF/"
+   "nome": "CNBC (NY e dólar)",
+   "url": "https://www.cnbc.com/quotes/@KC.1"
+  },
+  {
+   "nome": "TradingView (Londres)",
+   "url": "https://www.tradingview.com/symbols/ICEEUR-RC1!/"
   },
   {
    "nome": "Banco Central (PTAX)",
    "url": "https://www.bcb.gov.br/estabilidadefinanceira/historicocotacoes"
   },
   {
-   "nome": "Notícias Agrícolas (CEPEA e praças)",
-   "url": "https://www.noticiasagricolas.com.br/cotacoes/cafe"
+   "nome": "CEPEA/Esalq",
+   "url": "https://www.cepea.org.br/br/indicador/cafe.aspx"
   },
   {
-   "nome": "Open-Meteo (clima)",
+   "nome": "Agrolink (praças)",
+   "url": "https://www.agrolink.com.br/cotacoes/graos/cafe"
+  },
+  {
+   "nome": "Open-Meteo e met.no (clima)",
    "url": "https://open-meteo.com/"
+  }
+ ],
+ "pracasDate": "2026-11-13",
+ "pracas": [
+  {
+   "praca": "Guaxupé (Sul de Minas)",
+   "tipo": "Tipo 6",
+   "preco": 1607,
+   "var": 1.16
+  },
+  {
+   "praca": "Patrocínio (Cerrado Mineiro)",
+   "tipo": "Tipo 6",
+   "preco": 1619,
+   "var": 1.8
+  },
+  {
+   "praca": "Varginha (Sul de Minas)",
+   "tipo": "Tipo 6 bebida dura",
+   "preco": 1655,
+   "var": 1.53
+  },
+  {
+   "praca": "Manhuaçu (Matas de Minas)",
+   "tipo": "Tipo 6 bebida dura",
+   "preco": 1625,
+   "var": 3.11
   }
  ]
 }

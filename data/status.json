@@ -1,9 +1,9 @@
 {
- "updatedAt": "2026-11-13T22:44:59Z",
+ "updatedAt": "2026-11-14T02:07:21Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
-   "detalhe": "512 pregões"
+   "detalhe": "513 pregões"
   },
   "NY 2º vencimento (CNBC)": {
    "ok": true,
@@ -11,23 +11,19 @@
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "274.0 (KCH7) em 2026-11-13T17:34:44.000-0500"
+   "detalhe": "274.0 (KCH7) em 2026-11-13T18:00:00.000-0500"
   },
-  "Londres (Notícias Agrícolas)": {
-   "ok": false,
-   "detalhe": "HTTP Error 403: Forbidden"
-  },
-  "Londres reserva (Notícias Agrícolas, página geral)": {
-   "ok": false,
-   "detalhe": "HTTP Error 403: Forbidden"
+  "Londres (TradingView)": {
+   "ok": true,
+   "detalhe": "pregão de Londres ainda não abriu hoje"
   },
   "Dólar PTAX (Banco Central)": {
    "ok": true,
-   "detalhe": "275 dias"
+   "detalhe": "274 dias"
   },
   "Dólar comercial histórico (CNBC)": {
    "ok": true,
-   "detalhe": "543 dias"
+   "detalhe": "545 dias"
   },
   "Dólar agora (CNBC)": {
    "ok": true,
@@ -61,11 +57,11 @@
    "ok": false,
    "detalhe": "rejeitados por salto impossível: cepeaArabica 1999-10-13=214.27, cepeaArabica 2000-07-18=195.57"
   },
-  "Clima (Open-Meteo)": {
-   "ok": false,
-   "detalhe": "0 regiões"
+  "Praças de Minas (Agrolink)": {
+   "ok": true,
+   "detalhe": "4 de 4 praças, até 2026-11-13"
   },
-  "Clima reserva (met.no)": {
+  "Clima (Open-Meteo)": {
    "ok": true,
    "detalhe": "4 regiões"
   }
