@@ -36,6 +36,8 @@ jobs:
           python scripts/collect.py
       - name: Calcular indicadores do dia
         run: python scripts/indicadores.py
+      - name: Escrever manchete e resumo do dia (automático, sem IA)
+        run: python scripts/resumo.py
       - name: Enviar resumo e alertas no Telegram
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}

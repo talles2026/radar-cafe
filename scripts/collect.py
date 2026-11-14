@@ -164,22 +164,112 @@ def parse_londres(html):
     return hist
 
 
+MESES_PT = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto",
+            "Setembro", "Outubro", "Novembro", "Dezembro"]
+RC_MESES = {1: "F", 3: "H", 5: "K", 7: "N", 9: "U", 11: "X"}  # vencimentos do robusta na ICE Europe
+
+
+def fetch_rc_tradingview():
+    """Robusta Londres (ICE Europe) em US$/t pelo TradingView (atraso de ~10 min): 1º e 2º contratos
+    ainda não vencidos -> {data: (c1, v1, c2, v2)} só com o dia de hoje."""
+    from zoneinfo import ZoneInfo
+    lon = datetime.now(ZoneInfo("Europe/London"))
+    if lon.weekday() >= 5 or (lon.hour, lon.minute) < (9, 15):
+        status("Londres (TradingView)", True, "pregão de Londres ainda não abriu hoje")
+        return {}
+    syms, y, m = [], lon.year, lon.month
+    while len(syms) < 4:
+        if m in RC_MESES:
+            syms.append(f"ICEEUR:RC{RC_MESES[m]}{y}")
+        m += 1
+        if m > 12:
+            m, y = 1, y + 1
+    body = json.dumps({"symbols": {"tickers": syms}, "columns": ["close", "expiration"]}).encode()
+    req = urllib.request.Request("https://scanner.tradingview.com/futures/scan", data=body,
+                                 headers={"User-Agent": UA, "Content-Type": "application/json",
+                                          "Origin": "https://www.tradingview.com"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        js = json.loads(r.read().decode())
+    hoje = int(lon.strftime("%Y%m%d"))
+    cont = []
+    for it in js.get("data", []):
+        close, exp = (it.get("d") or [None, None])[:2]
+        if close and exp and int(exp) >= hoje and 1000 < float(close) < 15000:
+            yy, mm = int(str(exp)[:4]), int(str(exp)[4:6])
+            cont.append((int(exp), f"{MESES_PT[mm - 1]}/{str(yy)[2:]}", round(float(close), 0)))
+    cont.sort()
+    if not cont:
+        raise ValueError("sem contratos válidos na resposta")
+    c1, v1 = cont[0][1], cont[0][2]
+    c2, v2 = (cont[1][1], cont[1][2]) if len(cont) > 1 else (None, None)
+    return {lon.date().isoformat(): (c1, v1, c2, v2)}
+
+
 def fetch_rc():
     """Café robusta Londres (ICE Europe) em US$/t: 1º e 2º contratos -> {data: (c1, v1, c2, v2)}.
-    Fonte principal: página de Londres do Notícias Agrícolas; reserva: página geral de café do mesmo site."""
+    Fonte principal: TradingView (preço do dia). Reserva: Notícias Agrícolas (bloqueia o robô desde nov/2026)."""
     hist = {}
-    for nome, url in (("Londres (Notícias Agrícolas)", "https://www.noticiasagricolas.com.br/cotacoes/cafe/cafe-bolsa-de-londres-liffe"),
-                      ("Londres reserva (Notícias Agrícolas, página geral)", "https://www.noticiasagricolas.com.br/cotacoes/cafe")):
+    try:
+        hist = fetch_rc_tradingview()
+        if hist:
+            d, (c1, v1, _, _) = next(iter(hist.items()))
+            status("Londres (TradingView)", True, f"{v1:.0f} ({c1}) em {d}")
+    except Exception as e:
+        status("Londres (TradingView)", False, e)
+    if hist or STATUS.get("Londres (TradingView)", {}).get("ok"):
+        return hist
+    for nome, url in (("Londres reserva (Notícias Agrícolas)", "https://www.noticiasagricolas.com.br/cotacoes/cafe/cafe-bolsa-de-londres-liffe"),):
         try:
             h = parse_londres(get(url))
             for d, v in h.items():
                 hist.setdefault(d, v)
             status(nome, bool(h), f"{len(h)} pregões até {max(h) if h else '-'}")
-            if h and max(h) >= ultimo_dia_util(1):
-                break
         except Exception as e:
             status(nome, False, e)
     return hist
+
+
+# Praças de Minas no Agrolink: (produto na URL, cidade, nome exibido, tipo exibido)
+PRACAS = [
+    ("cafe-arabica-tipo-6-sc-60kg", "Guaxupé", "Guaxupé (Sul de Minas)", "Tipo 6"),
+    ("cafe-arabica-tipo-6-sc-60kg", "Patrocínio", "Patrocínio (Cerrado Mineiro)", "Tipo 6"),
+    ("cafe-arabica-bebida-dura-tipo-6-safra-nova-sc-60kg", "Varginha", "Varginha (Sul de Minas)", "Tipo 6 bebida dura"),
+    ("cafe-arabica-bebida-dura-tipo-6-safra-nova-sc-60kg", "Manhuaçu", "Manhuaçu (Matas de Minas)", "Tipo 6 bebida dura"),
+]
+
+
+def parse_agrolink(html):
+    """Linhas embutidas na página do Agrolink -> {cidade: (data, preco, var%)} com a data mais recente."""
+    t = html.replace('\\"', '"')
+    out = {}
+    for m in re.finditer(r'\{"cidade":"([^"]+)","uf":"(\w\w)","preco":([\d.]+),"variacaoPct":([-\d.eE]+|null),'
+                         r'"freq":"\w+","dia":(\d+)', t):
+        cid, uf, preco, var, dia = m.groups()
+        d = (date(1970, 1, 1) + timedelta(days=int(dia))).isoformat()
+        p = float(preco)
+        if uf in ("MG", "ES") and 300 < p < 6000 and (cid not in out or d > out[cid][0]):
+            out[cid] = (d, p, None if var == "null" else round(float(var), 2))
+    return out
+
+
+def fetch_pracas():
+    """Preços do físico em praças de Minas (Agrolink), grava data/pracas.json."""
+    paginas, pracas = {}, []
+    for prod, cidade, nome, tipo in PRACAS:
+        try:
+            if prod not in paginas:
+                paginas[prod] = parse_agrolink(get(f"https://www.agrolink.com.br/cotacoes/graos/cafe/{prod}"))
+            if cidade in paginas[prod]:
+                d, p, v = paginas[prod][cidade]
+                pracas.append({"praca": nome, "tipo": tipo, "preco": round(p), "var": v, "data": d})
+        except Exception as e:
+            paginas[prod] = {}
+            log(f"Agrolink {prod}: {e}")
+    status("Praças de Minas (Agrolink)", bool(pracas), f"{len(pracas)} de {len(PRACAS)} praças"
+           + (f", até {max(x['data'] for x in pracas)}" if pracas else ""))
+    if pracas:
+        (DATA / "pracas.json").write_text(json.dumps({"atualizadoEm": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                                                      "pracas": pracas}, ensure_ascii=False, indent=1), "utf-8")
 
 
 def fetch_usd_comercial():
@@ -421,7 +511,10 @@ def escrever_saude(rows, weather, now):
             return 999
     wa = idade_h((weather and now) or (json.loads((DATA / "weather.json").read_text("utf-8")).get("updatedAt") if WEATHER.exists() else "")) if not weather else 0
     itens["Clima"] = {"ultimo": now if weather else None, "estado": "ok" if weather or wa < 30 else "falha"}
-    pa = meta.get("pracasDate")
+    try:
+        pa = max(x["data"] for x in json.loads((DATA / "pracas.json").read_text("utf-8"))["pracas"])
+    except Exception:
+        pa = meta.get("pracasDate")
     itens["Praças"] = {"ultimo": pa, "estado": "ok" if pa and dias_uteis_entre(pa, ultimo_dia_util(1)) <= 1 else ("atencao" if pa and dias_uteis_entre(pa, ultimo_dia_util(1)) <= 2 else "falha")}
     an = idade_h(meta.get("updatedAt") or "")
     itens["Análise do dia"] = {"ultimo": meta.get("updatedAt"), "estado": "ok" if an < 30 or agora.weekday() >= 5 else ("atencao" if an < 54 else "falha")}
@@ -518,6 +611,7 @@ def main():
     QUOTES.write_text("[\n" + ",\n".join(json.dumps(r, ensure_ascii=False, separators=(",", ":")) for r in rows) + "\n]\n", "utf-8")
     log(f"quotes.json: {len(rows)} dias, {changed} campos alterados")
 
+    fetch_pracas()
     w = fetch_weather()
     if w:
         WEATHER.write_text(json.dumps({"updatedAt": now, "regioes": w}, ensure_ascii=False, indent=1), "utf-8")
