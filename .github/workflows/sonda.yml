@@ -1,0 +1,17 @@
+name: Sonda de fontes
+on:
+  push:
+    branches: [sonda-fontes]
+    paths: [sonda/sonda.py]
+permissions:
+  contents: write
+jobs:
+  sonda:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 sonda/sonda.py
+      - run: |
+          git config user.name "radar-cafe-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sonda/out; git commit -m "Resultado da sonda" && git push origin HEAD:sonda-fontes
