@@ -174,9 +174,11 @@ def fetch_rc_tradingview():
     ainda não vencidos -> {data: (c1, v1, c2, v2)} só com o dia de hoje."""
     from zoneinfo import ZoneInfo
     lon = datetime.now(ZoneInfo("Europe/London"))
+    dia = lon.date()  # antes da abertura (ou no fim de semana) o preço é o fechamento do último pregão
     if lon.weekday() >= 5 or (lon.hour, lon.minute) < (9, 15):
-        status("Londres (TradingView)", True, "pregão de Londres ainda não abriu hoje")
-        return {}
+        dia -= timedelta(days=1)
+        while dia.weekday() >= 5:
+            dia -= timedelta(days=1)
     syms, y, m = [], lon.year, lon.month
     while len(syms) < 4:
         if m in RC_MESES:
@@ -202,7 +204,7 @@ def fetch_rc_tradingview():
         raise ValueError("sem contratos válidos na resposta")
     c1, v1 = cont[0][1], cont[0][2]
     c2, v2 = (cont[1][1], cont[1][2]) if len(cont) > 1 else (None, None)
-    return {lon.date().isoformat(): (c1, v1, c2, v2)}
+    return {dia.isoformat(): (c1, v1, c2, v2)}
 
 
 def fetch_rc():
@@ -216,7 +218,7 @@ def fetch_rc():
             status("Londres (TradingView)", True, f"{v1:.0f} ({c1}) em {d}")
     except Exception as e:
         status("Londres (TradingView)", False, e)
-    if hist or STATUS.get("Londres (TradingView)", {}).get("ok"):
+    if hist:
         return hist
     for nome, url in (("Londres reserva (Notícias Agrícolas)", "https://www.noticiasagricolas.com.br/cotacoes/cafe/cafe-bolsa-de-londres-liffe"),):
         try:
