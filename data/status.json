@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-14T02:07:21Z",
+ "updatedAt": "2026-11-14T02:09:54Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -15,7 +15,7 @@
   },
   "Londres (TradingView)": {
    "ok": true,
-   "detalhe": "pregão de Londres ainda não abriu hoje"
+   "detalhe": "3211 (Novembro/26) em 2026-11-13"
   },
   "Dólar PTAX (Banco Central)": {
    "ok": true,
@@ -23,7 +23,7 @@
   },
   "Dólar comercial histórico (CNBC)": {
    "ok": true,
-   "detalhe": "545 dias"
+   "detalhe": "553 dias"
   },
   "Dólar agora (CNBC)": {
    "ok": true,
