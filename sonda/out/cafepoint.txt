@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Cotações | CaféPoint</title><link rel="image_src" href="https://www.cafepoint.com.br/imagens/img-redes-sociais.jpg" />
+    <meta name="description" content="" /><link rel="canonical" href="https://www.cafepoint.com.br/cotacoes/" />
+        <meta property="og:title" content="Cotações | CaféPoint" />
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="https://www.cafepoint.com.br/cotacoes/" />
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:site_name" content="CaféPoint" /><meta property="og:image" content="https://www.cafepoint.com.br/imagens/img-redes-sociais.jpg" /><meta property="og:image:alt" content="" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Cotações | CaféPoint" />
+        <meta name="twitter:description" content="" /><meta property="twitter:image" content="https://www.cafepoint.com.br/imagens/img-redes-sociais.jpg" />
+    <meta name="theme-color" content="#C81E00">
+    <meta name="HandheldFriendly" content="True">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <meta property="fb:app_id" content="713021262108852">
+    <meta name="facebook-domain-verification" content="cbndc3c0bvw6os7pj0z4ogxrnqg669">
+    <meta name="google-site-verification" content="UNpCsFmd2-SQMuUQ9FPX-Kn8lQcJwpFj9Fk5rX--be8">
+    <link rel="shortcut icon" href="imagens/icone.ico">
+    <meta name="sitemap" content="https://www.cafepoint.com.br/sitemap" />
+    <meta name="referrer" content="origin">
+    <base href="/">
+    <meta name="author" content="CaféPoint" />
+    <meta name="rating" content="general">
+    <meta name="copyright" content="CaféPoint, 2026" />
+    
+    <link rel='dns-prefetch' href='//fonts.googleapis.com'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="_content/Agripoint.Web.Portais/css/normalize.rr1c2o9qtu.css" />
+    <link rel="stylesheet" href="_content/Agripoint.Web.Portais/css/portais.x4dssb4e4d.css" />
+    <link rel="stylesheet" href="css/portal.9jqv1udkc9.css" />
+    <link rel="stylesheet" href="CafePoint.clbuq6259v.styles.css" />
+    <style type="text/css">
+        html { overflow-y: scroll; }
+    </style>
+
+    <script>
+        const dev = 0;
+        const url = '/';
+        const urlCompleta = 'https://www.cafepoint.com.br/';
+        const mobile = 0;
+        const desktop = 1;
+    </script>
+
+    <script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "Organization",
+"name": "CaféPoint",
+"url": "https://www.cafepoint.com.br/",
+"logo": "https://www.cafepoint.com.br/imagens/logo.png",
+"sameAs": ["https://www.facebook.com/cafepoint/", "https://www.instagram.com/cafepointbr/", "https://twitter.com/cafepoint/", ""]
+}
+</script>
+
+    <script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "WebSite",
+"url": "https://www.cafepoint.com.br/",
+"potentialAction": {
+"@type": "SearchAction",
+"target": "https://www.cafepoint.com.br/busca/?q={search_term_string}",
+"query-input": "required name=search_term_string"
+}
+}
+</script>
+
+
+    <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-KH3477S');
+        </script></head>
+<body><div id="barraProgresso" b-mfn5wfc7zc><div class="progresso" b-k5wgs31jnc><div class="indeterminado" b-k5wgs31jnc></div></div></div>
+    <header b-n445easn0w><div class="topo central" b-n445easn0w><div class="menu-lateral" onclick="ativarMenuLateral()" b-n445easn0w><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333333"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"></path></svg></div>
+        <div class="logo" b-n445easn0w><a href="https://www.cafepoint.com.br/" b-n445easn0w><img src="imagens/logo.fe3ihx7q8m.png" width="180" height="40" loading="eager" alt="Logo do site CaféPoint" b-n445easn0w /></a></div>
+        <div class="acoes" b-n445easn0w><div class="busca" b-n445easn0w><div class="conta" b-n445easn0w><a href="entrar/" title="Faça login no CaféPoint" class="acao-entrar" b-n445easn0w><span class="nome" b-n445easn0w>Entrar</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#333333"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"></path></svg></a></div>
+                <form action="busca/" method="get" id="formBusca" data-enhance b-6jpdagjx1u><label for="txtBusca" id="lbBusca" onclick="ativarBusca(true)" b-6jpdagjx1u><span b-6jpdagjx1u>Buscar</span>
+        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#333333"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"></path></svg></label>
+    <input type="search" id="txtBusca" name="q" placeholder="Encontre no CaféPoint" b-6jpdagjx1u />
+    <button type="submit" id="btnBusca" b-6jpdagjx1u><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#333333"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"></path></svg></button></form></div></div></div>
+    <div class="menu" b-n445easn0w><nav class="central" b-n445easn0w><ul b-n445easn0w><li class="secao" onmousemove="exibirSecoes(this, true, 3)" onmouseout="exibirSecoes(this, false, 3)" b-n445easn0w><a role="button" title="Acessar Notícias" class="noticias" b-n445easn0w>NOTÍCIAS<svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#333333"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path></svg></a><div class="secoes" b-n445easn0w><a target="_self" data-enhance-nav="true" title="Acessar Giro de Notícias" href="https://www.cafepoint.com.br/noticias/giro-de-noticias/" b-n445easn0w>GIRO DE NOTÍCIAS</a><a target="_self" data-enhance-nav="true" title="Acessar Técnicas de Produção" href="https://www.cafepoint.com.br/noticias/tecnicas-de-producao/" b-n445easn0w>TÉCNICAS DE PRODUÇÃO</a><a target="_self" data-enhance-nav="true" title="Acessar Agenda do produtor" href="https://www.cafepoint.com.br/noticias/agenda-do-produtor/" b-n445easn0w>AGENDA DO PRODUTOR</a></div></li><li class="secao" onmousemove="exibirSecoes(this, true, 2)" onmouseout="exibirSecoes(this, false, 2)" b-n445easn0w><a role="button" title="Acessar Cotações" class="cotacoes" b-n445easn0w>COTAÇÕES<svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#333333"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path></svg></a><div class="secoes" b-n445easn0w><a target="_self" data-enhance-nav="true" title="Acessar Mercado Físico e Mercado Futuro" href="https://www.cafepoint.com.br/cotacoes/mercado-fisico-e-mercado-futuro/cotacoes-mercado-fisico-e-mercados-futuros-27122017-101834/" b-n445easn0w>MERCADO FÍSICO E MERCADO FUTURO</a><a target="_self" data-enhance-nav="true" title="Acessar Análises" href="https://www.cafepoint.com.br/cotacoes/analises/" b-n445easn0w>ANÁLISES</a></div></li><li class="secao" onmousemove="exibirSecoes(this, true, 0)" onmouseout="exibirSecoes(this, false, 0)" b-n445easn0w><a href="https://www.cafepoint.com.br/colunas/" target="_self" title="Acessar Colunas" class="colunas" b-n445easn0w>COLUNAS</a></li><li class="secao" onmousemove="exibirSecoes(this, true, 1)" onmouseout="exibirSecoes(this, false, 1)" b-n445easn0w><a role="button" title="Acessar Anuncie" class="anuncie" b-n445easn0w>ANUNCIE<svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#333333"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path></svg></a><div class="secoes" b-n445easn0w><a target="_self" data-enhance-nav="true" title="Acessar Anuncie no CaféPoint" href="https://www.cafepoint.com.br/anuncie/" b-n445easn0w>ANUNCIE NO CAFÉPOINT</a></div></li><li class="secao" onmousemove="exibirSecoes(this, true, 1)" onmouseout="exibirSecoes(this, false, 1)" b-n445easn0w><a role="button" title="Acessar Empresas" class="empresas" b-n445easn0w>EMPRESAS<svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#333333"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path></svg></a><div class="secoes" b-n445easn0w><a target="_self" data-enhance-nav="true" title="Acessar Novidades dos Parceiros" href="https://www.cafepoint.com.br/empresas/novidades-parceiros/" b-n445easn0w>NOVIDADES DOS PARCEIROS</a></div></li><li class="secao" onmousemove="exibirSecoes(this, true, 3)" onmouseout="exibirSecoes(this, false, 3)" b-n445easn0w><a role="button" title="Acessar Contato" class="contato" b-n445easn0w>CONTATO<svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#333333"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path></svg></a><div class="secoes" b-n445easn0w><a target="_self" data-enhance-nav="true" title="Acessar Newsletter" href="https://www.cafepoint.com.br/newsletter/" b-n445easn0w>NEWSLETTER</a><a target="_self" data-enhance-nav="true" title="Acessar Fale conosco" href="https://www.cafepoint.com.br/contato/" b-n445easn0w>FALE CONOSCO</a><a target="_self" data-enhance-nav="true" title="Acessar Educapoint" href="https://www.cafepoint.com.br/contato/novas-do-cafepoint/" b-n445easn0w>EDUCAPOINT</a></div></li></ul></nav></div></header>
+
+<div id="menuLateral" b-n445easn0w><div class="checkin" b-n445easn0w><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#333333"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"></path></svg>
+            <div class="acessos" b-n445easn0w><a href="entrar/" title="Acesse sua conta" b-n445easn0w>Acesse sua conta</a>
+                <a class="cor-site" href="cadastro/" title="Faça o cadastro no site" b-n445easn0w>Ou cadastre-se</a></div></div><div class="secao" b-n445easn0w><a href="https://www.cafepoint.com.br/" onclick="ativarSecoesMenuLateral(this, 0)" class="lk-secao inicio" title="Página incial" b-n445easn0w><strong b-n445easn0w>INÍCIO</strong></a></div><div class="secao" b-n445easn0w><a role="button" onclick="ativarSecoesMenuLateral(this, 3)" class="lk-secao noticias" title="Acessar Notícias" b-n445easn0w><strong b-n445easn0w>NOTÍCIAS<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333333"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path></svg></strong></a><div class="geral-secoes" b-n445easn0w><div class="secoes" b-n445easn0w><a target="_self" data-enhance-nav="true" title="Acessar Giro de Notícias" href="https://www.cafepoint.com.br/noticias/giro-de-noticias/" b-n445easn0w>GIRO DE NOTÍCIAS</a><a target="_self" data-enhance-nav="true" title="Acessar Técnicas de Produção" href="https://www.cafepoint.com.br/noticias/tecnicas-de-producao/" b-n445easn0w>TÉCNICAS DE PRODUÇÃO</a><a target="_self" data-enhance-nav="true" title="Acessar Agenda do produtor" href="https://www.cafepoint.com.br/noticias/agenda-do-produtor/" b-n445easn0w>AGENDA DO PRODUTOR</a></div></div></div><div class="secao" b-n445easn0w><a role="button" onclick="ativarSecoesMenuLateral(this, 2)" class="lk-secao cotacoes" title="Acessar Cotações" b-n445easn0w><strong b-n445easn0w>COTAÇÕES<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333333"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path></svg></strong></a><div class="geral-secoes" b-n445easn0w><div class="secoes" b-n445easn0w><a target="_self" data-enhance-nav="true" title="Acessar Mercado Físico e Mercado Futuro" href="https://www.cafepoint.com.br/cotacoes/mercado-fisico-e-mercado-futuro/cotacoes-mercado-fisico-e-mercados-futuros-27122017-101834/" b-n445easn0w>MERCADO FÍSICO E MERCADO FUTURO</a><a target="_self" data-enhance-nav="true" title="Acessar Análises" href="https://www.cafepoint.com.br/cotacoes/analises/" b-n445easn0w>ANÁLISES</a></div></div></div><div class="secao" b-n445easn0w><a href="https://www.cafepoint.com.br/colunas/" target="_self" onclick="ativarSecoesMenuLateral(this, 0)" class="lk-secao colunas" title="Acessar Colunas" b-n445easn0w><strong b-n445easn0w>COLUNAS</strong></a></div><div class="secao" b-n445easn0w><a role="button" onclick="ativarSecoesMenuLateral(this, 1)" class="lk-secao anuncie" title="Acessar Anuncie" b-n445easn0w><strong b-n445easn0w>ANUNCIE<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333333"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path></svg></strong></a><div class="geral-secoes" b-n445easn0w><div class="secoes" b-n445easn0w><a target="_self" data-enhance-nav="true" title="Acessar Anuncie no CaféPoint" href="https://www.cafepoint.com.br/anuncie/" b-n445easn0w>ANUNCIE NO CAFÉPOINT</a></div></div></div><div class="secao" b-n445easn0w><a role="button" onclick="ativarSecoesMenuLateral(this, 1)" class="lk-secao empresas" title="Acessar Empresas" b-n445easn0w><strong b-n445easn0w>EMPRESAS<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333333"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path></svg></strong></a><div class="geral-secoes" b-n445easn0w><div class="secoes" b-n445easn0w><a target="_self" data-enhance-nav="true" title="Acessar Novidades dos Parceiros" href="https://www.cafepoint.com.br/empresas/novidades-parceiros/" b-n445easn0w>NOVIDADES DOS PARCEIROS</a></div></div></div><div class="secao" b-n445easn0w><a role="button" onclick="ativarSecoesMenuLateral(this, 3)" class="lk-secao contato" title="Acessar Contato" b-n445easn0w><strong b-n445easn0w>CONTATO<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333333"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path></svg></strong></a><div class="geral-secoes" b-n445easn0w><div class="secoes" b-n445easn0w><a target="_self" data-enhance-nav="true" title="Acessar Newsletter" href="https://www.cafepoint.com.br/newsletter/" b-n445easn0w>NEWSLETTER</a><a target="_self" data-enhance-nav="true" title="Acessar Fale conosco" href="https://www.cafepoint.com.br/contato/" b-n445easn0w>FALE CONOSCO</a><a target="_self" data-enhance-nav="true" title="Acessar Educapoint" href="https://www.cafepoint.com.br/contato/novas-do-cafepoint/" b-n445easn0w>EDUCAPOINT</a></div></div></div><div class="produtos" b-n445easn0w><ul>
+    <li><a href="https://www.milkpointventures.com.br" target="_blank" rel="noreferrer"> <img src="https://www.milkpoint.com.br/imagens/produtos/ico-menu-milk-ventures.svg" width="30" height="30" alt="Acesse o MilkPoint Ventures" style="filter: invert(0);" / loading="lazy"> MilkPoint Ventures </a></li>
+    <li><a href="https://www.milkpoint.com.br" target="_blank" rel="noreferrer"> <img src="https://www.milkpoint.com.br/imagens/produtos/ico-milkpoint.gif" width="30" height="30" alt="Acesse o CaféPoint" style="filter: invert(0);" / loading="lazy">MilkPoint </a></li>
+    <li><a href="https://www.milkpoint.com.br/mercado" target="_blank" rel="noreferrer"> <img src="https://www.milkpoint.com.br/imagens/produtos/ico-menu-mercado.svg" width="30" height="30" alt="Acesse o MilkPoint Mercado" style="filter: invert(0);" / loading="lazy"> MilkPoint Mercado </a></li>
+    <li><a href="https://www.milkmonitor.com.br" target="_blank" rel="noreferrer"> <img src="https://www.milkpoint.com.br/imagens/produtos/ico-menu-monitor.svg" width="30" height="30" alt="Acesse o Milk Monitor" style="filter: invert(0);" / loading="lazy"> Milk Monitor </a></li>
+    <li><a href="https://www.milkpoint.com.br/mercado/mapleite/" target="_blank" rel="noreferrer"> <img src="https://www.milkpoint.com.br/imagens/produtos/ico-menu-mapleite.svg" width="30" height="30" alt="Acesse o MapLeite" style="filter: invert(0);" / loading="lazy"> MapLeite </a></li>
+</ul></div></div>
+    <main b-mfn5wfc7zc>
+
+
+<div class="pagina secao central" b-w1yxtd1xyz><div class="caixa" id="cx582"><div class="banner" b-y45jf3l6qi><a href="https://palinialves.com.br/produto.php?produto=250&amp;pa-fullselect" title="clique para acessar: Palini Alves" aria-label="Palini Alves" class="lnkbn" rel="noreferrer" target="_blank" onmouseenter="bnMouseEnter(this, 74823)" onmouseleave="bnMouseLeave(this)" data-enhance-nav="false"><img src="/img/banner/7109/?o=1&amp;vs=06032026095310" width="1340" height="auto" loading="lazy" alt="Palini Alves" /></a></div></div>
+
+    <div class="geral-artigos" b-w1yxtd1xyz><section class="artigos" b-w1yxtd1xyz><h1 class="cor-site" b-w1yxtd1xyz>Cotações</h1>
+
+            
+
+            <h2 b-w1yxtd1xyz></h2>
+                <p class="mgT0 mgB0" b-w1yxtd1xyz>Acesse as seções abaixo:</p><a class="link-secao" href="/cotacoes/mercado-fisico-e-mercado-futuro/cotacoes-mercado-fisico-e-mercados-futuros-27122017-101834/" title="Acessar a seção Mercado Físico e Mercado Futuro" b-w1yxtd1xyz><strong b-w1yxtd1xyz>» Mercado Físico e Mercado Futuro</strong>
+                            <p b-w1yxtd1xyz>Dados de café arábica, atualizados diariamente por meio da nossa parceria com o Escritório Carvalhaes, de Santos (SP). E, também, do café conilon</p></a><a class="link-secao" href="/cotacoes/analises/" title="Acessar a seção Análises" b-w1yxtd1xyz><strong b-w1yxtd1xyz>» Análises</strong>
+                            <p b-w1yxtd1xyz></p></a></section>
+
+        <aside b-w1yxtd1xyz><div class="caixa" id="cx589"></div><div class="caixa" id="cx590"><section class="caixa-artigos-reduzidos vertical" b-pufiacxae7><h2 class="cor-site" b-pufiacxae7>Destaques de hoje</h2>
+        <div class="artigos" b-pufiacxae7><article class="artigo-reduzido" b-r6r0b6tikk><a href="/noticias/giro-de-noticias/produtores-do-espirito-santo-e-amazonas-vencem-o-coffee-of-the-year-2026-242909/" title="Ler mais sobre: Produtoras do Espírito Santo e Amazonas vencem o Coffee of the Year 2026" b-r6r0b6tikk><img src="/img/artigo/126823/?w=160&amp;h=160&amp;cf=1&amp;vs=13112026185444" alt="Produtoras do Espírito Santo e Amazonas vencem o Coffee of the Year 2026" loading="lazy" b-r6r0b6tikk />
+            <div b-r6r0b6tikk><small b-r6r0b6tikk>Giro de Notícias</small>
+                <h3 b-r6r0b6tikk>Produtoras do Espírito Santo e Amazonas vencem o Coffee of the Year 2026</h3></div></a></article><article class="artigo-reduzido" b-r6r0b6tikk><a href="/noticias/giro-de-noticias/sic-2026-revela-vencedores-de-quatro-premiacoes-no-ultimo-dia-do-evento-242910/" title="Ler mais sobre: SIC 2026 revela vencedores de quatro premiações no último dia do evento" b-r6r0b6tikk><img src="/img/artigo/126824/?w=160&amp;h=160&amp;cf=1&amp;vs=13112026191217" alt="SIC 2026 revela vencedores de quatro premiações no último dia do evento" loading="lazy" b-r6r0b6tikk />
+            <div b-r6r0b6tikk><small b-r6r0b6tikk>Giro de Notícias</small>
+                <h3 b-r6r0b6tikk>SIC 2026 revela vencedores de quatro premiações no último dia do evento</h3></div></a></article><article class="artigo-reduzido" b-r6r0b6tikk><a href="/noticias/giro-de-noticias/mudancas-no-clima-requerem-novos-padroes-e-praticas-regenerativas-aponta-painel-da-sic-242911/" title="Ler mais sobre: Mudanças no clima requerem novos padrões e práticas regenerativas, aponta painel da SIC" b-r6r0b6tikk><img src="/img/artigo/126825/?w=160&amp;h=160&amp;cf=1&amp;vs=13112026203750" alt="Mudanças no clima requerem novos padrões e práticas regenerativas, aponta painel da SIC" loading="lazy" b-r6r0b6tikk />
+            <div b-r6r0b6tikk><small b-r6r0b6tikk>Giro de Notícias</small>
+                <h3 b-r6r0b6tikk>Mudanças no clima requerem novos padrões e práticas regenerativas, aponta painel da SIC</h3></div></a></article><article class="artigo-reduzido" b-r6r0b6tikk><a href="/noticias/giro-de-noticias/somos-ruins-de-comunicar-avalia-diretor-da-abics-sobre-o-cafe-brasileiro-na-sic-242912/" title="Ler mais sobre: &quot;Somos ruins de comunicar&quot;, avalia diretor da Abics sobre o café brasileiro, na SIC" b-r6r0b6tikk><img src="/img/artigo/126826/?w=160&amp;h=160&amp;cf=1&amp;vs=13112026204322" alt="&quot;Somos ruins de comunicar&quot;, avalia diretor da Abics sobre o café brasileiro, na SIC" loading="lazy" b-r6r0b6tikk />
+            <div b-r6r0b6tikk><small b-r6r0b6tikk>Giro de Notícias</small>
+                <h3 b-r6r0b6tikk>&quot;Somos ruins de comunicar&quot;, avalia diretor da Abics sobre o café brasileiro, na SIC</h3></div></a></article><article class="artigo-reduzido" b-r6r0b6tikk><a href="/noticias/giro-de-noticias/o-desafio-dos-caneforas-finos-escala-nao-admite-improviso-diz-produtor-lucas-venturim-em-painel-242894/" title="Ler mais sobre: O desafio dos canéforas finos: &quot;Escala não admite improviso&quot;, diz produtor Lucas Venturim em painel" b-r6r0b6tikk><img src="/img/artigo/126795/?w=160&amp;h=160&amp;cf=1&amp;vs=12112026202347" alt="O desafio dos canéforas finos: &quot;Escala não admite improviso&quot;, diz produtor Lucas Venturim em painel" loading="lazy" b-r6r0b6tikk />
+            <div b-r6r0b6tikk><small b-r6r0b6tikk>Giro de Notícias</small>
+                <h3 b-r6r0b6tikk>O desafio dos canéforas finos: &quot;Escala não admite improviso&quot;, diz produtor Lucas Venturim em painel</h3></div></a></article></div></section></div><div class="caixa" id="cx591"></div></aside></div></div></main>
+    <footer id="rodape" b-pp5b5mejcd><section class="newsletter" b-pp5b5mejcd><div class="newsletter central" b-hyqbfgygfm><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#FFFFFF" b-hyqbfgygfm><path d="M280-280q-33 0-56.5-23.5T200-360v-400q0-33 23.5-56.5T280-840h560q33 0 56.5 23.5T920-760v400q0 33-23.5 56.5T840-280H280Zm280-188L280-663v303h560v-303L560-468Zm0-98 280-194H280l280 194ZM120-120q-33 0-56.5-23.5T40-200v-500h80v500h660v80H120Zm720-546v-94H280v94-94h560v94Z" b-hyqbfgygfm></path></svg>
+    <h4 b-hyqbfgygfm>Assine nossa newsletter gratuitamente</h4>
+    <p b-hyqbfgygfm>E fique por dentro de todas as novidades do CaféPoint diretamente no seu e-mail.</p>
+    <form method="post" data-enhance="" id="formularioAssinarNews" action="/cotacoes/"><input type="hidden" name="_handler" value="frmAssinarNews" /><input type="hidden" name="__RequestVerificationToken" value="CfDJ8MXkOKLSYIFJuB2gV8ZxTEETWGgDZA7bnsEmid0K6YXEjb3PQs34C5JziHTHL22SSk-B1-nJbQRVSk_U6qxymxkCRgkxneTszTBKexO63ZBDC-3PnrpGrvBdbpJ10mbcxee83aKlLiNd731_epkp47w" /><div class="campos" b-hyqbfgygfm><div class="campo" b-hyqbfgygfm><input placeholder="Nome completo" id="txtNomeNews" required name="Comando.Nome" class="valid" /></div>
+            <div class="campo" b-hyqbfgygfm><input type="email" required placeholder="Seu melhor e-mail" id="txtEmailNews" name="Comando.Email" class="valid" /></div></div>
+        <div class="captcha" b-hyqbfgygfm><div id="recaptcha" data-id="6LfqcyUpAAAAAHWqpzg4qYr8rVV3OJAj7a48ZzxF"><div id="recaptcha-container"></div></div>
+<page-script src="./_content/Agripoint.Web.Portais/_gerais/componentes/ReCaptcha.32fz8kju8b.razor.js"></page-script>
+            <button type="submit" class="bg-cor-site bg-cor-site-hover" id="assinarNewsBtn" b-hyqbfgygfm>Assinar news</button></div></form>
+    </div>
+<page-script src="./_content/Agripoint.Web.Portais/_interacao/componentes/InscreverNewsletter.axncs46s95.razor.js"></page-script></section><section class="redes-sociais" b-pp5b5mejcd><div class="itens central" b-pp5b5mejcd><a href="https://www.facebook.com/cafepoint/" title="Página do Facebook" aria-label="Página do Facebook" rel="noreferrer" target="_blank" b-pp5b5mejcd><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#FFFFFF" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg></a><a href="https://www.instagram.com/cafepointbr/" title="Perfil do Instagram" aria-label="Perfil do Instagram" rel="noreferrer" target="_blank" b-pp5b5mejcd><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#FFFFFF" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a></div></section>
+
+    <section class="geral-menu" b-pp5b5mejcd><div class="itens central" b-pp5b5mejcd><div class="geral-logos" b-pp5b5mejcd><div class="logos" b-pp5b5mejcd><img src="imagens/site.fla2s2023y.svg" alt="Logo do site CaféPoint" width="114" height="80" loading="lazy" b-pp5b5mejcd />
+                    <img src="_content/Agripoint.Web.Portais/imagens/ventures-logo.8bowa0jgah.svg" width="112" height="58" alt="Logo do site MilkPoint Ventures" loading="lazy" b-pp5b5mejcd /></div>
+                <p b-pp5b5mejcd>CaféPoint é um produto da rede MilkPoint Ventures</p></div>
+            <div id="geral-rodape-secoes" b-pp5b5mejcd><div id="rodape-secoes" b-pp5b5mejcd><a role="button" b-pp5b5mejcd><strong class="" b-pp5b5mejcd>NOTÍCIAS</strong></a><a target="_self" title="Acessar Giro de Notícias" href="https://www.cafepoint.com.br/noticias/giro-de-noticias/" b-pp5b5mejcd>GIRO DE NOTÍCIAS</a><a target="_self" title="Acessar Técnicas de Produção" href="https://www.cafepoint.com.br/noticias/tecnicas-de-producao/" b-pp5b5mejcd>TÉCNICAS DE PRODUÇÃO</a><a target="_self" title="Acessar Agenda do produtor" href="https://www.cafepoint.com.br/noticias/agenda-do-produtor/" b-pp5b5mejcd>AGENDA DO PRODUTOR</a><a role="button" b-pp5b5mejcd><strong class="" b-pp5b5mejcd>COTAÇÕES</strong></a><a target="_self" title="Acessar Mercado Físico e Mercado Futuro" href="https://www.cafepoint.com.br/cotacoes/mercado-fisico-e-mercado-futuro/cotacoes-mercado-fisico-e-mercados-futuros-27122017-101834/" b-pp5b5mejcd>MERCADO FÍSICO E MERCADO FUTURO</a><a target="_self" title="Acessar Análises" href="https://www.cafepoint.com.br/cotacoes/analises/" b-pp5b5mejcd>ANÁLISES</a><a href="https://www.cafepoint.com.br/colunas/" target="_self" b-pp5b5mejcd><strong class="solo" b-pp5b5mejcd>COLUNAS</strong></a><a role="button" b-pp5b5mejcd><strong class="" b-pp5b5mejcd>ANUNCIE</strong></a><a target="_self" title="Acessar Anuncie no CaféPoint" href="https://www.cafepoint.com.br/anuncie/" b-pp5b5mejcd>ANUNCIE NO CAFÉPOINT</a><a role="button" b-pp5b5mejcd><strong class="" b-pp5b5mejcd>EMPRESAS</strong></a><a target="_self" title="Acessar Novidades dos Parceiros" href="https://www.cafepoint.com.br/empresas/novidades-parceiros/" b-pp5b5mejcd>NOVIDADES DOS PARCEIROS</a><a role="button" b-pp5b5mejcd><strong class="" b-pp5b5mejcd>CONTATO</strong></a><a target="_self" title="Acessar Newsletter" href="https://www.cafepoint.com.br/newsletter/" b-pp5b5mejcd>NEWSLETTER</a><a target="_self" title="Acessar Fale conosco" href="https://www.cafepoint.com.br/contato/" b-pp5b5mejcd>FALE CONOSCO</a><a target="_self" title="Acessar Educapoint" href="https://www.cafepoint.com.br/contato/novas-do-cafepoint/" b-pp5b5mejcd>EDUCAPOINT</a></div></div></div></section>
+    <section class="politica" b-pp5b5mejcd><div class="itens central" b-pp5b5mejcd><p b-pp5b5mejcd><a href="politica-privacidade" title="Conheça nossa política de privacidade" b-pp5b5mejcd>POLÍTICA DE PRIVACIDADE</a></p>
+            <p b-pp5b5mejcd><small b-pp5b5mejcd>Copyright © 2026 CaféPoint - Todos os direitos reservados</small></p>
+            <p b-pp5b5mejcd><small b-pp5b5mejcd>MilkPoint Ventures Serviços de Inteligência de Mercado LTDA. - CNPJ 08.885.666/0001-86</small></p>
+            <p b-pp5b5mejcd><small b-pp5b5mejcd>Rua Barão de Tatuí, 387 - Vila Buarque - São Paulo (SP)</small></p></div></section></footer><div id="consentimento-cookies" style="display:none;" class="sombra" b-1a7wlnc8d0><p b-1a7wlnc8d0>Usamos cookies e tecnologias semelhantes para aprimorar sua experiência em nossos serviços, personalizar anúncios e oferecer conteúdo relevante. 
+        Ao continuar navegando em nosso site, você concorda com o uso dessas tecnologias. Confira nossa 
+        <a href="politica-privacidade/" b-1a7wlnc8d0>Política de Privacidade</a> para mais detalhes sobre como protegemos seus dados.</p>
+    <button id="permitir-cookies" b-1a7wlnc8d0>Prosseguir</button></div>
+<page-script src="./_content/Agripoint.Web.Portais/_interacao/componentes/ConsentimentoUsoCookies.wp032x653g.razor.js"></page-script>
+        <blazor-focus-on-navigate selector="h1"></blazor-focus-on-navigate>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>jQuery.event.special.touchstart = { setup: function (_, ns, handle) { this.addEventListener("touchstart", handle, { passive: true }); }};</script>
+    
+    <script>        function exibirSecoes(secao, exibir, secoes) {
+            if (secoes == 0) return;
+            $(secao).toggleClass('ativo', exibir);
+            $(secao).children('.secoes').toggle(exibir);
+        }
+        
+            function carregarScript(src, async = true, defer = true, adicionarNoBody = false) {
+                return new Promise((resolve, reject) => {
+                    
+                    // verifica se o script já está carregado
+                    if (document.querySelector(`script[src="${src}"]`)) {
+                        resolve();
+                        return;
+                    }
+
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.async = async;
+                    script.defer = defer;
+                    script.onload = () => resolve();
+                    script.onerror = () => reject(new Error(`Não foi possível carregar o script: ${src}`));
+
+                    // se o parâmetro adicionarNoBody for verdadeiro, adiciona no body, caso contrário, adiciona no head
+                    if (adicionarNoBody) 
+                        document.body.appendChild(script);
+                    else 
+                        document.head.appendChild(script);
+                });
+            }
+
+        function carregarCSS(href, media = 'all') {
+            return new Promise((resolve, reject) => {
+                if (document.querySelector(`link[href="${href}"]`)) {
+                    resolve();
+                    return;
+                }
+                const link = document.createElement('link');
+                link.href = href;
+                link.rel = 'stylesheet';
+                link.media = media;
+                link.onload = () => resolve();
+                link.onerror = () => reject(new Error(`Não foi possível carregar o CSS: ${href}`));
+                document.head.appendChild(link);
+            });
+        }
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" async defer></script>
+
+    <script src="_content/Agripoint.Web.Portais/js/integracoes.w7m11pm77b.js"></script>
+    <script src="_content/Agripoint.Web.Portais/js/portais.ur1bsr92t2.js"></script>
+    <script src="js/portal.uibxy2xzqv.js"></script>
+    <script src="_content/Agripoint.Web.Portais/js/rolagem-navegacao.l3mcq69zev.js"></script>
+    <script src="_framework/blazor.web.9hsif5t8mt.js"></script>
+    
+    <script>        const originalFetch = window.fetch;
+        window.fetch = async (...args) => 
+        {
+            const [url, options] = args;
+
+            let acceptHeader = null;
+            if (options && options.headers instanceof Headers) 
+                acceptHeader = options.headers.get('accept');
+            else if (options && options.headers && typeof options.headers === 'object') 
+                acceptHeader = options.headers['accept'];
+
+            if (acceptHeader && acceptHeader.includes('blazor-enhanced-nav')) 
+            {
+                $('#barraProgresso').show();
+            }
+
+            return await originalFetch(...args);
+        };
+
+        Blazor.addEventListener('enhancedload', () => 
+        {
+            $('#barraProgresso').hide();
+
+            const valorLgd = obterValorCookie('estL');
+            let lgd = false;
+
+            if (valorLgd) {
+                const partesLgd = valorLgd.split('-');
+                lgd = partesLgd[0] === '1';
+            } else {
+                // se o cookie não existir, verifica a variável lgdAut
+                const lgdAut = 0;
+                lgd = lgdAut === 1;
+            }
+
+            if (lgd) {
+                
+            }
+
+            atualizarRolagemNavegacao();
+
+            var posicaoRolagem = $(this).scrollTop();
+            if (posicaoRolagem > 0)
+                ajustarCabecalho(posicaoRolagem);
+
+            executarScriptsInline("conteudoArtigo");
+        });
+    </script>
+
+    <script>window.addEventListener('load', inicializar);</script>
+
+    <script></script>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH3477S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        
+        <script>
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
+                if (!f._fbq) f._fbq = n;
+                n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+                t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+            }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1850937528503585');
+            fbq('track', "PageView");</script>
+        <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=1411196385857761&ev=PageView&noscript=1"></noscript></body></html><!--Blazor-Web-Initializers:Ww0KICAiX2NvbnRlbnQvQWdyaXBvaW50LldlYi5Qb3J0YWlzL0Fncmlwb2ludC5XZWIuUG9ydGFpcy5veDl1bmV2YjQwLmxpYi5tb2R1bGUuanMiDQpd--><!--Blazor-Server-Component-State:CfDJ8MXkOKLSYIFJuB2gV8ZxTEFHUvp72Hyph5dDi0f04iT+cULHXE+4EHo3/ySDvNw6qkoOuz56APJTEMDSNShX4GUDrmBHhHXunYyROADVEvg1UNa+Qzc3vHq+kdoYX0saM1PMryqtjn0cE4dHTruDQ3jaqI94cbq7fe8Wj3JtQ/fmwmzEd3kbTqpw4Gb5le6x1Qi79PL4X+IxHgAwy/j+IJ8UKyIYwKyzdeOmwaJP5RARsq8cdFP1+pH5Zy0nlPF6o6j5NSeLWbzOdh9p+umH1p5Eo2Iv7rqX0Hjx6I90tPfOth5ate/HKjT2P2QihNBun9Bs+P2q4f0H9QJfvFbvHvzwGpU0i+iXcX+bUosvW9oNLSZieaKB/2j3PpTi+uyA3O4W1rl8tDJv4P9NzRM4S8D1g9TtPHTfpCPlMek4VujJFH77uX199tgRIw+5m2fQ07zvJxXKlzuas7B8qrlyWbdv+qYup/NUVzBBJlZlDUOMufc9SccLmoGd+9boYLiu0w/tY8C7IKPOURaAOLCYKtJZwupo/TkHOYD87GSHcX/nAJECo7XkLzBvX8MSLg/HaUvJ2Ca1IkelFsyyMFvx9Q3TKvGOa+ysPbrh0uAfwplC66N041vy/gWLr2/QQSKu+R0WnxGj1r6B+iyQeib6BRkja9bi0NJGi4fyXzC06jP05PKruruSDexBZlf8/TZAsIPx98ZW+ZjKQGjwGVDf2WurCbVXXKBbXGf1CmMRNlswzm/5Gsj8zt5T2OU1C23WI8gtoYxA4jP1pgrmRCxPOOsYrlV0xsKngewC4EnidZVIQn++XE78TUsSjavh8culyK5Ac0eZvJ3JzpsTTexaqgDHXcljmVbpCeQbwLFGydRkDATaAAPNkUkxJA58DzVQHwu3Hs4nfUN+w+LxiBqDiO5fGlnFS6A22aIe64pjD9H4skJUy49Bxnu8raHWuSWf2LR+95b3eZx03WyGPujSlaHfJ/LDYSnOoeQRCH19YZGwG9EplNLMTuApyc1NDYkjzlXDt9sWbsARLjMARwLDyQY4YpN01hQR4GoAKyt4gQ0Cff+6xgteKNfBHzQhh+r2hV/FkE0rDYDNJ54b3rb3v5SYzro+HEsby2tEqYSMkjyyWzEK1uiVCnjLFWB5Euq2FA==-->

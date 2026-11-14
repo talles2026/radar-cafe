@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Início do aviso de consentimento de cookies OneTrust para cooxupe.com.br -->
+  <script type="text/javascript" src="https://cdn.cookielaw.org/consent/52755b17-66bf-487c-a65c-2e7a3f459f29/OtAutoBlock.js"></script>
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="52755b17-66bf-487c-a65c-2e7a3f459f29"></script>
+  <script type="text/javascript">
+    function OptanonWrapper() {}
+  </script>
+  <!-- Final do aviso de consentimento de cookies OneTrust para cooxupe.com.br -->
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Cooxupé - Cooperativa Regional de Cafeicultores em Guaxupé LTDA</title>
+  <link rel="profile" href="https://gmpg.org/xfn/11" />
+  <link rel="pingback" href="https://www.cooxupe.com.br/xmlrpc.php" />
+  <link rel="shortcut icon" href="https://www.cooxupe.com.br/wp-content/uploads/2017/06/favicon.png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans:300,400,700" />
+  <link rel="stylesheet" href="https://www.cooxupe.com.br/wp-content/themes/fl-automator/css/bootstrap.min.css" />
+  <!--[if lt IE 9]>
+    <script src="https://www.cooxupe.com.br/wp-content/themes/fl-automator/js/html5shiv.js"></script>
+    <script src="https://www.cooxupe.com.br/wp-content/themes/fl-automator/js/respond.min.js"></script>
+<![endif]-->
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v23.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="Com mais de 18 mil cooperados, a Cooxupé recebe o café produzido em mais de 300 municípios de sua área de ação, localizada no Sul de Minas, Cerrado Mineiro, Matas de Minas e Média Mogiana do Estado de São Paulo." />
+	<link rel="canonical" href="https://www.cooxupe.com.br/" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Cooxupé - Cooperativa Regional de Cafeicultores em Guaxupé LTDA" />
+	<meta property="og:description" content="Com mais de 18 mil cooperados, a Cooxupé recebe o café produzido em mais de 300 municípios de sua área de ação, localizada no Sul de Minas, Cerrado Mineiro, Matas de Minas e Média Mogiana do Estado de São Paulo." />
+	<meta property="og:url" content="https://www.cooxupe.com.br/" />
+	<meta property="og:site_name" content="Cooxupé" />
+	<meta property="article:modified_time" content="2026-11-05T18:46:37+00:00" />
+	<meta property="og:image" content="https://www.cooxupe.com.br/wp-content/uploads/2017/05/facebook.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Cooxupé - Cooperativa Regional de Cafeicultores em Guaxupé LTDA" />
+	<meta name="twitter:description" content="Com mais de 18 mil cooperados, a Cooxupé recebe o café produzido em mais de 300 municípios de sua área de ação, localizada no Sul de Minas, Cerrado Mineiro, Matas de Minas e Média Mogiana do Estado de São Paulo." />
+	<meta name="twitter:image" content="https://www.cooxupe.com.br/wp-content/uploads/2017/05/twitter.png" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.cooxupe.com.br/","url":"https://www.cooxupe.com.br/","name":"Cooxupé - Cooperativa Regional de Cafeicultores em Guaxupé LTDA","isPartOf":{"@id":"https://www.cooxupe.com.br/#website"},"primaryImageOfPage":{"@id":"https://www.cooxupe.com.br/#primaryimage"},"image":{"@id":"https://www.cooxupe.com.br/#primaryimage"},"thumbnailUrl":"https://www.cooxupe.com.br/wp-content/uploads/2017/05/facebook.png","datePublished":"2017-05-31T20:52:27+00:00","dateModified":"2026-11-05T18:46:37+00:00","description":"Com mais de 18 mil cooperados, a Cooxupé recebe o café produzido em mais de 300 municípios de sua área de ação, localizada no Sul de Minas, Cerrado Mineiro, Matas de Minas e Média Mogiana do Estado de São Paulo.","breadcrumb":{"@id":"https://www.cooxupe.com.br/#breadcrumb"},"inLanguage":"pt-BR","potentialAction":[{"@type":"ReadAction","target":["https://www.cooxupe.com.br/"]}]},{"@type":"ImageObject","inLanguage":"pt-BR","@id":"https://www.cooxupe.com.br/#primaryimage","url":"https://www.cooxupe.com.br/wp-content/uploads/2017/05/facebook.png","contentUrl":"https://www.cooxupe.com.br/wp-content/uploads/2017/05/facebook.png","width":1200,"height":630},{"@type":"BreadcrumbList","@id":"https://www.cooxupe.com.br/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Início"}]},{"@type":"WebSite","@id":"https://www.cooxupe.com.br/#website","url":"https://www.cooxupe.com.br/","name":"Cooxupé","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.cooxupe.com.br/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"pt-BR"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.cooxupe.com.br' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel="alternate" type="application/rss+xml" title="Feed para Cooxupé &raquo;" href="https://www.cooxupe.com.br/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Cooxupé &raquo;" href="https://www.cooxupe.com.br/comments/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.cooxupe.com.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=17db448be9eda8083d79db066561a3a5"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel='stylesheet' id='wp-block-library-group-css' href='https://www.cooxupe.com.br/wp-content/plugins/bwp-minify/min/?f=wp-includes/css/dist/block-library/style.min.css,wp-content/uploads/bb-plugin/cache/5-layout.css,wp-content/plugins/captcha/css/front_end_style.css,wp-content/plugins/captcha/css/desktop_style.css,wp-content/plugins/contact-form-7/includes/css/styles.css,wp-content/plugins/search-filter/style.css,wp-content/themes/wm-automator/style.css,wp-content/themes/wm-automator/css/owl.carousel.css,wp-content/themes/wm-automator/css/owl.theme.default.css,wp-content/plugins/popup-maker/assets/css/pum-site.min.css' type='text/css' media='all' />
+<style id='popup-maker-site-inline-css' type='text/css'>
+/* Popup Google Fonts */
+@import url('//fonts.googleapis.com/css?family=Montserrat:100');
+
+/* Popup Theme 4257: Light Box */
+.pum-theme-4257, .pum-theme-lightbox { background-color: rgba( 0, 0, 0, 0.60 ) } 
+.pum-theme-4257 .pum-container, .pum-theme-lightbox .pum-container { padding: 1px; border-radius: 1px; border: 2px none #000000; box-shadow: 0px 0px 30px 0px rgba( 2, 2, 2, 0.00 ); background-color: rgba( 255, 255, 255, 0.00 ) } 
+.pum-theme-4257 .pum-title, .pum-theme-lightbox .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 100; font-size: 32px; line-height: 36px } 
+.pum-theme-4257 .pum-content, .pum-theme-lightbox .pum-content { color: #000000; font-family: inherit; font-weight: 100 } 
+.pum-theme-4257 .pum-content + .pum-close, .pum-theme-lightbox .pum-content + .pum-close { position: absolute; height: 26px; width: 26px; left: auto; right: 60px; bottom: auto; top: 20px; padding: 0px; color: #ffffff; font-family: Arial; font-weight: 100; font-size: 18px; line-height: 24px; border: 2px solid #ffffff; border-radius: 26px; box-shadow: 0px 0px 15px 1px rgba( 2, 2, 2, 0.75 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 0, 0, 1.00 ) } 
+
+/* Popup Theme 4256: Default Theme */
+.pum-theme-4256, .pum-theme-default-theme { background-color: rgba( 255, 255, 255, 1.00 ) } 
+.pum-theme-4256 .pum-container, .pum-theme-default-theme .pum-container { padding: 18px; border-radius: 0px; border: 1px none #000000; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.23 ); background-color: rgba( 249, 249, 249, 1.00 ) } 
+.pum-theme-4256 .pum-title, .pum-theme-default-theme .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 400; font-size: 32px; font-style: normal; line-height: 36px } 
+.pum-theme-4256 .pum-content, .pum-theme-default-theme .pum-content { color: #8c8c8c; font-family: inherit; font-weight: 400; font-style: inherit } 
+.pum-theme-4256 .pum-content + .pum-close, .pum-theme-default-theme .pum-content + .pum-close { position: absolute; height: auto; width: auto; left: auto; right: 0px; bottom: auto; top: 0px; padding: 8px; color: #ffffff; font-family: inherit; font-weight: 400; font-size: 12px; font-style: inherit; line-height: 36px; border: 1px none #ffffff; border-radius: 0px; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 183, 205, 1.00 ) } 
+
+/* Popup Theme 4258: Enterprise Blue */
+.pum-theme-4258, .pum-theme-enterprise-blue { background-color: rgba( 0, 0, 0, 0.70 ) } 
+.pum-theme-4258 .pum-container, .pum-theme-enterprise-blue .pum-container { padding: 28px; border-radius: 5px; border: 1px none #000000; box-shadow: 0px 10px 25px 4px rgba( 2, 2, 2, 0.50 ); background-color: rgba( 255, 255, 255, 1.00 ) } 
+.pum-theme-4258 .pum-title, .pum-theme-enterprise-blue .pum-title { color: #315b7c; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 100; font-size: 34px; line-height: 36px } 
+.pum-theme-4258 .pum-content, .pum-theme-enterprise-blue .pum-content { color: #2d2d2d; font-family: inherit; font-weight: 100 } 
+.pum-theme-4258 .pum-content + .pum-close, .pum-theme-enterprise-blue .pum-content + .pum-close { position: absolute; height: 28px; width: 28px; left: auto; right: 8px; bottom: auto; top: 8px; padding: 4px; color: #ffffff; font-family: Times New Roman; font-weight: 100; font-size: 20px; line-height: 20px; border: 1px none #ffffff; border-radius: 42px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 49, 91, 124, 1.00 ) } 
+
+/* Popup Theme 4259: Hello Box */
+.pum-theme-4259, .pum-theme-hello-box { background-color: rgba( 0, 0, 0, 0.75 ) } 
+.pum-theme-4259 .pum-container, .pum-theme-hello-box .pum-container { padding: 30px; border-radius: 80px; border: 14px solid #81d742; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.00 ); background-color: rgba( 255, 255, 255, 1.00 ) } 
+.pum-theme-4259 .pum-title, .pum-theme-hello-box .pum-title { color: #2d2d2d; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: Montserrat; font-weight: 100; font-size: 32px; line-height: 36px } 
+.pum-theme-4259 .pum-content, .pum-theme-hello-box .pum-content { color: #2d2d2d; font-family: inherit; font-weight: 100 } 
+.pum-theme-4259 .pum-content + .pum-close, .pum-theme-hello-box .pum-content + .pum-close { position: absolute; height: auto; width: auto; left: auto; right: -30px; bottom: auto; top: -30px; padding: 0px; color: #2d2d2d; font-family: Times New Roman; font-weight: 100; font-size: 32px; line-height: 28px; border: 1px none #ffffff; border-radius: 28px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 255, 255, 255, 1.00 ) } 
+
+/* Popup Theme 4260: Cutting Edge */
+.pum-theme-4260, .pum-theme-cutting-edge { background-color: rgba( 0, 0, 0, 0.50 ) } 
+.pum-theme-4260 .pum-container, .pum-theme-cutting-edge .pum-container { padding: 18px; border-radius: 0px; border: 1px none #000000; box-shadow: 0px 10px 25px 0px rgba( 2, 2, 2, 0.50 ); background-color: rgba( 30, 115, 190, 1.00 ) } 
+.pum-theme-4260 .pum-title, .pum-theme-cutting-edge .pum-title { color: #ffffff; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: Sans-Serif; font-weight: 100; font-size: 26px; line-height: 28px } 
+.pum-theme-4260 .pum-content, .pum-theme-cutting-edge .pum-content { color: #ffffff; font-family: inherit; font-weight: 100 } 
+.pum-theme-4260 .pum-content + .pum-close, .pum-theme-cutting-edge .pum-content + .pum-close { position: absolute; height: 24px; width: 24px; left: auto; right: 0px; bottom: auto; top: 0px; padding: 0px; color: #1e73be; font-family: Times New Roman; font-weight: 100; font-size: 32px; line-height: 24px; border: 1px none #ffffff; border-radius: 0px; box-shadow: -1px 1px 1px 0px rgba( 2, 2, 2, 0.10 ); text-shadow: -1px 1px 1px rgba( 0, 0, 0, 0.10 ); background-color: rgba( 238, 238, 34, 1.00 ) } 
+
+/* Popup Theme 4261: Framed Border */
+.pum-theme-4261, .pum-theme-framed-border { background-color: rgba( 255, 255, 255, 0.50 ) } 
+.pum-theme-4261 .pum-container, .pum-theme-framed-border .pum-container { padding: 18px; border-radius: 0px; border: 20px outset #dd3333; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.97 ) inset; background-color: rgba( 255, 251, 239, 1.00 ) } 
+.pum-theme-4261 .pum-title, .pum-theme-framed-border .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 100; font-size: 32px; line-height: 36px } 
+.pum-theme-4261 .pum-content, .pum-theme-framed-border .pum-content { color: #2d2d2d; font-family: inherit; font-weight: 100 } 
+.pum-theme-4261 .pum-content + .pum-close, .pum-theme-framed-border .pum-content + .pum-close { position: absolute; height: 20px; width: 20px; left: auto; right: -20px; bottom: auto; top: -20px; padding: 0px; color: #ffffff; font-family: Tahoma; font-weight: 700; font-size: 16px; line-height: 18px; border: 1px none #ffffff; border-radius: 0px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 0, 0, 0.55 ) } 
+
+/* Popup Theme 4262: Floating Bar - Soft Blue */
+.pum-theme-4262, .pum-theme-floating-bar { background-color: rgba( 255, 255, 255, 0.00 ) } 
+.pum-theme-4262 .pum-container, .pum-theme-floating-bar .pum-container { padding: 8px; border-radius: 0px; border: 1px none #000000; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.23 ); background-color: rgba( 238, 246, 252, 1.00 ) } 
+.pum-theme-4262 .pum-title, .pum-theme-floating-bar .pum-title { color: #505050; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 400; font-size: 32px; line-height: 36px } 
+.pum-theme-4262 .pum-content, .pum-theme-floating-bar .pum-content { color: #505050; font-family: inherit; font-weight: 400 } 
+.pum-theme-4262 .pum-content + .pum-close, .pum-theme-floating-bar .pum-content + .pum-close { position: absolute; height: 18px; width: 18px; left: auto; right: 5px; bottom: auto; top: 50%; padding: 0px; color: #505050; font-family: Sans-Serif; font-weight: 700; font-size: 15px; line-height: 18px; border: 1px solid #505050; border-radius: 15px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.00 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.00 ); background-color: rgba( 255, 255, 255, 0.00 ); transform: translate(0, -50%) } 
+
+/* Popup Theme 4263: Content Only - For use with page builders or block editor */
+.pum-theme-4263, .pum-theme-content-only { background-color: rgba( 0, 0, 0, 0.70 ) } 
+.pum-theme-4263 .pum-container, .pum-theme-content-only .pum-container { padding: 0px; border-radius: 0px; border: 1px none #000000; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.00 ) } 
+.pum-theme-4263 .pum-title, .pum-theme-content-only .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 400; font-size: 32px; line-height: 36px } 
+.pum-theme-4263 .pum-content, .pum-theme-content-only .pum-content { color: #8c8c8c; font-family: inherit; font-weight: 400 } 
+.pum-theme-4263 .pum-content + .pum-close, .pum-theme-content-only .pum-content + .pum-close { position: absolute; height: 18px; width: 18px; left: auto; right: 7px; bottom: auto; top: 7px; padding: 0px; color: #000000; font-family: inherit; font-weight: 700; font-size: 20px; line-height: 20px; border: 1px none #ffffff; border-radius: 15px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.00 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.00 ); background-color: rgba( 255, 255, 255, 0.00 ) } 
+
+
+</style>
+<link rel='stylesheet' id='dashicons-css' href='https://www.cooxupe.com.br/wp-includes/css/dashicons.min.css?ver=17db448be9eda8083d79db066561a3a5' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=1.10.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='mono-social-icons-group-css' href='https://www.cooxupe.com.br/wp-content/plugins/bwp-minify/min/?f=wp-content/themes/fl-automator/css/mono-social-icons.css,wp-content/plugins/bb-plugin/css/jquery.magnificpopup.css' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.cooxupe.com.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.cooxupe.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.cooxupe.com.br/wp-json/" /><link rel="alternate" type="application/json" href="https://www.cooxupe.com.br/wp-json/wp/v2/pages/5" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.cooxupe.com.br/xmlrpc.php?rsd" />
+<link rel="alternate" type="application/json+oembed" href="https://www.cooxupe.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cooxupe.com.br%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.cooxupe.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cooxupe.com.br%2F&#038;format=xml" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="stylesheet" href="https://www.cooxupe.com.br/wp-content/uploads/fl-automator/skin-697218025c9e2.css" />
+<style>.lista-revista .col-xs-6.col-sm-4.col-lg-3 {
+min-height: 570px;
+}</style>
+<script>jQuery(document).ready(function($) {
+    $("#menu-item-1092 a").attr("target","blank");
+    $("#menu-item-1093 a").attr("target","blank");
+    $("#menu-item-1094 a").attr("target","blank");
+    $("#menu-item-1095 a").attr("target","blank");
+    $("#menu-item-1096 a").attr("target","blank");
+    $("#menu-item-1097 a").attr("target","blank");
+    $("#menu-item-1106 a").attr("target","blank");
+    $("#menu-item-1105 a").attr("target","blank");
+$("#menu-item-591 a").attr("target","blank");
+$("#menu-item-557 a").attr("target","blank");
+$("#menu-item-1141 a").attr("target","blank");
+$("#menu-item-1142 a").attr("target","blank");
+$("#menu-item-1145 a").attr("target","blank");
+$("#menu-item-1146 a").attr("target","blank");
+});</script>
+<meta name="google-site-verification" content="pvG_n72B3EEoOyOqgAMHsW9kDVHurspbX5pyq_hnVmQ" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEG08GMC89"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TEG08GMC89');
+</script>
+</head>
+
+<body data-rsssl=1 class="home page-template-default page page-id-5 fl-builder fl-full-width" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+    <div class="fl-page">
+    <div class="fl-page-bar">
+    <div class="fl-page-bar-container container">
+        <div class="fl-page-bar-row row">
+            <div class="col-md-6 col-sm-6 text-left clearfix"><div class="fl-page-bar-text fl-page-bar-text-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Cooperativa Regional de Cafeicultores em Guaxupé LTDA <i class="fa fa-phone" aria-hidden="true"></i> Fone: (35) 3696-1200 </div></div>            <div class="col-md-6 col-sm-6 text-right clearfix"><div class="fl-page-bar-text fl-page-bar-text-2"><b><a href="https://sismet.cooxupe.com.br:9000/" target="_blank" style="color:#fff; font-size: 16px;">Meteorologia</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="https://ouvidoriacooxupe.com.br/" target="_blank" style="color:#fff; font-size: 16px;">Ouvidoria</a>  &nbsp&nbsp&nbsp 
+<a href="https://www.cooxupe.com.br/contato/" target="_blank" style="color:#fff; font-size: 16px;"">Contato</a></div></div>        </div>
+    </div>
+</div><!-- .fl-page-bar --><header class="fl-page-header fl-page-nav-right fl-page-header-primary" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+    <div class="fl-page-header-wrap">
+        <div class="fl-page-header-container container">
+            <div class="fl-page-header-row row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="fl-page-header-logo" itemscope="itemscope" itemtype="http://schema.org/Organization">
+                        <a href="https://www.cooxupe.com.br" itemprop="url"><img class="fl-logo-img" itemprop="logo" src="https://www.cooxupe.com.br/wp-content/uploads/2018/08/logo-cooxupe.png" data-retina="" alt="Cooxupé" /><meta itemprop="name" content="Cooxupé" /></a>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <div class="fl-page-nav-wrap">
+                        <nav class="fl-page-nav fl-nav navbar navbar-default" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".fl-page-nav-collapse">
+								<span>Menu</span>
+                            </button>
+                            <div class="fl-page-nav-collapse collapse navbar-collapse">
+                                <ul id="menu-menu" class="nav navbar-nav navbar-right menu"><li id="menu-item-152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-152"><a href="#">A Cooxupé</a>
+<ul class="sub-menu">
+	<li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153"><a href="https://www.cooxupe.com.br/quem-somos/">Quem Somos</a></li>
+	<li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a href="https://www.cooxupe.com.br/unidades/">Unidades</a></li>
+	<li id="menu-item-2134" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2134"><a target="_blank" rel="noopener" href="https://www.cooxupe.com.br/wp-content/uploads/2019/02/Brand_Cooxupe.pdf">Brand Book</a></li>
+	<li id="menu-item-155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a href="https://www.cooxupe.com.br/certificacoes/">Certificações</a></li>
+	<li id="menu-item-5619" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5619"><a href="#">Documentos Mercado de Capitais</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5840" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5840"><a href="#">Nota Comercial</a>
+		<ul class="sub-menu">
+			<li id="menu-item-5625" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5625"><a target="_blank" rel="noopener" href="https://www.cooxupe.com.br/wp-content/uploads/2025/09/NC-Cooxupe-Anuncio-de-Inicio-25.09-1.pdf">Anúncio de Início</a></li>
+			<li id="menu-item-5624" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5624"><a target="_blank" rel="noopener" href="https://www.cooxupe.com.br/wp-content/uploads/2025/09/NC-Cooxupe-Termo-de-Emissao-Sign-off-19.09-1.pdf">Termo da 1ª (Primeira) Emissão de Notas</a></li>
+			<li id="menu-item-5627" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5627"><a target="_blank" rel="noopener" href="https://www.cooxupe.com.br/wp-content/uploads/2025/09/NC-Cooxupe-Aviso-ao-Mercado-22.09-1.pdf">Aviso ao Mercado</a></li>
+			<li id="menu-item-5635" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5635"><a target="_blank" rel="noopener" href="https://www.cooxupe.com.br/wp-content/uploads/2025/09/NC-NC-Cooxupe-Anuncio-de-Encerramento-29.09.pdf">Anúncio de Encerramento</a></li>
+		</ul>
+</li>
+		<li id="menu-item-5841" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5841"><a href="#">CPR Financeira Pública</a>
+		<ul class="sub-menu">
+			<li id="menu-item-5837" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5837"><a target="_blank" rel="noopener" href="https://www.cooxupe.com.br/wp-content/uploads/2026/09/Oferta-CPR-F-Cooxupe-Termo-de-Emissao.pdf">Oferta CPR-F Cooxupé &#8211; Termo de Emissão</a></li>
+			<li id="menu-item-5839" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5839"><a target="_blank" rel="noopener" href="https://www.cooxupe.com.br/wp-content/uploads/2026/09/Oferta-CPR-F-Cooxupe-Primeiro-Aditamento-ao-Termo-de-Emissao-1.pdf">Oferta CPR-F Cooxupé &#8211; Primeiro Aditamento ao Termo de Emissão</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><a href="https://www.cooxupe.com.br/estrutura-organizacional/">Estrutura Organizacional</a></li>
+	<li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href="https://www.cooxupe.com.br/politica-cooxupe/">Missão,  Visão, Valores, Política e Objetivos Cooxupé</a></li>
+	<li id="menu-item-307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307"><a href="https://www.cooxupe.com.br/relatorios-de-gestao-e-demonstracoes-financeiras/">Relatório de Sustentabilidade e Demonstrações Financeiras Cooxupé</a></li>
+	<li id="menu-item-5227" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5227"><a href="https://www.cooxupe.com.br/protocolo-geracoes-2/">Protocolo Gerações</a></li>
+	<li id="menu-item-5349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5349"><a href="https://www.cooxupe.com.br/relatorio-de-transparencia-salarial/">Relatório de Transparência Salarial</a></li>
+</ul>
+</li>
+<li id="menu-item-5021" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5021"><a href="#">Governança e Transparência</a>
+<ul class="sub-menu">
+	<li id="menu-item-5022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5022"><a href="https://www.cooxupe.com.br/codigo-de-conduta-etica/">Código de Conduta Ética</a></li>
+	<li id="menu-item-5419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5419"><a href="https://www.cooxupe.com.br/diretrizes-de-seguranca-da-informacao-para-fornecedores/">Diretrizes de Segurança da Informação para Fornecedores</a></li>
+	<li id="menu-item-5362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5362"><a href="https://www.cooxupe.com.br/politica-de-relacionamento-com-a-administracao-publica/">Política de Relacionamento com a Administração Pública</a></li>
+	<li id="menu-item-5452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5452"><a href="#">Estatuto Social</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5031" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5031"><a target="_blank" rel="noopener" href="https://www.cooxupe.com.br/wp-content/uploads/2026/03/Estatuto-Social.pdf">Português</a></li>
+		<li id="menu-item-5454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5454"><a target="_blank" rel="noopener" href="https://www.cooxupe.com.br/wp-content/uploads/2026/03/EN_estatuto-social-27.11.2025.pdf">Inglês</a></li>
+	</ul>
+</li>
+	<li id="menu-item-5315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5315"><a href="https://www.cooxupe.com.br/manual-anticorrupcao/">Manual Anticorrupção</a></li>
+	<li id="menu-item-5027" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5027"><a href="https://www.cooxupe.com.br/politicas-cooxupe-lgpd/">Políticas de Privacidade</a></li>
+	<li id="menu-item-5032" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5032"><a href="https://www.cooxupe.com.br/politica-de-sustentabilidade-2/">Política de Sustentabilidade</a></li>
+	<li id="menu-item-5025" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5025"><a href="https://www.cooxupe.com.br/programa-de-integridade/">Programa de Integridade</a></li>
+	<li id="menu-item-5517" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5517"><a href="https://www.cooxupe.com.br/manual-de-integracao-dos-cooperados/">Manual de Integração dos Cooperados</a></li>
+</ul>
+</li>
+<li id="menu-item-366" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-366"><a href="#">Serviços</a>
+<ul class="sub-menu">
+	<li id="menu-item-367" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367"><a href="https://www.cooxupe.com.br/cafeicultura/">Cafeicultura</a></li>
+	<li id="menu-item-598" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-598"><a href="https://www.cooxupe.com.br/cotacoes/">Cotações</a></li>
+	<li id="menu-item-2715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2715"><a target="_blank" rel="noopener" href="https://psc.cooxupe.com.br/historical-price">Preço Histórico do Café</a></li>
+	<li id="menu-item-599" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-599"><a href="https://www.cooxupe.com.br/produtos/">Nossos Produtos</a></li>
+</ul>
+</li>
+<li id="menu-item-469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-469"><a href="#">Notícias</a>
+<ul class="sub-menu">
+	<li id="menu-item-5391" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5391"><a href="https://www.cooxupe.com.br/cartilha-praticas-trabalhistas-na-cafeicultura/">Cartilha Práticas Trabalhistas na Cafeicultura</a></li>
+	<li id="menu-item-5378" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5378"><a target="_blank" rel="noopener" href="https://www.cooxupe.com.br/wp-content/uploads/2026/05/Cartilha-Combate-ao-Trabalho-Infantil-2026_AJUSTE_GRASS_web-1.pdf">Trabalho infantil não é brinquedo</a></li>
+	<li id="menu-item-3305" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3305"><a href="https://www.cooxupe.com.br/editais-de-convocacao/">Editais de Convocação</a></li>
+	<li id="menu-item-470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-470"><a href="https://www.cooxupe.com.br/folharural/">Folha Rural</a></li>
+	<li id="menu-item-473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-473"><a href="https://www.cooxupe.com.br/manual-boas-praticas-agricolas/">Manual Boas Práticas Agrícolas</a></li>
+</ul>
+</li>
+<li id="menu-item-1090" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1090"><a href="#">Websites</a>
+<ul class="sub-menu">
+	<li id="menu-item-1092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1092"><a href="https://portalweb.cooxupe.com.br:9080/portal/index.jsp">Portal do Cooperado</a></li>
+	<li id="menu-item-4829" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4829"><a target="_blank" rel="noopener" href="https://ebsprd-web.cooxupe.com.br/">Portal de Cotação</a></li>
+	<li id="menu-item-1093" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1093"><a href="https://psc.cooxupe.com.br/">Café Online</a></li>
+	<li id="menu-item-1094" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1094"><a href="https://www.cooxupe.com.br/exportacao/">Exportação</a></li>
+	<li id="menu-item-5583" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5583"><a target="_blank" rel="noopener" href="https://esgcooxupe.com.br/">ESG Cooxupé</a></li>
+	<li id="menu-item-1095" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1095"><a href="http://www.cafescooxupe.com.br/">Torrefação</a></li>
+	<li id="menu-item-1096" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1096"><a href="http://www.smccafe.com.br/">SMC</a></li>
+	<li id="menu-item-1097" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1097"><a href="https://www.cooxupe.com.br/femagri/">Femagri</a></li>
+	<li id="menu-item-1106" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1106"><a href="https://www.cooxupe.com.br/feiracerrado/">Feira do Cerrado</a></li>
+	<li id="menu-item-5796" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5796"><a href="https://www.cooxupe.com.br/feiramatasdeminas/">Feira Matas de Minas</a></li>
+	<li id="menu-item-1099" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1099"><a href="https://www.cooxupe.com.br/oleodecafe/">Óleo de Café Verde</a></li>
+</ul>
+</li>
+<li id="menu-item-4144" class="ajustaTablet menu-item menu-item-type-custom menu-item-object-custom menu-item-4144"><a href="https://www.cooxupe.com.br/lgpd">LGPD</a></li>
+<li id="menu-item-557" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-557"><a target="_blank" rel="noopener">Trabalhe Conosco</a>
+<ul class="sub-menu">
+	<li id="menu-item-5018" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5018"><a href="https://cooxupe.portaldetalentos.senior.com.br/">Vagas</a></li>
+	<li id="menu-item-5643" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5643"><a href="https://platform.senior.com.br/senior-x/#/Gest%C3%A3o%20de%20Pessoas%20%7C%20HCM/2/43c072c8-de8c-4c4c-81b8-5d383daa8dcd%2FGest%C3%A3o%20de%20recrutamento%20e%20sele%C3%A7%C3%A3o%2FOportunidades%20internas%2FVagas%20internas?category=frame&#038;link=https:%2F%2Fplatform.senior.com.br%2Fhcmrs%2Fhcm%2Frecruitment%2F%23!%2Finternal-vacancies%2Flist&#038;helpUrl=https:%2F%2Fdocumentacao.senior.com.br%2Fseniorxplatform%2Fmanual-do-usuario%2Fhcm%2F%23gestao-recrutamento-selecao%2Frecrutamento-interno.htm%23detalhes-vagas-internas&#038;helpContext=&#038;r=2">Vagas Internas</a></li>
+</ul>
+</li>
+<li id="menu-item-3546" class="escondeDesk menu-item menu-item-type-custom menu-item-object-custom menu-item-3546"><a href="https://cafeonline.cooxupe.com.br/">Café Online</a></li>
+<li id="menu-item-3547" class="escondeDesk menu-item menu-item-type-custom menu-item-object-custom menu-item-3547"><a href="https://portalweb.cooxupe.com.br:9080/portal/index.jsp">Portal do Cooperado</a></li>
+<li id="menu-item-3548" class="escondeDesk menu-item menu-item-type-custom menu-item-object-custom menu-item-3548"><a href="https://loja.cafescooxupe.com.br/b2c/loja/Pagina.do?action=init&#038;idLoja=1677">Torrefação Loja Online</a></li>
+<li id="menu-item-3549" class="escondeDesk menu-item menu-item-type-custom menu-item-object-custom menu-item-3549"><a href="http://portalweb.cooxupe.com.br:8080/portal/listaitens.jsp">Lista de Produtos das Lojas Cooxupé</a></li>
+</ul>                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header><!-- .fl-page-header -->    <div class="pesquisa">
+      <div class="container">
+        <div class="row text-center" style="display: flex; justify-content: center;">
+          <!-- <div class="col-md-12 col-sm-12 bloco-pesquisa col-xs-12 text-center">
+            Pesquise no site
+            
+				<form action="" method="post" class="searchandfilter">
+					<div><input type="hidden" name="ofpost_types[]" value="noticia" /><input type="hidden" name="ofpost_types[]" value=" evento" /><ul><li><input type="text" name="ofsearch" placeholder="Notícias e Eventos" value=""></li><li><input type="hidden" name="ofsubmitted" value="1"><input type="submit" value="Ok"></li></ul></div></form>          </div> -->
+          <!--<div class="col-md-3 col-sm-6 cafe-online col-xs-12">
+            <img src="https://www.cooxupe.com.br/wp-content/uploads/2017/06/cafe.png" class="cafe">
+            <a href="https://psc.cooxupe.com.br/" target="blank">Café <b>Online</b>/Campanhas</a>
+          </div> -->
+          <div class="col-md-3 col-sm-6 torrefacao-online col-xs-12">
+            <img src="https://www.cooxupe.com.br/wp-content/uploads/2018/01/ico-loja.png" class="portal">
+            <a href="https://www.cafescooxupe.com.br" target="blank">Torrefação <b>Loja Online</b></a>
+          </div>
+          <div class="col-md-3 col-sm-6 portal-cooperado col-xs-12">
+            <img src="https://www.cooxupe.com.br/wp-content/uploads/2017/06/icon-contato.png" class="portal">
+            <a href="https://portalcooperado.cooxupe.com.br/initial?utm_source=site_institucional&utm_medium=menu_principal&utm_campaign=lancamento_portal_web_2026" target="blank">Portal do <b>Cooperado</b></a>
+          </div>
+          <div class="col-md-3 col-sm-6 produtos-cooxupe col-xs-12">
+            <img src="https://www.cooxupe.com.br/wp-content/uploads/2018/09/icone_produtos.png" class="portal">
+            <a href="http://portalweb.cooxupe.com.br:8080/portal/listaitens.jsp" target="blank">Lista de Produtos das Lojas <b>Cooxupé</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fl-page-content" itemprop="mainContentOfPage">
+
+      
+<div class="fl-content-full container">
+    <div class="row">
+        <div class="fl-content col-md-12">
+                            <article class="fl-post" id="fl-post-5" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+
+	<header class="fl-post-header">
+		<h1 class="fl-post-title" itemprop="headline">Home</h1>
+		    </header><!-- .fl-post-header -->
+
+    <div class="fl-post-content clearfix" itemprop="text">
+        <div class="fl-builder-content fl-builder-content-5 fl-builder-content-primary fl-builder-global-templates-locked" data-post-id="5"><div class="fl-row fl-row-full-width fl-row-bg-none fl-node-620185886f3d0 banner-home-owl" data-node="620185886f3d0">
+	<div class="fl-row-content-wrap">
+				<div class="fl-row-content fl-row-full-width fl-node-content">
+		
+<div class="fl-col-group fl-node-62018588775ed" data-node="62018588775ed">
+			<div class="fl-col fl-node-6201858877627" data-node="6201858877627">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-html fl-node-6201858b79bbb" data-node="6201858b79bbb">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-html">
+	    <div class="owl-carousel owl-theme " >
+                            <div class="item item-carrossel">
+                    <a href="https://www.cooxupe.com.br/conquista-do-funrural/" target="">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2024/04/BANNERS-SITE-FUNRURAL_1200x500.jpg.jpeg">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2024/04/BANNERS-SITE-FUNRURAL_1920x500.jpg.jpeg" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="https://portalcooperado.cooxupe.com.br/?utm_source=site_institucional&utm_medium=banner_home&utm_campaign=lancamento_portal_web_2026" target="Array">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2025/02/mobile-banner-novo-portal.jpg">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2025/02/banner-site-institucional.jpg.jpeg" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="javascript:void(0)" target="">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2025/01/Banner-site-protecao-e-seguranca-mobile.jpg">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2025/01/Banner-site-protecao-e-seguranca.jpg" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="javascript:void(0)" target="">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2024/05/prospera-mobile.jpg">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2024/05/Site_Prospera.jpg" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="javascript:void(0)" target="">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2024/04/BANNER-SITE-COM-MATURACAO-1.png">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2024/04/kafe-desk.png" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="javascript:void(0)" target="">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2024/03/KAFE-BANNER-DE-SITE-COOXUPE-FASES-.-1200px-x-500px.jpg">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2024/03/KAFE-BANNER-DE-SITE-COOXUPE-FASES.jpg" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="javascript:void(0)" target="">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2024/01/1767904225_5be4b5_1200x500px__cooxup_2026.jpg">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2024/01/1767904229_9af727_1912x500px__cooxup_2026.jpg" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="javascript:void(0)" target="">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2023/09/BANNER_HEADER_MOBILE_COOXUPE_MICROLOTES_PQ_1200x500px.jpg">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2023/09/BANNER_HEADER_COOXUPE_MICROLOTES_PQ_1912x500px.jpg" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="javascript:void(0)" target="">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2023/09/BANNER_HEADER_COOXUPE_EVOLUTTO_1200x500px.jpg">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2023/09/BANNER_HEADER_COOXUPE_EVOLUTTO_1912x500px.jpg" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="javascript:void(0)" target="">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2024/04/BANNER-SITE-PROSPERA-FLUID-1.png">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2024/04/prospera-desk.png" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="https://www.cooxupe.com.br/wp-content/uploads/2023/09/Funrural-Site_compressed.pdf" target="Array">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2023/09/result_BANNERS-SITE-FUNRURAL_1920x500.jpg">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2023/09/BANNERS-SITE-FUNRURAL_1920x500.jpg" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="https://esgcooxupe.com.br/" target="Array">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2023/06/banneresg1200x500-1.jpg">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2023/06/banneresg1912x500-1.jpg" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="javascript:void(0)" target="">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2023/01/result_Pleno_desk_v3.png">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2023/01/Pleno_desk_v3.png" alt="">
+                        </picture>
+                    </a>
+                </div>
+                            <div class="item item-carrossel">
+                    <a href="https://cooxupe.portaldetalentos.senior.com.br/" target="Array">
+                        <picture>
+                            <source media="(max-width: 767.8px)" srcset="https://www.cooxupe.com.br/wp-content/uploads/2022/03/banner-mobile-1.jpg">
+                            <img decoding="async" src="https://www.cooxupe.com.br/wp-content/uploads/2022/03/Vagas.png" alt="">
+                        </picture>
+                    </a>
+                </div>
+                </div>
+    <script>
+        jQuery(document).ready(function($) {
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                nav:true,
+                autoplay:true,
+                autoplayTimeout: 4000,
+                navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+                dots: false,
+                margin: 0,
+                items:1,
+            })
+        });
+    </script>
+    <style>
+    .banner-home-owl{
+        width: 100% !important;
+        margin: 0px !important;
+        overflow: hidden !important;
+    }
+    .banner-home-owl .fl-row-content-wrap{
+        padding: 0 !important;
+    }
+    .banner-home-owl .fl-module-content{
+        margin: 0 0 -15px 0 !important;
+    }
+
+
+    .carousel-wrapper {
+    position: relative;
+    text-align: center;
+    font-family: sans-serif;
+    }
+    .owl-carousel .owl-nav {
+    overflow: hidden;
+    height: 0px;
+    }
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+    background: #5110e9;
+    }
+
+    .owl-carousel .item {
+    text-align: center;
+    }
+    .owl-carousel .nav-button {
+    height: 50px;
+    width: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 40% !important;
+    }
+    @media(max-width: 768px){
+        .owl-carousel .nav-button {
+            top: 30% !important;
+        }
+    }
+    .owl-carousel .owl-prev.disabled,
+    .owl-carousel .owl-next.disabled {
+    pointer-events: none;
+    opacity: 0.25;
+    }
+    .owl-carousel .owl-prev {
+    left: 0px;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 !important;
+    height: 60px;
+    justify-content: center;
+    }
+    .owl-carousel .owl-next {
+    right: 0px;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 !important;
+    height: 60px;
+    justify-content: center;
+    }
+    .owl-theme .owl-nav [class*=owl-] {
+    /* color: #ffffff; */
+    font-size: 39px;
+    /* background: #000000; */
+    border-radius: 3px;
+    }
+    .owl-prev,
+    .owl-next{
+    color: #273a16 !important;
+    background: #927d5e !important;
+    top: 50% !important;
+    }
+    .owl-carousel .prev-carousel:hover {
+    background-position: 0px -53px;
+    }
+    .owl-carousel .next-carousel:hover {
+    background-position: -24px -53px;
+    }
+    </style>
+</div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-none fl-node-593b171e10de8" data-node="593b171e10de8">
+	<div class="fl-row-content-wrap">
+				<div class="fl-row-content fl-row-full-width fl-node-content">
+		
+<div class="fl-col-group fl-node-593b171e1ba29" data-node="593b171e1ba29">
+			<div class="fl-col fl-node-593b171e1bc9c" data-node="593b171e1bc9c">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-photo fl-node-593b171e1069a fl-visible-desktop" data-node="593b171e1069a">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-png">
+				<img loading="lazy" decoding="async" class="fl-photo-img wp-image-131 size-full" src="https://www.cooxupe.com.br/wp-content/uploads/2017/05/icon-cafe.png" alt="icon-cafe" itemprop="image" height="94" width="90"  />
+		    
+			</div>
+	</div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-none fl-node-616f30d85549d" data-node="616f30d85549d">
+	<div class="fl-row-content-wrap">
+				<div class="fl-row-content fl-row-fixed-width fl-node-content">
+		
+<div class="fl-col-group fl-node-616f30d85da00" data-node="616f30d85da00">
+			<div class="fl-col fl-node-616f30d85da6c fl-col-small" data-node="616f30d85da6c">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-photo fl-node-616f30dfa724a" data-node="616f30dfa724a">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-png">
+				<a href="https://www.cooxupe.com.br/exportacao/" target="_blank" itemprop="url">
+				<img loading="lazy" decoding="async" class="fl-photo-img wp-image-4374 size-full" src="https://www.cooxupe.com.br/wp-content/uploads/2021/10/santos_v2.png" alt="santos_v2" itemprop="image" height="300" width="300" srcset="https://www.cooxupe.com.br/wp-content/uploads/2021/10/santos_v2.png 300w, https://www.cooxupe.com.br/wp-content/uploads/2021/10/santos_v2-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" />
+				</a>
+		    
+			</div>
+	</div>
+	</div>
+</div>
+	</div>
+</div>
+			<div class="fl-col fl-node-616f30d85da70 fl-col-small" data-node="616f30d85da70">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-photo fl-node-616f30e5ecc11" data-node="616f30e5ecc11">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-png">
+				<a href="https://www.cooxupe.com.br/oleodecafe/" target="_self" itemprop="url">
+				<img loading="lazy" decoding="async" class="fl-photo-img wp-image-4375 size-full" src="https://www.cooxupe.com.br/wp-content/uploads/2021/10/greencoffee.png" alt="greencoffee" itemprop="image" height="300" width="300" srcset="https://www.cooxupe.com.br/wp-content/uploads/2021/10/greencoffee.png 300w, https://www.cooxupe.com.br/wp-content/uploads/2021/10/greencoffee-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" />
+				</a>
+		    
+			</div>
+	</div>
+	</div>
+</div>
+	</div>
+</div>
+			<div class="fl-col fl-node-6973cca95126c fl-col-small" data-node="6973cca95126c">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-photo fl-node-6973cca568ce3" data-node="6973cca568ce3">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www.cooxupe.com.br/folharural/" target="_self" itemprop="url">
+				<img loading="lazy" decoding="async" class="fl-photo-img wp-image-5847 size-medium" src="https://www.cooxupe.com.br/wp-content/uploads/2026/11/result_Folha-Rural_ed567-OUT26_page-0001-300x300.jpg" alt="result_Folha Rural_ed567 - OUT26_page-0001" itemprop="image" height="300" width="300" srcset="https://www.cooxupe.com.br/wp-content/uploads/2026/11/result_Folha-Rural_ed567-OUT26_page-0001-300x300.jpg 300w, https://www.cooxupe.com.br/wp-content/uploads/2026/11/result_Folha-Rural_ed567-OUT26_page-0001-150x150.jpg 150w" sizes="(max-width: 300px) 100vw, 300px" />
+				</a>
+		    
+			</div>
+	</div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-6494aedc08e66" data-node="6494aedc08e66">
+	<div class="fl-row-content-wrap">
+				<div class="fl-row-content fl-row-full-width fl-node-content">
+		
+<div class="fl-col-group fl-node-6495d8c7500db" data-node="6495d8c7500db">
+			<div class="fl-col fl-node-6495d8c7501a4" data-node="6495d8c7501a4">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-photo fl-node-6494aedc08f94" data-node="6494aedc08f94">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-png">
+				<a href="https://hubdocafe.cooxupe.com.br/" target="_self" itemprop="url">
+				<img loading="lazy" decoding="async" class="fl-photo-img wp-image-5174 size-full" src="https://www.cooxupe.com.br/wp-content/uploads/2023/06/mini-logo-hub-do-cafe_white.png" alt="mini-logo-hub-do-cafe_white" itemprop="image" height="150" width="300"  />
+				</a>
+		    
+			</div>
+	</div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+
+<div class="fl-col-group fl-node-6495d9592094b" data-node="6495d9592094b">
+			<div class="fl-col fl-node-6495d959209c6" data-node="6495d959209c6">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-rich-text fl-node-6495d9bc65d5e" data-node="6495d9bc65d5e">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-rich-text">
+	<h3 style="text-align: center;"><span style="color: #ffffff;">Acesse o portal e fique por dentro das principais notícias do universo do café.</span></h3>
+</div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+
+<div class="fl-col-group fl-node-6494aedc08f91" data-node="6494aedc08f91">
+			<div class="fl-col fl-node-6494aedc08f95" data-node="6494aedc08f95">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-button fl-node-6494aedc08f97" data-node="6494aedc08f97">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-button-wrap fl-button-width-auto fl-button-center">
+			<a href="https://hubdocafe.cooxupe.com.br/" target="_blank" class="fl-button" role="button">
+							<span class="fl-button-text">Clique aqui</span>
+					</a>
+</div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+</div>    </div><!-- .fl-post-content -->
+
+    
+</article>
+<!-- .fl-post -->        	        </div>
+    </div>
+</div>
+
+
+</div><!-- .fl-page-content -->
+            <div class="logos text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            <a href="http://www.cncafe.com.br/" target="_blank">
+                                <img src="https://www.cooxupe.com.br/wp-content/uploads/2017/06/conselhoDoCafe.jpg" class="conselho">
+                            </a>
+
+                            <a href="http://www.bndes.gov.br/wps/portal/site/home" target="_blank">
+                                <img src="https://www.cooxupe.com.br/wp-content/uploads/2017/06/bndes.jpg" class="bndes">
+                            </a>
+
+                            <a href="http://www.bb.com.br/pbb/pagina-inicial#/" target="_blank">
+                                <img src="https://www.cooxupe.com.br/wp-content/uploads/2017/06/bBrasil.jpg" class="bbrasil">
+                            </a>
+
+                            <a href="https://www.bdmg.mg.gov.br/Paginas/Home.aspx" target="_blank">
+                                <img src="https://www.cooxupe.com.br/wp-content/uploads/2017/06/bdmg.jpg" class="bdmg">
+
+                                <img src="https://www.cooxupe.com.br/wp-content/uploads/2017/06/minasGerais.jpg" class="minasgerais">
+                            </a>
+
+                            <script language='javascript'>
+                                function vopenw() {
+                                    tbar = 'location=no,status=yes,resizable=yes,scrollbars=yes,width=560,height=535';
+                                    sw = window.open('https://www.certisign.com.br/seal/splashcerti.htm', 'CRSN_Splash', tbar);
+                                    sw.focus();
+                                }
+                            </script><a href='javascript:vopenw()'><img src="https://www.cooxupe.com.br/wp-content/uploads/2017/06/siteSeguro.jpg" class="siteseguro"></a>
+
+                            <script src="https://seal.verisign.com/getseal?host_name=www.cooxupe.com.br&size=S&use_flash=NO&use_transparent=getsealjs_b.js&lang=pt"></script>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="fl-page-footer-wrap" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+        <div class="fl-page-footer-widgets">
+            <div class="fl-page-footer-widgets-container container">
+                <div class="fl-page-footer-widgets-row row">
+                    <div class="col-sm-12 col-md-12">
+                        <aside id="text-6" class="fl-widget widget_text">
+                            <div class="textwidget text-center">
+                                <!-- <a class="texto contato">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    (35) 3696-1000
+                                </a> -->
+                                <!--<a class="contato">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            (35) 3696-1100
+                                        </a>-->
+                                <!-- <a href="/contato" class="contato2">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    Preencha o Formulário
+                                </a> -->
+
+                                <p class="cooperativa" style="margin-top: 70px;margin-bottom: 70px;">
+                                    <b>Cooperativa Regional de Cafeicultores em Guaxupé LTDA</b><br>
+                                    Rua Manoel Joaquim M. Gomes, 400 , Vila Santa Bárbara<br>
+                                    CEP: 37834-077 Guaxupé/MG<br>
+                                    <a href="/contato" class="saiba-mais-rodape">Saiba Mais</a>
+                                </p>
+                                <a href="https://www.facebook.com/cooperativacooxupe" target="blank" class="rede-social">
+                                    <img src="https://www.cooxupe.com.br/wp-content/uploads/2017/06/face.png" class="face">
+                                </a>
+                                <!-- <a href="https://plus.google.com/116383948142183277189" target="blank" class="rede-social">
+                                    <img src="https://www.cooxupe.com.br/wp-content/uploads/2017/06/google.png" class="google">
+                                </a> -->
+                                <a href="https://twitter.com/Cooxupe" target="blank" class="rede-social">
+                                    <img src="https://www.cooxupe.com.br/wp-content/uploads/2017/06/twitter.png" class="twitter">
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCYqf_b9i0HO1IofxBf4pdBg" target="blank" class="rede-social">
+                                    <img src="https://www.cooxupe.com.br/wp-content/uploads/2017/06/youtube.png" class="youtube">
+                                </a>
+                                <br><br>
+
+                                <a href="hhttps://play.google.com/store/apps/details?id=br.com.cooxupe.pscapp" target="blank">
+                                    <img alt="Disponível no Google Play" src="https://www.cooxupe.com.br/wp-content/uploads/2018/03/googleplay.png">
+                                </a>
+                                <a href="https://apps.apple.com/br/app/cooxupe/id1604779706" target="blank">
+                                    <img alt="Disponível no App Store" src="https://www.cooxupe.com.br/wp-content/uploads/2018/03/appstore.png">
+                                </a>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fl-page-footer">
+    <div class="fl-page-footer-container container">
+        <div class="fl-page-footer-row row">
+            <div class="col-md-12 text-center clearfix"><div class="fl-page-footer-text fl-page-footer-text-1">Desenvolvido pela <a href="http://www.williarts.com.br/" target="blank">Williarts Internet</a>. Todos os direitos reservados.</div></div>                    </div>
+    </div>
+</div><!-- .fl-page-footer -->    </footer>
+</div><!-- .fl-page -->
+<script type="text/javascript">
+
+if(typeof jQuery == 'undefined' || typeof jQuery.fn.on == 'undefined') {
+	document.write('<script src="https://www.cooxupe.com.br/wp-content/plugins/bb-plugin/js/jquery.js"><\/script>');
+	document.write('<script src="https://www.cooxupe.com.br/wp-content/plugins/bb-plugin/js/jquery.migrate.min.js"><\/script>');
+}
+
+</script>
+<div 
+	id="pum-5696" 
+	role="dialog" 
+	aria-modal="false"
+	class="pum pum-overlay pum-theme-4256 pum-theme-default-theme popmake-overlay click_open" 
+	data-popmake="{&quot;id&quot;:5696,&quot;slug&quot;:&quot;novo-portal-do-cooperado&quot;,&quot;theme_id&quot;:4256,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:false,&quot;responsive_min_width&quot;:false,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:false,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:false,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:false,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:false,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:false,&quot;position_left&quot;:false,&quot;position_bottom&quot;:false,&quot;position_right&quot;:false,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:false,&quot;animation_speed&quot;:false,&quot;animation_origin&quot;:false,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:false},&quot;close&quot;:{&quot;text&quot;:false,&quot;button_delay&quot;:false,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-5696" class="pum-container popmake theme-4256 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<div style="position: relative; max-width: 640px; margin: auto;">
+<p><a href="https://portalcooperado.cooxupe.com.br/?utm_source=site_institucional&amp;utm_medium=menu_principal&amp;utm_campaign=lancamento_portal_web_2026" target="_blank" rel="noopener"><img fetchpriority="high" decoding="async" class="wp-image-5704 size-full aligncenter" src="https://www.cooxupe.com.br/wp-content/uploads/2026/03/novo-portal-1.png" alt="" width="640" height="380" /></a></p>
+<div style="position: absolute; bottom: 20px; left: 30%; transform: translateX(-50%); text-align: center; width: 100%;"><span style="text-decoration: underline;"><a style="display: block; color: black; font-size: 12px; font-weight: 500; text-decoration: underline;" href="https://portalweb.cooxupe.com.br:9080/portal/index.jsp" target="_blank" rel="noopener">Acessar o portal antigo</a></span></div>
+</div>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			&#215;			</button>
+		
+	</div>
+
+</div>
+<div 
+	id="pum-4265" 
+	role="dialog" 
+	aria-modal="false"
+	class="pum pum-overlay pum-theme-4256 pum-theme-default-theme popmake-overlay click_open" 
+	data-popmake="{&quot;id&quot;:4265,&quot;slug&quot;:&quot;pop-up&quot;,&quot;theme_id&quot;:4256,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:false,&quot;responsive_min_width&quot;:false,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:false,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:false,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:false,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:false,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:false,&quot;position_left&quot;:false,&quot;position_bottom&quot;:false,&quot;position_right&quot;:false,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:false,&quot;animation_speed&quot;:false,&quot;animation_origin&quot;:false,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:false},&quot;close&quot;:{&quot;text&quot;:false,&quot;button_delay&quot;:false,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-4265" class="pum-container popmake theme-4256 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p><img decoding="async" class="wp-image-5551 aligncenter" src="https://www.cooxupe.com.br/wp-content/uploads/2025/04/carta-quadrada.jpg" alt="" width="500" height="500" srcset="https://www.cooxupe.com.br/wp-content/uploads/2025/04/carta-quadrada.jpg 1000w, https://www.cooxupe.com.br/wp-content/uploads/2025/04/carta-quadrada-300x300.jpg 300w, https://www.cooxupe.com.br/wp-content/uploads/2025/04/carta-quadrada-150x150.jpg 150w, https://www.cooxupe.com.br/wp-content/uploads/2025/04/carta-quadrada-768x768.jpg 768w" sizes="(max-width: 500px) 100vw, 500px" /></p>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			&#215;			</button>
+		
+	</div>
+
+</div>
+<script type='text/javascript'>window.pum_popups = {"pum-5696":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"4256","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"default-theme","id":"5696","slug":"novo-portal-do-cooperado"},"pum-4265":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"4256","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"default-theme","id":"4265","slug":"pop-up"}};window.pum_vars = window.pum_vars || {}; window.pum_vars.popups = window.pum_popups;</script><script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/www.cooxupe.com.br\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cooxupe.com.br/wp-content/plugins/bwp-minify/min/?f=wp-content/uploads/bb-plugin/cache/5-layout.js,wp-includes/js/dist/vendor/wp-polyfill-inert.min.js,wp-includes/js/dist/vendor/regenerator-runtime.min.js,wp-includes/js/dist/vendor/wp-polyfill.min.js,wp-includes/js/dist/hooks.min.js,wp-includes/js/dist/i18n.min.js,wp-content/plugins/contact-form-7/includes/swv/js/index.js,wp-content/plugins/contact-form-7/includes/js/index.js,wp-content/themes/wm-automator/js/owl.carousel.min.js,wp-includes/js/jquery/ui/core.min.js'></script>
+<script type="text/javascript" id="popup-maker-site-js-extra">
+/* <![CDATA[ */
+var pum_vars = {"version":"1.20.6","pm_dir_url":"https:\/\/www.cooxupe.com.br\/wp-content\/plugins\/popup-maker\/","ajaxurl":"https:\/\/www.cooxupe.com.br\/wp-admin\/admin-ajax.php","restapi":"https:\/\/www.cooxupe.com.br\/wp-json\/pum\/v1","rest_nonce":null,"default_theme":"4256","debug_mode":"","disable_tracking":"","home_url":"\/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"cookie_domain":"","analytics_route":"analytics","analytics_api":"https:\/\/www.cooxupe.com.br\/wp-json\/pum\/v1"};
+var pum_sub_vars = {"ajaxurl":"https:\/\/www.cooxupe.com.br\/wp-admin\/admin-ajax.php","message_position":"top"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="wpcf7-recaptcha-js-extra">
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6Ld9S7IZAAAAAHN0_n7xdIAmQgX2wZ05U3ixWBEX","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cooxupe.com.br/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/popup-maker/assets/js/site.min.js,wp-content/plugins/contact-form-7/modules/recaptcha/index.js,wp-content/themes/fl-automator/js/jquery.throttle.min.js,wp-content/plugins/bb-plugin/js/jquery.magnificpopup.min.js,wp-content/themes/fl-automator/js/bootstrap.min.js,wp-content/themes/fl-automator/js/theme.js'></script>
+<script>
+    jQuery(document).ready(function($) {
+        let isDragging = false;
+        $("body").on('mousedown', '.fl-content-slider', function(event) {
+            isDragging = false;
+        });
+        $("body").on('mousemove', '.fl-content-slider', function(event) {
+            isDragging = true;
+        });
+        $("body").on('mouseup', '.fl-content-slider', function(event) {
+            let wasDragging = isDragging;
+            isDragging = false;
+            if (!wasDragging) {
+                if (event.target.className == 'bx-viewport') {
+                    let url_slide = $(this).find('.fl-slide[aria-hidden="false"] .fl-slide-bg-link');
+                    if (url_slide.attr('href') != undefined) {
+                        if (url_slide.attr('target') == '_blank') {
+                            window.open(url_slide.attr('href'), '_blank');
+                        } else {
+                            window.location.href = url_slide.attr('href');
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+</script>
+</body>
+
+</html>
+<!-- Dynamic page generated in 0.470 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2026-11-13 22:57:30 -->
+
+<!-- Compression = gzip -->
+<!-- super cache -->

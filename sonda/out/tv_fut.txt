@@ -1,0 +1,1 @@
+{"totalCount":2,"data":[{"s":"ICEEUR:RC1!","d":[3196,-0.3429996881821017,"RC1!","Robusta Coffee Futures","delayed_streaming_600",null]},{"s":"ICEUS:KC1!","d":[273.5,-0.3824439992715394,"KC1!","Coffee C Futures","delayed_streaming_600",null]}]}
