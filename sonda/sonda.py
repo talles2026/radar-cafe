@@ -3,22 +3,15 @@ UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Ge
 H={"User-Agent":UA,"Accept":"text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8","Accept-Language":"pt-BR,pt;q=0.9,en;q=0.8"}
 out=pathlib.Path("sonda/out"); out.mkdir(exist_ok=True)
 G=[
-("na_cafe","https://www.noticiasagricolas.com.br/cotacoes/cafe"),
-("na_fisico","https://www.noticiasagricolas.com.br/cotacoes/cafe/cafe-arabica-mercado-fisico-tipo-6-7"),
-("agrolink","https://www.agrolink.com.br/cotacoes/graos/cafe/"),
-("agrolink_arab","https://www.agrolink.com.br/cotacoes/graos/cafe/cafe-arabica-tipo-6-bebida-dura-sc-60kg"),
-("canalrural","https://www.canalrural.com.br/cotacao/cafe/"),
-("cafepoint","https://www.cafepoint.com.br/cotacoes/"),
-("cooxupe","https://www.cooxupe.com.br/"),
-("minasul","https://minasul.com.br/"),
-("expocaccer","https://www.expocaccer.com.br/"),
-("cccmg","https://www.cccmg.com.br/"),
-("yahoo_rc","https://query1.finance.yahoo.com/v8/finance/chart/RC=F?range=1mo&interval=1d"),
-("yahoo_rm","https://query1.finance.yahoo.com/v8/finance/chart/RM=F?range=1mo&interval=1d"),
-("stooq_rc","https://stooq.com/q/d/l/?s=rc.f&i=d"),
-("investing","https://br.investing.com/commodities/london-coffee"),
-("mw","https://www.marketwatch.com/investing/future/rm00?countrycode=uk"),
-("cnbc_rc","https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol?symbols=@RC.1|@RM.1|LRC.1|@LRC.1|RC.1&requestMethod=itv&noform=1&partnerId=2&fund=1&exthrs=1&output=json"),
+("al_uf","https://www.agrolink.com.br/cotacoes/graos/cafe?uf=mg"),
+("al_busca_uf","https://www.agrolink.com.br/cotacoes/busca?cultura=cafe&uf=mg"),
+("al_busca_estado","https://www.agrolink.com.br/cotacoes/busca?cultura=cafe&estado=mg"),
+("al_p2","https://www.agrolink.com.br/cotacoes/graos/cafe?pagina=2"),
+("al_hoje","https://www.agrolink.com.br/cotacoes/graos/cafe?periodo=hoje"),
+("al_ir","https://www.agrolink.com.br/api/cotacoes/historico/ir?cod=2110&uf=mg"),
+("al_prod_safra","https://www.agrolink.com.br/cotacoes/graos/cafe/cafe-arabica-bebida-dura-tipo-6-safra-nova-sc-60kg"),
+("al_prod_t6","https://www.agrolink.com.br/cotacoes/graos/cafe/cafe-arabica-tipo-6-sc-60kg"),
+("al_prod_t6_mg","https://www.agrolink.com.br/cotacoes/graos/cafe/cafe-arabica-tipo-6-sc-60kg?uf=mg"),
 ]
 res={}
 def save(n,code,body):
@@ -30,7 +23,7 @@ for n,u in G:
     except Exception as e:
         save(n,str(e)[:120],"")
 # TradingView scanner (POST)
-for n,mk,syms in (("tv_fut","futures",["ICEEUR:RC1!","ICEEUR:RC2!","ICEUS:KC1!"]),):
+for n,mk,syms in (("tv_fut","futures",["ICEEUR:RC1!","ICEEUR:RC2!","ICEEUR:RCF2027","ICEEUR:RCH2027","ICEEUR:RCX2026","ICEUS:KCH2027"]),):
     try:
         body=json.dumps({"symbols":{"tickers":syms},"columns":["close","change","name","description","update_mode","expiration"]}).encode()
         req=urllib.request.Request(f"https://scanner.tradingview.com/{mk}/scan",data=body,headers={**H,"Content-Type":"application/json","Origin":"https://www.tradingview.com"})
