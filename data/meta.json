@@ -1,28 +1,28 @@
 {
- "updatedAt": "2026-11-14T02:10:07Z",
+ "updatedAt": "2026-11-16T10:43:18Z",
  "automatico": true,
- "headline": "Café em reais estável: NY -0,2% e dólar +0,5%",
- "summary": "Em Nova York, o arábica está em 274,00 ¢/lb, -0,2% no dia e -2,1% em 5 pregões. O dólar comercial está em R$ 5,667 (+0,5% no dia). O CEPEA arábica de 13/11 ficou em R$ 1.647,96 por saca (+1,8%), e o conilon em R$ 972,99 (+0,4%). Em Londres, o robusta está em US$ 3.211 por tonelada (-1,5% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.682, numa faixa provável de R$ 1.544 a R$ 1.833.",
+ "headline": "Café em reais mais caro: NY +1,0% e dólar +0,5%",
+ "summary": "Em Nova York, o arábica está em 276,10 ¢/lb, +1,0% no dia e +3,3% em 5 pregões. O dólar comercial está em R$ 5,667 (+0,5% no dia). O CEPEA arábica de 13/11 ficou em R$ 1.647,96 por saca (+1,8%), e o conilon em R$ 972,99 (+0,4%). Em Londres, o robusta está em US$ 3.211 por tonelada (0,0% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.689, numa faixa provável de R$ 1.553 a R$ 1.836.",
  "drivers": [
   {
-   "dir": "neutro",
-   "t": "NY ficou quase estável (-0,2%) no dia (-2,1% na semana)."
+   "dir": "alta",
+   "t": "NY subiu 1,0% no dia (+3,3% na semana)."
   },
   {
    "dir": "alta",
    "t": "Dólar subiu 0,5%: café em reais tende a subir."
   },
   {
-   "dir": "baixa",
-   "t": "Londres (robusta) caiu 1,5% no dia."
+   "dir": "neutro",
+   "t": "Londres (robusta) ficou quase estável (0,0%) no dia."
   },
   {
    "dir": "alta",
-   "t": "Previsão de 15 dias: 60% de chance de alta para o arábica."
+   "t": "Previsão de 15 dias: 59% de chance de alta para o arábica."
   },
   {
    "dir": "neutro",
-   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -19,8% contra -8,1% na média."
+   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -19,6% contra -8,0% na média."
   }
  ],
  "sources": [
@@ -51,7 +51,7 @@
    "url": "https://open-meteo.com/"
   }
  ],
- "pracasDate": "2026-11-13",
+ "pracasDate": "2026-11-16",
  "pracas": [
   {
    "praca": "Guaxupé (Sul de Minas)",
