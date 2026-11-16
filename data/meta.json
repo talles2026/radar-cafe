@@ -1,16 +1,16 @@
 {
- "updatedAt": "2026-11-16T15:09:05Z",
+ "updatedAt": "2026-11-16T16:44:24Z",
  "automatico": true,
- "headline": "Café em reais mais caro: NY +1,1% e dólar +1,5%",
- "summary": "Em Nova York, o arábica está em 276,45 ¢/lb, +1,1% no dia e +3,4% em 5 pregões. O dólar comercial está em R$ 5,750 (+1,5% no dia). O CEPEA arábica de 13/11 ficou em R$ 1.647,96 por saca (+1,8%), e o conilon em R$ 972,99 (+0,4%). Em Londres, o robusta está em US$ 3.211 por tonelada (0,0% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.715, numa faixa provável de R$ 1.573 a R$ 1.870.",
+ "headline": "Café em reais mais caro: NY +1,7% e dólar +1,9%",
+ "summary": "Em Nova York, o arábica está em 278,05 ¢/lb, +1,7% no dia e +4,0% em 5 pregões. O dólar comercial está em R$ 5,775 (+1,9% no dia). O CEPEA arábica de 13/11 ficou em R$ 1.647,96 por saca (+1,8%), e o conilon em R$ 972,99 (+0,4%). Em Londres, o robusta está em US$ 3.211 por tonelada (0,0% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.732, numa faixa provável de R$ 1.584 a R$ 1.894.",
  "drivers": [
   {
    "dir": "alta",
-   "t": "NY subiu 1,1% no dia (+3,4% na semana)."
+   "t": "NY subiu 1,7% no dia (+4,0% na semana)."
   },
   {
    "dir": "alta",
-   "t": "Dólar subiu 1,5%: café em reais tende a subir."
+   "t": "Dólar subiu 1,9%: café em reais tende a subir."
   },
   {
    "dir": "neutro",
@@ -68,14 +68,14 @@
   {
    "praca": "Varginha (Sul de Minas)",
    "tipo": "Tipo 6 bebida dura",
-   "preco": 1655,
-   "var": 1.53
+   "preco": 1720,
+   "var": 3.93
   },
   {
    "praca": "Manhuaçu (Matas de Minas)",
    "tipo": "Tipo 6 bebida dura",
-   "preco": 1625,
-   "var": 3.11
+   "preco": 1631,
+   "var": 0.37
   }
  ]
 }
