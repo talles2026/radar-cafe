@@ -1,28 +1,28 @@
 {
- "geradoEm": "2026-11-17T11:52:16Z",
+ "geradoEm": "2026-11-17T13:06:35Z",
  "arabica": {
   "cepea": 1669.0,
   "cepeaData": "2026-11-16",
   "fisicoEstimadoHoje": 1693,
-  "bolsaUltimo": 280.75,
+  "bolsaUltimo": 280.8,
   "bolsaData": "2026-11-17",
-  "bolsaVar1d": 0.02128046562386321,
-  "bolsaVar5d": 0.05584806318164737,
-  "bolsaVar20d": -0.09813684548666879,
+  "bolsaVar1d": 0.021462349945434722,
+  "bolsaVar5d": 0.0560361037984205,
+  "bolsaVar20d": -0.09797622871827816,
   "previsao": {
    "7d": {
-    "centro": 1711,
+    "centro": 1712,
     "faixa70": [
      1615,
-     1813
+     1814
     ],
     "chanceAlta": 0.58
    },
    "15d": {
-    "centro": 1733,
+    "centro": 1734,
     "faixa70": [
-     1590,
-     1889
+     1591,
+     1890
     ],
     "chanceAlta": 0.61
    }
@@ -44,7 +44,7 @@
   "bolsaVar20d": -0.07469244288224952,
   "previsao": {
    "7d": {
-    "centro": 973,
+    "centro": 974,
     "faixa70": [
      931,
      1018
@@ -67,37 +67,37 @@
   }
  },
  "dolar": {
-  "ultimo": 5.7785,
+  "ultimo": 5.7802,
   "data": "2026-11-17",
-  "var1d": -0.0008818037208658813,
-  "var5d": 0.03497993981945857
+  "var1d": -0.0005878691472439579,
+  "var5d": 0.03528442470267956
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 75.9,
+   "chuva7d": 73.9,
    "tmin": 18.3,
-   "tmax": 29.6,
+   "tmax": 29.3,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 25.5,
-   "tmin": 16.2,
+   "chuva7d": 32.8,
+   "tmin": 16.8,
    "tmax": 29.5,
    "nota": "Chuva moderada prevista"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 40.1,
-   "tmin": 17.8,
+   "chuva7d": 40.0,
+   "tmin": 18.1,
    "tmax": 28.4,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 80.6,
-   "tmin": 22.3,
+   "chuva7d": 64.6,
+   "tmin": 22.8,
    "tmax": 33.6,
    "nota": "Chuva boa para a florada e o pegamento"
   }
