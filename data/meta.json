@@ -1,8 +1,8 @@
 {
- "updatedAt": "2026-11-17T20:56:19Z",
+ "updatedAt": "2026-11-17T21:54:50Z",
  "automatico": true,
  "headline": "Café em reais mais caro: NY +1,8% e dólar -0,1%",
- "summary": "Em Nova York, o arábica está em 279,95 ¢/lb, +1,8% no dia e +5,3% em 5 pregões. O dólar comercial está em R$ 5,776 (-0,1% no dia). O CEPEA arábica de 16/11 ficou em R$ 1.669,00 por saca (+1,3%), e o conilon em R$ 968,89 (-0,4%). Em Londres, o robusta está em US$ 3.091 por tonelada (-2,2% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.728, numa faixa provável de R$ 1.586 a R$ 1.882.",
+ "summary": "Em Nova York, o arábica está em 279,95 ¢/lb, +1,8% no dia e +5,3% em 5 pregões. O dólar comercial está em R$ 5,779 (-0,1% no dia). O CEPEA arábica de 17/11 ficou em R$ 1.688,00 por saca (+1,1%), e o conilon em R$ 960,04 (-0,9%). Em Londres, o robusta está em US$ 3.091 por tonelada (-2,2% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.727, numa faixa provável de R$ 1.586 a R$ 1.881.",
  "drivers": [
   {
    "dir": "alta",
@@ -22,7 +22,7 @@
   },
   {
    "dir": "neutro",
-   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -20,6% contra -8,1% na média."
+   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -21,1% contra -8,1% na média."
   }
  ],
  "sources": [
@@ -74,8 +74,8 @@
   {
    "praca": "Manhuaçu (Matas de Minas)",
    "tipo": "Tipo 6 bebida dura",
-   "preco": 1631,
-   "var": 0.37
+   "preco": 1688,
+   "var": 3.49
   }
  ]
 }
