@@ -1,28 +1,28 @@
 {
- "geradoEm": "2026-11-17T10:04:49Z",
+ "geradoEm": "2026-11-17T11:05:41Z",
  "arabica": {
   "cepea": 1669.0,
   "cepeaData": "2026-11-16",
-  "fisicoEstimadoHoje": 1676,
-  "bolsaUltimo": 276.9,
+  "fisicoEstimadoHoje": 1681,
+  "bolsaUltimo": 277.95,
   "bolsaData": "2026-11-17",
-  "bolsaVar1d": 0.007275372862859175,
-  "bolsaVar5d": 0.04136893569010902,
-  "bolsaVar20d": -0.11050433665274662,
+  "bolsaVar1d": 0.011094943615860275,
+  "bolsaVar5d": 0.04531778864234681,
+  "bolsaVar20d": -0.10713138451654358,
   "previsao": {
    "7d": {
-    "centro": 1692,
+    "centro": 1697,
     "faixa70": [
-     1598,
-     1790
+     1603,
+     1796
     ],
     "chanceAlta": 0.57
    },
    "15d": {
-    "centro": 1710,
+    "centro": 1716,
     "faixa70": [
-     1572,
-     1860
+     1577,
+     1867
     ],
     "chanceAlta": 0.6
    }
@@ -52,10 +52,10 @@
     "chanceAlta": 0.55
    },
    "15d": {
-    "centro": 980,
+    "centro": 979,
     "faixa70": [
      917,
-     1047
+     1046
     ],
     "chanceAlta": 0.57
    }
@@ -67,39 +67,39 @@
   }
  },
  "dolar": {
-  "ultimo": 5.7785,
+  "ultimo": 5.7777,
   "data": "2026-11-17",
-  "var1d": -0.0008818037208658813,
-  "var5d": 0.03497993981945857
+  "var1d": -0.0010201258731584728,
+  "var5d": 0.034836652815589675
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 75.9,
-   "tmin": 18.3,
-   "tmax": 29.6,
-   "nota": "Chuva boa para a florada e o pegamento"
+   "chuva7d": 35.0,
+   "tmin": 17.9,
+   "tmax": 27.4,
+   "nota": ""
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 25.5,
-   "tmin": 16.2,
-   "tmax": 29.5,
-   "nota": "Chuva moderada prevista"
+   "chuva7d": 6.1,
+   "tmin": 17.5,
+   "tmax": 28.6,
+   "nota": ""
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 40.1,
-   "tmin": 17.8,
-   "tmax": 28.4,
-   "nota": "Chuva boa para a florada e o pegamento"
+   "chuva7d": 12.1,
+   "tmin": 18.0,
+   "tmax": 27.9,
+   "nota": ""
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 80.6,
-   "tmin": 22.3,
-   "tmax": 33.6,
-   "nota": "Chuva boa para a florada e o pegamento"
+   "chuva7d": 36.0,
+   "tmin": 22.7,
+   "tmax": 32.7,
+   "nota": ""
   }
  ]
 }
