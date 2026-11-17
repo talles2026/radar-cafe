@@ -1,28 +1,28 @@
 {
- "geradoEm": "2026-11-17T18:00:56Z",
+ "geradoEm": "2026-11-17T19:02:16Z",
  "arabica": {
   "cepea": 1669.0,
   "cepeaData": "2026-11-16",
-  "fisicoEstimadoHoje": 1690,
-  "bolsaUltimo": 280.4,
+  "fisicoEstimadoHoje": 1689,
+  "bolsaUltimo": 279.95,
   "bolsaData": "2026-11-17",
-  "bolsaVar1d": 0.020007275372862843,
-  "bolsaVar5d": 0.05453177886423477,
-  "bolsaVar20d": -0.09926116286540321,
+  "bolsaVar1d": 0.018370316478719673,
+  "bolsaVar5d": 0.052839413313275685,
+  "bolsaVar20d": -0.10070671378091878,
   "previsao": {
    "7d": {
-    "centro": 1708,
+    "centro": 1706,
     "faixa70": [
-     1612,
-     1810
+     1611,
+     1808
     ],
     "chanceAlta": 0.57
    },
    "15d": {
-    "centro": 1730,
+    "centro": 1728,
     "faixa70": [
-     1588,
-     1884
+     1586,
+     1882
     ],
     "chanceAlta": 0.61
    }
@@ -44,18 +44,18 @@
   "bolsaVar20d": -0.09461042765084948,
   "previsao": {
    "7d": {
-    "centro": 955,
+    "centro": 956,
     "faixa70": [
      912,
-     1001
+     1002
     ],
     "chanceAlta": 0.52
    },
    "15d": {
-    "centro": 958,
+    "centro": 959,
     "faixa70": [
      894,
-     1027
+     1028
     ],
     "chanceAlta": 0.53
    }
@@ -67,39 +67,39 @@
   }
  },
  "dolar": {
-  "ultimo": 5.774,
+  "ultimo": 5.7763,
   "data": "2026-11-17",
-  "var1d": -0.001659865827512208,
-  "var5d": 0.034173950422696775
+  "var1d": -0.00126218963967073,
+  "var5d": 0.03458590055881938
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 73.9,
-   "tmin": 18.3,
-   "tmax": 29.3,
-   "nota": "Chuva boa para a florada e o pegamento"
+   "chuva7d": 44.8,
+   "tmin": 18.1,
+   "tmax": 28.0,
+   "nota": ""
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 32.8,
-   "tmin": 16.8,
-   "tmax": 29.5,
-   "nota": "Chuva moderada prevista"
+   "chuva7d": 9.9,
+   "tmin": 17.9,
+   "tmax": 28.7,
+   "nota": ""
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 40.0,
-   "tmin": 18.1,
+   "chuva7d": 25.0,
+   "tmin": 18.5,
    "tmax": 28.4,
-   "nota": "Chuva boa para a florada e o pegamento"
+   "nota": ""
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 64.6,
-   "tmin": 22.8,
-   "tmax": 33.6,
-   "nota": "Chuva boa para a florada e o pegamento"
+   "chuva7d": 24.8,
+   "tmin": 22.6,
+   "tmax": 31.9,
+   "nota": ""
   }
  ]
 }
