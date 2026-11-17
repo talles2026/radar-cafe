@@ -1,20 +1,20 @@
 {
- "updatedAt": "2026-11-16T22:48:25Z",
+ "updatedAt": "2026-11-17T10:04:49Z",
  "automatico": true,
- "headline": "Café em reais mais caro: NY +0,3% e dólar +2,1%",
- "summary": "Em Nova York, o arábica está em 274,40 ¢/lb, +0,3% no dia e +2,7% em 5 pregões. O dólar comercial está em R$ 5,784 (+2,1% no dia). O CEPEA arábica de 16/11 ficou em R$ 1.669,00 por saca (+1,3%), e o conilon em R$ 968,89 (-0,4%). Em Londres, o robusta está em US$ 3.159 por tonelada (-1,6% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.706, numa faixa provável de R$ 1.565 a R$ 1.859.",
+ "headline": "Café em reais mais caro: NY +0,7% e dólar -0,1%",
+ "summary": "Em Nova York, o arábica está em 276,90 ¢/lb, +0,7% no dia e +4,1% em 5 pregões. O dólar comercial está em R$ 5,779 (-0,1% no dia). O CEPEA arábica de 16/11 ficou em R$ 1.669,00 por saca (+1,3%), e o conilon em R$ 968,89 (-0,4%). Em Londres, o robusta está em US$ 3.159 por tonelada (0,0% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.710, numa faixa provável de R$ 1.572 a R$ 1.860.",
  "drivers": [
   {
    "dir": "alta",
-   "t": "NY subiu 0,3% no dia (+2,7% na semana)."
+   "t": "NY subiu 0,7% no dia (+4,1% na semana)."
   },
   {
-   "dir": "alta",
-   "t": "Dólar subiu 2,1%: café em reais tende a subir."
+   "dir": "neutro",
+   "t": "Dólar ficou quase estável (-0,1%): sem efeito no preço em reais."
   },
   {
-   "dir": "baixa",
-   "t": "Londres (robusta) caiu 1,6% no dia."
+   "dir": "neutro",
+   "t": "Londres (robusta) ficou quase estável (0,0%) no dia."
   },
   {
    "dir": "alta",
@@ -22,7 +22,7 @@
   },
   {
    "dir": "neutro",
-   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -20,5% contra -8,1% na média."
+   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -20,6% contra -8,1% na média."
   }
  ],
  "sources": [
@@ -51,19 +51,19 @@
    "url": "https://open-meteo.com/"
   }
  ],
- "pracasDate": "2026-11-16",
+ "pracasDate": "2026-11-17",
  "pracas": [
   {
    "praca": "Guaxupé (Sul de Minas)",
    "tipo": "Tipo 6",
-   "preco": 1607,
-   "var": 1.16
+   "preco": 1638,
+   "var": 1.95
   },
   {
    "praca": "Patrocínio (Cerrado Mineiro)",
    "tipo": "Tipo 6",
-   "preco": 1619,
-   "var": 1.8
+   "preco": 1649,
+   "var": 1.86
   },
   {
    "praca": "Varginha (Sul de Minas)",
