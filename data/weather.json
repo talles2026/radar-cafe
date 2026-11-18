@@ -1,11 +1,11 @@
 {
- "updatedAt": "2026-11-18T12:00:02Z",
+ "updatedAt": "2026-11-18T13:12:28Z",
  "regioes": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 38.1,
+   "chuva7d": 58.3,
    "tmin": 18.7,
-   "tmax": 27.8,
+   "tmax": 29.2,
    "dias": [
     "2026-11-18",
     "2026-11-19",
@@ -16,21 +16,21 @@
     "2026-11-24"
    ],
    "chuvaDia": [
-    6.3,
-    17.6,
-    10.4,
-    0.9,
-    0.7,
-    1.8,
-    0.5
+    13.8,
+    11.4,
+    10.9,
+    6.6,
+    4.2,
+    4.4,
+    7.0
    ],
-   "nota": ""
+   "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 12.0,
-   "tmin": 17.9,
-   "tmax": 29.3,
+   "chuva7d": 62.3,
+   "tmin": 18.6,
+   "tmax": 29.6,
    "dias": [
     "2026-11-18",
     "2026-11-19",
@@ -41,21 +41,21 @@
     "2026-11-24"
    ],
    "chuvaDia": [
-    4.2,
+    14.4,
+    5.8,
+    9.9,
     1.8,
-    0.7,
-    0.1,
-    0.5,
-    0.7,
-    3.9
+    4.3,
+    8.0,
+    18.1
    ],
-   "nota": ""
+   "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 17.6,
-   "tmin": 18.6,
-   "tmax": 28.3,
+   "chuva7d": 53.7,
+   "tmin": 17.7,
+   "tmax": 28.0,
    "dias": [
     "2026-11-18",
     "2026-11-19",
@@ -66,21 +66,21 @@
     "2026-11-24"
    ],
    "chuvaDia": [
-    5.2,
-    2.8,
-    2.3,
-    0.7,
-    1.8,
-    2.0,
-    2.8
+    5.8,
+    5.7,
+    11.2,
+    2.5,
+    8.9,
+    7.0,
+    12.6
    ],
-   "nota": ""
+   "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 45.6,
-   "tmin": 22.4,
-   "tmax": 33.1,
+   "chuva7d": 74.7,
+   "tmin": 22.9,
+   "tmax": 33.7,
    "dias": [
     "2026-11-18",
     "2026-11-19",
@@ -91,15 +91,15 @@
     "2026-11-24"
    ],
    "chuvaDia": [
-    0.8,
-    12.4,
-    26.5,
-    4.9,
-    0.1,
+    0.5,
+    18.9,
+    38.4,
+    4.0,
     0.7,
-    0.2
+    7.5,
+    4.7
    ],
-   "nota": ""
+   "nota": "Chuva boa para a florada e o pegamento"
   }
  ]
 }
