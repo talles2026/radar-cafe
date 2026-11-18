@@ -1,33 +1,33 @@
 {
- "atualizadoEm": "2026-11-17T22:56:08Z",
+ "atualizadoEm": "2026-11-18T10:02:31Z",
  "pracas": [
   {
    "praca": "Guaxupé (Sul de Minas)",
    "tipo": "Tipo 6",
    "preco": 1660,
    "var": 1.29,
-   "data": "2026-11-17"
+   "data": "2026-11-18"
   },
   {
    "praca": "Patrocínio (Cerrado Mineiro)",
    "tipo": "Tipo 6",
    "preco": 1677,
    "var": 1.69,
-   "data": "2026-11-17"
+   "data": "2026-11-18"
   },
   {
    "praca": "Varginha (Sul de Minas)",
    "tipo": "Tipo 6 bebida dura",
    "preco": 1720,
    "var": 3.93,
-   "data": "2026-11-17"
+   "data": "2026-11-18"
   },
   {
    "praca": "Manhuaçu (Matas de Minas)",
    "tipo": "Tipo 6 bebida dura",
    "preco": 1688,
    "var": 3.49,
-   "data": "2026-11-17"
+   "data": "2026-11-18"
   }
  ]
 }
