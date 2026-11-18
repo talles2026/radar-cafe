@@ -1,63 +1,63 @@
 {
- "geradoEm": "2026-11-18T17:06:39Z",
+ "geradoEm": "2026-11-18T17:58:03Z",
  "arabica": {
   "cepea": 1688.0,
   "cepeaData": "2026-11-17",
-  "fisicoEstimadoHoje": 1695,
-  "bolsaUltimo": 272.75,
+  "fisicoEstimadoHoje": 1680,
+  "bolsaUltimo": 276.85,
   "bolsaData": "2026-11-18",
-  "bolsaVar1d": -0.030739161336176157,
-  "bolsaVar5d": 0.03060646136406575,
-  "bolsaVar20d": -0.13727660920449147,
+  "bolsaVar1d": -0.016169154228855565,
+  "bolsaVar5d": 0.046098620819950975,
+  "bolsaVar20d": -0.12430808160683204,
   "previsao": {
    "7d": {
-    "centro": 1720,
+    "centro": 1702,
     "faixa70": [
-     1625,
-     1820
+     1608,
+     1801
     ],
-    "chanceAlta": 0.6
+    "chanceAlta": 0.59
    },
    "15d": {
-    "centro": 1750,
+    "centro": 1728,
     "faixa70": [
-     1609,
-     1903
+     1589,
+     1879
     ],
-    "chanceAlta": 0.65
+    "chanceAlta": 0.64
    }
   },
   "fisicoVsBolsa": {
-   "hoje": -0.1922,
-   "media": -0.0541,
+   "hoje": -0.2153,
+   "media": -0.0812,
    "dias": 270
   }
  },
  "conilon": {
   "cepea": 960.04,
   "cepeaData": "2026-11-17",
-  "fisicoEstimadoHoje": 957,
-  "bolsaUltimo": 3050.0,
+  "fisicoEstimadoHoje": 951,
+  "bolsaUltimo": 3022.0,
   "bolsaData": "2026-11-18",
-  "bolsaVar1d": -0.013264315755418976,
-  "bolsaVar5d": -0.06584992343032159,
-  "bolsaVar20d": -0.12456946039035588,
+  "bolsaVar1d": -0.022322872856680664,
+  "bolsaVar5d": -0.07442572741194486,
+  "bolsaVar20d": -0.1326061997703789,
   "previsao": {
    "7d": {
-    "centro": 957,
+    "centro": 951,
     "faixa70": [
-     915,
-     1002
+     908,
+     996
     ],
     "chanceAlta": 0.5
    },
    "15d": {
-    "centro": 958,
+    "centro": 950,
     "faixa70": [
-     895,
-     1025
+     887,
+     1017
     ],
-    "chanceAlta": 0.51
+    "chanceAlta": 0.49
    }
   },
   "fisicoVsBolsa": {
@@ -67,10 +67,10 @@
   }
  },
  "dolar": {
-  "ultimo": 5.8284,
+  "ultimo": 5.8344,
   "data": "2026-11-18",
-  "var1d": 0.008513289036544913,
-  "var5d": 0.04402966359760696
+  "var1d": 0.009551495016611122,
+  "var5d": 0.045104431626840524
  },
  "clima": [
   {
