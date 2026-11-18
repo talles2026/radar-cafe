@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-18T11:05:05Z",
+ "updatedAt": "2026-11-18T12:00:02Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -7,11 +7,11 @@
   },
   "NY 2º vencimento (CNBC)": {
    "ok": true,
-   "detalhe": "cotação do dia 272.25 (KCK7); suficiente para a emenda"
+   "detalhe": "cotação do dia 271.5 (KCK7); suficiente para a emenda"
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "278.85 (KCH7) em 2026-11-18T05:54:53.000-0500"
+   "detalhe": "278.15 (KCH7) em 2026-11-18T06:49:48.000-0500"
   },
   "Londres (TradingView)": {
    "ok": true,
@@ -62,6 +62,10 @@
    "detalhe": "4 de 4 praças, até 2026-11-18"
   },
   "Clima (Open-Meteo)": {
+   "ok": false,
+   "detalhe": "0 regiões"
+  },
+  "Clima reserva (met.no)": {
    "ok": true,
    "detalhe": "4 regiões"
   }
