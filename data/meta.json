@@ -1,16 +1,16 @@
 {
- "updatedAt": "2026-11-18T14:56:39Z",
+ "updatedAt": "2026-11-18T16:02:13Z",
  "automatico": true,
- "headline": "Café em reais mais barato: NY -1,8% e dólar +0,1%",
- "summary": "Em Nova York, o arábica está em 276,40 ¢/lb, -1,8% no dia e +4,4% em 5 pregões. O dólar comercial está em R$ 5,783 (+0,1% no dia). O CEPEA arábica de 17/11 ficou em R$ 1.688,00 por saca (+1,1%), e o conilon em R$ 960,04 (-0,9%). Em Londres, o robusta está em US$ 3.091 por tonelada (0,0% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.710, numa faixa provável de R$ 1.571 a R$ 1.863.",
+ "headline": "Café em reais mais barato: NY -2,9% e dólar +0,7%",
+ "summary": "Em Nova York, o arábica está em 273,35 ¢/lb, -2,9% no dia e +3,3% em 5 pregões. O dólar comercial está em R$ 5,818 (+0,7% no dia). O CEPEA arábica de 17/11 ficou em R$ 1.688,00 por saca (+1,1%), e o conilon em R$ 960,04 (-0,9%). Em Londres, o robusta está em US$ 3.091 por tonelada (0,0% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.751, numa faixa provável de R$ 1.609 a R$ 1.904.",
  "drivers": [
   {
    "dir": "baixa",
-   "t": "NY caiu 1,8% no dia (+4,4% na semana)."
+   "t": "NY caiu 2,9% no dia (+3,3% na semana)."
   },
   {
-   "dir": "neutro",
-   "t": "Dólar ficou quase estável (+0,1%): sem efeito no preço em reais."
+   "dir": "alta",
+   "t": "Dólar subiu 0,7%: café em reais tende a subir."
   },
   {
    "dir": "neutro",
@@ -18,11 +18,11 @@
   },
   {
    "dir": "alta",
-   "t": "Previsão de 15 dias: 62% de chance de alta para o arábica."
+   "t": "Previsão de 15 dias: 65% de chance de alta para o arábica."
   },
   {
    "dir": "neutro",
-   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -21,5% contra -8,1% na média."
+   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -19,2% contra -5,4% na média."
   }
  ],
  "sources": [
@@ -68,8 +68,8 @@
   {
    "praca": "Varginha (Sul de Minas)",
    "tipo": "Tipo 6 bebida dura",
-   "preco": 1720,
-   "var": 3.93
+   "preco": 1780,
+   "var": 3.49
   },
   {
    "praca": "Manhuaçu (Matas de Minas)",
