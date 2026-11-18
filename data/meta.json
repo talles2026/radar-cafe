@@ -1,16 +1,16 @@
 {
- "updatedAt": "2026-11-18T13:12:40Z",
+ "updatedAt": "2026-11-18T14:56:39Z",
  "automatico": true,
- "headline": "Café em reais estável: NY -0,7% e dólar +0,6%",
- "summary": "Em Nova York, o arábica está em 279,55 ¢/lb, -0,7% no dia e +5,6% em 5 pregões. O dólar comercial está em R$ 5,814 (+0,6% no dia). O CEPEA arábica de 17/11 ficou em R$ 1.688,00 por saca (+1,1%), e o conilon em R$ 960,04 (-0,9%). Em Londres, o robusta está em US$ 3.091 por tonelada (0,0% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.738, numa faixa provável de R$ 1.598 a R$ 1.890.",
+ "headline": "Café em reais mais barato: NY -1,8% e dólar +0,1%",
+ "summary": "Em Nova York, o arábica está em 276,40 ¢/lb, -1,8% no dia e +4,4% em 5 pregões. O dólar comercial está em R$ 5,783 (+0,1% no dia). O CEPEA arábica de 17/11 ficou em R$ 1.688,00 por saca (+1,1%), e o conilon em R$ 960,04 (-0,9%). Em Londres, o robusta está em US$ 3.091 por tonelada (0,0% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.710, numa faixa provável de R$ 1.571 a R$ 1.863.",
  "drivers": [
   {
    "dir": "baixa",
-   "t": "NY caiu 0,7% no dia (+5,6% na semana)."
+   "t": "NY caiu 1,8% no dia (+4,4% na semana)."
   },
   {
-   "dir": "alta",
-   "t": "Dólar subiu 0,6%: café em reais tende a subir."
+   "dir": "neutro",
+   "t": "Dólar ficou quase estável (+0,1%): sem efeito no preço em reais."
   },
   {
    "dir": "neutro",
@@ -18,7 +18,7 @@
   },
   {
    "dir": "alta",
-   "t": "Previsão de 15 dias: 64% de chance de alta para o arábica."
+   "t": "Previsão de 15 dias: 62% de chance de alta para o arábica."
   },
   {
    "dir": "neutro",
@@ -56,14 +56,14 @@
   {
    "praca": "Guaxupé (Sul de Minas)",
    "tipo": "Tipo 6",
-   "preco": 1660,
-   "var": 1.29
+   "preco": 1673,
+   "var": 0.83
   },
   {
    "praca": "Patrocínio (Cerrado Mineiro)",
    "tipo": "Tipo 6",
-   "preco": 1677,
-   "var": 1.69
+   "preco": 1703,
+   "var": 1.59
   },
   {
    "praca": "Varginha (Sul de Minas)",

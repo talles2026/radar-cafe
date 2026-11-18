@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-18T13:12:28Z",
+ "updatedAt": "2026-11-18T14:56:23Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -7,11 +7,11 @@
   },
   "NY 2º vencimento (CNBC)": {
    "ok": true,
-   "detalhe": "cotação do dia 273.1 (KCK7); suficiente para a emenda"
+   "detalhe": "cotação do dia 269.85 (KCK7); suficiente para a emenda"
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "279.55 (KCH7) em 2026-11-18T08:02:26.000-0500"
+   "detalhe": "276.4 (KCH7) em 2026-11-18T09:46:21.000-0500"
   },
   "Londres (TradingView)": {
    "ok": true,
@@ -23,11 +23,11 @@
   },
   "Dólar comercial histórico (CNBC)": {
    "ok": true,
-   "detalhe": "543 dias"
+   "detalhe": "551 dias"
   },
   "Dólar agora (CNBC)": {
    "ok": true,
-   "detalhe": "5.8135 em 2026-11-18T08:12:00.000-0500"
+   "detalhe": "5.7834 em 2026-11-18T09:56:00.000-0500"
   },
   "CEPEA arábica (Notícias Agrícolas)": {
    "ok": false,

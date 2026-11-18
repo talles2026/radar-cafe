@@ -1,18 +1,18 @@
 {
- "atualizadoEm": "2026-11-18T13:12:39Z",
+ "atualizadoEm": "2026-11-18T14:56:39Z",
  "pracas": [
   {
    "praca": "Guaxupé (Sul de Minas)",
    "tipo": "Tipo 6",
-   "preco": 1660,
-   "var": 1.29,
+   "preco": 1673,
+   "var": 0.83,
    "data": "2026-11-18"
   },
   {
    "praca": "Patrocínio (Cerrado Mineiro)",
    "tipo": "Tipo 6",
-   "preco": 1677,
-   "var": 1.69,
+   "preco": 1703,
+   "var": 1.59,
    "data": "2026-11-18"
   },
   {
