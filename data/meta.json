@@ -1,16 +1,16 @@
 {
- "updatedAt": "2026-11-19T14:28:38Z",
+ "updatedAt": "2026-11-19T15:31:54Z",
  "automatico": true,
- "headline": "Café em reais mais caro: NY +0,5% e dólar +0,3%",
- "summary": "Em Nova York, o arábica está em 276,70 ¢/lb, +0,5% no dia e +0,8% em 5 pregões. O dólar comercial está em R$ 5,897 (+0,3% no dia). O CEPEA arábica de 18/11 ficou em R$ 1.682,78 por saca (-0,3%), e o conilon em R$ 957,74 (-0,2%). Em Londres, o robusta está em US$ 3.056 por tonelada (+1,1% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.745, numa faixa provável de R$ 1.608 a R$ 1.893.",
+ "headline": "Café em reais mais caro: NY +1,3% e dólar +0,2%",
+ "summary": "Em Nova York, o arábica está em 278,90 ¢/lb, +1,3% no dia e +1,6% em 5 pregões. O dólar comercial está em R$ 5,892 (+0,2% no dia). O CEPEA arábica de 18/11 ficou em R$ 1.682,78 por saca (-0,3%), e o conilon em R$ 957,74 (-0,2%). Em Londres, o robusta está em US$ 3.056 por tonelada (+1,1% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.757, numa faixa provável de R$ 1.618 a R$ 1.908.",
  "drivers": [
   {
    "dir": "alta",
-   "t": "NY subiu 0,5% no dia (+0,8% na semana)."
+   "t": "NY subiu 1,3% no dia (+1,6% na semana)."
   },
   {
    "dir": "neutro",
-   "t": "Dólar ficou quase estável (+0,3%): sem efeito no preço em reais."
+   "t": "Dólar ficou quase estável (+0,2%): sem efeito no preço em reais."
   },
   {
    "dir": "alta",
@@ -18,7 +18,7 @@
   },
   {
    "dir": "alta",
-   "t": "Previsão de 15 dias: 65% de chance de alta para o arábica."
+   "t": "Previsão de 15 dias: 66% de chance de alta para o arábica."
   },
   {
    "dir": "neutro",
@@ -56,26 +56,26 @@
   {
    "praca": "Guaxupé (Sul de Minas)",
    "tipo": "Tipo 6",
-   "preco": 1673,
-   "var": 0.83
+   "preco": 1668,
+   "var": -0.34
   },
   {
    "praca": "Patrocínio (Cerrado Mineiro)",
    "tipo": "Tipo 6",
-   "preco": 1703,
-   "var": 1.59
+   "preco": 1697,
+   "var": -0.39
   },
   {
    "praca": "Varginha (Sul de Minas)",
    "tipo": "Tipo 6 bebida dura",
-   "preco": 1780,
-   "var": 3.49
+   "preco": 1760,
+   "var": -1.12
   },
   {
    "praca": "Manhuaçu (Matas de Minas)",
    "tipo": "Tipo 6 bebida dura",
-   "preco": 1688,
-   "var": 3.49
+   "preco": 1678,
+   "var": -0.59
   }
  ]
 }
