@@ -1,17 +1,17 @@
 {
- "updatedAt": "2026-11-18T22:53:44Z",
+ "updatedAt": "2026-11-19T02:16:23Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
-   "detalhe": "512 pregões"
+   "detalhe": "513 pregões"
   },
   "NY 2º vencimento (CNBC)": {
    "ok": true,
-   "detalhe": "cotação do dia 269.45 (KCK7); suficiente para a emenda"
+   "detalhe": "cotação do dia 268.75 (KCK7); suficiente para a emenda"
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "276.05 (KCH7) em 2026-11-18T17:43:29.000-0500"
+   "detalhe": "275.45 (KCH7) em 2026-11-18T21:05:59.000-0500"
   },
   "Londres (TradingView)": {
    "ok": true,
@@ -19,11 +19,11 @@
   },
   "Dólar PTAX (Banco Central)": {
    "ok": true,
-   "detalhe": "275 dias"
+   "detalhe": "274 dias"
   },
   "Dólar comercial histórico (CNBC)": {
    "ok": true,
-   "detalhe": "543 dias"
+   "detalhe": "544 dias"
   },
   "Dólar agora (CNBC)": {
    "ok": true,
@@ -59,7 +59,7 @@
   },
   "Praças de Minas (Agrolink)": {
    "ok": true,
-   "detalhe": "4 de 4 praças, até 2026-11-18"
+   "detalhe": "4 de 4 praças, até 2026-11-19"
   },
   "Clima (Open-Meteo)": {
    "ok": true,
