@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-11-19T11:06:07Z",
+ "geradoEm": "2026-11-19T12:02:25Z",
  "arabica": {
   "cepea": 1682.78,
   "cepeaData": "2026-11-18",
-  "fisicoEstimadoHoje": 1689,
-  "bolsaUltimo": 277.1,
+  "fisicoEstimadoHoje": 1696,
+  "bolsaUltimo": 278.8,
   "bolsaData": "2026-11-19",
-  "bolsaVar1d": 0.00599019785805055,
-  "bolsaVar5d": 0.009287925696594534,
-  "bolsaVar20d": -0.11313810209633535,
+  "bolsaVar1d": 0.012161916863314692,
+  "bolsaVar5d": 0.015479876160990669,
+  "bolsaVar20d": -0.10769723155704902,
   "previsao": {
    "7d": {
-    "centro": 1713,
+    "centro": 1721,
     "faixa70": [
-     1621,
-     1809
+     1628,
+     1818
     ],
-    "chanceAlta": 0.6
+    "chanceAlta": 0.61
    },
    "15d": {
-    "centro": 1742,
+    "centro": 1751,
     "faixa70": [
-     1605,
-     1889
+     1613,
+     1901
     ],
-    "chanceAlta": 0.65
+    "chanceAlta": 0.66
    }
   },
   "fisicoVsBolsa": {
@@ -46,7 +46,7 @@
    "7d": {
     "centro": 955,
     "faixa70": [
-     914,
+     913,
      998
     ],
     "chanceAlta": 0.5
@@ -54,8 +54,8 @@
    "15d": {
     "centro": 955,
     "faixa70": [
-     895,
-     1020
+     894,
+     1019
     ],
     "chanceAlta": 0.5
    }
@@ -67,19 +67,12 @@
   }
  },
  "dolar": {
-  "ultimo": 5.8777,
+  "ultimo": 5.8741,
   "data": "2026-11-19",
-  "var1d": -0.000646093683584148,
-  "var5d": 0.04199758899446904
+  "var1d": -0.001258182436453259,
+  "var5d": 0.041359381647993354
  },
  "clima": [
-  {
-   "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 60.7,
-   "tmin": 19.3,
-   "tmax": 30.7,
-   "nota": "Chuva boa para a florada e o pegamento"
-  },
   {
    "regiao": "Sul de Minas (Varginha)",
    "chuva7d": 41.4,
