@@ -2,10 +2,11 @@ name: Coleta e publicação
 
 on:
   schedule:
-    # de hora em hora, das 6h10 às 19h10 de Brasília (UTC-3), de segunda a sexta:
-    # pega a abertura de NY e do dólar antes das cooperativas fecharem o preço da manhã.
-    # O GitHub pode atrasar execuções agendadas em alguns minutos.
-    - cron: "10 9-22 * * 1-5"
+    # a cada 15 minutos durante o pregão (6h às 18h45 de Brasília, UTC-3), de segunda a sexta,
+    # e mais uma às 19h37 para pegar o CEPEA que sai no fim da tarde.
+    # Minutos "quebrados" fogem do horário cheio, quando o GitHub mais atrasa as execuções.
+    - cron: "7,22,37,52 9-21 * * 1-5"
+    - cron: "37 22 * * 1-5"
   push:
     branches: [main]
   workflow_dispatch: {}

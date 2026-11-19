@@ -166,6 +166,60 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
 #notif.off .nopts, #notif.off .fields{opacity:.55}
 .btn.wa{background:#1F8A4C;border-color:#1F8A4C;color:#fff}
 .preview{font:400 .82rem var(--mono);white-space:pre-wrap;background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:10px;margin:0;overflow-wrap:anywhere}
+/* Bola de Cristal */
+.bola{--tom:var(--accent);position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px;display:grid;gap:14px}
+.bola.alta{--tom:var(--up)} .bola.baixa{--tom:var(--down)}
+.bola::before{content:"";position:absolute;inset:-40% -20% auto;height:120%;background:radial-gradient(closest-side,color-mix(in srgb,var(--tom) 16%,transparent),transparent);pointer-events:none}
+.bola > *{position:relative}
+.bola-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.bola-top h2{margin:0;display:flex;align-items:center;gap:8px}
+.bola-ctl{display:flex;gap:6px}
+.bola-ctl .seg{grid-template-columns:1fr 1fr;padding:2px}
+.bola-ctl .seg button{min-height:32px;padding:4px 10px;font-size:.78rem}
+.bola-core{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center}
+@media (max-width:420px){.bola-core{grid-template-columns:1fr;justify-items:center;text-align:center}}
+.orbe{width:148px;aspect-ratio:1;position:relative;display:grid;place-items:center;flex:none}
+.orbe .esfera{position:absolute;inset:0;border-radius:50%;overflow:hidden;
+  background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.55),transparent 22%),
+    radial-gradient(circle at 50% 55%,color-mix(in srgb,var(--tom) 55%,#0b0f0d),color-mix(in srgb,var(--tom) 18%,#060807) 70%);
+  box-shadow:0 0 34px color-mix(in srgb,var(--tom) 45%,transparent),inset 0 -10px 24px rgba(0,0,0,.45),inset 0 0 0 1px color-mix(in srgb,var(--tom) 50%,transparent)}
+.orbe .nevoa{position:absolute;inset:-30%;background:conic-gradient(from 0deg,transparent,color-mix(in srgb,var(--tom) 45%,transparent),transparent 40%,color-mix(in srgb,#fff 18%,transparent),transparent 70%);filter:blur(10px);opacity:.75}
+.orbe .base{position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:96px;height:20px;border-radius:50%/60%;background:linear-gradient(#3a2a1c,#1d140d);box-shadow:0 6px 14px rgba(0,0,0,.4);z-index:-1}
+.orbe .leitura{position:relative;text-align:center;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.orbe .leitura b{display:block;font:700 2.3rem/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.orbe .leitura span{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;opacity:.9}
+@media (prefers-reduced-motion:no-preference){
+  .orbe .nevoa{animation:girar 9s linear infinite}
+  .orbe .esfera{animation:pulsar 3.2s ease-in-out infinite}
+  .orbe.lendo .leitura{animation:surgir .9s ease-out}
+}
+@keyframes girar{to{transform:rotate(360deg)}}
+@keyframes pulsar{50%{box-shadow:0 0 52px color-mix(in srgb,var(--tom) 60%,transparent),inset 0 -10px 24px rgba(0,0,0,.45),inset 0 0 0 1px color-mix(in srgb,var(--tom) 50%,transparent)}}
+@keyframes surgir{from{opacity:0;transform:scale(.7);filter:blur(6px)}}
+.profecia{display:grid;gap:8px;min-width:0}
+.profecia .frase{font:600 1.25rem/1.25 var(--display);margin:0;text-wrap:balance}
+.profecia .frase em{font-style:normal;color:var(--tom)}
+.profecia .alvo{font-size:.9rem;color:var(--muted);margin:0}
+.profecia .alvo b{color:var(--ink);font-family:var(--mono);font-weight:500}
+.conselho{text-align:left;width:100%;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;background:color-mix(in srgb,var(--tom) 10%,var(--bg));border:1px solid color-mix(in srgb,var(--tom) 30%,var(--line));border-radius:12px;padding:10px 12px}
+.conselho .ic{font-size:1.4rem;line-height:1}
+.conselho b{display:block;font-family:var(--display);font-size:1rem;color:var(--tom)}
+.conselho span{font-size:.86rem}
+.pistas{display:grid;gap:0;border-top:1px dashed var(--line)}
+.pista{display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:baseline;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.86rem}
+.pista:last-child{border-bottom:0}
+.pista .seta{font-weight:700;text-align:center}
+.pista .seta.alta{color:var(--up)} .pista .seta.baixa{color:var(--down)} .pista .seta.neutro{color:var(--muted)}
+.pista small{color:var(--muted);font-size:.72rem;white-space:nowrap}
+.forca{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.82rem;color:var(--muted)}
+.forca .barras{display:flex;gap:3px}
+.forca .barras i{width:14px;height:8px;border-radius:2px;background:var(--line)}
+.forca .barras i.on{background:var(--tom)}
+.aovivo{display:inline-flex;align-items:center;gap:6px;font:600 .68rem var(--body);text-transform:uppercase;letter-spacing:.06em;padding:3px 8px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.aovivo i{width:7px;height:7px;border-radius:50%;background:var(--muted)}
+.aovivo.on{color:var(--up)} .aovivo.on i{background:var(--up)}
+@media (prefers-reduced-motion:no-preference){.aovivo.on i{animation:pisca 1.6s ease-in-out infinite}}
+@keyframes pisca{50%{opacity:.25}}
 </style>
 </head>
 <body>
@@ -179,6 +233,41 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   <div class="notice" id="nodb" hidden>Sem conexão agora. Mostrando os últimos dados salvos no aparelho.</div>
 
   <main id="main">
+    <section class="span" aria-labelledby="h-bola">
+      <div class="bola" id="bola">
+        <div class="bola-top">
+          <h2 id="h-bola">🔮 Bola de Cristal <span class="aovivo" id="pregao"><i></i><span>–</span></span></h2>
+          <div class="bola-ctl">
+            <div class="seg prod" role="group" aria-label="Produto da Bola de Cristal">
+              <button type="button" data-prod="arabica" aria-pressed="true">Arábica</button>
+              <button type="button" data-prod="conilon" aria-pressed="false">Conilon</button>
+            </div>
+            <div class="seg bh" role="group" aria-label="Prazo da Bola de Cristal">
+              <button type="button" data-bh="7" aria-pressed="false">7 dias</button>
+              <button type="button" data-bh="15" aria-pressed="true">15 dias</button>
+            </div>
+          </div>
+        </div>
+        <div class="bola-core">
+          <div class="orbe" id="orbe" aria-hidden="true">
+            <div class="esfera"><div class="nevoa"></div></div>
+            <div class="base"></div>
+            <div class="leitura"><b id="bPct">–</b><span id="bLbl">lendo…</span></div>
+          </div>
+          <div class="profecia">
+            <p class="frase" id="bFrase">A bola está lendo o mercado…</p>
+            <p class="alvo" id="bAlvo">&nbsp;</p>
+            <div class="conselho" id="bConselho" hidden><span class="ic" id="bIc"></span><div><b id="bCons">–</b><span id="bPorque"></span></div></div>
+          </div>
+        </div>
+        <div>
+          <div class="forca"><span id="bForca">O que a bola está vendo</span><span class="barras" id="bBarras"></span></div>
+          <div class="pistas" id="bPistas"></div>
+        </div>
+        <p class="caption" id="bNota">Chance calculada com a bolsa, o dólar, o preço físico e o clima. É probabilidade, não certeza.</p>
+      </div>
+    </section>
+
     <section class="hero" aria-labelledby="h-hoje">
       <div>
         <div class="eyebrow" id="h-hoje">Indicador CEPEA/Esalq · arábica tipo 6</div>
@@ -341,7 +430,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   <footer class="assinatura">
     <span class="marca">Radar do Café</span>
     <span>desenvolvido por <b>Talles Eugenio</b></span>
-    <span class="versao">versão 28/10 · 13h50</span>
+    <span class="versao">versão 18/11 · Bola de Cristal</span>
   </footer>
 </div>
 
@@ -528,13 +617,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
       const c = nP ? nL.cepeaConilon/nP.cepeaConilon-1 : (nL.conilonVar!=null? nL.conilonVar/100 : null);
       if (c!=null){ $("conChg").textContent = pct(c); $("conChg").className="s "+cls(c);} }
 
-    // frescor
-    const stamps = quotes.map(x=>x.updatedAt).concat(meta&&meta.updatedAt?[meta.updatedAt]:[], weather&&weather.updatedAt?[weather.updatedAt]:[]).filter(Boolean).sort();
-    const ts = stamps[stamps.length-1];
-    if (ts){ const h=(Date.now()-new Date(ts).getTime())/36e5;
-      $("dot").className = "dot " + (h<8?"ok":"old");
-      $("fresh").textContent = h<1 ? "atualizado agora" : h<24 ? "atualizado há "+Math.round(h)+" h" : "atualizado há "+Math.round(h/24)+" dias";
-    } else { $("fresh").textContent = quotes.length ? "sem horário" : "aguardando dados"; }
+    renderFresh();
 
     // estimativa de hoje no topo (só quando o CEPEA é de dia anterior)
     { const Fa = forecastFor("arabica", 7);
@@ -641,6 +724,100 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
         <div class="meta">Sinal do Radar de ${esc(dBR(r.data))} às ${esc(r.hora)}. Ajuda para decidir, não é recomendação de investimento.</div></details>`; }).join("");
     $("sinal").hidden = false;
   }
+  // ---------- frescor dos dados (em minutos) e pregão de NY ----------
+  let ULT_COLETA = null;
+  function renderFresh(){
+    const stamps = quotes.map(x=>x.updatedAt).concat(meta&&meta.updatedAt?[meta.updatedAt]:[], weather&&weather.updatedAt?[weather.updatedAt]:[]).filter(Boolean).sort();
+    const ts = stamps[stamps.length-1];
+    if (ts){ const min = Math.max(0, Math.round((Date.now()-new Date(ts).getTime())/6e4));
+      const aberto = pregaoNY().aberto;
+      $("dot").className = "dot " + ((aberto ? min<=40 : min<=8*60) ? "ok" : "old");
+      $("fresh").textContent = min<2 ? "atualizado agora" : min<60 ? "atualizado há "+min+" min" : min<24*60 ? "atualizado há "+Math.floor(min/60)+" h"+(min%60>=5&&min<6*60?" "+(min%60)+" min":"") : "atualizado há "+Math.round(min/1440)+" dias";
+    } else { $("fresh").textContent = quotes.length ? "sem horário" : "aguardando dados"; }
+    const p = pregaoNY(), el = $("pregao");
+    if (el){ el.className = "aovivo" + (p.aberto ? " on" : ""); el.querySelector("span").textContent = p.texto; }
+  }
+  // café arábica em NY: segunda a sexta, 4h15 às 13h30 no horário de Nova York
+  function pregaoNY(){
+    const parts = Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",weekday:"short",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date()).map(x=>[x.type,x.value]));
+    const m = (+parts.hour)*60 + (+parts.minute), util = !["Sat","Sun"].includes(parts.weekday);
+    const aberto = util && m >= 4*60+15 && m < 13*60+30;
+    // diferença de fuso entre Brasília e Nova York (muda no horário de verão americano)
+    const br = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+    const mBR = (+br.find(x=>x.type==="hour").value)*60 + (+br.find(x=>x.type==="minute").value);
+    const dif = Math.round(((mBR - m + 1440) % 1440)/60);
+    const abre = (4+dif) + "h15", fecha = (13+dif) + "h30";
+    return { aberto, texto: aberto ? "NY aberta · fecha " + fecha : "NY fechada · abre " + abre };
+  }
+
+  // ---------- Bola de Cristal ----------
+  // junta a previsão do modelo (chance de alta medida nos erros reais) com pistas do mercado e do clima
+  let BH = 15;
+  try { const v = localStorage.getItem("radar-bh"); if ([7,15].includes(+v)) BH = +v; } catch(e){}
+  function pistasDe(prod, F){
+    const out = [], lq = quotes.slice().sort((a,b)=>a.date<b.date?-1:1), P = PRODS[prod];
+    // 1) bolsa nos últimos 5 pregões
+    const bs = lq.filter(x=>x[P.field]>0);
+    if (bs.length > 5){ const a = bs[bs.length-1][P.field+"Adj"]||bs[bs.length-1][P.field], b = bs[bs.length-6][P.field+"Adj"]||bs[bs.length-6][P.field], v = a/b-1;
+      out.push({ dir: v>0.01?"alta":v<-0.01?"baixa":"neutro", t: (P.bolsa==="NY"?"Bolsa de Nova York":"Bolsa de Londres") + (v>0.01?" subindo":v<-0.01?" caindo":" de lado"), d: pct(v)+" em 5 pregões" }); }
+    // 2) dólar em 5 dias
+    const us = lq.filter(x=>x.usdCom>0);
+    if (us.length > 5){ const v = us[us.length-1].usdCom/us[us.length-6].usdCom-1;
+      out.push({ dir: v>0.01?"alta":v<-0.01?"baixa":"neutro", t: v>0.01?"Dólar subindo: café em reais fica mais caro":v<-0.01?"Dólar caindo: café em reais fica mais barato":"Dólar estável", d: pct(v)+" em 5 dias" }); }
+    // 3) físico em relação à bolsa: muito abaixo da média costuma se recuperar
+    const pts = F.S.filter(x=>x.fis && x.usdReal).map(x=>x.fis/x.parity-1).slice(-60);
+    if (pts.length >= 10){ const now = pts[pts.length-1], avg = pts.reduce((a,b)=>a+b,0)/pts.length, dif = (now-avg)*100;
+      out.push({ dir: dif<-2?"alta":dif>2?"baixa":"neutro", t: dif<-2?"Físico barato perto da bolsa: tende a recuperar":dif>2?"Físico caro perto da bolsa: tende a ceder":"Físico em linha com a bolsa", d: (dif>0?"+":"")+fmtN(dif,1)+" pts da média" }); }
+    // 4) clima nas regiões do produto (chuva boa na florada = safra maior = pressão de baixa)
+    if (weather && weather.regioes){ const rs = weather.regioes.filter(w=> prod==="conilon" ? /Conilon/i.test(w.regiao) : !/Conilon/i.test(w.regiao));
+      if (rs.length){ const chuva = rs.reduce((a,w)=>a+(w.chuva7d||0),0)/rs.length, tmin = Math.min(...rs.map(w=>w.tmin??99)), mes = new Date().getMonth()+1;
+        let dir = "neutro", t = "Clima normal nas lavouras";
+        if (tmin <= 3){ dir = "alta"; t = "Risco de geada nas lavouras"; }
+        else if (chuva < 10 && (mes>=9 || mes<=3)){ dir = "alta"; t = "Pouca chuva: ameaça a próxima safra"; }
+        else if (chuva >= 30 && (mes>=9 || mes<=3)){ dir = "baixa"; t = "Chuva boa: safra maior pesa no preço"; }
+        out.push({ dir, t, d: fmtN(chuva,0)+" mm em 7 dias" }); } }
+    return out;
+  }
+  function renderBola(){
+    document.querySelectorAll(".seg.bh button").forEach(b=>b.setAttribute("aria-pressed", String(+b.dataset.bh===BH)));
+    const F = forecastFor(PROD, BH), box = $("bola"), orbe = $("orbe");
+    if (!F){ $("bFrase").textContent = "A bola precisa de mais dados da bolsa para ler o futuro."; $("bPct").textContent = "–"; $("bLbl").textContent = "aguardando"; return; }
+    const P = PRODS[PROD], f = F.f, up = f.up, pis = pistasDe(PROD, F);
+    const altas = pis.filter(x=>x.dir==="alta").length, baixas = pis.filter(x=>x.dir==="baixa").length, saldo = altas - baixas;
+    const dir = up >= 0.55 ? "alta" : up <= 0.45 ? "baixa" : "neutro";
+    box.className = "bola " + (dir==="neutro" ? "" : dir);
+    const chance = Math.round((dir==="baixa" ? 1-up : up)*100);
+    const ant = $("bPct").textContent; $("bPct").textContent = dir==="neutro" ? Math.round(up*100)+"%" : chance+"%";
+    $("bLbl").textContent = dir==="alta" ? "chance de alta" : dir==="baixa" ? "chance de queda" : "chance de alta";
+    if (ant !== $("bPct").textContent){ orbe.classList.remove("lendo"); void orbe.offsetWidth; orbe.classList.add("lendo"); }
+    const dt = F.target.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"}), nome = P.nome;
+    $("bFrase").innerHTML = dir==="alta" ? `Nos próximos ${BH} dias, o ${esc(nome)} tende a <em>subir</em>.`
+      : dir==="baixa" ? `Nos próximos ${BH} dias, o ${esc(nome)} tende a <em>cair</em>.`
+      : `Nos próximos ${BH} dias, o ${esc(nome)} está <em>sem direção clara</em>.`;
+    $("bAlvo").innerHTML = `Preço provável em ${esc(dt)}: <b>${esc(fmtR0(F.base*f.mid))}</b><br>7 em 10 vezes fica entre <b>${esc(fmtR0(F.base*f.lo70))}</b> e <b>${esc(fmtR0(F.base*f.hi70))}</b> (hoje ${esc(fmtR0(F.base))}).`;
+    // conselho: modelo e pistas precisam concordar para sair do "aguardar"
+    let c;
+    if (dir==="alta" && saldo >= 0) c = { ic:"🟢", t:"Segurar a venda", p: saldo>=2 ? " A maioria das pistas também aponta alta. Se puder esperar, a tendência é a seu favor." : " Se puder esperar, a tendência é a seu favor; venda só o que precisar agora." };
+    else if (dir==="baixa" && saldo <= 0) c = { ic:"🔴", t:"Vender uma parte", p: saldo<=-2 ? " A maioria das pistas também aponta queda. Garantir parte do preço de hoje reduz o risco." : " Garantir parte do preço de hoje reduz o risco de pegar o preço mais baixo." };
+    else if (dir==="neutro" && saldo >= 2) c = { ic:"🟡", t:"Leve viés de alta", p: " O modelo está dividido, mas as pistas pendem para alta. Venda só o necessário." };
+    else if (dir==="neutro" && saldo <= -2) c = { ic:"🟡", t:"Leve viés de queda", p: " O modelo está dividido, mas as pistas pendem para queda. Vender aos poucos é mais seguro." };
+    else c = { ic:"🟡", t:"Aguardar", p: " Os sinais estão divididos. Melhor vender só o necessário e esperar o mercado firmar." };
+    $("bConselho").hidden = false; $("bIc").textContent = c.ic; $("bCons").textContent = c.t; $("bPorque").textContent = c.p;
+    // força: quantas pistas concordam com a direção do modelo
+    const concordam = dir==="alta" ? altas : dir==="baixa" ? baixas : pis.filter(x=>x.dir==="neutro").length;
+    $("bForca").textContent = pis.length ? (dir==="neutro" ? "O que a bola está vendo" : concordam + " de " + pis.length + " pistas apontam " + (dir==="alta"?"alta":"queda")) : "O que a bola está vendo";
+    $("bBarras").innerHTML = pis.map((_,i)=>`<i class="${dir!=="neutro" && i<concordam ? "on" : ""}"></i>`).join("");
+    const seta = { alta:"▲", baixa:"▼", neutro:"•" };
+    $("bPistas").innerHTML = pis.map(x=>`<div class="pista"><span class="seta ${x.dir}">${seta[x.dir]}</span><span>${esc(x.t)}</span><small class="num">${esc(x.d)}</small></div>`).join("");
+    // honestidade: quantas vezes a faixa acertou no histórico, e de quando é o último preço da bolsa
+    const lq = quotes.slice().sort((a,b)=>a.date<b.date?-1:1).filter(x=>x[P.field]>0).pop() || {};
+    const hora = lq[P.field+"Hora"] ? new Date(lq[P.field+"Hora"]).toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit",timeZone:"America/Sao_Paulo"}) : null;
+    const acerto = F.cal && F.cal.n >= 20 ? " Nos testes com o histórico, o preço ficou dentro da faixa em " + Math.round(F.cal.in70/F.cal.n*100) + "% das vezes." : "";
+    $("bNota").textContent = "Leitura com " + P.bolsa + (hora ? " das " + hora : " de " + dBR(lq.date)) + ", dólar, preço físico e clima." + acerto + " É probabilidade, não certeza.";
+  }
+  document.querySelectorAll(".seg.bh button").forEach(b=>b.addEventListener("click",()=>{
+    BH = +b.dataset.bh; try{ localStorage.setItem("radar-bh", String(BH)); }catch(e){} renderBola(); }));
+
   // placar: confere cada sinal com o CEPEA 7 e 15 dias depois
   function renderPlacar(){
     const itens = ((recs && recs.itens) || []).slice().sort((a,b)=>(a.data+a.hora)<(b.data+b.hora)?-1:1);
@@ -807,7 +984,7 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
   }
 
   document.querySelectorAll(".seg.prod button").forEach(b=>b.addEventListener("click",()=>{
-    PROD = b.dataset.prod; try{ localStorage.setItem("radar-prod", PROD); }catch(e){} render(); renderCalc(); }));
+    PROD = b.dataset.prod; try{ localStorage.setItem("radar-prod", PROD); }catch(e){} render(); renderCalc(); renderBola(); }));
   document.querySelectorAll(".seg.fc button").forEach(b=>b.addEventListener("click",()=>{
     H = +b.dataset.h; try{ localStorage.setItem("radar-h", String(H)); }catch(e){} render(); }));
 
@@ -828,10 +1005,21 @@ h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;
     if (w.status === "fulfilled") weather = w.value;
     $("nodb").hidden = navigator.onLine;
     if (q.status === "rejected" && !quotes.length) $("fresh").textContent = "não foi possível carregar";
-    nRender(); render(); renderSinal(); renderPlacar(); renderFontes(); renderCalc(); renderBasis(); renderHist(); renderResumo();
+    if (st.status === "fulfilled") ULT_COLETA = st.value.updatedAt || ULT_COLETA;
+    nRender(); render(); renderBola(); renderSinal(); renderPlacar(); renderFontes(); renderCalc(); renderBasis(); renderHist(); renderResumo();
   }
   load();
-  setInterval(load, 10 * 60 * 1000);
+  // a cada minuto: confere se saiu coleta nova (arquivo pequeno) e só então recarrega tudo
+  async function conferir(){
+    if (document.hidden) return;
+    try {
+      const r = await fetch("data/status.json?t=" + Date.now(), {cache:"no-store"});
+      if (r.ok){ const st = await r.json(); if (st.updatedAt && st.updatedAt !== ULT_COLETA){ await load(); return; } }
+    } catch(e){}
+    renderFresh();
+  }
+  setInterval(conferir, 60 * 1000);
+  setInterval(renderFresh, 20 * 1000);
   document.addEventListener("visibilitychange", () => { if (!document.hidden) load(); });
 
   // ---------- notificações ----------
