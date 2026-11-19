@@ -1,5 +1,5 @@
 {
- "atualizadoEm": "2026-11-19T02:16:46Z",
+ "atualizadoEm": "2026-11-19T02:18:21Z",
  "pracas": [
   {
    "praca": "Guaxupé (Sul de Minas)",
@@ -20,14 +20,14 @@
    "tipo": "Tipo 6 bebida dura",
    "preco": 1780,
    "var": 3.49,
-   "data": "2026-11-18"
+   "data": "2026-11-19"
   },
   {
    "praca": "Manhuaçu (Matas de Minas)",
    "tipo": "Tipo 6 bebida dura",
    "preco": 1688,
    "var": 3.49,
-   "data": "2026-11-18"
+   "data": "2026-11-19"
   }
  ]
 }
