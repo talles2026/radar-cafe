@@ -1,6 +1,31 @@
 {
- "updatedAt": "2026-11-19T12:01:41Z",
+ "updatedAt": "2026-11-19T13:15:10Z",
  "regioes": [
+  {
+   "regiao": "Chapada de Minas (Angelândia)",
+   "chuva7d": 60.7,
+   "tmin": 19.3,
+   "tmax": 30.7,
+   "dias": [
+    "2026-11-19",
+    "2026-11-20",
+    "2026-11-21",
+    "2026-11-22",
+    "2026-11-23",
+    "2026-11-24",
+    "2026-11-25"
+   ],
+   "chuvaDia": [
+    17.3,
+    19.9,
+    6.4,
+    3.3,
+    8.4,
+    4.8,
+    0.6
+   ],
+   "nota": "Chuva boa para a florada e o pegamento"
+  },
   {
    "regiao": "Sul de Minas (Varginha)",
    "chuva7d": 41.4,

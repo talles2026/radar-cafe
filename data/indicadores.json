@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-11-19T12:02:25Z",
+ "geradoEm": "2026-11-19T13:15:30Z",
  "arabica": {
   "cepea": 1682.78,
   "cepeaData": "2026-11-18",
-  "fisicoEstimadoHoje": 1696,
-  "bolsaUltimo": 278.8,
+  "fisicoEstimadoHoje": 1689,
+  "bolsaUltimo": 276.4,
   "bolsaData": "2026-11-19",
-  "bolsaVar1d": 0.012161916863314692,
-  "bolsaVar5d": 0.015479876160990669,
-  "bolsaVar20d": -0.10769723155704902,
+  "bolsaVar1d": 0.003448901797059367,
+  "bolsaVar5d": 0.006738299034784179,
+  "bolsaVar20d": -0.11537846055368861,
   "previsao": {
    "7d": {
-    "centro": 1721,
+    "centro": 1713,
     "faixa70": [
-     1628,
-     1818
+     1621,
+     1809
     ],
-    "chanceAlta": 0.61
+    "chanceAlta": 0.6
    },
    "15d": {
-    "centro": 1751,
+    "centro": 1741,
     "faixa70": [
-     1613,
-     1901
+     1605,
+     1889
     ],
-    "chanceAlta": 0.66
+    "chanceAlta": 0.65
    }
   },
   "fisicoVsBolsa": {
@@ -36,26 +36,26 @@
  "conilon": {
   "cepea": 957.74,
   "cepeaData": "2026-11-18",
-  "fisicoEstimadoHoje": 955,
-  "bolsaUltimo": 3012.0,
+  "fisicoEstimadoHoje": 954,
+  "bolsaUltimo": 2998.0,
   "bolsaData": "2026-11-19",
-  "bolsaVar1d": -0.0033090668431502435,
-  "bolsaVar5d": -0.07607361963190185,
-  "bolsaVar20d": -0.11671554252199412,
+  "bolsaVar1d": -0.00794176042356054,
+  "bolsaVar5d": -0.08036809815950918,
+  "bolsaVar20d": -0.12082111436950149,
   "previsao": {
    "7d": {
-    "centro": 955,
+    "centro": 953,
     "faixa70": [
-     913,
-     998
+     912,
+     996
     ],
     "chanceAlta": 0.5
    },
    "15d": {
-    "centro": 955,
+    "centro": 953,
     "faixa70": [
-     894,
-     1019
+     892,
+     1018
     ],
     "chanceAlta": 0.5
    }
@@ -67,12 +67,19 @@
   }
  },
  "dolar": {
-  "ultimo": 5.8741,
+  "ultimo": 5.892,
   "data": "2026-11-19",
-  "var1d": -0.001258182436453259,
-  "var5d": 0.041359381647993354
+  "var1d": 0.0017852588625351107,
+  "var5d": 0.044532690398525254
  },
  "clima": [
+  {
+   "regiao": "Chapada de Minas (Angelândia)",
+   "chuva7d": 60.7,
+   "tmin": 19.3,
+   "tmax": 30.7,
+   "nota": "Chuva boa para a florada e o pegamento"
+  },
   {
    "regiao": "Sul de Minas (Varginha)",
    "chuva7d": 41.4,
