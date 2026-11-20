@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-11-20T14:27:04Z",
+ "geradoEm": "2026-11-20T15:30:33Z",
  "arabica": {
   "cepea": 1709.06,
   "cepeaData": "2026-11-19",
-  "fisicoEstimadoHoje": 1688,
-  "bolsaUltimo": 270.65,
+  "fisicoEstimadoHoje": 1710,
+  "bolsaUltimo": 275.5,
   "bolsaData": "2026-11-20",
-  "bolsaVar1d": -0.019384057971014612,
-  "bolsaVar5d": -0.010420475319926958,
-  "bolsaVar20d": -0.11969425922914301,
+  "bolsaVar1d": -0.0018115942028985588,
+  "bolsaVar5d": 0.007312614259597838,
+  "bolsaVar20d": -0.10391933647747598,
   "previsao": {
    "7d": {
-    "centro": 1707,
+    "centro": 1733,
     "faixa70": [
-     1616,
-     1803
+     1642,
+     1828
     ],
-    "chanceAlta": 0.58
+    "chanceAlta": 0.6
    },
    "15d": {
-    "centro": 1729,
+    "centro": 1761,
     "faixa70": [
-     1595,
-     1876
+     1626,
+     1906
     ],
-    "chanceAlta": 0.62
+    "chanceAlta": 0.65
    }
   },
   "fisicoVsBolsa": {
@@ -36,7 +36,7 @@
  "conilon": {
   "cepea": 947.36,
   "cepeaData": "2026-11-19",
-  "fisicoEstimadoHoje": 948,
+  "fisicoEstimadoHoje": 949,
   "bolsaUltimo": 2998.0,
   "bolsaData": "2026-11-20",
   "bolsaVar1d": 0.0,
@@ -46,16 +46,16 @@
    "7d": {
     "centro": 948,
     "faixa70": [
-     908,
-     989
+     909,
+     990
     ],
     "chanceAlta": 0.49
    },
    "15d": {
-    "centro": 947,
+    "centro": 948,
     "faixa70": [
      889,
-     1009
+     1010
     ],
     "chanceAlta": 0.49
    }
@@ -67,26 +67,12 @@
   }
  },
  "dolar": {
-  "ultimo": 5.9443,
+  "ultimo": 5.9479,
   "data": "2026-11-20",
-  "var1d": 0.0016344825262024631,
-  "var5d": 0.048932415740250645
+  "var1d": 0.0022410945977824337,
+  "var5d": 0.0495676724898535
  },
  "clima": [
-  {
-   "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 50.7,
-   "tmin": 19.5,
-   "tmax": 30.3,
-   "nota": "Chuva boa para a florada e o pegamento"
-  },
-  {
-   "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 73.0,
-   "tmin": 17.0,
-   "tmax": 29.7,
-   "nota": "Chuva boa para a florada e o pegamento"
-  },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
    "chuva7d": 73.5,
