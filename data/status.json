@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-19T23:16:49Z",
+ "updatedAt": "2026-11-20T10:02:05Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -7,19 +7,19 @@
   },
   "NY 2º vencimento (CNBC)": {
    "ok": true,
-   "detalhe": "cotação do dia 267.75 (KCK7); suficiente para a emenda"
+   "detalhe": "cotação do dia 263.2 (KCK7); suficiente para a emenda"
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "275.5 (KCH7) em 2026-11-19T18:00:00.000-0500"
+   "detalhe": "270.55 (KCH7) em 2026-11-20T04:52:02.000-0500"
   },
   "Londres (TradingView)": {
    "ok": true,
-   "detalhe": "2998 (Novembro/26) em 2026-11-19"
+   "detalhe": "2998 (Novembro/26) em 2026-11-20"
   },
   "Dólar PTAX (Banco Central)": {
    "ok": true,
-   "detalhe": "275 dias"
+   "detalhe": "274 dias"
   },
   "Dólar comercial histórico (CNBC)": {
    "ok": true,
@@ -27,7 +27,7 @@
   },
   "Dólar agora (CNBC)": {
    "ok": true,
-   "detalhe": "5.9346 em 2026-11-19T16:08:00.000-0500"
+   "detalhe": "5.9353 em 2026-11-20T04:53:00.000-0500"
   },
   "CEPEA arábica (Notícias Agrícolas)": {
    "ok": false,
@@ -59,7 +59,7 @@
   },
   "Praças de Minas (Agrolink)": {
    "ok": true,
-   "detalhe": "4 de 4 praças, até 2026-11-19"
+   "detalhe": "4 de 4 praças, até 2026-11-20"
   },
   "Clima (Open-Meteo)": {
    "ok": true,

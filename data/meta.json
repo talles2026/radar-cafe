@@ -1,28 +1,28 @@
 {
- "updatedAt": "2026-11-19T23:17:09Z",
+ "updatedAt": "2026-11-20T10:02:17Z",
  "automatico": true,
- "headline": "Café em reais mais caro: NY +0,0% e dólar +0,9%",
- "summary": "Em Nova York, o arábica está em 275,50 ¢/lb, +0,0% no dia e +0,3% em 5 pregões. O dólar comercial está em R$ 5,935 (+0,9% no dia). O CEPEA arábica de 19/11 ficou em R$ 1.709,06 por saca (+1,6%), e o conilon em R$ 947,36 (-1,1%). Em Londres, o robusta está em US$ 2.998 por tonelada (-0,8% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.764, numa faixa provável de R$ 1.626 a R$ 1.914.",
+ "headline": "Café em reais mais barato: NY -2,0% e dólar +0,0%",
+ "summary": "Em Nova York, o arábica está em 270,55 ¢/lb, -2,0% no dia e -1,1% em 5 pregões. O dólar comercial está em R$ 5,935 (+0,0% no dia). O CEPEA arábica de 19/11 ficou em R$ 1.709,06 por saca (+1,6%), e o conilon em R$ 947,36 (-1,1%). Em Londres, o robusta está em US$ 2.998 por tonelada (0,0% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.726, numa faixa provável de R$ 1.591 a R$ 1.873.",
  "drivers": [
   {
-   "dir": "neutro",
-   "t": "NY ficou quase estável (+0,0%) no dia (+0,3% na semana)."
-  },
-  {
-   "dir": "alta",
-   "t": "Dólar subiu 0,9%: café em reais tende a subir."
-  },
-  {
    "dir": "baixa",
-   "t": "Londres (robusta) caiu 0,8% no dia."
-  },
-  {
-   "dir": "alta",
-   "t": "Previsão de 15 dias: 66% de chance de alta para o arábica."
+   "t": "NY caiu 2,0% no dia (-1,1% na semana)."
   },
   {
    "dir": "neutro",
-   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -21,0% contra -8,2% na média."
+   "t": "Dólar ficou quase estável (+0,0%): sem efeito no preço em reais."
+  },
+  {
+   "dir": "neutro",
+   "t": "Londres (robusta) ficou quase estável (0,0%) no dia."
+  },
+  {
+   "dir": "alta",
+   "t": "Previsão de 15 dias: 62% de chance de alta para o arábica."
+  },
+  {
+   "dir": "neutro",
+   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -21,1% contra -8,2% na média."
   }
  ],
  "sources": [
@@ -51,7 +51,7 @@
    "url": "https://open-meteo.com/"
   }
  ],
- "pracasDate": "2026-11-19",
+ "pracasDate": "2026-11-20",
  "pracas": [
   {
    "praca": "Guaxupé (Sul de Minas)",
