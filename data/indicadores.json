@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-11-20T15:30:33Z",
+ "geradoEm": "2026-11-20T16:30:06Z",
  "arabica": {
   "cepea": 1709.06,
   "cepeaData": "2026-11-19",
-  "fisicoEstimadoHoje": 1710,
-  "bolsaUltimo": 275.5,
+  "fisicoEstimadoHoje": 1702,
+  "bolsaUltimo": 273.8,
   "bolsaData": "2026-11-20",
-  "bolsaVar1d": -0.0018115942028985588,
-  "bolsaVar5d": 0.007312614259597838,
-  "bolsaVar20d": -0.10391933647747598,
+  "bolsaVar1d": -0.007971014492753614,
+  "bolsaVar5d": 0.00109689213893982,
+  "bolsaVar20d": -0.10944869084403963,
   "previsao": {
    "7d": {
-    "centro": 1733,
+    "centro": 1724,
     "faixa70": [
-     1642,
-     1828
+     1634,
+     1819
     ],
     "chanceAlta": 0.6
    },
    "15d": {
-    "centro": 1761,
+    "centro": 1750,
     "faixa70": [
-     1626,
-     1906
+     1616,
+     1895
     ],
-    "chanceAlta": 0.65
+    "chanceAlta": 0.64
    }
   },
   "fisicoVsBolsa": {
@@ -67,12 +67,26 @@
   }
  },
  "dolar": {
-  "ultimo": 5.9479,
+  "ultimo": 5.9488,
   "data": "2026-11-20",
-  "var1d": 0.0022410945977824337,
-  "var5d": 0.0495676724898535
+  "var1d": 0.0023927476156777594,
+  "var5d": 0.04972648667725443
  },
  "clima": [
+  {
+   "regiao": "Chapada de Minas (Angelândia)",
+   "chuva7d": 50.7,
+   "tmin": 19.5,
+   "tmax": 30.3,
+   "nota": "Chuva boa para a florada e o pegamento"
+  },
+  {
+   "regiao": "Sul de Minas (Varginha)",
+   "chuva7d": 73.0,
+   "tmin": 17.0,
+   "tmax": 29.7,
+   "nota": "Chuva boa para a florada e o pegamento"
+  },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
    "chuva7d": 73.5,
