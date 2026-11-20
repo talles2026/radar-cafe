@@ -1,16 +1,16 @@
 {
- "updatedAt": "2026-11-20T10:02:17Z",
+ "updatedAt": "2026-11-20T11:02:08Z",
  "automatico": true,
- "headline": "Café em reais mais barato: NY -2,0% e dólar +0,0%",
- "summary": "Em Nova York, o arábica está em 270,55 ¢/lb, -2,0% no dia e -1,1% em 5 pregões. O dólar comercial está em R$ 5,935 (+0,0% no dia). O CEPEA arábica de 19/11 ficou em R$ 1.709,06 por saca (+1,6%), e o conilon em R$ 947,36 (-1,1%). Em Londres, o robusta está em US$ 2.998 por tonelada (0,0% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.726, numa faixa provável de R$ 1.591 a R$ 1.873.",
+ "headline": "Café em reais mais barato: NY -1,8% e dólar -0,0%",
+ "summary": "Em Nova York, o arábica está em 271,05 ¢/lb, -1,8% no dia e -0,9% em 5 pregões. O dólar comercial está em R$ 5,934 (-0,0% no dia). O CEPEA arábica de 19/11 ficou em R$ 1.709,06 por saca (+1,6%), e o conilon em R$ 947,36 (-1,1%). Em Londres, o robusta está em US$ 2.998 por tonelada (0,0% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.729, numa faixa provável de R$ 1.594 a R$ 1.875.",
  "drivers": [
   {
    "dir": "baixa",
-   "t": "NY caiu 2,0% no dia (-1,1% na semana)."
+   "t": "NY caiu 1,8% no dia (-0,9% na semana)."
   },
   {
    "dir": "neutro",
-   "t": "Dólar ficou quase estável (+0,0%): sem efeito no preço em reais."
+   "t": "Dólar ficou quase estável (-0,0%): sem efeito no preço em reais."
   },
   {
    "dir": "neutro",
