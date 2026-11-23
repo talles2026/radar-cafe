@@ -1,6 +1,4 @@
 [
-{"date":"2025-10-16","usd":5.4354,"updatedAt":"2026-10-27T16:48:37Z","kc":393.8,"usdCom":5.4452,"kcAdj":352.5972,"cepeaArabica":2269.67,"cepeaConilon":1420.51},
-{"date":"2025-10-17","usd":5.439,"updatedAt":"2026-10-27T16:48:37Z","kc":397.45,"usdCom":5.408,"kcAdj":355.8653,"cepeaArabica":2262.88,"cepeaConilon":1400.77},
 {"date":"2025-10-20","usd":5.3771,"updatedAt":"2026-10-27T16:48:37Z","kc":406.05,"usdCom":5.3743,"kcAdj":363.5654,"cepeaArabica":2275.55,"cepeaConilon":1407.41},
 {"date":"2025-10-21","usd":5.3848,"updatedAt":"2026-10-27T16:48:37Z","kc":413.55,"usdCom":5.3876,"kcAdj":370.2807,"cepeaArabica":2300.49,"cepeaConilon":1423.4},
 {"date":"2025-10-22","usd":5.3898,"updatedAt":"2026-10-27T16:48:37Z","kc":420.85,"usdCom":5.3997,"kcAdj":376.8169,"cepeaArabica":2323.66,"cepeaConilon":1429.9},
@@ -285,5 +283,6 @@
 {"date":"2026-11-17","kc":281.4,"updatedAt":"2026-11-18T10:02:21Z","kcHora":"2026-11-17T17:45:44.000-0500","kc2":273.35,"rc":3091.0,"rcContrato":"Novembro/26","rc2":3071.0,"usdCom":5.7792,"usdComHora":"2026-11-17T17:36:00.000-0500","kcAdj":272.9886,"rcAdj":3091.0,"usd":5.7851,"cepeaArabica":1688.0,"cepeaConilon":960.04},
 {"date":"2026-11-18","kc":275.45,"updatedAt":"2026-11-19T11:05:50Z","kcHora":"2026-11-18T21:07:44.000-0500","kc2":269.45,"rc":3022.0,"rcContrato":"Novembro/26","rc2":3019.0,"usdCom":5.8815,"usdComHora":"2026-11-18T17:42:00.000-0500","kcAdj":267.2164,"rcAdj":3022.0,"usd":5.8102,"cepeaArabica":1682.78,"cepeaConilon":957.74},
 {"date":"2026-11-19","kc":276.0,"updatedAt":"2026-11-20T10:02:05Z","kcHora":"2026-11-19T18:00:00.000-0500","rc":2998.0,"rcContrato":"Novembro/26","rc2":2978.0,"kcAdj":267.75,"rcAdj":2998.0,"kc2":267.75,"usdCom":5.9346,"usdComHora":"2026-11-19T16:08:00.000-0500","usd":5.8889,"cepeaArabica":1709.06,"cepeaConilon":947.36},
-{"date":"2026-11-20","kc":268.7,"updatedAt":"2026-11-20T19:36:50Z","kcHora":"2026-11-20T18:00:00.000-0500","kc2":262.6,"rc":2901.0,"rcContrato":"Novembro/26","rc2":2881.0,"usdCom":5.9488,"usdComHora":"2026-11-20T13:19:00.000-0500","kcAdj":268.7,"rcAdj":2901.0,"kcVirada":true}
+{"date":"2026-11-20","kc":268.5,"updatedAt":"2026-11-23T10:13:03Z","kcHora":"2026-11-20T18:00:00.000-0500","kc2":262.6,"rc":2901.0,"rcContrato":"Novembro/26","rc2":2881.0,"usdCom":5.9488,"usdComHora":"2026-11-20T13:19:00.000-0500","kcAdj":268.5,"rcAdj":2901.0,"kcVirada":true},
+{"date":"2026-11-23","kc":270.45,"updatedAt":"2026-11-23T10:13:03Z","kcHora":"2026-11-23T05:03:01.000-0500","kc2":263.9,"rc":2901.0,"rcContrato":"Novembro/26","rc2":2878.0,"kcAdj":270.45,"rcAdj":2901.0}
 ]
