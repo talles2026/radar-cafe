@@ -1,5 +1,5 @@
 {
- "verificadoEm": "2026-11-23T19:49:38Z",
+ "verificadoEm": "2026-11-23T20:36:00Z",
  "itens": {
   "NY": {
    "ultimo": "2026-11-23",
@@ -15,7 +15,7 @@
   },
   "Londres": {
    "ultimo": "2026-11-23",
-   "esperado": "2026-11-20",
+   "esperado": "2026-11-23",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
@@ -32,7 +32,7 @@
    "estado": "atencao"
   },
   "Clima": {
-   "ultimo": "2026-11-23T19:49:38Z",
+   "ultimo": "2026-11-23T20:36:00Z",
    "estado": "ok"
   },
   "Praças": {
@@ -40,7 +40,7 @@
    "estado": "ok"
   },
   "Análise do dia": {
-   "ultimo": "2026-11-23T18:40:52Z",
+   "ultimo": "2026-11-23T19:49:51Z",
    "estado": "ok"
   }
  },
