@@ -1,34 +1,34 @@
 {
- "geradoEm": "2026-11-23T23:24:41Z",
+ "geradoEm": "2026-11-24T10:10:49Z",
  "arabica": {
   "cepea": 1692.77,
   "cepeaData": "2026-11-23",
-  "fisicoEstimadoHoje": 1693,
-  "bolsaUltimo": 267.35,
-  "bolsaData": "2026-11-23",
-  "bolsaVar1d": -0.004283054003724307,
-  "bolsaVar5d": -0.02746453255729342,
-  "bolsaVar20d": -0.11164645289915254,
+  "fisicoEstimadoHoje": 1682,
+  "bolsaUltimo": 265.2,
+  "bolsaData": "2026-11-24",
+  "bolsaVar1d": -0.009523809523809601,
+  "bolsaVar5d": -0.05756929637526653,
+  "bolsaVar20d": -0.09719148936170219,
   "previsao": {
    "7d": {
-    "centro": 1715,
+    "centro": 1700,
     "faixa70": [
-     1628,
-     1807
+     1616,
+     1789
     ],
-    "chanceAlta": 0.6
+    "chanceAlta": 0.59
    },
    "15d": {
-    "centro": 1742,
+    "centro": 1723,
     "faixa70": [
-     1612,
-     1883
+     1598,
+     1858
     ],
-    "chanceAlta": 0.65
+    "chanceAlta": 0.63
    }
   },
   "fisicoVsBolsa": {
-   "hoje": -0.1927,
+   "hoje": -0.194,
    "media": -0.0536,
    "dias": 269
   }
@@ -36,70 +36,70 @@
  "conilon": {
   "cepea": 935.58,
   "cepeaData": "2026-11-23",
-  "fisicoEstimadoHoje": 936,
-  "bolsaUltimo": 2954.0,
-  "bolsaData": "2026-11-23",
-  "bolsaVar1d": 0.018269562219924262,
-  "bolsaVar5d": -0.06489395378284268,
-  "bolsaVar20d": -0.10158150851581504,
+  "fisicoEstimadoHoje": 901,
+  "bolsaUltimo": 2799.0,
+  "bolsaData": "2026-11-24",
+  "bolsaVar1d": -0.05247122545700744,
+  "bolsaVar5d": -0.09446780977030089,
+  "bolsaVar20d": -0.13289962825278812,
   "previsao": {
    "7d": {
-    "centro": 932,
+    "centro": 892,
     "faixa70": [
-     890,
-     976
+     843,
+     943
     ],
-    "chanceAlta": 0.46
+    "chanceAlta": 0.42
    },
    "15d": {
-    "centro": 927,
+    "centro": 880,
     "faixa70": [
-     866,
-     993
+     810,
+     957
     ],
-    "chanceAlta": 0.45
+    "chanceAlta": 0.39
    }
   },
   "fisicoVsBolsa": {
-   "hoje": -0.1097,
+   "hoje": -0.1099,
    "media": -0.081,
    "dias": 45
   }
  },
  "dolar": {
-  "ultimo": 5.9293,
-  "data": "2026-11-23",
-  "var1d": -0.003277972027972198,
-  "var5d": 0.025191921986306154
+  "ultimo": 5.9314,
+  "data": "2026-11-24",
+  "var1d": 0.00021922058649925802,
+  "var5d": 0.0263358250276855
  },
  "clima": [
   {
    "regiao": "Chapada de Minas (Angelândia)",
-   "chuva7d": 26.2,
-   "tmin": 19.5,
-   "tmax": 31.2,
-   "nota": "Chuva moderada prevista"
+   "chuva7d": 8.4,
+   "tmin": 18.8,
+   "tmax": 31.6,
+   "nota": "Pouca chuva prevista"
   },
   {
    "regiao": "Sul de Minas (Varginha)",
-   "chuva7d": 125.6,
-   "tmin": 16.8,
-   "tmax": 29.5,
+   "chuva7d": 141.2,
+   "tmin": 17.3,
+   "tmax": 29.1,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Cerrado Mineiro (Patrocínio)",
-   "chuva7d": 126.3,
-   "tmin": 19.2,
-   "tmax": 28.3,
+   "chuva7d": 104.5,
+   "tmin": 19.3,
+   "tmax": 28.4,
    "nota": "Chuva boa para a florada e o pegamento"
   },
   {
    "regiao": "Conilon ES (Linhares)",
-   "chuva7d": 25.1,
-   "tmin": 22.7,
-   "tmax": 34.2,
-   "nota": "Chuva moderada prevista"
+   "chuva7d": 5.0,
+   "tmin": 21.6,
+   "tmax": 35.0,
+   "nota": "Calor e pouca chuva: atenção à florada"
   }
  ]
 }
