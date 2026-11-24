@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-24T15:50:19Z",
+ "updatedAt": "2026-11-24T16:51:55Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -7,11 +7,11 @@
   },
   "NY 2º vencimento (CNBC)": {
    "ok": true,
-   "detalhe": "cotação do dia 258.8 (KCK7); suficiente para a emenda"
+   "detalhe": "cotação do dia 255.95 (KCK7); suficiente para a emenda"
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "264.6 (KCH7) em 2026-11-24T10:40:13.000-0500"
+   "detalhe": "261.3 (KCH7) em 2026-11-24T11:41:54.000-0500"
   },
   "Londres (TradingView)": {
    "ok": true,
@@ -19,15 +19,15 @@
   },
   "Dólar PTAX (Banco Central)": {
    "ok": true,
-   "detalhe": "273 dias"
+   "detalhe": "274 dias"
   },
   "Dólar comercial histórico (CNBC)": {
    "ok": true,
-   "detalhe": "542 dias"
+   "detalhe": "551 dias"
   },
   "Dólar agora (CNBC)": {
    "ok": true,
-   "detalhe": "5.8558 em 2026-11-24T10:50:00.000-0500"
+   "detalhe": "5.8929 em 2026-11-24T11:51:00.000-0500"
   },
   "CEPEA arábica (Notícias Agrícolas)": {
    "ok": false,
@@ -51,7 +51,7 @@
   },
   "Emenda de contratos": {
    "ok": true,
-   "detalhe": "NY: 3 virada(s); Londres: 0 virada(s)"
+   "detalhe": "NY: 4 virada(s); Londres: 0 virada(s)"
   },
   "Conferência de valores": {
    "ok": false,
@@ -62,6 +62,10 @@
    "detalhe": "4 de 4 praças, até 2026-11-24"
   },
   "Clima (Open-Meteo)": {
+   "ok": false,
+   "detalhe": "0 regiões"
+  },
+  "Clima reserva (met.no)": {
    "ok": true,
    "detalhe": "4 regiões"
   }
