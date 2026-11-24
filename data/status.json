@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-24T21:41:44Z",
+ "updatedAt": "2026-11-24T22:41:47Z",
  "fontes": {
   "NY histórico (CNBC)": {
    "ok": true,
@@ -11,7 +11,7 @@
   },
   "NY agora (CNBC)": {
    "ok": true,
-   "detalhe": "266.75 (KCH7) em 2026-11-24T11:38:32.000-0500"
+   "detalhe": "260.4 (KCH7) em 2026-11-24T17:31:44.000-0500"
   },
   "Londres (TradingView)": {
    "ok": true,
@@ -23,11 +23,11 @@
   },
   "Dólar comercial histórico (CNBC)": {
    "ok": true,
-   "detalhe": "542 dias"
+   "detalhe": "543 dias"
   },
   "Dólar agora (CNBC)": {
    "ok": true,
-   "detalhe": "5.9061 em 2026-11-24T16:30:00.000-0500"
+   "detalhe": "5.9053 em 2026-11-24T17:30:00.000-0500"
   },
   "CEPEA arábica (Notícias Agrícolas)": {
    "ok": false,
@@ -43,15 +43,15 @@
   },
   "CEPEA série completa (arábica)": {
    "ok": true,
-   "detalhe": "7526 dias"
+   "detalhe": "7527 dias"
   },
   "CEPEA série completa (conilon)": {
    "ok": true,
-   "detalhe": "6169 dias"
+   "detalhe": "6170 dias"
   },
   "Emenda de contratos": {
    "ok": true,
-   "detalhe": "NY: 3 virada(s); Londres: 0 virada(s)"
+   "detalhe": "NY: 4 virada(s); Londres: 0 virada(s)"
   },
   "Conferência de valores": {
    "ok": false,
