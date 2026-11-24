@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-11-24T17:40:36Z",
+ "geradoEm": "2026-11-24T18:39:08Z",
  "arabica": {
   "cepea": 1692.77,
   "cepeaData": "2026-11-23",
-  "fisicoEstimadoHoje": 1689,
-  "bolsaUltimo": 261.1,
+  "fisicoEstimadoHoje": 1685,
+  "bolsaUltimo": 260.55,
   "bolsaData": "2026-11-24",
-  "bolsaVar1d": -0.024836601307189454,
-  "bolsaVar5d": -0.0721393034825869,
-  "bolsaVar20d": -0.11114893617021271,
+  "bolsaVar1d": -0.026890756302520913,
+  "bolsaVar5d": -0.0740938166311299,
+  "bolsaVar20d": -0.11302127659574468,
   "previsao": {
    "7d": {
-    "centro": 1709,
+    "centro": 1704,
     "faixa70": [
-     1624,
-     1798
+     1620,
+     1793
     ],
-    "chanceAlta": 0.6
+    "chanceAlta": 0.59
    },
    "15d": {
-    "centro": 1733,
+    "centro": 1728,
     "faixa70": [
-     1608,
-     1868
+     1603,
+     1863
     ],
-    "chanceAlta": 0.64
+    "chanceAlta": 0.63
    }
   },
   "fisicoVsBolsa": {
@@ -36,28 +36,28 @@
  "conilon": {
   "cepea": 935.58,
   "cepeaData": "2026-11-23",
-  "fisicoEstimadoHoje": 898,
-  "bolsaUltimo": 2799.0,
+  "fisicoEstimadoHoje": 932,
+  "bolsaUltimo": 2954.0,
   "bolsaData": "2026-11-24",
-  "bolsaVar1d": -0.05247122545700744,
-  "bolsaVar5d": -0.09446780977030089,
-  "bolsaVar20d": -0.13289962825278812,
+  "bolsaVar1d": 0.0,
+  "bolsaVar5d": -0.04432222581688772,
+  "bolsaVar20d": -0.08488228004956633,
   "previsao": {
    "7d": {
-    "centro": 888,
+    "centro": 927,
     "faixa70": [
-     838,
-     941
+     886,
+     970
     ],
-    "chanceAlta": 0.42
+    "chanceAlta": 0.46
    },
    "15d": {
-    "centro": 876,
+    "centro": 922,
     "faixa70": [
-     803,
-     954
+     862,
+     986
     ],
-    "chanceAlta": 0.38
+    "chanceAlta": 0.44
    }
   },
   "fisicoVsBolsa": {
@@ -67,10 +67,10 @@
   }
  },
  "dolar": {
-  "ultimo": 5.9003,
+  "ultimo": 5.8941,
   "data": "2026-11-24",
-  "var1d": -0.005025210367447519,
-  "var5d": 0.020954457364340984
+  "var1d": -0.006070723933829236,
+  "var5d": 0.019881644518272346
  },
  "clima": [
   {
