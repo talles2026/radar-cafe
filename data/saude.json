@@ -1,5 +1,5 @@
 {
- "verificadoEm": "2026-11-25T17:20:31Z",
+ "verificadoEm": "2026-11-25T18:05:37Z",
  "itens": {
   "NY": {
    "ultimo": "2026-11-25",
@@ -32,7 +32,7 @@
    "estado": "ok"
   },
   "Clima": {
-   "ultimo": "2026-11-25T17:20:31Z",
+   "ultimo": "2026-11-25T18:05:37Z",
    "estado": "ok"
   },
   "Praças": {
@@ -40,7 +40,7 @@
    "estado": "ok"
   },
   "Análise do dia": {
-   "ultimo": "2026-11-25T16:13:35Z",
+   "ultimo": "2026-11-25T17:20:46Z",
    "estado": "ok"
   }
  },
