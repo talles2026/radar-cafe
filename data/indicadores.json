@@ -1,30 +1,30 @@
 {
- "geradoEm": "2026-11-25T15:05:52Z",
+ "geradoEm": "2026-11-25T16:13:35Z",
  "arabica": {
   "cepea": 1679.04,
   "cepeaData": "2026-11-24",
-  "fisicoEstimadoHoje": 1687,
-  "bolsaUltimo": 265.7,
+  "fisicoEstimadoHoje": 1709,
+  "bolsaUltimo": 271.3,
   "bolsaData": "2026-11-25",
-  "bolsaVar1d": 0.01180502665651173,
-  "bolsaVar5d": -0.035396623706661856,
-  "bolsaVar20d": -0.07340889276373153,
+  "bolsaVar1d": 0.033130236100533006,
+  "bolsaVar5d": -0.015066255218732949,
+  "bolsaVar20d": -0.053879686137750626,
   "previsao": {
    "7d": {
-    "centro": 1705,
+    "centro": 1732,
     "faixa70": [
-     1620,
-     1795
+     1642,
+     1827
     ],
-    "chanceAlta": 0.59
+    "chanceAlta": 0.6
    },
    "15d": {
-    "centro": 1727,
+    "centro": 1759,
     "faixa70": [
-     1601,
-     1863
+     1625,
+     1905
     ],
-    "chanceAlta": 0.63
+    "chanceAlta": 0.65
    }
   },
   "fisicoVsBolsa": {
@@ -36,28 +36,28 @@
  "conilon": {
   "cepea": 905.45,
   "cepeaData": "2026-11-24",
-  "fisicoEstimadoHoje": 895,
-  "bolsaUltimo": 2779.0,
+  "fisicoEstimadoHoje": 902,
+  "bolsaUltimo": 2816.0,
   "bolsaData": "2026-11-25",
-  "bolsaVar1d": -0.05924170616113744,
-  "bolsaVar5d": -0.08041032428855066,
-  "bolsaVar20d": -0.12993112085159675,
+  "bolsaVar1d": -0.046716316858496976,
+  "bolsaVar5d": -0.06816677696889473,
+  "bolsaVar20d": -0.11834690043832186,
   "previsao": {
    "7d": {
-    "centro": 888,
+    "centro": 896,
     "faixa70": [
-     849,
-     929
+     858,
+     936
     ],
-    "chanceAlta": 0.43
+    "chanceAlta": 0.44
    },
    "15d": {
-    "centro": 880,
+    "centro": 890,
     "faixa70": [
-     823,
-     940
+     834,
+     949
     ],
-    "chanceAlta": 0.4
+    "chanceAlta": 0.41
    }
   },
   "fisicoVsBolsa": {
@@ -67,10 +67,10 @@
   }
  },
  "dolar": {
-  "ultimo": 5.8761,
+  "ultimo": 5.8654,
   "data": "2026-11-25",
-  "var1d": -0.005079494082389391,
-  "var5d": -0.0009181331293037776
+  "var1d": -0.006891180305108269,
+  "var5d": -0.002737396922553703
  },
  "clima": [
   {
