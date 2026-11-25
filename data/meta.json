@@ -1,24 +1,24 @@
 {
- "updatedAt": "2026-11-25T13:53:24Z",
+ "updatedAt": "2026-11-25T15:05:52Z",
  "automatico": true,
- "headline": "Café em reais mais barato: NY -0,5% e dólar -0,2%",
- "summary": "Em Nova York, o arábica está em 261,30 ¢/lb, -0,5% no dia e -5,1% em 5 pregões. O dólar comercial está em R$ 5,895 (-0,2% no dia). O CEPEA arábica de 24/11 ficou em R$ 1.679,04 por saca (-0,8%), e o conilon em R$ 905,45 (-3,2%). Em Londres, o robusta está em US$ 2.746 por tonelada (-7,0% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.704, numa faixa provável de R$ 1.580 a R$ 1.839.",
+ "headline": "Café em reais mais caro: NY +1,2% e dólar -0,5%",
+ "summary": "Em Nova York, o arábica está em 265,70 ¢/lb, +1,2% no dia e -3,5% em 5 pregões. O dólar comercial está em R$ 5,876 (-0,5% no dia). O CEPEA arábica de 24/11 ficou em R$ 1.679,04 por saca (-0,8%), e o conilon em R$ 905,45 (-3,2%). Em Londres, o robusta está em US$ 2.779 por tonelada (-5,9% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.727, numa faixa provável de R$ 1.601 a R$ 1.863.",
  "drivers": [
   {
-   "dir": "baixa",
-   "t": "NY caiu 0,5% no dia (-5,1% na semana)."
-  },
-  {
-   "dir": "neutro",
-   "t": "Dólar ficou quase estável (-0,2%): sem efeito no preço em reais."
+   "dir": "alta",
+   "t": "NY subiu 1,2% no dia (-3,5% na semana)."
   },
   {
    "dir": "baixa",
-   "t": "Londres (robusta) caiu 7,0% no dia."
+   "t": "Dólar caiu 0,5%: café em reais tende a cair."
+  },
+  {
+   "dir": "baixa",
+   "t": "Londres (robusta) caiu 5,9% no dia."
   },
   {
    "dir": "alta",
-   "t": "Previsão de 15 dias: 61% de chance de alta para o arábica."
+   "t": "Previsão de 15 dias: 63% de chance de alta para o arábica."
   },
   {
    "dir": "neutro",
@@ -56,26 +56,26 @@
   {
    "praca": "Guaxupé (Sul de Minas)",
    "tipo": "Tipo 6",
-   "preco": 1674,
-   "var": -1.63
+   "preco": 1662,
+   "var": -0.74
   },
   {
    "praca": "Patrocínio (Cerrado Mineiro)",
    "tipo": "Tipo 6",
-   "preco": 1709,
-   "var": -0.1
+   "preco": 1704,
+   "var": -0.33
   },
   {
    "praca": "Varginha (Sul de Minas)",
    "tipo": "Tipo 6 bebida dura",
-   "preco": 1740,
-   "var": -1.14
+   "preco": 1670,
+   "var": -4.02
   },
   {
    "praca": "Manhuaçu (Matas de Minas)",
    "tipo": "Tipo 6 bebida dura",
-   "preco": 1694,
-   "var": -0.59
+   "preco": 1643,
+   "var": -3.01
   }
  ]
 }
