@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-11-26T10:11:45Z",
+ "geradoEm": "2026-11-26T11:17:46Z",
  "arabica": {
   "cepea": 1678.92,
   "cepeaData": "2026-11-25",
@@ -36,26 +36,26 @@
  "conilon": {
   "cepea": 873.54,
   "cepeaData": "2026-11-25",
-  "fisicoEstimadoHoje": 875,
-  "bolsaUltimo": 2801.0,
+  "fisicoEstimadoHoje": 877,
+  "bolsaUltimo": 2813.0,
   "bolsaData": "2026-11-26",
-  "bolsaVar1d": 0.001072194424589057,
-  "bolsaVar5d": -0.06571047364909943,
-  "bolsaVar20d": -0.13549382716049385,
+  "bolsaVar1d": 0.005360972122945062,
+  "bolsaVar5d": -0.06170780520346897,
+  "bolsaVar20d": -0.1317901234567901,
   "previsao": {
    "7d": {
-    "centro": 868,
+    "centro": 871,
     "faixa70": [
-     831,
-     907
+     834,
+     910
     ],
     "chanceAlta": 0.43
    },
    "15d": {
-    "centro": 860,
+    "centro": 864,
     "faixa70": [
-     806,
-     918
+     809,
+     922
     ],
     "chanceAlta": 0.4
    }
