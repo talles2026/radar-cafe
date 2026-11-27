@@ -1,28 +1,28 @@
 {
- "updatedAt": "2026-11-26T23:27:37Z",
+ "updatedAt": "2026-11-27T18:51:13Z",
  "automatico": true,
- "headline": "Café em reais mais barato: NY -0,5% e dólar -2,9%",
- "summary": "Em Nova York, o arábica está em 268,55 ¢/lb, -0,5% no dia e -2,7% em 5 pregões. O dólar comercial está em R$ 5,651 (-2,9% no dia). O CEPEA arábica de 26/11 ficou em R$ 1.665,87 por saca (-0,8%), e o conilon em R$ 870,08 (-0,4%). Em Londres, o robusta está em US$ 2.857 por tonelada (+2,1% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.671, numa faixa provável de R$ 1.540 a R$ 1.812.",
+ "headline": "Café em reais estável: NY +1,9% e dólar -2,2%",
+ "summary": "Em Nova York, o arábica está em 275,25 ¢/lb, +1,9% no dia e +2,5% em 5 pregões. O dólar comercial está em R$ 5,527 (-2,2% no dia). O CEPEA arábica de 26/11 ficou em R$ 1.665,87 por saca (-0,8%), e o conilon em R$ 870,08 (-0,4%). Em Londres, o robusta está em US$ 2.946 por tonelada (+3,1% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.668, numa faixa provável de R$ 1.544 a R$ 1.801.",
  "drivers": [
   {
-   "dir": "baixa",
-   "t": "NY caiu 0,5% no dia (-2,7% na semana)."
+   "dir": "alta",
+   "t": "NY subiu 1,9% no dia (+2,5% na semana)."
   },
   {
    "dir": "baixa",
-   "t": "Dólar caiu 2,9%: café em reais tende a cair."
+   "t": "Dólar caiu 2,2%: café em reais tende a cair."
   },
   {
    "dir": "alta",
-   "t": "Londres (robusta) subiu 2,1% no dia."
+   "t": "Londres (robusta) subiu 3,1% no dia."
   },
   {
    "dir": "neutro",
-   "t": "Previsão de 15 dias: 51% de chance de alta para o arábica."
+   "t": "Previsão de 15 dias: 52% de chance de alta para o arábica."
   },
   {
    "dir": "neutro",
-   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -17,0% contra -5,5% na média."
+   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -17,5% contra -5,4% na média."
   }
  ],
  "sources": [
@@ -51,19 +51,19 @@
    "url": "https://open-meteo.com/"
   }
  ],
- "pracasDate": "2026-11-26",
+ "pracasDate": "2026-11-27",
  "pracas": [
   {
    "praca": "Guaxupé (Sul de Minas)",
    "tipo": "Tipo 6",
-   "preco": 1652,
-   "var": -0.56
+   "preco": 1642,
+   "var": -0.6
   },
   {
    "praca": "Patrocínio (Cerrado Mineiro)",
    "tipo": "Tipo 6",
-   "preco": 1721,
-   "var": 1.03
+   "preco": 1708,
+   "var": -0.8
   },
   {
    "praca": "Varginha (Sul de Minas)",
@@ -74,8 +74,8 @@
   {
    "praca": "Manhuaçu (Matas de Minas)",
    "tipo": "Tipo 6 bebida dura",
-   "preco": 1662,
-   "var": 1.16
+   "preco": 1659,
+   "var": -0.18
   }
  ]
 }
