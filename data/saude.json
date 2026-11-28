@@ -1,21 +1,21 @@
 {
- "verificadoEm": "2026-11-28T01:42:08Z",
+ "verificadoEm": "2026-11-28T04:09:00Z",
  "itens": {
   "NY": {
    "ultimo": "2026-11-27",
-   "esperado": "2026-11-27",
+   "esperado": "2026-11-26",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
   "Dólar": {
    "ultimo": "2026-11-27",
-   "esperado": "2026-11-27",
+   "esperado": "2026-11-26",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
   "Londres": {
    "ultimo": "2026-11-27",
-   "esperado": "2026-11-27",
+   "esperado": "2026-11-26",
    "atrasoDiasUteis": 0,
    "estado": "ok"
   },
@@ -32,7 +32,7 @@
    "estado": "ok"
   },
   "Clima": {
-   "ultimo": "2026-11-28T01:42:08Z",
+   "ultimo": "2026-11-28T04:09:00Z",
    "estado": "ok"
   },
   "Praças": {
@@ -40,7 +40,7 @@
    "estado": "ok"
   },
   "Análise do dia": {
-   "ultimo": "2026-11-27T18:51:13Z",
+   "ultimo": "2026-11-28T01:42:29Z",
    "estado": "ok"
   }
  },
