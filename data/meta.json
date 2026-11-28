@@ -1,8 +1,8 @@
 {
- "updatedAt": "2026-11-27T18:51:13Z",
+ "updatedAt": "2026-11-28T01:42:29Z",
  "automatico": true,
- "headline": "Café em reais estável: NY +1,9% e dólar -2,2%",
- "summary": "Em Nova York, o arábica está em 275,25 ¢/lb, +1,9% no dia e +2,5% em 5 pregões. O dólar comercial está em R$ 5,527 (-2,2% no dia). O CEPEA arábica de 26/11 ficou em R$ 1.665,87 por saca (-0,8%), e o conilon em R$ 870,08 (-0,4%). Em Londres, o robusta está em US$ 2.946 por tonelada (+3,1% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.668, numa faixa provável de R$ 1.544 a R$ 1.801.",
+ "headline": "Café em reais estável: NY +1,9% e dólar -1,6%",
+ "summary": "Em Nova York, o arábica está em 275,25 ¢/lb, +1,9% no dia e +2,5% em 5 pregões. O dólar comercial está em R$ 5,558 (-1,6% no dia). O CEPEA arábica de 27/11 ficou em R$ 1.668,99 por saca (+0,2%), e o conilon em R$ 874,69 (+0,5%). Em Londres, o robusta está em US$ 2.946 por tonelada (+3,1% no dia). Para os próximos 15 dias, a previsão do arábica aponta R$ 1.677, numa faixa provável de R$ 1.553 a R$ 1.811.",
  "drivers": [
   {
    "dir": "alta",
@@ -10,7 +10,7 @@
   },
   {
    "dir": "baixa",
-   "t": "Dólar caiu 2,2%: café em reais tende a cair."
+   "t": "Dólar caiu 1,6%: café em reais tende a cair."
   },
   {
    "dir": "alta",
@@ -18,11 +18,11 @@
   },
   {
    "dir": "neutro",
-   "t": "Previsão de 15 dias: 52% de chance de alta para o arábica."
+   "t": "Previsão de 15 dias: 53% de chance de alta para o arábica."
   },
   {
    "dir": "neutro",
-   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -17,5% contra -5,4% na média."
+   "t": "Físico (CEPEA) está mais barato que o normal em relação a NY: -17,5% contra -5,5% na média."
   }
  ],
  "sources": [
